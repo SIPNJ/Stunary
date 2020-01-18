@@ -4,7 +4,10 @@
     background-color: #333;
     font-family: Arial;
     margin: 1em;
-    }
+    border: black solid;
+    border-radius: 1em;
+    width: 105%;
+}
     
     /* Links inside the navbar */
     .navbar a {

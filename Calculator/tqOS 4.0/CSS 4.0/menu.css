@@ -1,9 +1,12 @@
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: rgb(190, 101, 101);
+    background-color: #333;
     font-family: Arial;
-    margin-bottom: 1em;
+    margin: 1em;
+    border: black solid;
+    border-radius: 1em;
+    width: 105%;
 }
     
 /* Links inside the navbar */
