@@ -7,7 +7,7 @@ body{
 #contenttitle{
     display: flex;
     flex-flow: column;
-    align-items: center;
+    overflow-x: scroll;
 }
 #periodic{
     display: grid;

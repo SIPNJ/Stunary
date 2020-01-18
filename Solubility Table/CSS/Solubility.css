@@ -6,6 +6,7 @@ body{
 
 table{
     margin: 1em;
+    transform: scale(0.9,0.9);
 }
 
 .solu,.insolu,.slu,.unavai,.reftex{
