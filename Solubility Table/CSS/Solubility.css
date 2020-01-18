@@ -1,7 +1,6 @@
 body{
     display: flex;
     flex-flow: column;
-    align-items: center;
     background-color: blanchedalmond;
 }
 
@@ -9,7 +8,7 @@ table{
     margin: 1em;
 }
 
-.solu,.insolu,.slu,.unavai{
+.solu,.insolu,.slu,.unavai,.reftex{
     padding: 5px;
     text-align: center;
 }
@@ -31,4 +30,21 @@ table{
 .ion{
     text-align: center;
     background-color: darkorange;
+}
+
+#ref{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 5em 10em 10em 10em 10em 10em ;
+    grid-template-rows: 5em;
+    grid-gap: 0.25em;
+}
+
+.refbot{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px black solid;
+    border-radius: 5px;
 }
