@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tqOS 2.0</title>
+    <link rel="shortcut icon" href="https://nhanvan.vn/images/detailed/81/22a.jpeg">
+    <link rel="stylesheet" href="Calculator/tqOS 2.0/CSS 2.0/App.css">
+    <link rel="stylesheet" href="Calculator/tqOS 2.0/CSS 2.0/Setting.css">
+    <link rel="stylesheet" href="Calculator/tqOS 2.0/CSS 2.0/menu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="Index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Calculator</button>
+          <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+      </div>
+    <div id="content">
+        <div id="calculator" style="background-color: rgb(65, 135, 211);" >
+            <div class="name" style="font-family:cursive; padding: 0.5em;">tqOS 2.0 calculator</div>
+            <table>
+                <tr>
+                    <!-- Hiển thị màn hình -->
+                    <td id="display">
+                        <input type="text" id="operadisp">
+                        <input type="text" id="ansdisp" disabled>
+                    </td>
+                </tr>
+                <tr id="settingbuttons">
+                    <!-- Các nút settingbuttons -->
+                    <td><button class="set" id="Shift"> Shift </button></td>
+                    <td><button class="set" id="Alpha"> Alpha </button></td>
+                    <td><button class="set" id="Left">&larr;</button></td>
+                    <td><button class="set" id="Right">&rarr;</button></td>
+                    <td><button class="set" id="mode"> Mode </button></td>
+                    <td><button class="set" id="reset" disabled> Reset </button></td>
+                </tr>
+    
+                <tr id="collosal-operator">
+                    <!-- Các nút ko rõ chức năng :> -->
+                    <td><button class="doc" class="collo" id="cale" disabled>cale</button></td>
+                    <td><button class="doc" class="collo" id="integral" disabled>&int;</button></td>
+                    <td><button class="set" id="Up">&uarr;</button></td>
+                    <td><button class="set" id="Down">&darr;</button></td>
+                    <td><button class="doc" class="collo" id="minusone">^-1</button></td>
+                    <td><button class="doc" class="collo" id="factorial">!</button></td>
+                </tr>
+    
+                <tr id="super-operator">
+                    <!-- Các nút toán tử cao cấp -->
+                    <td><button class="doc" class="sup" id="frac" disabled > frac </button></td>
+                    <td><button class="doc" class="sup" id="sqrt" disabled >&radic;</button></td>
+                    <td><button class="doc" class="sup" id="square"> ^2 </button></td>
+                    <td><button class="doc" class="sup" id="expo">^</button></td>
+                    <td><button class="doc" class="sup" id="Log">Log</button></td>
+                    <td><button class="doc" class="sup" id="Ln">Ln</button></td>
+                </tr>
+    
+                <tr id="trigonometry">
+                    <!-- Các nút lượng giác -->
+                    <td><button class="doc" class="trig" id="min" disabled>(-)</td>
+                    <td><button class="doc" class="trig" id="degree" disabled>°</button></td>
+                    <td><button class="doc" class="trig" id="hyp" disabled>HYP</td>
+                    <td><button class="doc" class="trig" id="sine">Sin</button></td>
+                    <td><button class="doc" class="trig" id="cosine">Cos</button></td>
+                    <td><button class="doc" class="trig" id="tangent">Tan</button></td>
+                </tr>
+    
+                <tr id="subsettingbuttons">
+                    <!-- Các nút settingbuttons ít dùng -->
+                    <td><button class="doc" class="subset" id="rlc" disabled>RCL</button></td>
+                    <td><button class="doc" class="subset" id="eng" disabled>ENG</button></td>
+                    <td><button class="doc" class="subset" id="open">(</button></td>
+                    <td><button class="doc" class="subset" id="close">)</button></td>
+                    <td><button class="doc" class="subset" id="convert" disabled>S &harr; D</button></td>
+                    <td><button class="doc" class="subset" id="store m" disabled>M+</button></td>
+                </tr>
+    
+                <tr id="numkeylin3">
+                    <!-- Các nút số dòng 3 -->
+                    <td><button class="num" id="seven">7</button></td>
+                    <td><button class="num" id="eight">8</button></td>
+                    <td><button class="num" id="nine">9</button></td>
+                    <td><button class="deact" id="delete">DEL</button></td>
+                    <td><button class="deact" id="ace">AC</button></td>
+                </tr>
+    
+                <tr id="numkeylin2">
+                    <!-- Các nút số dòng 2 -->
+                    <td><button class="num" id="four">4</button></td>
+                    <td><button class="num" id="five">5</button></td>
+                    <td><button class="num" id="six">6</button></td>
+                    <td><button class="opera" id="multiply">×</button></td>
+                    <td><button class="opera" id="divide">÷</button></td>
+                </tr>
+    
+                <tr id="numkeylin1">
+                    <!-- Các nút số dòng 1 -->
+                    <td><button class="num" id="one">1</button></td>
+                    <td><button class="num" id="two">2</button></td>
+                    <td><button class="num" id="three">3</button></td>
+                    <td><button class="opera" id="plus">+</button></td>
+                    <td><button class="opera" id="minus">-</button></td>
+                </tr>
+                <tr id="numkeylin0"> 
+                    <!-- Các nút số dòng 0 -->
+                    <td><button class="num" id="zero">0</button></td>
+                    <td><button class="num" id="dot">.</button></td>
+                    <td><button class="opera" id="expo">×10^</button></td>
+                    <td><button class="opera" id="Answer">Ans</button></td>
+                    <td><button class="opera" id="Calc">=</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="tabclr">
+            <div id="clrtable">
+                <b class="name" style="font-size: 3em; margin: 0.5em;">Calculator style</b>
+                <div id="colorsetting">
+                    <div id="bgclr">
+                        <center style="margin: 1em;"> 
+                            <div> Enter RGB </div> 
+                            <div> background color </div>
+                        </center>
+                        <input type="text" class="bgclr" id = "bgcalccolor" placeholder="Calculator">
+                        <input type="text" class="bgclr" id = "bgsetcolor" placeholder="Setting buttons">
+                        <input type="text" class="bgclr" id = "bgdoccolor" placeholder="Documentary buttons">
+                        <input type="text" class="bgclr" id = "bgnumcolor" placeholder="Number keyboard ">
+                        <input type="text" class="bgclr" id = "bgdeactcolor" placeholder="Deactive buttons">
+                        <input type="text" class="bgclr" id = "bgoperacolor" placeholder="Opera buttons">
+                        <button class="bgclr" id="clickbtn"> Enter </button>
+                    </div>
+                    <div style="margin: 1rem;"></div>
+                    <div id="txtclr">
+                        <center style="margin: 1em;"> 
+                            <div> Enter RGB </div>
+                            <div> text color </div> 
+                        </center>
+                        <input type="text" class="txtclr" id = "calccolor" placeholder="Calculator display">
+                        <input type="text" class="txtclr" id = "setcolor" placeholder="Setting buttons">
+                        <input type="text" class="txtclr" id = "doccolor" placeholder="Documentary buttons">
+                        <input type="text" class="txtclr" id = "numcolor" placeholder="Number keyboard ">
+                        <input type="text" class="txtclr" id = "deactcolor" placeholder="Deactive buttons">
+                        <input type="text" class="txtclr" id = "operacolor" placeholder="Opera buttons">
+                        <button class="txtclr" id="resetclr"> Reset</button>
+                    </div>
+                </div>
+            </div>
+            <table id="colorpicker", border="4", cellpadding="2", cellspacing="0">
+                <thead>
+                    <tr>
+                        <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>COLOR PICKER</strong></td>
+                    </tr>
+                    <tr>
+                        <th style="color: red; background-color: blanchedalmond;"> Red </th>
+                        <th style="color: green; background-color: blanchedalmond;"> Green </th>
+                        <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="Rclr" style="background-color: red; width: 8em; height: 4em;"></td>
+                        <td id="Gclr" style="background-color: green; width: 8em; height: 4em;"></td>
+                        <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;"></td>
+                    </tr>
+                    <tr>
+                        <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255</td>
+                        <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0</td>
+                        <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
+                        <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
+                        <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td id="resclr" colspan="3" style="background-color: red;"></td>
+                    </tr>
+                </tfoot>
+    
+    
+            </table>
+    
+        </div>
+    </div>
+
+    
+    <!-- <iframe src="https://www.desmos.com/calculator"></iframe> -->
+    <script src="Calculator/tqOS 2.0/Javascript 2.0/App.js"></script>
+    <script src="Calculator/tqOS 2.0/Javascript 2.0/Slide.js"></script>
+    <script src="Calculator/tqOS 2.0/Javascript 2.0/Calccolor.js"></script>
+</body>
+</html>
+
+
+<!-- <td><button class="" id="" value=""></td>
+×÷ 
+onclick="calculator.ansdisp.value = eval(calculator.operadisp.value)"
+-->

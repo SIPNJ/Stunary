@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Periodic Table</title>
+    <link rel="stylesheet" href="Periodic Table/CSS/Ped.css">
+    <link rel="stylesheet" href="Periodic Table/CSS/Menu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="Index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Calculator</button>
+          <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+      </div>
+    <div id="contenttitle">
+        <div id="periodic">
+            <div id="title">PERIODIC TABLE</div>
+
+            <div class="numcol"></div>
+            <div class="numcol" id="alkali">IA</div>
+            <div class="numcol" id="alkaline">IIA</div>
+            <!-- <div class="space" id="space0"></div> -->
+            <div class="numcol">IIIA</div>
+            <div class="numcol">IVA</div>        
+            <div class="numcol">VA</div>
+            <div class="numcol">VIA</div>
+            <div class="numcol">VIIA</div>
+            <div class="numcol">VIIIA</div>
+
+            <!-- <div></div>
+            <div class="namcol" id="alkali"> Alkali Metal </div>
+            <div class="namcol" id="alkaline"> Alkaline Earth Metal </div>
+            <div class="space" id="space0"></div>
+            <div class="namcol" id="Icosagen"> Icosagen </div>
+            <div class="namcol" id="Crystallogen"> Crystallogen </div>        
+            <div class="namcol" id="Pnictogen"> Pnictogen </div>
+            <div class="namcol" id="Chalcogen"> Chalcogen </div>
+            <div class="namcol" id="Halogen"> Halogen</div>
+            <div class="namcol" id="Noble"> Noble Gas </div> -->
+
+            <div class="numrow">1</div>
+
+            <button onclick="conte(this)" class="element sbl" id="H">H</button>
+            <div class="space" id="space1"></div>
+            <button onclick="conte(this)" class="element sbl" id="He">He</button>
+
+            <div class="numrow">2</div>
+
+            <button onclick="conte(this)" class="element sbl" id="Li">Li</button>
+            <button onclick="conte(this)" class="element sbl" id="Be">Be</button>
+            <div class="space" id="space2"></div>
+            <button onclick="conte(this)" class="element pbl" id="B">B</button>
+            <button onclick="conte(this)" class="element pbl" id="C">C</button>
+            <button onclick="conte(this)" class="element pbl" id="N">N</button>
+            <button onclick="conte(this)" class="element pbl" id="O">O</button>
+            <button onclick="conte(this)" class="element pbl" id="F">F</button>
+            <button onclick="conte(this)" class="element pbl" id="Ne">Ne</button>
+
+            <div class="numrow">3</div>
+
+            <button onclick="conte(this)" class="element sbl" id="Na">Na</button>
+            <button onclick="conte(this)" class="element sbl" id="Mg">Mg</button>
+            <div class="numcol">IIIB</div>
+            <div class="numcol">IVB</div>
+            <div class="numcol">VB</div>
+            <div class="numcol">VIB</div>
+            <div class="numcol">VIIB</div>
+            <div class="numcol" id="B8">VIIIB</div>
+            <div class="numcol">IB</div>
+            <div class="numcol">IIB</div>
+            <!-- ten mot so kim loai chuyen tiep -->
+            <button onclick="conte(this)" class="element pbl" id="Al">Al</button>
+            <button onclick="conte(this)" class="element pbl" id="Si">Si</button>
+            <button onclick="conte(this)" class="element pbl" id="P">P</button>
+            <button onclick="conte(this)" class="element pbl" id="S">S</button>
+            <button onclick="conte(this)" class="element pbl" id="Cl">Cl</button>
+            <button onclick="conte(this)" class="element pbl" id="Ar">Ar</button>
+
+            <div class="numrow">4</div>
+
+            <button onclick="conte(this)" class="element sbl" id="K">K</button>
+            <button onclick="conte(this)" class="element sbl" id="Ca">Ca</button>
+            <button onclick="conte(this)" class="element dbl" id="Sc">Sc</button>
+            <button onclick="conte(this)" class="element dbl" id="Ti">Ti</button>
+            <button onclick="conte(this)" class="element dbl" id="V">V</button>
+            <button onclick="conte(this)" class="element dbl" id="Cr">Cr</button>
+            <button onclick="conte(this)" class="element dbl" id="Mn">Mn</button>
+            <button onclick="conte(this)" class="element dbl" id="Fe">Fe</button>
+            <button onclick="conte(this)" class="element dbl" id="Co">Co</button>
+            <button onclick="conte(this)" class="element dbl" id="Ni">Ni</button>
+            <button onclick="conte(this)" class="element dbl" id="Cu">Cu</button>
+            <button onclick="conte(this)" class="element dbl" id="Zn">Zn</button>
+            <button onclick="conte(this)" class="element pbl" id="Ga">Ga</button>
+            <button onclick="conte(this)" class="element pbl" id="Ge">Ge</button>
+            <button onclick="conte(this)" class="element pbl" id="As">As</button>
+            <button onclick="conte(this)" class="element pbl" id="Se">Se</button>
+            <button onclick="conte(this)" class="element pbl" id="Br">Br</button>
+            <button onclick="conte(this)" class="element pbl" id="Kr">Kr</button>
+
+            <div class="numrow">5</div>     
+
+            <button onclick="conte(this)" class="element sbl" id="Rb">Rb</button>
+            <button onclick="conte(this)" class="element sbl" id="Sr">Sr</button>
+            <button onclick="conte(this)" class="element dbl" id="Y">Y</button>
+            <button onclick="conte(this)" class="element dbl" id="Zr">Zr</button>
+            <button onclick="conte(this)" class="element dbl" id="Nb">Nb</button>
+            <button onclick="conte(this)" class="element dbl" id="Mo">Mo</button>
+            <button onclick="conte(this)" class="element dbl" id="Tc">Tc</button>
+            <button onclick="conte(this)" class="element dbl" id="Ru">Ru</button>
+            <button onclick="conte(this)" class="element dbl" id="Rh">Rh</button>
+            <button onclick="conte(this)" class="element dbl" id="Pd">Pd</button>
+            <button onclick="conte(this)" class="element dbl" id="Ag">Ag</button>
+            <button onclick="conte(this)" class="element dbl" id="Cd">Cd</button>
+            <button onclick="conte(this)" class="element pbl" id="In">In</button>
+            <button onclick="conte(this)" class="element pbl" id="Sn">Sn</button>
+            <button onclick="conte(this)" class="element pbl" id="Sb">Sb</button>
+            <button onclick="conte(this)" class="element pbl" id="Te">Te</button>
+            <button onclick="conte(this)" class="element pbl" id="I">I</button>
+            <button onclick="conte(this)" class="element pbl" id="Xe">Xe</button>
+
+            <div class="numrow">6</div>  
+
+            <button onclick="conte(this)" class="element sbl" id="Cs">Cs</button>
+            <button onclick="conte(this)" class="element sbl" id="Ba">Ba</button>
+            <div class="group" id="lathanoid">Lathanoid</div>
+            <button onclick="conte(this)" class="element dbl" id="Hf">Hf</button>
+            <button onclick="conte(this)" class="element dbl" id="Ta">Ta</button>
+            <button onclick="conte(this)" class="element dbl" id="W">W</button>
+            <button onclick="conte(this)" class="element dbl" id="Re">Re</button>
+            <button onclick="conte(this)" class="element dbl" id="Os">Os</button>
+            <button onclick="conte(this)" class="element dbl" id="Ir">Ir</button>
+            <button onclick="conte(this)" class="element dbl" id="Pt">Pt</button>
+            <button onclick="conte(this)" class="element dbl" id="Au">Au</button>
+            <button onclick="conte(this)" class="element dbl" id="Hg">Hg</button>
+            <button onclick="conte(this)" class="element pbl" id="Tl">Tl</button>
+            <button onclick="conte(this)" class="element pbl" id="Pb">Pb</button>
+            <button onclick="conte(this)" class="element pbl" id="Bi">Bi</button>
+            <button onclick="conte(this)" class="element pbl" id="Po">Po</button>
+            <button onclick="conte(this)" class="element pbl" id="At">At</button>
+            <button onclick="conte(this)" class="element pbl" id="Rn">Rn</button>
+
+            <div class="numrow">7</div>  
+
+            <button onclick="conte(this)" class="element sbl" id="Fr">Fr</button>
+            <button onclick="conte(this)" class="element sbl" id="Ra">Ra</button>
+            <div class="group" id="Actinoid">Actinoid</div>
+            <button onclick="conte(this)" class="element dbl" id="Rf">Rf</button>
+            <button onclick="conte(this)" class="element dbl" id="Db">Db</button>
+            <button onclick="conte(this)" class="element dbl" id="Sg">Sg</button>
+            <button onclick="conte(this)" class="element dbl" id="Bh">Bh</button>
+            <button onclick="conte(this)" class="element dbl" id="Hs">Hs</button>
+            <button onclick="conte(this)" class="element dbl" id="Mt">Mt</button>
+            <button onclick="conte(this)" class="element dbl" id="Ds">Ds</button>
+            <button onclick="conte(this)" class="element dbl" id="Rg">Rg</button>
+            <button onclick="conte(this)" class="element dbl" id="Cn">Cn</button>
+            <button onclick="conte(this)" class="element ssbl" id="Nh">Nh</button>
+            <button onclick="conte(this)" class="element ssbl" id="Fl">Fl</button>
+            <button onclick="conte(this)" class="element ssbl" id="Mc">Mc</button>
+            <button onclick="conte(this)" class="element ssbl" id="Lv">Lv</button>
+            <button onclick="conte(this)" class="element ssbl" id="Ts">Ts</button>
+            <button onclick="conte(this)" class="element ssbl" id="Og">Og</button>
+
+            <div class="spacenoid"></div>
+            <button onclick="conte(this)" class="element fbl" id="La">La</button>
+            <button onclick="conte(this)" class="element fbl" id="Ce">Ce</button>
+            <button onclick="conte(this)" class="element fbl" id="Pr">Pr</button>
+            <button onclick="conte(this)" class="element fbl" id="Nd">Nd</button>
+            <button onclick="conte(this)" class="element fbl" id="Pm">Pm</button>
+            <button onclick="conte(this)" class="element fbl" id="Sm">Sm</button>
+            <button onclick="conte(this)" class="element fbl" id="Eu">Eu</button>
+            <button onclick="conte(this)" class="element fbl" id="Gd">Gd</button>
+            <button onclick="conte(this)" class="element fbl" id="Tb">Tb</button>
+            <button onclick="conte(this)" class="element fbl" id="Dy">Dy</button>
+            <button onclick="conte(this)" class="element fbl" id="Ho">Ho</button>
+            <button onclick="conte(this)" class="element fbl" id="Er">Er</button>
+            <button onclick="conte(this)" class="element fbl" id="Tm">Tm</button>
+            <button onclick="conte(this)" class="element fbl" id="Yb">Yb</button>
+            <button onclick="conte(this)" class="element fbl" id="Lu">Lu</button>
+
+            <div class="spacenoid"></div>
+            <button onclick="conte(this)" class="element fbl" id="Ac">Ac</button>
+            <button onclick="conte(this)" class="element fbl" id="Th">Th</button>
+            <button onclick="conte(this)" class="element fbl" id="Pa">Pa</button>
+            <button onclick="conte(this)" class="element fbl" id="U">U</button>
+            <button onclick="conte(this)" class="element fbl" id="Np">Np</button>
+            <button onclick="conte(this)" class="element fbl" id="Pu">Pu</button>
+            <button onclick="conte(this)" class="element fbl" id="Am">Am</button>
+            <button onclick="conte(this)" class="element fbl" id="Cm">Cm</button>
+            <button onclick="conte(this)" class="element fbl" id="Bk">Bk</button>
+            <button onclick="conte(this)" class="element fbl" id="Cf">Cf</button>
+            <button onclick="conte(this)" class="element fbl" id="Es">Es</button>
+            <button onclick="conte(this)" class="element fbl" id="Fm">Fm</button>
+            <button onclick="conte(this)" class="element fbl" id="Md">Md</button>
+            <button onclick="conte(this)" class="element fbl" id="No">No</button>
+            <button onclick="conte(this)" class="element fbl" id="Lr">Lr</button>
+
+        </div>
+        <div id="cap">
+            <div id="elementcontent">
+                <div id="eletop">
+                    <div id="elelef">
+                        <div id="atomnum"></div>
+                        <div id="elesym"></div>
+                        <div id="config"></div>
+                    </div>
+                    <div id="elerig">
+                        <div id="elemass"></div>
+                        <div id="elenam"></div>
+                    </div>
+                </div>
+                <div id="elebot">
+                    <div id="elenegati"></div>
+                    <div id="boil"></div>
+                    <div id="melt"></div>
+                    <div id="fusion"></div>
+                    <div id="vapor"></div>
+                </div>
+            </div>
+
+            <div id="chuthich">
+                <div id="churig">
+                    <div id="blclr1"></div>
+                    <div id="blclr2"></div>
+                    <div id="blclr3"></div>
+                    <div id="blclr4"></div>
+                </div>
+                <div id="chulef">
+                    <div id="bltxt1"></div>
+                    <div id="bltxt2"></div>
+                    <div id="bltxt3"></div>
+                    <div id="bltxt4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Periodic Table/Javascript/Ped.js"></script>
+</body>
+</html>

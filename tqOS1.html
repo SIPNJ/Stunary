@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tqOS 1.0</title>
+    <link rel="stylesheet" href="Calculator/tqOS 1.0/CSS 1.0/App.css">
+    <link rel="stylesheet" href="Calculator/tqOS 1.0/CSS 1.0/menu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="Index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Calculator</button>
+          <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+      </div>
+    <div id="calculator" style="background-color: grey;">
+        <div id="name" style="font-family:cursive">tqOS 1.0 calculator</div>
+        <table>
+            <tr>
+                <!-- Hiển thị màn hình -->
+                <td id="display">
+                    <input type="text" id="operadisp">
+                    <input type="text" id="ansdisp" disabled>
+                </td>
+            </tr>
+            <tr id="settingbuttons">
+                <!-- Các nút settingbuttons -->
+                <td><button class="set" id="Shift"> Shift </button></td>
+                <td><button class="set" id="Alpha"> Alpha </button></td>
+                <td><button class="set" id="Left">&larr;</button></td>
+                <td><button class="set" id="Right">&rarr;</button></td>
+                <td><button class="set" id="mode"> Mode </button></td>
+                <td><button class="set" id="reset" > Reset </button></td>
+            </tr>
+
+            <tr id="collosal-operator">
+                <!-- Các nút ko rõ chức năng :> -->
+                <td><button class="doc" class="collo" id="cale" >cale</button></td>
+                <td><button class="doc" class="collo" id="integral" >&int;</button></td>
+                <td><button class="set" id="Up">&uarr;</button></td>
+                <td><button class="set" id="Down">&darr;</button></td>
+                <td><button class="doc" class="collo" id="minusone">^-1</button></td>
+                <td><button class="doc" class="collo" id="factorial">!</button></td>
+            </tr>
+
+            <tr id="super-operator">
+                <!-- Các nút toán tử cao cấp -->
+                <td><button class="doc" class="sup" id="frac"  > frac </button></td>
+                <td><button class="doc" class="sup" id="sqrt"  >&radic;</button></td>
+                <td><button class="doc" class="sup" id="square"> ^2 </button></td>
+                <td><button class="doc" class="sup" id="expo">^</button></td>
+                <td><button class="doc" class="sup" id="Log">Log</button></td>
+                <td><button class="doc" class="sup" id="Ln">Ln</button></td>
+            </tr>
+
+            <tr id="trigonometry">
+                <!-- Các nút lượng giác -->
+                <td><button class="doc" class="trig" id="min" >(-)</td>
+                <td><button class="doc" class="trig" id="degree" >°</button></td>
+                <td><button class="doc" class="trig" id="hyp" >HYP</td>
+                <td><button class="doc" class="trig" id="sine">Sin</button></td>
+                <td><button class="doc" class="trig" id="cosine">Cos</button></td>
+                <td><button class="doc" class="trig" id="tangent">Tan</button></td>
+            </tr>
+
+            <tr id="subsettingbuttons">
+                <!-- Các nút settingbuttons ít dùng -->
+                <td><button class="doc" class="subset" id="rlc">RCL</button></td>
+                <td><button class="doc" class="subset" id="eng">ENG</button></td>
+                <td><button class="doc" class="subset" id="open">(</button></td>
+                <td><button class="doc" class="subset" id="close">)</button></td>
+                <td><button class="doc" class="subset" id="convert">S &harr; D</button></td>
+                <td><button class="doc" class="subset" id="store m">M+</button></td>
+            </tr>
+
+            <tr id="numkeylin3">
+                <!-- Các nút số dòng 3 -->
+                <td><button class="num" id="seven">7</button></td>
+                <td><button class="num" id="eight">8</button></td>
+                <td><button class="num" id="nine">9</button></td>
+                <td><button class="deact" id="delete">DEL</button></td>
+                <td><button class="deact" id="ace">AC</button></td>
+            </tr>
+
+            <tr id="numkeylin2">
+                <!-- Các nút số dòng 2 -->
+                <td><button class="num" id="four">4</button></td>
+                <td><button class="num" id="five">5</button></td>
+                <td><button class="num" id="six">6</button></td>
+                <td><button class="opera" id="multiply">×</button></td>
+                <td><button class="opera" id="divide">÷</button></td>
+            </tr>
+
+            <tr id="numkeylin1">
+                <!-- Các nút số dòng 1 -->
+                <td><button class="num" id="one">1</button></td>
+                <td><button class="num" id="two">2</button></td>
+                <td><button class="num" id="three">3</button></td>
+                <td><button class="opera" id="plus">+</button></td>
+                <td><button class="opera" id="minus">-</button></td>
+            </tr>
+            <tr id="numkeylin0"> 
+                <!-- Các nút số dòng 0 -->
+                <td><button class="num" id="zero">0</button></td>
+                <td><button class="num" id="dot">.</button></td>
+                <td><button class="opera" id="expo">×10^</button></td>
+                <td><button class="opera" id="Answer">Ans</button></td>
+                <td><button class="opera" id="Calc">=</button></td>
+            </tr>
+        </table>
+
+    <!-- <iframe src="https://www.desmos.com/calculator"></iframe> -->
+    <script src="Calculator/tqOS 1.0/Javascript 1.0/App.js"></script>
+</body>
+</html>
+
+
+<!-- <td><button class="" id="" value=""></td>
+×÷ 
+onclick="calculator.ansdisp.value = eval(calculator.operadisp.value)"
+-->

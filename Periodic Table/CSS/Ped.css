@@ -1,0 +1,242 @@
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(255, 215, 155);
+}
+
+#contenttitle{
+    display: flex;
+    flex-flow: column;;
+}
+#periodic{
+    display: grid;
+    grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+/*                      nam nam 1   2   3   4   5   6   7   8   9 */
+    grid-template-columns: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+    /* grid-gap: 1em; */
+    text-align: center;
+    border: black;
+}
+/* #periodic div{
+    border: black;
+} */
+#cap{
+    display: flex;
+    flex-flow: row;
+}
+#title{
+    grid-area: 1 / 4 / 2 / 14;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+}
+
+
+
+
+.element{
+    border: 0.5px black solid ;
+    padding-top: 13px;
+}
+
+
+
+
+
+.numcol,.numrow{
+    border: 0.5px black solid;
+    background-color: teal;
+    color: rgb(255, 255, 255);
+    padding-top: 15px;
+}
+.namcol, .group{
+    font-size: xx-small;
+    padding-top: 15px;
+    border: 0.5px black solid;
+}
+
+
+
+
+
+/* space */
+#space0{
+    grid-column: 4/ span 10;
+}
+#space1{
+    grid-column: 3/ span 16;
+}
+#space2, #space3 {
+    grid-column: 4/ span 10;
+}
+.spacenoid{
+    grid-column: span 3;
+}
+
+
+
+
+
+/*  */
+#B8{
+    grid-column: span 3;
+}
+
+
+
+/* block */
+.sbl{
+    background-color: green;
+    color: whitesmoke;
+}
+.pbl{
+    background-color: rgb(233, 77, 233);
+    color: whitesmoke;
+}
+.dbl{
+    background-color: gold;
+    color: rgb(0, 0, 0);
+}
+.fbl{
+    background-color: burlywood;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+/* chuthich */
+
+#chuthich{
+    display: flex;
+    flex-flow: row;
+
+    border: 5px black solid;
+    margin: 2em;
+
+    width: 25rem;
+    height: 25rem;
+}
+#churig,#chulef{
+    display: flex;
+    flex-flow: column;
+}
+
+
+/* content */
+
+#elementcontent{
+    display: flex;
+    flex-flow: column;
+
+    border: 5px black solid;
+    margin: 2em;
+
+    width: 25em;
+    height: 25em;
+}
+
+#eletop{
+    display: flex;
+    flex-flow: row;
+
+    height: 60%;
+    margin: 10px;
+}
+
+#elebot{
+    height: 40%;
+    margin: 10px;
+}
+
+#elelef{
+    display: flex;
+    flex-flow: column;
+
+    position: relative;
+
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+}
+
+#elerig{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+}
+
+#model{
+    height: 50%;
+}
+
+/* content x2 */
+
+#atomnum{
+    position: absolute;
+
+    margin: 10%;
+    text-align: left;
+    font-size: 23px;
+    animation-name: rainbowcolor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#elesym{
+    position: relative;
+
+    top: 50%;
+    left: auto;
+
+    margin: 10%;
+    font-size: xx-large;
+    font: bold;
+    text-align: left;
+}
+#config{
+    position: relative;
+    top: 60%;
+
+    margin: 10%;
+    text-align: left;
+}
+
+
+
+
+#elenam{
+    margin: 10%;
+    font-size: x-large;
+    text-align: right;
+}
+
+#elemass{
+    margin: 10%;
+    text-align: right;
+    font-size: 23px;
+}
+
+
+
+#elenegati{
+    width: 100%;
+    text-align: center;
+}
+
+
+@keyframes rainbowcolor{
+    0% {color: white; font-size: 27px; }
+    10% {color: skyblue; font-size: 24px;}
+    20% {color: rgb(206, 0, 161); font-size: 22px;}
+    30% {color: red; font-size: 26px;}
+    40% {color: rgb(0, 255, 242); font-size: 28px;}
+    50% {color: orange; font-size: 32px;}
+    70% {color: orangered; font-size: 40px;}
+    80% {color: plum; font-size: 38px;}
+    90% {color: purple; font-size: 32px}
+    100% {color: black; font-size: 30px;}
+}

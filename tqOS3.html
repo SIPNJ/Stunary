@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tqOS 3.0</title>
+    <link rel="shortcut icon" href="https://nhanvan.vn/images/detailed/81/22a.jpeg">
+    <link rel="stylesheet" href="Calculator/tqOS 3.0/CSS 3.0/App.css">
+    <link rel="stylesheet" href="Calculator/tqOS 3.0/CSS 3.0/Setting.css">
+    <link rel="stylesheet" href="Calculator/tqOS 3.0/CSS 3.0/Instruct.css">
+    <link rel="stylesheet" href="Calculator/tqOS 3.0/CSS 3.0/phone.css">
+    <link rel="stylesheet" href="Calculator/tqOS 3.0/CSS 3.0/menu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="Index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Calculator</button>
+          <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+      </div>
+        <div id="content">
+            <div id="calculator" style="background-color: rgb(189, 189, 189);">
+                <div id="namedisp">
+                    <div class="name" style="font-family:cursive; padding: 0.5em;">
+                        tqOS 3.0 calculator
+                    </div>
+                </div> 
+                <div id="realcalc">
+                    <div id="display">
+                        <!-- <div id="setdisp">
+                            <div class="sh" id="Sbtn"> S </div>
+                            <div class="sh" id="Abtn"> A </div>
+                            <div class="sh" id="Mbtn"> M </div>
+                            <div class="lo" id="stobtn"> STO </div>
+                            <div class="lo" id="rclbtn"> RCL </div>
+                            <div class="lo" id="mbtn"> STAT </div>
+                            <div class="lo" id="cmlxbtn"> CMLX </div>
+                            <div class="lo" id="mtxbtn"> MTX </div>
+                            <div class="lo" id="vctbtn"> VCT </div>
+                            <div class="sh" id="Dbtn"> D </div>
+                            <div class="sh" id="Rbtn"> R </div>
+                            <div class="sh" id="Gbtn"> G </div>
+                            <div class="lo" id="fixbtn"> FIX </div>
+                            <div class="lo" id="scibtn"> SCI </div>
+                            <div class="lo" id="mathbtn"> Math </div>
+                            <div class="lo" id="dispbtn"> Disp </div>
+                        </div>  -->
+                        <div id="realdisp">
+                            <!-- doan dung flex: column align-items: center -->
+                            <input type="text" id="operadisp" disabled>
+                            <input type="text" id="ansdisp" disabled>
+                        </div>
+                    </div>
+        
+                    <div id="sixbuttons">
+        
+                            <button class="set" id="Shift"> Shift </button>
+                            <button class="set" id="Alpha"> Alpha </button>
+                            <button class="set" id="Left">&larr;</button>
+                            <button class="set" id="Right">&rarr;</button>
+                            <button class="set" id="mode"> Mode </button>
+                            <button class="set" id="Reset"> Reset </button>
+        
+                            <button class="doc" class="collo" id="minusone"> ^-1 </button>
+                            <button class="doc" class="collo" id="integral" disabled>&int;</button>
+                            <button class="set" id="Up">&uarr;</button>
+                            <button class="set" id="Down">&darr;</button>
+                            <button class="doc" class="collo" id="factorial">!</button>
+                            <button class="doc" class="collo" id="Loga">Log <sub>a</sub>(x)</button>
+        
+                            <button class="doc" class="sup" id="frac" disabled > frac </button>
+                            <button class="doc" class="sup" id="sqrt" disabled >&radic;</button>
+                            <button class="doc" class="sup" id="square"> <sub>&#x25A1;</sub> <sup>2</sup> </button>
+                            <button class="doc" class="sup" id="expo">^</button>
+                            <button class="doc" class="sup" id="Log">Log</button>
+                            <button class="doc" class="sup" id="Ln">Ln</button>
+         
+                            <button class="doc" class="trig" id="comma">,</button>
+                            <button class="doc" class="trig" id="degree" disabled>°</button>
+                            <button class="doc" class="trig" id="hyp" disabled>HYP</button>
+                            <button class="doc" class="trig" id="sine">Sin</button>
+                            <button class="doc" class="trig" id="cosine">Cos</button>
+                            <button class="doc" class="trig" id="tangent">Tan</button>
+        
+                            <button class="doc" class="subset" id="rlc" disabled>RCL</button>
+                            <button class="doc" class="subset" id="eng" disabled>ENG</button>
+                            <button class="doc" class="subset" id="open">(</button>
+                            <button class="doc" class="subset" id="close">)</button>
+                            <button class="doc" class="subset" id="convert" disabled>S &harr; D</button>
+                            <button class="doc" class="subset" id="store m" disabled>M+</button>
+        
+                    </div>
+        
+                    <div id="fivebuttons">
+                            <button class="num" id="seven">7</button>
+                            <button class="num" id="eight">8</button>
+                            <button class="num" id="nine">9</button>
+                            <button class="deact" id="delete">DEL</button>
+                            <button class="deact" id="ace">AC</button>
+                            <button class="num" id="four">4</button>
+                            <button class="num" id="five">5</button>
+                            <button class="num" id="six">6</button>
+                            <button class="opera" id="multiply">×</button>
+                            <button class="opera" id="divide">÷</button>
+                            <button class="num" id="one">1</button>
+                            <button class="num" id="two">2</button>
+                            <button class="num" id="three">3</button>
+                            <button class="opera" id="plus">+</button>
+                            <button class="opera" id="minus">-</button>
+                            <button class="num" id="zero">0</button>
+                            <button class="num" id="dot">.</button>
+                            <button class="opera" id="expo">×10^</button>
+                            <button class="opera" id="Answer">Ans</button>
+                            <button class="opera" id="Calc">≈</button>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div id="tabclr">
+                <div id="clrtable">
+                    <b class="name" style="font-size: 3em; margin: 0.5em;">Calculator style</b>
+                    <div id="colorsetting">
+                        <div id="bgclr">
+                            <center style="margin: 1em;"> 
+                                <div> Enter RGB </div> 
+                                <div> background color </div>
+                            </center>
+                            <input type="text" class="bgclr" id = "bgcalccolor" placeholder="Calculator">
+                            <input type="text" class="bgclr" id = "bgsetcolor" placeholder="Setting buttons">
+                            <input type="text" class="bgclr" id = "bgdoccolor" placeholder="Documentary buttons">
+                            <input type="text" class="bgclr" id = "bgnumcolor" placeholder="Number keyboard ">
+                            <input type="text" class="bgclr" id = "bgdeactcolor" placeholder="Deactive buttons">
+                            <input type="text" class="bgclr" id = "bgoperacolor" placeholder="Opera buttons">
+                            <button class="bgclr" id="clickbtn"> Enter </button>
+                        </div>
+                        <div style="margin: 1rem;"></div>
+                        <div id="txtclr">
+                            <center style="margin: 1em;"> 
+                                <div> Enter RGB </div>
+                                <div> text color </div> 
+                            </center>
+                            <input type="text" class="txtclr" id = "calccolor" placeholder="Calculator display">
+                            <input type="text" class="txtclr" id = "setcolor" placeholder="Setting buttons">
+                            <input type="text" class="txtclr" id = "doccolor" placeholder="Documentary buttons">
+                            <input type="text" class="txtclr" id = "numcolor" placeholder="Number keyboard ">
+                            <input type="text" class="txtclr" id = "deactcolor" placeholder="Deactive buttons">
+                            <input type="text" class="txtclr" id = "operacolor" placeholder="Opera buttons">
+                            <button class="txtclr" id="resetclr"> Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <table id="colorpicker", border="4", cellpadding="2", cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>COLOR PICKER</strong>
+                        </tr>
+                        <tr>
+                            <th style="color: red; background-color: blanchedalmond;"> Red </th>
+                            <th style="color: green; background-color: blanchedalmond;"> Green </th>
+                            <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="Rclr" style="background-color: red; width: 8em; height: 4em;">
+                            <td id="Gclr" style="background-color: green; width: 8em; height: 4em;">
+                            <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;">
+                        </tr>
+                        <tr>
+                            <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255
+                            <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0
+                            <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
+                            <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
+                            <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+                        </tr>
+                    </tfoot>
+        
+        
+                </table>
+        
+            </div>
+        
+            <div id="instruction">
+                <h1 class="name"> Instruction Box </h1>
+                <div style="display:flex; flex-flow: row; justify-content: center;">
+                    <div id="menuinstruct">
+                        <button class="inbtn" onclick = "openMenu(`baseopera`)"> Basic operator </button>
+                        <button class="inbtn" onclick = "openMenu(`supopera`)"> Super operator </button>
+                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                        <button class="inbtn"> Setting </button>
+        
+                        <button class="inbtn"> Sine </button>
+                        <button class="inbtn"> Cosine </button>
+                        <button class="inbtn"> Tangent </button>
+        
+                        <button class="inbtn"> Arc Sine </button>
+                        <button class="inbtn"> Arc Cosine </button>
+                        <button class="inbtn"> Arc Tangent </button>
+        
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+                        <button class="inbtn"> Tangent </button>
+        
+                    </div>
+                    <div id="menucontent">
+                        <div class="menucontent" id="baseopera">
+                            <h2 class="contenttitle"> Basic Operator </h2>
+                            <h3> Plus </h3>
+                            <p> To plus, you need to click the plus sign (+) button and the display will show the plus symbol. </p>
+                            <h3> Minus </h3>
+                            <p> To subtract, you need to click the minus sign (-) button and the display will show the minus symbol. </p>
+                            <h3> Multiply </h3>
+                            <p> To multiply, you need to click the multiply sign (×) button and the display will show the multiply symbol. </p>
+                            <h3> Divide </h3>
+                            <p> To divide, you need to click the divide sign (÷) button and the display will show the divide symbol. </p>
+                        </div>
+                        <div class="menucontent" id="supopera"> 
+                            <h2 class="contenttitle"> Super Operator </h2>
+                            <h3></h3>
+                            <h3></h3>
+                            <h3></h3>
+                            <h3></h3>
+                        </div>
+                        <div class="menucontent" id="colopera"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <!-- <iframe src="https://www.desmos.com/calculator"></iframe> -->
+    <script src="Calculator/tqOS 3.0/Javascript 3.0/App.js"></script>
+    <script src="Calculator/tqOS 3.0/Javascript 3.0/Slide.js"></script>
+    <script src="Calculator/tqOS 3.0/Javascript 3.0/Calccolor.js"></script>
+    <script src="Calculator/tqOS 3.0/Javascript 3.0/Instruct.js"></script>
+</body>
+</html>
+
+
+<!-- <button class="" id="" value="">
+×÷ 
+onclick="calculator.ansdisp.value = eval(calculator.operadisp.value)"
+-->

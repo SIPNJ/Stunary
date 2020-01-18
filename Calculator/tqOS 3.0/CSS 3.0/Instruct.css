@@ -1,0 +1,58 @@
+#instruction{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightgrey;
+
+    border: 0.7em black solid;
+    border-radius: 2rem;
+    padding: 1rem;
+    height: 37rem;
+
+}
+
+#menuinstruct{
+    display: flex;
+    flex-flow: column;
+    border: 0.5em black solid;
+    background-color: #f1f1f1;
+    height: 30rem;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.inbtn{
+    display: inline-block; 
+    padding: 1rem 2rem 2rem 2rem;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.inbtn:hover{
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.inbtn:active{
+    background-color: cornsilk;
+}
+
+.menucontent{
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(240, 230, 140, 0.801);
+    height: 28rem;
+    width: 15rem;
+    border: 0.5em black solid;
+    border-left: 0em;
+    padding: 1rem;
+
+    overflow-y: scroll;
+    white-space: pre-line;
+}
+
+.contenttitle{
+    margin-left: auto;
+    margin-right: auto;
+}

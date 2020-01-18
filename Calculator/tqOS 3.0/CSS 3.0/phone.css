@@ -1,0 +1,46 @@
+/* @media only screen and (max-width: 320px){
+    #content{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    #calculator{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #tabclr{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #instruction{
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */
+
+@media only screen and (max-width: 414px){
+    #content{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    #calculator{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #tabclr{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #instruction{
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+
+/* @media only screen and (max-width: 768px){
+    #twotools{
+        display:flex;
+        flex-flow: column;
+    }
+} */

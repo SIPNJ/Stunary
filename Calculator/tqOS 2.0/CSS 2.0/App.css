@@ -1,0 +1,186 @@
+body{
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(37,43,64);
+}
+/* Chỉnh màu máy tính */
+
+#content{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator{
+    display: flex;
+    flex-flow: column;
+
+    height: 43rem;
+    width: 21rem;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 2em;
+}
+
+
+
+/* Chỉnh bảng hiển thị đáp án */
+#display{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    border-radius: 1em;
+    border-style: solid;
+    padding: 1em;
+
+    height: 5em;
+    width: 16em;
+
+    background-color: rgb(74, 119, 63); 
+    color: aliceblue; 
+
+    margin-left: auto;
+    margin-right: auto;
+}
+#operadisp{
+    text-align: left;
+
+    border-style: hidden;
+    border-color: rgb(74, 119, 63);
+    padding: 1em;
+
+    height: 2em;
+
+    background-color: rgb(74, 119, 63); 
+    color: aliceblue; 
+}
+#ansdisp{
+    text-align: right;
+
+    border-style: hidden;
+    border-color: rgb(74, 119, 63);
+    padding: 1em;
+
+    height: 2em;
+
+    background-color: rgb(74, 119, 63); 
+    color: rgb(238, 204, 225); 
+}
+
+/* 
+
+7 nút
+1/ #settingbuttons : id nhóm nút settingbuttons
+.set : class nhóm nút settingbuttons
+
+6 nút
+2/ #subsettingbuttons : id nhóm nút subsettingbuttons
+.subset : class nhóm nút subsettingbuttons
+
+6 nút
+3/ #trigonometry : id nhóm nút trigonometry
+.trig : class nhóm nút trigonometry
+
+4 nút
+4/ #collosal-operator : id nhóm collosal-operator
+.collo : class nhóm nút collosal-operator
+
+6 nút
+5/ #super-operator : nhóm nút super-operator
+.sup  : class nhóm nút super-operator
+
+5 nút
+6/ #numkeylin3 :
+7/ #numkeylin2 :
+8/ #numkeylin1 :
+9/ #numkeylin0 :
+
+.opera : class nhóm nút operator
+.num : class nhóm nút số
+.deact : class nhóm nút xoá
+
+*/
+
+/* Phím chức năng */
+#trigonometry,#collosal-operator,#super-operator,
+#settingbuttons,#subsettingbuttons{
+    display: table;
+
+    width: 21em;
+    height: 3em;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Phím số 1 2 3 4 + - x / */
+#numkeylin3,#numkeylin2,#numkeylin1,#numkeylin0{
+    display: table;
+
+    width: 21em;
+    height: 3em;
+
+    margin-right: auto;
+    margin-left: auto;    
+}
+
+
+/* Chỉnh để nhóm 7 nút (class) có kích thước */
+.set{
+    margin: 1vh;
+    border-radius: 0em;
+    padding: 0.25em;
+
+    width: 5vh;
+    height: 5vh;
+
+    background-color: rgb(64, 224, 208, 0.521);
+}
+/* Chỉnh để nhóm 6 nút (class) có kích thước */
+.doc{
+    margin: 4px;
+    border-radius: 0em;
+    padding: 1em;
+
+    width: 5vh;
+    height: 5vh;
+
+    /* width: 2.7em;
+    height: 0.9em; */
+
+    background-color: black;
+    color: blanchedalmond;
+}
+
+/* Chỉnh để nhóm 5 nút (class) có kích thước */
+.num,.collo,.deact,.opera{
+    margin: 0.75em;
+    border-radius: 0em;
+    padding: 1em;
+
+    /* width: 2.7em;
+    height: 0.9em; */
+}
+/* Chỉnh từng nhóm nhỏ */
+
+.num{
+    background-color: seashell;
+}
+.opera{
+    background-color: rgb(128, 39, 24);
+    color: whitesmoke;
+}
+.deact{
+    background-color: tomato;
+}
+
+td{
+    width: 2em;
+    height: 2em;
+
+}
+
+

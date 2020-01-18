@@ -1,0 +1,201 @@
+body{
+    display: flex;
+    flex-flow: column;
+    background-color: burlywood;
+}
+
+#content{
+    display: flex;
+    flex-flow: row;
+    overflow: scroll;
+}
+
+#calculator{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    border: black solid;
+    border-radius: 2em;
+
+    height: 41em;
+    margin-left: 1rem;
+}
+
+#realcalc{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#display{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    border-radius: 1em;
+    border-style: solid;
+    padding: 1em;
+
+    height: 5em;
+    width: 16em;
+
+    background-color: rgb(74, 119, 63); 
+
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+#setdisp{
+    display: grid;
+    grid-template-columns:  1em 1em 1em 3em 3em 3.5em 4.5em 3.2em 3em 1em 1em 1em 2.5em 2.5em 3em 3em;
+                            1   2   3   4   5   6     7   8     9   10  11  12  13  14  15  18  
+                            S   A   M   STO RCL STAT CMLX MTX VCT  D   R   G   FIX SCI Math  Disp     
+    font-size: 0.35em;
+    grid-column-gap: 0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(30, 255, 79, 0.336) ;
+}
+
+.sh,.lo{
+    background-color: rgba(94, 255, 30, 0.24) ;
+    color: black;
+}
+*/
+
+#realdisp{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#operadisp{
+    text-align: left;
+
+    border-style: hidden;
+    border-color: rgb(74, 119, 63);
+    padding: 1em;
+
+    height: 2em;
+
+    background-color: rgb(74, 119, 63); 
+    color: aliceblue; 
+
+    overflow-x: scroll;
+    white-space: pre;
+}
+#ansdisp{
+    text-align: right;
+
+    border-style: hidden;
+    border-color: rgb(74, 119, 63);
+    padding: 1em;
+
+    height: 2em;
+
+    background-color: rgb(74, 119, 63); 
+    color: rgb(238, 204, 225); 
+}
+
+#sixbuttons{
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em 3em 3em;
+    grid-template-rows: 2em 2em 2em 2em 2em;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    margin: 0.5em 1em 0em 1em;
+}
+
+#fivebuttons{
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em 3em;
+    grid-template-rows: 2em 2em 2em 2em;
+    grid-column-gap: 1.25em;
+    grid-row-gap: 1em;
+
+    margin: 1em 1em 1em 1em;
+}
+
+.set,.doc{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+}
+
+.num,.deact,.opera{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4em;
+}
+
+.num,.opera{
+    background-color: rgb(226, 223, 185);
+    color: rgb(50, 50, 50);
+    /* border-color: black; */
+}
+
+.deact{
+    background-color: rgb(255, 99, 71);
+    color: rgb(50, 50, 50);
+    /* border-color: black; */
+}
+
+.doc{
+    background-color: black;
+    color: whitesmoke;
+    /* border-color: cornsilk; */
+}
+
+.set{
+    background-color: rgba(30, 143, 255, 0.651);
+    /* border-color: cornsilk; */
+}
+
+/* #cursor{
+    animation-duration: 1s ;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1}
+} */
+
+#setdisp{
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em 3em 3em; 
+    grid-template-rows: 2em 2em;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+
+    font-size: 12px;
+}
+
+.lo,.sh{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.5px black solid;
+    border-radius: 2em;
+    background-color: honeydew;
+}
+
+#Sbtn,#Abtn,#HYPbtn,
+#Dbtn,#Gbtn,#stobtn,
+#fixbtn,#scibtn,
+#cmlxbtn,#vctbtn,#matbtn{
+    opacity: 0;
+}
