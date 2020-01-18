@@ -6,7 +6,8 @@ body{
 
 #contenttitle{
     display: flex;
-    flex-flow: column;;
+    flex-flow: column;
+    align-items: center;
 }
 #periodic{
     display: grid;
