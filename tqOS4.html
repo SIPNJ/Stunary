@@ -137,11 +137,12 @@
                     <b class="name" style="font-size: 3em; margin: 0.5em;">Calculator style</b>
                     <div id="colorsetting">
                         <div id="bgclr">
-                            <center style="margin: 1em;"> 
+                            <center style="margin: 0.4em;"> 
                                 <div> Enter RGB </div> 
                                 <div> background color </div>
                             </center>
                             <input type="text" class="bgclr" id = "bgcalccolor" placeholder="Calculator">
+                            <input type="text" class="bgclr" id = "bgdispcolor" placeholder="Calculator display">
                             <input type="text" class="bgclr" id = "bgsetcolor" placeholder="Setting buttons">
                             <input type="text" class="bgclr" id = "bgdoccolor" placeholder="Documentary buttons">
                             <input type="text" class="bgclr" id = "bgnumcolor" placeholder="Number keyboard ">
@@ -151,11 +152,12 @@
                         </div>
                         <div style="margin: 1rem;"></div>
                         <div id="txtclr">
-                            <center style="margin: 1em;"> 
+                            <center style="margin: 0.4em;"> 
                                 <div> Enter RGB </div>
                                 <div> text color </div> 
                             </center>
-                            <input type="text" class="txtclr" id = "calccolor" placeholder="Calculator display">
+                            <input type="text" class="txtclr" id = "operadispcolor" placeholder="Calculator typing display">
+                            <input type="text" class="txtclr" id = "ansdispcolor" placeholder="Calculator answer display">
                             <input type="text" class="txtclr" id = "setcolor" placeholder="Setting buttons">
                             <input type="text" class="txtclr" id = "doccolor" placeholder="Documentary buttons">
                             <input type="text" class="txtclr" id = "numcolor" placeholder="Number keyboard ">
@@ -253,10 +255,45 @@
                         </div>
                         <div class="menucontent" id="supopera"> 
                             <h2 class="contenttitle"> Super Operator </h2>
-                            <h3></h3>
-                            <h3></h3>
-                            <h3></h3>
-                            <h3></h3>
+
+                            <h3> Power </h3>
+                            <p> To power, you need to click the power sign (^) button and the display will show the power symbol.</p>
+                            <p> Also, if you want to square, just click (^2) button and the display will show.</p>
+                            <p> Rememner these one:
+                                <strong>Shift</strong> + <strong>^</strong> = <strong>%</strong>
+                                <strong>Alpha</strong> + <strong>^</strong> = <strong>‰</strong>
+                            </p>
+
+                            <h3> Square root</h3>
+                            <p> To square root, you need to click the square root sign (√) button and the display will show the plus symbol.</p>
+
+                            <h3>Logarithm</h3>
+                            <p>Simple <strong>Log</strong> button is decimal logarithm.</p>
+                            <p><strong>Ln</strong> button is Napierian logarithm or natural lagarithm.</p>
+                            <p><strong>Loga</strong> button is logarithm with random base, it should be typed as <strong>Loga(a,b)</strong> where a is base and b is anti-logarithm.</p>
+
+                            <h3> Variable</h3>
+                            <p> To assign number to variable, click <strong>Shift</strong> and number button from 1 to 9 or just simply click only <strong>M+</strong> button.</p>
+                            <p> To recall variable, click <strong>Alpha</strong> and a number button from 1 to 9 or <strong>M+</strong> button. </p>
+                            <p> Remember these one:</p>
+                            <div>1 : A</div>
+                            <div>2 : B</div>
+                            <div>3 : C</div>
+                            <div>4 : D</div>
+                            <div>5 : E</div>
+                            <div>6 : F</div>
+                            <div>7 : G</div>
+                            <div>8 : H</div>
+                            <div>9 : I</div>
+
+                            <h3>GCD and LCM</h3>
+                            <p>GCD is Greatest Common Divisor, it is also known as Highest Common Factor - LCF</p>
+                            <p>LCM is Least Common Multiple</p>
+                            <p>Remember these one:
+                                <strong>Alpha</strong> + <strong>x</strong> = <strong>GCD</strong>
+                                <strong>Alpha</strong> + <strong>÷</strong> = <strong>LCM</strong>
+                            </p>
+                            <p>Note: GCD and LCM is just for 2 numbers, for 3 or more mubers, we should type as <strong>GCD(a,GCD(b,c))</strong> or <strong>LCM(a,LCM(b,LCM(c,LCM(d,e))))</strong></p>
                         </div>
                         <div class="menucontent" id="colopera"></div>
                         <div class="menucontent" id="trigopera">
@@ -276,7 +313,7 @@
                             <p> If you want inverse reciprocal hyperbolic trigonometry operators, just simply click <strong>HYP Button + Alpha Button + Shift Button </strong> </p>
                             <h3> Inverse Trigonometry </h3>
                         </div>
-                        <div></div>
+                        <div class="menucontent"></div>
                     </div>
                 </div>
             </div>
@@ -286,7 +323,6 @@
     
     <!-- <iframe src="https://www.desmos.com/calculator"></iframe> -->
     <script src="Calculator/tqOS 4.0/Javascript 4.0/App.js"></script>
-    <script src="Calculator/tqOS 4.0/Javascript 4.0/Slide.js"></script>
     <script src="Calculator/tqOS 4.0/Javascript 4.0/Calccolor.js"></script>
     <script src="Calculator/tqOS 4.0/Javascript 4.0/Instruct.js"></script>
 </body>

@@ -1,3 +1,32 @@
+// color slider picker
+
+var redval = document.getElementById("redval");
+var greenval = document.getElementById("greenval");
+var blueval = document.getElementById("blueval");
+
+var slidered = document.getElementById("slideRed");
+var slidegreen = document.getElementById("slideGreen");
+var slideblue = document.getElementById("slideBlue");
+
+slidered.oninput = function(){
+    redval.innerHTML = slidered.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
+    document.getElementById("Rclr").style.backgroundColor = `rgb(${slidered.value},0,0)`;
+}
+slidegreen.oninput = function(){
+    greenval.innerHTML = slidegreen.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
+    document.getElementById("Gclr").style.backgroundColor = `rgb(0,${slidegreen.value},0)`;
+}
+slideblue.oninput = function(){
+    blueval.innerHTML = slideblue.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
+    document.getElementById("Bclr").style.backgroundColor = `rgb(0,0,${slideblue.value})`;
+}
+
+
+// color changer
+
 var btn = document.getElementById("clickbtn");
 var resetclr = document.getElementById("resetclr");
 
@@ -27,13 +56,15 @@ resetclr.addEventListener("click", function(){
 
 btn.addEventListener("click", function(){
     var bgcalccolor=document.getElementById("bgcalccolor").value;
+    var bgdispcolor=document.getElementById("bgdispcolor").value;
     var bgsetccolor=document.getElementById("bgsetcolor").value;
     var bgdocccolor=document.getElementById("bgdoccolor").value;
     var bgnumcolor=document.getElementById("bgnumcolor").value;
     var bgdeactcolor=document.getElementById("bgdeactcolor").value;
     var bgoperacolor=document.getElementById("bgoperacolor").value;
 
-    var calccolor=document.getElementById("calccolor").value;
+    var operadispcolor=document.getElementById("operadispcolor").value;
+    var ansdispcolor=document.getElementById("ansdispcolor").value;
     var setcolor=document.getElementById("setcolor").value;
     var doccolor=document.getElementById("doccolor").value;
     var numcolor=document.getElementById("numcolor").value;
@@ -41,6 +72,12 @@ btn.addEventListener("click", function(){
     var operacolor=document.getElementById("operacolor").value;
 
     document.getElementById("calculator").style.backgroundColor = `rgb(${bgcalccolor})`;
+    document.getElementById("realdisp").style.backgroundColor = `rgb(${bgdispcolor})`;
+    document.getElementById("operadisp").style.backgroundColor = `rgb(${bgdispcolor})`;
+    document.getElementById("ansdisp").style.backgroundColor = `rgb(${bgdispcolor})`;
+    document.getElementById("operadisp").style.color = `rgb(${operadispcolor})`;
+    document.getElementById("ansdisp").style.color = `rgb(${ansdispcolor})`;
+
     for(let i=0 ; i<8 ; i++){
         document.getElementsByClassName("set")[i].style.backgroundColor = `rgb(${bgsetccolor})`;
         document.getElementsByClassName("set")[i].style.color = `rgb(${setcolor})`;

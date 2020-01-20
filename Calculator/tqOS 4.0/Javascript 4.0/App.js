@@ -54,7 +54,6 @@ let ansdisp = document.getElementById("ansdisp");
 // var alpha = document.getElementById("Alpha");
 // var alpha = document.getElementById("Alpha");
 // var alpha = document.getElementById("Alpha");
-// var ans = document.getElementById("Answer");
 // var degree = document.getElementById("degree");
 
 
@@ -720,7 +719,7 @@ function GCD(num,denom){
 
 function LCM(num,denom){
     for (let factor = denom; factor > 0; factor++) {
-        if ((num % factor == 0) && (denom % factor == 0)) {
+        if ((factor % num == 0) && (factor % denom == 0)) {
             return factor;
         }
     }
@@ -810,8 +809,10 @@ hyp.addEventListener("click", function(){
 })
 
 // phim luu tru
+var ans = document.getElementById("Answer");
 var storem = document.getElementById("storem");
 
+var storageans = 0;
 var StorageM = 0;
 
 var StorageA = 0;
@@ -824,6 +825,19 @@ var StorageG = 0;
 var StorageH = 0;
 var StorageI = 0;
 
+ans.addEventListener("click", function(){
+    if (shiftStatus == false && alphaStatus == false){
+        ansans.push(storageans);
+        newjoint.push(`Ans`);
+        operadisp.value = newjoint.join(``);
+    } else if (shiftStatus == true && alphaStatus == false){
+
+    } else if (shiftStatus == false && alphaStatus == true){
+
+    } else if (shiftStatus == true && alphaStatus == true){
+        
+    }
+});
 
 storem.addEventListener("click", function(){
     if(shiftStatus == false && alphaStatus == false){
@@ -841,8 +855,8 @@ storem.addEventListener("click", function(){
 
     } else if (shiftStatus == true && alphaStatus == true){
         
-
-}});
+    }
+});
 
 
 // UI
@@ -904,8 +918,14 @@ calc.addEventListener("click", function(){
     // ansans = ansans.replace(/Ln/gi, "Math.log");
     // // ansans = ansans.replace(/Loga/gi,"logasa");
     // ansans = ansans.replace(/√/gi, "Math.sqrt");
-    console.log(ansans.join(``));
-    ansdisp.value = eval(ansans.join(``));
+    try{
+        ansdisp.value = eval(ansans.join(``));
+        storageans = ansdisp.value;
+        console.log(storageans);
+    }
+    catch(err){
+        ansdisp.value = err.message;
+    }
 });
 
 // var calculator = document.getElementById("calculator");

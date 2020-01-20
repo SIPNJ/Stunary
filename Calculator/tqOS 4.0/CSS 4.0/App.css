@@ -81,7 +81,8 @@ body{
     height: 2em;
 
     background-color: rgb(74, 119, 63); 
-    color: aliceblue; 
+    color: rgb(255, 255, 255); 
+    font-weight: 900;
 
     overflow-x: scroll;
     white-space: pre;
@@ -96,7 +97,8 @@ body{
     height: 2em;
 
     background-color: rgb(74, 119, 63); 
-    color: rgb(238, 204, 225); 
+    color: rgb(255, 255, 255); 
+    font-weight: 900;
 }
 
 #sixbuttons{
@@ -124,6 +126,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 2em;
+    cursor: pointer;
 }
 
 .num,.deact,.opera{
@@ -132,6 +135,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 4em;
+    cursor: pointer;
 }
 
 .num,.opera{
