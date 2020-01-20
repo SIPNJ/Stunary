@@ -4,7 +4,12 @@ body{
     background-color: blanchedalmond;
 }
 
+#content{
+    position: relative;
+    overflow-x: scroll;
+}
 table{
+    position: relative;
     margin: 1em;
     transform: scale(0.9,0.9);
 }
@@ -34,7 +39,9 @@ table{
 }
 
 #ref{
-    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 5em 10em 10em 10em 10em 10em ;
     grid-template-rows: 5em;

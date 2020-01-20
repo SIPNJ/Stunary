@@ -401,7 +401,9 @@ multiply.addEventListener("click", function(){
         newjoint.push(`P`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
-
+        ansans.push(`GCD(`);
+        newjoint.push(`GCD(`);
+        operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
     }
@@ -416,7 +418,9 @@ divide.addEventListener("click", function(){
         newjoint.push(`C`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
-
+        ansans.push(`LCM(`);
+        newjoint.push(`LCM(`);
+        operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
         
     }
@@ -663,7 +667,7 @@ power.addEventListener("click", function(){
 // dinh nghia cac collosal operator khong co san trong javscript
 // ham logarith
 function logasa(a,b){
-    return Math.log(a)/Math.log(b);    
+    return Math.log(b)/Math.log(a);    
 };
 //ham mo rong luong giac
 function secant(a){
@@ -705,6 +709,22 @@ function arccsch(a){
 function arccoth(a){
     return (Math.log((a+1)/(a-1)))/2;
 };
+
+function GCD(num,denom){
+    for (let factor = num; factor > 0; factor--) {
+        if ((num % factor == 0) && (denom % factor == 0)) {
+            return factor;
+        }
+    }
+}
+
+function LCM(num,denom){
+    for (let factor = denom; factor > 0; factor++) {
+        if ((num % factor == 0) && (denom % factor == 0)) {
+            return factor;
+        }
+    }
+}
 // done
 
 // function factorial(){
@@ -894,3 +914,5 @@ mode.addEventListener("click", function(){
     console.log(operadisp.style);
     console.log(ansdisp.style)
 });
+
+
