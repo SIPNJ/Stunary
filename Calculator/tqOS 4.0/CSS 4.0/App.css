@@ -117,8 +117,6 @@ body{
     grid-template-rows: 1em 2em 1em 2em 1em 2em 1em 2em;
     grid-column-gap: 0.625em;
     grid-row-gap: 0.25em;
-
-    margin: 1em 1em 1em 1em;
 }
 
 .set,.doc{
