@@ -7,7 +7,6 @@ body{
 #contenttitle{
     display: flex;
     flex-flow: column;
-    overflow-x: scroll;
 }
 #periodic{
     display: grid;
@@ -17,6 +16,8 @@ body{
     /* grid-gap: 1em; */
     text-align: center;
     border: black;
+
+    overflow-x: scroll;
 }
 /* #periodic div{
     border: black;
