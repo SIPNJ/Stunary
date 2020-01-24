@@ -32,16 +32,16 @@
         <div id="periodic">
             <div id="title">PERIODIC TABLE</div>
 
-            <div class="numcol"></div>
-            <div class="numcol" id="alkali">IA</div>
-            <div class="numcol" id="alkaline">IIA</div>
+            <button onclick="conte(this)" class="numcol"></button>
+            <button onclick="conte(this)" class="numcol" id="alkali">IA</button>
+            <button onclick="conte(this)" class="numcol" id="alkaline">IIA</button>
             <!-- <div class="space" id="space0"></div> -->
-            <div class="numcol">IIIA</div>
-            <div class="numcol">IVA</div>        
-            <div class="numcol">VA</div>
-            <div class="numcol">VIA</div>
-            <div class="numcol">VIIA</div>
-            <div class="numcol">VIIIA</div>
+            <button onclick="conte(this)" class="numcol">IIIA</button>
+            <button onclick="conte(this)" class="numcol">IVA</button>        
+            <button onclick="conte(this)" class="numcol">VA</button>
+            <button onclick="conte(this)" class="numcol">VIA</button>
+            <button onclick="conte(this)" class="numcol">VIIA</button>
+            <button onclick="conte(this)" class="numcol">VIIIA</button>
 
             <!-- <div></div>
             <div class="namcol" id="alkali"> Alkali Metal </div>
@@ -76,14 +76,14 @@
 
             <button onclick="conte(this)" class="element sbl" id="Na">Na</button>
             <button onclick="conte(this)" class="element sbl" id="Mg">Mg</button>
-            <div class="numcol">IIIB</div>
-            <div class="numcol">IVB</div>
-            <div class="numcol">VB</div>
-            <div class="numcol">VIB</div>
-            <div class="numcol">VIIB</div>
-            <div class="numcol" id="B8">VIIIB</div>
-            <div class="numcol">IB</div>
-            <div class="numcol">IIB</div>
+            <div onclick="conte(this)" class="numcol">IIIB</div>
+            <div onclick="conte(this)" class="numcol">IVB</div>
+            <div onclick="conte(this)" class="numcol">VB</div>
+            <div onclick="conte(this)" class="numcol">VIB</div>
+            <div onclick="conte(this)" class="numcol">VIIB</div>
+            <div onclick="conte(this)" class="numcol" id="B8">VIIIB</div>
+            <div onclick="conte(this)" class="numcol">IB</div>
+            <div onclick="conte(this)" class="numcol">IIB</div>
             <!-- ten mot so kim loai chuyen tiep -->
             <button onclick="conte(this)" class="element pbl" id="Al">Al</button>
             <button onclick="conte(this)" class="element pbl" id="Si">Si</button>
@@ -213,39 +213,31 @@
         </div>
         <div id="cap">
             <div id="elementcontent">
-                <div id="eletop">
-                    <div id="elelef">
-                        <div id="atomnum"></div>
-                        <div id="elesym"></div>
-                        <div id="config"></div>
+                <div class="eletop">
+                    <div class="elelef">
+                        <div class="atomnum">Atomic Number</div>
+                        <div class="elesym">Element Symbol</div>
+                        <div class="config">Electron Configuration</div>
                     </div>
-                    <div id="elerig">
-                        <div id="elemass"></div>
-                        <div id="elenam"></div>
+                    <div class="elerig">
+                        <div class="elemass">Atomic Mass</div>
+                        <div class="elenam">Element Name</div>
                     </div>
                 </div>
-                <div id="elebot">
-                    <div id="elenegati"></div>
-                    <div id="boil"></div>
-                    <div id="melt"></div>
-                    <div id="fusion"></div>
-                    <div id="vapor"></div>
+                <br style="height: 1px;">
+                <div class="elebot">
+                    <div class="elenegati">Electronegativity</div>
+                    <!-- <div class="boil">Boiling Point</div>
+                    <div class="melt">Melting Point</div> -->
+                    <div class="fusion"></div>
+                    <div class="vapor"></div>
                 </div>
             </div>
-
             <div id="chuthich">
-                <div id="churig">
-                    <div id="blclr1"></div>
-                    <div id="blclr2"></div>
-                    <div id="blclr3"></div>
-                    <div id="blclr4"></div>
-                </div>
-                <div id="chulef">
-                    <div id="bltxt1"></div>
-                    <div id="bltxt2"></div>
-                    <div id="bltxt3"></div>
-                    <div id="bltxt4"></div>
-                </div>
+                <div class="sbl chu">s block</div>
+                <div class="pbl chu">p block</div>
+                <div class="dbl chu">d block</div>
+                <div class="fbl chu">f block</div>
             </div>
         </div>
     </div>

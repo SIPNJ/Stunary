@@ -1,10 +1,11 @@
 // variable
-var atomnum = document.getElementById("atomnum");
-var elesym = document.getElementById("elesym");
-var elenam = document.getElementById("elenam");
-var elemass = document.getElementById("elemass");
-var elenegati = document.getElementById("elenegati");
-var config = document.getElementById("config");
+var atomnum = document.getElementsByClassName("atomnum")[0];
+var elesym = document.getElementsByClassName("elesym")[0];
+var elenam = document.getElementsByClassName("elenam")[0];
+var elemass = document.getElementsByClassName("elemass")[0];
+var elenegati = document.getElementsByClassName("elenegati")[0];
+var config = document.getElementsByClassName("config")[0];
+var title = document.getElementById("title");
 
 var eleconte = document.getElementById("elementcontent");
 
@@ -171,7 +172,7 @@ var varelement = {
         elenam: "Lithium",
         elesym: "Li",
         elemass: "7",
-        elenegati: "1",
+        elenegati: "+1",
         config: "[He]"+"2s"+"1".sup(),
         block: `s`,
     },
@@ -179,8 +180,8 @@ var varelement = {
         atomnum: "4",
         elenam: "Berilyum",
         elesym: "Be",
-        // elemass: "",
-        // elenegati: "1",
+        elemass: "9",
+        elenegati: "+2",
         config: "[He]"+"2s"+"2".sup(),
         block: `s`,
     },
@@ -188,8 +189,8 @@ var varelement = {
         atomnum: "5",
         elenam: "Boron",
         elesym: "B",
-        // elemass: "9",
-        // elenegati: "",
+        elemass: "11",
+        elenegati: "+3",
         config: "[He]"+"2s"+"2".sup()+"2p"+"1".sup(),
         block: `p`,
     },
@@ -198,7 +199,7 @@ var varelement = {
         elenam: "Carbon",
         elesym: "C",
         elemass: "12",
-        // elenegati: "1",
+        elenegati: "-4,-3,-2,-1,+1,+2,+3,+4",
         config: "[He]"+"2s"+"1".sup()+"2p"+"2".sup(),
         block: `p`,
     },
@@ -207,7 +208,7 @@ var varelement = {
         elenam: "Nitrogen",
         elesym: "N",
         elemass: "14",
-        // elenegati: "1",
+        elenegati: "-3,+1,+2,+3,+4,+5",
         config: "[He]"+"2s"+"1".sup()+"2p"+"3".sup(),
         block: `p`,
     },
@@ -216,16 +217,16 @@ var varelement = {
         elenam: "Oxygen",
         elesym: "O",
         elemass: "16",
-        // elenegati: "1",
+        elenegati: "-2,-1,+2",
         config: "[He]"+"2s"+"1".sup()+"2p"+"4".sup(),
         block: `p`,
     },
     F: {
         atomnum: "9",
-        elenam: "Florine",
+        elenam: "Fluorine",
         elesym: "F",
         elemass: "19",
-        // elenegati: "1",
+        elenegati: "-1",
         config: "[He]"+"2s"+"1".sup()+"2p"+"5".sup(),
         block: `p`,
     },
@@ -270,7 +271,7 @@ var varelement = {
         elenam: "Silicon",
         elesym: "Si",
         elemass: "28",
-        // elenegati: "+3",
+        elenegati: "+4",
         config: "[Ne]"+"3s"+"2".sup()+"3p"+"2".sup(),
         block: `p`,
     },
@@ -279,7 +280,7 @@ var varelement = {
         elenam: "Phosphorus",
         elesym: "P",
         elemass: "31",
-        // elenegati: "1",
+        elenegati: "-3,+3,+5",
         config: "[Ne]"+"3s"+"2".sup()+"3p"+"3".sup(),
         block: `p`,
     },
@@ -288,7 +289,7 @@ var varelement = {
         elenam: "Sulphur",
         elesym: "S",
         elemass: "32",
-        // elenegati: "1",
+        elenegati: "-2,-1,+4,+6",
         config: "[Ne]"+"3s"+"2".sup()+"3p"+"4".sup(),
         block: `p`,
     },
@@ -332,8 +333,8 @@ var varelement = {
         atomnum: "21",
         elenam: "Scandium",
         elesym: "Sc",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "45",
+        elenegati: "+3",
         config: "[Ar]"+"3d"+"1".sup()+"4s"+"2".sup(),
         block: `d`,
     },
@@ -341,8 +342,8 @@ var varelement = {
         atomnum: "22",
         elenam: "Titanium",
         elesym: "Ti",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "48",
+        elenegati: "+2,+3,+4",
         config: "[Ar]"+"3d"+"2".sup()+"4s"+"2".sup(),
         block: `d`,
     },
@@ -350,8 +351,8 @@ var varelement = {
         atomnum: "23",
         elenam: "Vanadium",
         elesym: "V",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "51",
+        elenegati: "+2,+4,+5",
         config: "[Ar]"+"3d"+"3".sup()+"4s"+"2".sup(),
         block: `d`,
     },
@@ -360,132 +361,482 @@ var varelement = {
         atomnum: "24",
         elenam: "Crom",
         elesym: "Cr",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "52",
+        elenegati: "+2,+3,+4,+6",
         config: "[Ar]"+"3d"+"5".sup()+"4s"+"1".sup(),
+        block: "d",
     },
     Mn: {
         atomnum: "25",
         elenam: "Manganese",
         elesym: "Mn",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "55",
+        elenegati: "+2,+3,+4,+6,+7",
         config: "[Ar]"+"3d"+"5".sup()+"4s"+"2".sup(),
+        block: "d",
     },
     Fe: {
         atomnum: "26",
         elenam: "Iron",
         elesym: "Fe",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "56",
+        elenegati: "+2,+3",
         config: "[Ar]"+"3d"+"6".sup()+"4s"+"2".sup(),
+        block: "d",
     },
     Co: {
         atomnum: "27",
         elenam: "Cobalt",
         elesym: "Co",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "59",
+        elenegati: "+2",
         config: "[Ar]"+"3d"+"7".sup()+"4s"+"2".sup(),
+        block: "d",
     },
     Ni: {
         atomnum: "28",
         elenam: "Nikel",
         elesym: "Ni",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "59",
+        elenegati: "+2",
         config: "[Ar]"+"3d"+"8".sup()+"4s"+"2".sup(),
+        block: "d",
     },
     Cu: {
         atomnum: "29",
         elenam: "Copper",
         elesym: "Ti",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "64",
+        elenegati: "+1,+2",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"1".sup(),
+        block: "d",
     },
     Zn: {
         atomnum: "30",
         elenam: "Zinc",
         elesym: "Zn",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "65",
+        elenegati: "+2",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup(),
+        block: "d",
     },
     Ga: {
         atomnum: "31",
         elenam: "Galium",
         elesym: "Ga",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "70",
+        elenegati: "+3",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"1",
+        block: "p",
     },
     Ge: {
         atomnum: "32",
         elenam: "Gecmanium",
         elesym: "Ge",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "73",
+        elenegati: "+2,+4",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"2",
+        block: "p",
     },
     As: {
         atomnum: "33",
         elenam: "Arsenic",
         elesym: "As",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "75",
+        elenegati: "-3,+3,+5",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"3",
+        block: "p",
     },
     Se: {
         atomnum: "34",
         elenam: "Selenium",
         elesym: "Se",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "79",
+        elenegati: "-2,+4,+6",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"4",
+        block: "p",
     },
     Br: {
         atomnum: "35",
         elenam: "Bromine",
         elesym: "Br",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "80",
+        elenegati: "-1,+1,+5",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"5",
+        block: "p",
     },
     Kr: {
         atomnum: "36",
         elenam: "Kryptonite",
         elesym: "Kr",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "84",
+        elenegati: "+2,+4",
         config: "[Ar]"+"3d"+"10".sup()+"4s"+"2".sup()+"4p"+"6",
+        block: "p",
     },
     Rb: {
         atomnum: "37",
         elenam: "Rubidium",
         elesym: "Rb",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "85",
+        elenegati: "+1",
         config: "[Kr]"+"5s"+"1".sup(),
+        block: "s",
     },
     Sr: {
         atomnum: "38",
         elenam: "Strontium",
         elesym: "Sr",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "88",
+        elenegati: "+2",
         config: "[Kr]"+"5s"+"2".sup(),
+        block: "s",
     },
     Y: {
         atomnum: "39",
         elenam: "Yttrium",
         elesym: "Y",
-        // elemass: "7",
-        // elenegati: "1",
+        elemass: "89",
+        elenegati: "+3",
         config: "[Kr]"+"4d"+"1".sup()+"5s"+"2".sup(),
+        block: "d",
+    },
+    Zr: {
+        atomnum: "40",
+        elenam: "Zirconium",
+        elesym: "Zr",
+        elemass: "91",
+        elenegati: "+4",
+        config: "[Kr]"+"4d"+"2".sup()+"5s"+"2".sup(),
+        block: "d",
+    },
+    Nb: {
+        atomnum: "41",
+        elenam: "Niobium",
+        elesym: "Nb",
+        elemass: "93",
+        elenegati: "+5",
+        config: "[Kr]"+"4d"+"4".sup()+"5s"+"1".sup(),
+        block: "d",
+    },
+    Mo: {
+        atomnum: "42",
+        elenam: "Molybdenum",
+        elesym: "Mo",
+        elemass: "96",
+        elenegati: "+2,+3,+4,+6",
+        config: "[Kr]"+"4d"+"5".sup()+"5s"+"1".sup(),
+        block: "d",
+    },
+    Tc: {
+        atomnum: "43",
+        elenam: "Technetium",
+        elesym: "Tc",
+        elemass: "",
+        elenegati: "+3,+4,+7",
+        config: "[Kr]"+"4d"+"5".sup()+"5s"+"2".sup(),
+        block: "d",
+    },
+    Ru: {
+        atomnum: "44",
+        elenam: "Ruthenium",
+        elesym: "Ru",
+        elemass: "101",
+        elenegati: "+2,+3,+4,+8",
+        config: "[Kr]"+"4d"+"7".sup()+"5s"+"1".sup(),
+        block: "d",
+    },
+    Rh: {
+        atomnum: "45",
+        elenam: "Rhodium",
+        elesym: "Rh",
+        elemass: "103",
+        elenegati: "+2,+3,+2",
+        config: "[Kr]"+"4d"+"8".sup()+"5s"+"2".sup(),
+        block: "d",
+    },
+    Pd: {
+        atomnum: "46",
+        elenam: "Paladium",
+        elesym: "Pd",
+        elemass: "106",
+        elenegati: "+2,+4",
+        config: "[Kr]"+"4d"+"10".sup(),
+        block: "d",
+    },
+    Ag: {
+        atomnum: "47",
+        elenam: "Silver",
+        elesym: "Ag",
+        elemass: "108",
+        elenegati: "+1",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"1".sup(),
+        block: "d",
+    },
+    Cd: {
+        atomnum: "48",
+        elenam: "Cadimium",
+        elesym: "Cd",
+        elemass: "112",
+        elenegati: "+2",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup(),
+        block: "d",
+    },
+    In: {
+        atomnum: "49",
+        elenam: "Indium",
+        elesym: "In",
+        elemass: "115",
+        elenegati: "+3",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"1".sup(),
+        block: "p",
+    },
+    Sn: {
+        atomnum: "50",
+        elenam: "Tin",
+        elesym: "Sn",
+        elemass: "119",
+        elenegati: "+2,+4",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"2".sup(),
+        block: "p",
+    },
+    Sb: {
+        atomnum: "51",
+        elenam: "Antimony",
+        elesym: "Sb",
+        elemass: "122",
+        elenegati: "-3,+3,+5",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"3".sup(),
+        block: "p",
+    },
+    Te: {
+        atomnum: "52",
+        elenam: "Tellurium",
+        elesym: "Te",
+        elemass: "128",
+        elenegati: "-2,+4,+6",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"4".sup(),
+        block: "p",
+    },
+    I: {
+        atomnum: "53",
+        elenam: "Iodine",
+        elesym: "I",
+        elemass: "127",
+        elenegati: "-1,+1,+3,+5,+7,+8",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"5".sup(),
+        block: "p",
+    },
+    Xe: {
+        atomnum: "54",
+        elenam: "Xenon",
+        elesym: "Xe",
+        elemass: "131",
+        elenegati: "+2,+4,+6",
+        config: "[Kr]"+"4d"+"10".sup()+"5s"+"2".sup()+"5p"+"6".sup(),
+        block: "p",
+    },
+    Cs: {
+        atomnum: "55",
+        elenam: "Caesium",
+        elesym: "Cs",
+        elemass: "133",
+        elenegati: "+1",
+        config: "[Xe]"+"6s"+"1".sup(),
+        block: "s",
+    },
+    Ba: {
+        atomnum: "56",
+        elenam: "Barium",
+        elesym: "Ba",
+        elemass: "137",
+        elenegati: "+2",
+        config: "[Xe]"+"6s"+"2".sup(),
+        block: "s",
+    },
+    // Lanthanoid
+    // 
+    Ba: {
+        atomnum: "56",
+        elenam: "Barium",
+        elesym: "Ba",
+        elemass: "137",
+        elenegati: "+2",
+        config: "[Xe]"+"6s"+"2".sup(),
+        block: "s",
     },
 
 
+
+
+
+
+
+
+
+    // group
+    IA: {
+        atomnum: "1",
+        elenam: "Lithium Family",
+        elesym: "IA",
+        elemass: "A",
+        elenegati: "Alkali Metal",
+        config: "",
+        block: "Li",
+    },
+    IIA: {
+        atomnum: "2",
+        elenam: "Berilyum Family",
+        elesym: "IIA",
+        elemass: "A",
+        elenegati: "Alkaline Earth Metal",
+        config: "",
+        block: "Be",
+    },
+    IIIB: {
+        atomnum: "3",
+        elenam: "Scandium Family",
+        elesym: "IIIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Sc",
+    },
+    IVB: {
+        atomnum: "4",
+        elenam: "Titanium Family",
+        elesym: "IVB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Ti",    
+    },
+    VB: {
+        atomnum: "5",
+        elenam: "Vanadium Family",
+        elesym: "VB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "V",    
+    },
+    VIB: {
+        atomnum: "6",
+        elenam: "Chromium Family",
+        elesym: "VIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Cr",    
+    },
+    VIIB: {
+        atomnum: "7",
+        elenam: "Manganese Family",
+        elesym: "VIIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Mn",    
+    },
+    VIIIB: {
+        atomnum: "8",
+        elenam: "Iron Family",
+        elesym: "VIIIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Fe",    
+    },
+    IXB: {
+        atomnum: "9",
+        elenam: "Cobalt Family",
+        elesym: "VIIIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Co",    
+    },
+    XB: {
+        atomnum: "10",
+        elenam: "Nikel Family",
+        elesym: "VIIIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Ni",    
+    },
+    IB: {
+        atomnum: "11",
+        elenam: "Copper Family",
+        elesym: "IB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Cu",    
+    },
+    IIB: {
+        atomnum: "12",
+        elenam: "Zinc Family",
+        elesym: "IIB",
+        elemass: "B",
+        elenegati: "",
+        config: "",
+        block: "Zn",    
+    },
+    IIIA: {
+        atomnum: "13",
+        elenam: "Boron Family",
+        elesym: "IIIA",
+        elemass: "A",
+        elenegati: "Icosagen",
+        config: "Triels",
+        block: "B",
+    },
+    IVA: {
+        atomnum: "14",
+        elenam: "Cacbon Family",
+        elesym: "IVA",
+        elemass: "A",
+        elenegati: "Crystallogen",
+        config: "Tetrels",
+        block: "C",
+    },
+    VA: {
+        atomnum: "15",
+        elenam: "Nitrogen Family",
+        elesym: "VA",
+        elemass: "A",
+        elenegati: "Pnictogen",
+        config: "Pentels",
+        block: "N",
+    },
+    VIA: {
+        atomnum: "16",
+        elenam: "Oxygen Family",
+        elesym: "VIA",
+        elemass: "A",
+        elenegati: "Chalcogen",
+        config: "",
+        block: "O",
+    },
+    VIIA: {
+        atomnum: "17",
+        elenam: "Fluorine Family",
+        elesym: "VIIA",
+        elemass: "A",
+        elenegati: "Halogen",
+        config: "",
+        block: "F",
+    },
+    VIIIA: {
+        atomnum: "18",
+        elenam: "Neon Family",
+        elesym: "VIIIA",
+        elemass: "A",
+        elenegati: "Noble Gas",
+        config: "",
+        block: "He",
+    },
 
 }
 
@@ -524,6 +875,7 @@ function conte(selements) {
     elenegati.textContent = varelement[elmnt].elenegati;
     config.innerHTML = varelement[elmnt].config;
 
+    elesym.style.fontSize = "55px";
     elenegati.style.width = `100%`
     elenegati.style.border = `100% black solid`;
     if(varelement[elmnt].block == `s`){
@@ -538,11 +890,54 @@ function conte(selements) {
     } else if(varelement[elmnt].block == `f`){
         eleconte.style.backgroundColor = `burlywood`;
         eleconte.style.color = `black`;
-    }
-
+    } else if(varelement[elmnt].block == `Li`){
+        eleconte.style.backgroundColor = `grey`;
+        eleconte.style.color = ``;
+    } else if(varelement[elmnt].block == `Be`){
+        eleconte.style.backgroundColor = `burlywood`;
+        eleconte.style.color = `black`;
+    } else if(varelement[elmnt].block == `Sc`){
+        
+    } else if(varelement[elmnt].block == `Ti`){
+        
+    } else if(varelement[elmnt].block == `V`){
+        
+    } else if(varelement[elmnt].block == `Cr`){
+        
+    } else if(varelement[elmnt].block == `Mn`){
+        
+    } else if(varelement[elmnt].block == `Fe`){
+        
+    } else if(varelement[elmnt].block == `Cu`){
+        
+    } else if(varelement[elmnt].block == `Zn`){
+        
+    } else if(varelement[elmnt].block == `B`){
+        
+    } else if(varelement[elmnt].block == `C`){
+        
+    } else if(varelement[elmnt].block == `N`){
+        
+    } else if(varelement[elmnt].block == `O`){
+        
+    } else if(varelement[elmnt].block == `F`){
+        
+    } else if(varelement[elmnt].block == `Ne`){
+        
+    } 
 }
 
-
+title.addEventListener("click", function(){
+    elesym.style.fontSize = "20px";
+    eleconte.style.backgroundColor = `seashell`;
+    eleconte.style.color = `black`;
+    atomnum.textContent = "Atomic Number" ;
+    elesym.textContent = "Element Symbol";
+    elenam.textContent = "Element Name";
+    elemass.textContent = "Atomic Mass";
+    elenegati.textContent = "Electronegativity";
+    config.innerHTML = "Electron Configuration";
+})
 
 
 

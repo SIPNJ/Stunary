@@ -370,7 +370,9 @@ plus.addEventListener("click", function(){
         newjoint.push(`Pol`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
-
+        ansans.push(`^`);
+        newjoint.push(`^`);
+        operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
     }
@@ -385,7 +387,9 @@ minus.addEventListener("click", function(){
         newjoint.push(`Rec`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
-
+        ansans.push(`&`);
+        newjoint.push(`&`);
+        operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
     }
@@ -920,8 +924,7 @@ calc.addEventListener("click", function(){
     // ansans = ansans.replace(/√/gi, "Math.sqrt");
     try{
         ansdisp.value = eval(ansans.join(``));
-        storageans = ansdisp.value;
-        console.log(storageans);
+        storageans = ansdisp.value;;
     }
     catch(err){
         ansdisp.value = err.message;

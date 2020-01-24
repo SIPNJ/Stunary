@@ -45,10 +45,14 @@ body{
 
 
 .numcol,.numrow{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     border: 0.5px black solid;
     background-color: teal;
     color: rgb(255, 255, 255);
     padding-top: 15px;
+    font-size: 1rem;
 }
 .namcol, .group{
     font-size: xx-small;
@@ -110,17 +114,22 @@ body{
 
 #chuthich{
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 
     border: 5px black solid;
     margin: 2em;
 
-    width: 25rem;
+    width: 7rem;
     height: 25rem;
 }
-#churig,#chulef{
-    display: flex;
-    flex-flow: column;
+
+.chu{
+    margin: auto;
+    padding: 7%;
+    border: sandybrown;
+    border-radius: 1rem;
 }
 
 
@@ -130,6 +139,8 @@ body{
     display: flex;
     flex-flow: column;
 
+    background-color: seashell;
+
     border: 5px black solid;
     margin: 2em;
 
@@ -137,7 +148,19 @@ body{
     height: 25em;
 }
 
-#eletop{
+#chuthich{
+    display: flex;
+    flex-flow: column;
+
+    background-color: seashell;
+
+    border: 5px black solid;
+    margin: 2em;
+
+    width: 25em;
+    height: 25em;
+}
+.eletop{
     display: flex;
     flex-flow: row;
 
@@ -145,27 +168,30 @@ body{
     margin: 10px;
 }
 
-#elebot{
+.elebot{
     height: 40%;
     margin: 10px;
 }
 
-#elelef{
+.elelef{
     display: flex;
     flex-flow: column;
 
     position: relative;
 
     width: 50%;
-    height: 50%;
+    height: 100%;
     margin: 10px;
 }
 
-#elerig{
+.elerig{
     display: flex;
     flex-flow: column;
+
+    position: relative;
+
     width: 50%;
-    height: 50%;
+    height: 100%;
     margin: 10px;
 }
 
@@ -175,31 +201,37 @@ body{
 
 /* content x2 */
 
-#atomnum{
+.atomnum{
     position: absolute;
 
-    margin: 10%;
+    top: 10%;;
+    left: 10%;
     text-align: left;
     font-size: 23px;
     animation-name: rainbowcolor;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+
+
 }
 
-#elesym{
+.elesym{
     position: relative;
 
-    top: 50%;
+    top: 25%;
     left: auto;
 
+    height: 46px;
+    width: 70px;
+
     margin: 10%;
-    font-size: xx-large;
+    font-size: 20px;
     font: bold;
-    text-align: left;
+    text-align: center;
 }
-#config{
+.config{
     position: relative;
-    top: 60%;
+    top: 30%;
 
     margin: 10%;
     text-align: left;
@@ -208,13 +240,13 @@ body{
 
 
 
-#elenam{
+.elenam{
     margin: 10%;
     font-size: x-large;
     text-align: right;
 }
 
-#elemass{
+.elemass{
     margin: 10%;
     text-align: right;
     font-size: 23px;
@@ -222,21 +254,23 @@ body{
 
 
 
-#elenegati{
+.elenegati{
     width: 100%;
+    height: 1rem;
     text-align: center;
+    border: 1px solid red;
 }
 
 
 @keyframes rainbowcolor{
-    0% {color: white; font-size: 27px; }
-    10% {color: skyblue; font-size: 24px;}
+    0% {color: white; font-size: 20px; }
+    10% {color: skyblue; font-size: 21px;}
     20% {color: rgb(206, 0, 161); font-size: 22px;}
-    30% {color: red; font-size: 26px;}
-    40% {color: rgb(0, 255, 242); font-size: 28px;}
-    50% {color: orange; font-size: 32px;}
-    70% {color: orangered; font-size: 40px;}
-    80% {color: plum; font-size: 38px;}
-    90% {color: purple; font-size: 32px}
-    100% {color: black; font-size: 30px;}
+    30% {color: red; font-size: 23px;}
+    40% {color: rgb(0, 255, 242); font-size: 22px;}
+    50% {color: orange; font-size: 21px;}
+    70% {color: orangered; font-size: 20px;}
+    80% {color: plum; font-size: 21px;}
+    90% {color: purple; font-size: 22px}
+    100% {color: black; font-size: 21px;}
 }
