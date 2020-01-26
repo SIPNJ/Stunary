@@ -1,12 +1,8 @@
 body{
     display: flex;
     flex-flow: column;
+    align-items: baseline;
     background-color: rgb(255, 215, 155);
-}
-
-#contenttitle{
-    display: flex;
-    flex-flow: column;
 }
 #periodic{
     display: grid;
@@ -22,10 +18,6 @@ body{
 /* #periodic div{
     border: black;
 } */
-#cap{
-    display: flex;
-    flex-flow: row;
-}
 #title{
     grid-area: 1 / 4 / 2 / 14;
     padding-top: 10px;
@@ -114,21 +106,16 @@ body{
 /* chuthich */
 
 #chuthich{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-
+    background-color: seashell;
     border: 5px black solid;
     margin: 2em;
 
-    width: 7rem;
-    height: 25rem;
+    width: 25em;
+    height: 25em;
 }
 
 .chu{
     margin: auto;
-    padding: 7%;
     border: sandybrown;
     border-radius: 1rem;
 }
@@ -140,18 +127,7 @@ body{
     display: flex;
     flex-flow: column;
 
-    background-color: seashell;
-
-    border: 5px black solid;
-    margin: 2em;
-
-    width: 25em;
-    height: 25em;
-}
-
-#chuthich{
-    display: flex;
-    flex-flow: column;
+    position: relative;
 
     background-color: seashell;
 
@@ -161,6 +137,7 @@ body{
     width: 25em;
     height: 25em;
 }
+
 .eletop{
     display: flex;
     flex-flow: row;
@@ -219,7 +196,7 @@ body{
 .elesym{
     position: relative;
 
-    top: 25%;
+    top: 35%;
     left: auto;
 
     height: 46px;
@@ -232,12 +209,11 @@ body{
 }
 .config{
     position: relative;
-    top: 30%;
+    top: 35%;
 
     margin: 10%;
     text-align: left;
 }
-
 
 
 

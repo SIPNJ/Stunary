@@ -1,0 +1,46 @@
+@media only screen and (max-width: 414px){
+    #periodic{
+        transform: scale(0.5,0.5);
+        position: relative;
+        left: -13em;
+        overflow-x: scroll;
+    }
+    #contenttitle{
+        display: flex;
+        flex-flow: column;
+    }
+    #cap{
+        display: flex;
+        flex-flow: column;
+    }
+    #chuthich{
+        overflow-x: scroll;
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        grid-template-rows: 10rem 10rem;
+        grid-gap: 2rem;
+        justify-content: center;
+    }
+    .chu{
+        padding: 30%;
+    }
+}
+@media screen and (min-width: 415px){
+    #contenttitle{
+        display: flex;
+        flex-flow: column;
+    }
+    #cap{
+        display: flex;
+        flex-flow: row;
+    }
+    #chuthich{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chu{
+        padding: 7%;
+    }
+}
