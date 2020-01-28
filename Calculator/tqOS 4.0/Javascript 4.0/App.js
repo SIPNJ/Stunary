@@ -54,8 +54,6 @@ let ansdisp = document.getElementById("ansdisp");
 // var alpha = document.getElementById("Alpha");
 // var alpha = document.getElementById("Alpha");
 // var alpha = document.getElementById("Alpha");
-// var degree = document.getElementById("degree");
-
 
 // phim so
 var zero = document.getElementById("zero");
@@ -68,8 +66,10 @@ var six = document.getElementById("six");
 var seven = document.getElementById("seven");
 var eight = document.getElementById("eight");
 var nine = document.getElementById("nine");
+
 var dot = document.getElementById("dot");
 var varx = document.getElementById("varx");
+var degree = document.getElementById("degree");
 
 zero.addEventListener("click", function(){
 if (shiftStatus == false && alphaStatus == false){
@@ -357,6 +357,20 @@ varx.addEventListener("click", function(){
         
     }
 });
+degree.addEventListener("click", function(){
+    if (shiftStatus == false && alphaStatus == false){
+        ansans.push(`°`);
+        newjoint.push(`°`);
+        operadisp.value = newjoint.join(``);
+    } else if (shiftStatus == true && alphaStatus == false){
+        ansans.push(`Fact(`);
+        newjoint.push(`Fact(`);
+        operadisp.value = newjoint.join(``);
+    } else if (shiftStatus == false && alphaStatus == true){
+
+    } else if (shiftStatus == true && alphaStatus == true){
+
+}})
 
 
 // click dau operator
@@ -372,12 +386,12 @@ plus.addEventListener("click", function(){
         newjoint.push(`+`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == false){
-        ansans.push(``);
-        newjoint.push(`Pol`);
+        ansans.push(`Pol(`);
+        newjoint.push(`Pol(`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
-        ansans.push(`^`);
-        newjoint.push(`^`);
+        ansans.push(`|`);
+        newjoint.push(`or`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
@@ -389,12 +403,12 @@ minus.addEventListener("click", function(){
         newjoint.push(`-`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == false){
-        ansans.push(``);
-        newjoint.push(`Rec`);
+        ansans.push(`Rec(`);
+        newjoint.push(`Rec()`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == false && alphaStatus == true){
         ansans.push(`&`);
-        newjoint.push(`&`);
+        newjoint.push(`and`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
@@ -752,6 +766,97 @@ function LCM(num,denom){
         }
     }
 }
+
+function Fact(number){
+    let count = 0;
+    let fact = [];
+    for (let i = 2;i <= number; i++){
+        if (number % i == 0){
+            fact.push(`${i}`);
+            count = count + 1;
+            number = number/i;
+        }
+    }
+    return fact.join(`×`);
+}
+
+// function Fact(number){
+//     let prei = 2;
+//     let fact = [];
+//     let count = 0;
+//     for (let i = 2; i <= number; i++){
+//         while (number % i === 0){
+//             number = number / i;
+//             if (i == prei && count <= 1 && number == 1){
+//                 // xuat | ko mu | trong chang
+//                 count = 0;
+//                 fact.push(`${prei}`);
+
+//                 console.log(fact.join(`x`));
+//                 return fact.join(`x`);
+//             } else if (i == prei && count <= 1 && number !== 1){
+//                 // ko xuat | ko mu | trong chang
+//                 count = count + 1;
+
+//                 console.log(fact.join(`x`));
+//             } else if (i == prei && count > 1 && number == 1){
+//                 // xuat | co mu | trong chang
+//                 count = count + 1;
+//                 fact.push(`${i}`+`${count}`.sup());
+
+//                 console.log(fact.join(`x`));
+//                 return fact.join(`x`);
+//             } else if (i !== prei && count <= 1 && number == 1){
+//                 // xuat | ko mu | khac chang
+//                 count = 0;
+//                 fact.push(`${prei}`+`${i}`);
+
+//                 console.log(fact.join(`x`));
+//                 return fact.join(`x`);
+//             } else if (i !== prei && count > 1 && number == 1){
+//                 // xuat | co mu | khac chang
+//                 fact.push(`${prei}`+`${count}`.sup()+`${i}`);
+//                 count = 0;
+
+//                 console.log(fact.join(`x`));
+//                 return fact.join(`x`);
+//             } else if (i == prei && count > 1 && number !== 1){
+//                 // ko xuat | co mu | trong chang
+//                 count = count + 1;
+
+//                 console.log(fact.join(`x`));
+//             } else if (i !== prei && count <= 1 && number !== 1){
+//                 // ko xuat | ko mu | khac chang
+//                 fact.push(`${prei}`);
+//                 count = 0;
+
+//                 console.log(fact.join(`x`));
+//             } else if (i !== prei && count > 1 && number !== 1){
+//                 // ko xuat | co mu | khac chang
+//                 fact.push(`${prei}`+`${count}`.sup());
+//                 count = 0;
+
+//                 console.log(fact.join(`x`));
+//             }
+//             console.log(i);
+//             prei = i;
+//         }
+//     }
+//     return fact.join(`×`);
+// }
+
+function Pol(x,y){
+    var r = Math.sqrt(x*x+y*y)
+    var θ = Math.atan(y/x);
+    return `r = ${r}, θ = ${θ}`
+}
+
+function Rec(r,θ){
+    var x = r * Math.cos(θ);
+    var y = r * Math.sin(θ);
+    return `x = ${x}, y = ${y}` 
+} 
+
 // done
 
 // function factorial(){
@@ -918,6 +1023,22 @@ reset.addEventListener("click", function(){
     alphaStatus = false; abtn.style.opacity = 0;
     hypStatus = false; hypbtn.style.opacity = 0;
     stoStatus = false; stobtn.style.opacity = 0;
+
+    storageans = 0;
+    StorageM = 0;
+    StorageX = 0;
+    StorageY = 0;
+    StorageZ = 0;
+
+    StorageA = 0;
+    StorageB = 0;
+    StorageC = 0;
+    StorageD = 0;
+    StorageE = 0;
+    StorageF = 0;
+    StorageG = 0;
+    StorageH = 0;
+    StorageI = 0;
 });
 
 ac.addEventListener("click", function(){
@@ -964,5 +1085,3 @@ mode.addEventListener("click", function(){
     console.log(operadisp.style);
     console.log(ansdisp.style)
 });
-
-
