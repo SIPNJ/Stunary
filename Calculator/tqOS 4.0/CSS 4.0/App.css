@@ -7,7 +7,7 @@ body{
 #content{
     display: flex;
     flex-flow: row;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 #calculator{

@@ -1,47 +1,110 @@
-/* @media only screen and (max-width: 320px){
-    #content{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
-    #calculator{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #tabclr{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #instruction{
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
+* {
+    box-sizing: border-box;
+}
 
-@media only screen and (max-width: 414px){
+/* @media  screen and (max-width: 360px){
     #content{
-        transform: scale(0.5,0.5);
+        position: relative;
+        top: -20em;
+        transform: scale(0.7,0.7);
         display: flex;
         flex-flow: column;
-        align-items: center;
+        justify-content: space-around;
+        align-items: baseline;
     }
     #calculator{
+        position: relative;
+        left: 0em;
         margin-left: auto;
         margin-right: auto;
     }
     #tabclr{
+        position: relative;
+        left: -3em;
+        transform: scale(0.9,0.9);
         margin-left: auto;
         margin-right: auto;
     }
     #instruction{
+        position: relative;
+        top: -13em;
+        left: -8em;
+        transform: scale(0.6,0.6);
         margin-left: auto;
         margin-right: auto;
     }    
 }
-
-/* @media only screen and (max-width: 768px){
-    #twotools{
-        display:flex;
+@media  screen and (min-width:261px) and (max-width: 414px){
+    #content{
+        position: relative;
+        left: 1em;
+        display: flex;
         flex-flow: column;
+        justify-content: space-around;
+        align-items: baseline;
     }
+    #calculator{
+        position: relative;
+        left: 0em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #tabclr{
+        position: relative;
+        left: -3em;
+        transform: scale(0.9,0.9);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #instruction{
+        position: relative;
+        top: -13em;
+        left: -7.5em;
+        transform: scale(0.6,0.6);
+        margin-left: auto;
+        margin-right: auto;
+    }    
 } */
+/* @media  screen and (max-width: 768px){
+    #content{
+        transform: scale(1.2,1.2);
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    #calculator{
+        position: relative;
+        left: 3em;
+        top: 13em;
+    }
+    #tabclr{
+        transform: scale(0.75,0.75);
+        position: relative;
+        left: 22em;
+        top: -41em;
+    }
+    #instruction{
+        position: relative;
+        top: -60em;
+        left: 14.5em;
+        transform: scale(0.5,0.5);
+        margin-left: auto;
+        margin-right: auto;
+    }    
+} */
+
+.col-1{width: 8.33%}
+.col-2{width: 8.33%}
+.col-3{width: 8.33%}
+.col-4{width: 8.33%}
+.col-5{width: 8.33%}
+.col-6{width: 8.33%}
+.col-7{width: 8.33%}
+.col-8{width: 8.33%}
+.col-9{width: 8.33%}
+.col-10{width: 8.33%}
+.col-11{width: 8.33%}
+.col-12{width: 8.33%}
+

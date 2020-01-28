@@ -9,427 +9,425 @@
     <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/App.css">
     <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/Setting.css">
     <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/Instruct.css">
-    <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/phone.css">
     <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/menu.css">
+        <link rel="stylesheet" href="Calculator/tqOS 4.0/CSS 4.0/phone.css">
 </head>
 <body>
-    <div>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-              <button class="dropbtn">Calculator</button>
-              <div class="dropdown-content">
-                <a href="tqOS1.html">Gen 1.0</a>
-                <a href="tqOS2.html">Gen 2.0</a>
-                <a href="tqOS3.html">Gen 3.0</a>
-                <a href="tqOS4.html">Gen 4.0</a>
-              </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Calculator</button>
+            <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Chemistry </button>
-                <div class="dropdown-content"> 
-                    <a href="PeTa.html"> Periodic Table </a>
-                    <a href="Solubility.html"> Solubility Table</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+        </div>
+    <div id="content">
+        <div id="calculator" style="background-color: rgb(189, 189, 189);">
+            <div id="namedisp">
+                <div class="name" style="font-family:cursive; padding: 0.5em;">
+                    𝖙𝖖𝕆𝕊 4.0 calculator
                 </div>
-            </div>
-          </div>
-        <div id="content">
-            <div id="calculator" style="background-color: rgb(189, 189, 189);">
-                <div id="namedisp">
-                    <div class="name" style="font-family:cursive; padding: 0.5em;">
-                        𝖙𝖖𝕆𝕊 4.0 calculator
+            </div> 
+            <div id="realcalc">
+                <div id="display">
+                    <div id="realdisp">
+                        <!-- doan dung flex: column align-items: center -->
+                        <input type="text" id="operadisp" disabled>
+                        <!-- <span id="cursor">|</span> -->
+                        <input type="text" id="ansdisp" disabled>
                     </div>
+                </div>
+                <div id="setdisp">
+                    <div class="sh"><span id="Sbtn"> S </span></div>
+                    <div class="sh"><span id="Abtn"> A </span></div>
+                    <div class="sh"><span id="HYPbtn"> HYP </span></div>
+                    <div class="sh"><span id="Dbtn"> D </span></div>
+                    <div class="sh"><span id="Rbtn"> R </span></div>
+                    <div class="sh"><span id="Gbtn"> G </span></div>
+
+                    <div class="lo"><span id="stobtn"> STO </span></div>
+                    <div class="lo"><span id="cmlxbtn"> CMLX </span></div>
+
+                    <div class="lo"><span id="vctbtn"> VCT </span></div>
+                    <div class="lo"><span id="matbtn"> MAT </span></div>
+
+                    <div class="lo"><span id="fixbtn"> FIX </span></div>
+                    <div class="lo"><span id="scibtn"> SCI</span></div>
                 </div> 
-                <div id="realcalc">
-                    <div id="display">
-                        <div id="realdisp">
-                            <!-- doan dung flex: column align-items: center -->
-                            <input type="text" id="operadisp" disabled>
-                            <!-- <span id="cursor">|</span> -->
-                            <input type="text" id="ansdisp" disabled>
-                        </div>
+                <div class="sixbuttons">
+
+                        <div class="set" id="Shift"> Shift </div>
+                        <div class="set" id="Alpha"> Alpha </div>
+                        <div class="set" id="Left">&larr;</div>
+                        <div class="set" id="Right">&rarr;</div>
+                        <div class="set" id="mode"> Mode </div>
+                        <div class="deact" id="Reset"> Reset </div>
+    
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>  
+                        <div class="sft">∑</div>
+                        <div class="alt">Π</div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+
+                        <div class="doc" class="collo" id="minusone"> ^<sup>-1</sup></div>
+                        <div class="doc" class="collo" id="integral" disabled>&int;</div>
+                        <div class="set" id="Up">&uarr;</div>
+                        <div class="set" id="Down">&darr;</div>
+                        <div class="doc" class="collo" id="factorial">!</div>
+                        <div class="doc" class="collo" id="Loga">Log <sub>a</sub>(x)</div>
+    
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>  
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+
+                        <div class="doc" class="sup" id="frac"> frac </div>
+                        <div class="doc" class="sup" id="sqrt">&radic;</div>
+                        <div class="doc" class="sup" id="square"> <sub>&#x25A1;</sub> <sup>2</sup> </div>
+                        <div class="doc" class="sup" id="expo">^</div>
+                        <div class="doc" class="sup" id="Log">Log</div>
+                        <div class="doc" class="sup" id="Ln">Ln</div>
+        
+                        <div class="sft">Y</div>
+                        <div class="alt">Z</div>
+                        <div class="sft">Fact</div>
+                        <div class="alt"></div>
+                        <div class="sft">ArcHYP</div>
+                        <div class="alt">CoHYP</div>
+                        <div class="sft">ArcSin</div>
+                        <div class="alt">Sec</div>
+                        <div class="sft">ArcCos</div>
+                        <div class="alt">Cosec</div>
+                        <div class="sft">ArcTan</div>
+                        <div class="alt">Cot</div>
+
+                        <div class="doc" class="trig" id="varx">X</div>
+                        <div class="doc" class="trig" id="degree">°</div>
+                        <div class="doc" class="trig" id="hyp">HYP</div>
+                        <div class="doc" class="trig" id="sine">Sin</div>
+                        <div class="doc" class="trig" id="cosine">Cos</div>
+                        <div class="doc" class="trig" id="tangent">Tan</div>
+    
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>  
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+
+                        <div class="doc" class="subset" id="sto">STO</div>
+                        <div class="doc" class="subset" id="eng">ENG</div>
+                        <div class="doc" class="subset" id="open">(</div>
+                        <div class="doc" class="subset" id="close">)</div>
+                        <div class="doc" class="subset" id="convert">S &harr; D</div>
+                        <div class="doc" class="subset" id="storem">M+</div>
+    
+                </div>
+    
+                <div class="fivebuttons">
+
+                        <div class="sft"></div>
+                        <div class="alt">G</div>
+                        <div class="sft"></div>
+                        <div class="alt">H</div>
+                        <div class="sft"></div>
+                        <div class="alt">I</div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>  
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+
+                        <!-- <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>  
+                        <div class="sft"></div>
+                        <div class="alt"></div> -->
+
+
+                        <div class="num" id="seven">7</div>
+                        <div class="num" id="eight">8</div>
+                        <div class="num" id="nine">9</div>
+                        <div class="deact" id="delete">DEL</div>
+                        <div class="deact" id="ace">AC</div>
+
+                        <div class="sft"></div>
+                        <div class="alt">D</div>
+                        <div class="sft"></div>
+                        <div class="alt">E</div>
+                        <div class="sft"></div>
+                        <div class="alt">F</div>
+                        <div class="sft">nPr</div>
+                        <div class="alt">GCD</div>
+                        <div class="sft">nCr</div>
+                        <div class="alt">LCM</div>
+
+                        <div class="num" id="four">4</div>
+                        <div class="num" id="five">5</div>
+                        <div class="num" id="six">6</div>
+                        <div class="opera" id="multiply">×</div>
+                        <div class="opera" id="divide">÷</div>
+
+                        <div class="sft"></div>
+                        <div class="alt">A</div>
+                        <div class="sft"></div>
+                        <div class="alt">B</div>
+                        <div class="sft"></div>
+                        <div class="alt">C</div>
+                        <div class="sft">Pol</div>
+                        <div class="alt">or</div>
+                        <div class="sft">Rec</div>
+                        <div class="alt">and</div>
+
+
+                        <div class="num" id="one">1</div>
+                        <div class="num" id="two">2</div>
+                        <div class="num" id="three">3</div>
+                        <div class="opera" id="plus">+</div>
+                        <div class="opera" id="minus">-</div>
+
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft">%</div>
+                        <div class="alt">‰</div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+                        <div class="sft"></div>
+                        <div class="alt"></div>
+
+                        <div class="num" id="zero">0</div>
+                        <div class="num" id="dot">.</div>
+                        <div class="opera" id="expoten">×10^</div>
+                        <div class="opera" id="Answer">Ans</div>
+                        <div class="opera" id="Calc">≈</div>
+    
+                </div>
+            </div>
+    
+        </div>
+    
+        <div id="tabclr">
+            <div id="clrtable">
+                <b class="name" style="font-size: 3em; margin: 0.5em;">Calculator style</b>
+                <div id="colorsetting">
+                    <div id="bgclr">
+                        <center style="margin: 0.4em;"> 
+                            <div> Enter RGB </div> 
+                            <div> background color </div>
+                        </center>
+                        <input type="text" class="bgclr" id = "bgcalccolor" placeholder="Calculator">
+                        <input type="text" class="bgclr" id = "bgdispcolor" placeholder="Calculator display">
+                        <input type="text" class="bgclr" id = "bgsetcolor" placeholder="Setting buttons">
+                        <input type="text" class="bgclr" id = "bgdoccolor" placeholder="Documentary buttons">
+                        <input type="text" class="bgclr" id = "bgnumcolor" placeholder="Number keyboard ">
+                        <input type="text" class="bgclr" id = "bgdeactcolor" placeholder="Deactive buttons">
+                        <input type="text" class="bgclr" id = "bgoperacolor" placeholder="Opera buttons">
+                        <button class="bgclr" id="clickbtn"> Enter </button>
                     </div>
-                    <div id="setdisp">
-                        <div class="sh"><span id="Sbtn"> S </span></div>
-                        <div class="sh"><span id="Abtn"> A </span></div>
-                        <div class="sh"><span id="HYPbtn"> HYP </span></div>
-                        <div class="sh"><span id="Dbtn"> D </span></div>
-                        <div class="sh"><span id="Rbtn"> R </span></div>
-                        <div class="sh"><span id="Gbtn"> G </span></div>
-
-                        <div class="lo"><span id="stobtn"> STO </span></div>
-                        <div class="lo"><span id="cmlxbtn"> CMLX </span></div>
-
-                        <div class="lo"><span id="vctbtn"> VCT </span></div>
-                        <div class="lo"><span id="matbtn"> MAT </span></div>
-
-                        <div class="lo"><span id="fixbtn"> FIX </span></div>
-                        <div class="lo"><span id="scibtn"> SCI</span></div>
-                    </div> 
-                    <div class="sixbuttons">
-
-                            <div class="set" id="Shift"> Shift </div>
-                            <div class="set" id="Alpha"> Alpha </div>
-                            <div class="set" id="Left">&larr;</div>
-                            <div class="set" id="Right">&rarr;</div>
-                            <div class="set" id="mode"> Mode </div>
-                            <div class="deact" id="Reset"> Reset </div>
-        
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>  
-                            <div class="sft">∑</div>
-                            <div class="alt">Π</div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-
-                            <div class="doc" class="collo" id="minusone"> ^<sup>-1</sup></div>
-                            <div class="doc" class="collo" id="integral" disabled>&int;</div>
-                            <div class="set" id="Up">&uarr;</div>
-                            <div class="set" id="Down">&darr;</div>
-                            <div class="doc" class="collo" id="factorial">!</div>
-                            <div class="doc" class="collo" id="Loga">Log <sub>a</sub>(x)</div>
-        
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>  
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-
-                            <div class="doc" class="sup" id="frac"> frac </div>
-                            <div class="doc" class="sup" id="sqrt">&radic;</div>
-                            <div class="doc" class="sup" id="square"> <sub>&#x25A1;</sub> <sup>2</sup> </div>
-                            <div class="doc" class="sup" id="expo">^</div>
-                            <div class="doc" class="sup" id="Log">Log</div>
-                            <div class="doc" class="sup" id="Ln">Ln</div>
-         
-                            <div class="sft">Y</div>
-                            <div class="alt">Z</div>
-                            <div class="sft">Fact</div>
-                            <div class="alt"></div>
-                            <div class="sft">ArcHYP</div>
-                            <div class="alt">CoHYP</div>
-                            <div class="sft">ArcSin</div>
-                            <div class="alt">Sec</div>
-                            <div class="sft">ArcCos</div>
-                            <div class="alt">Cosec</div>
-                            <div class="sft">ArcTan</div>
-                            <div class="alt">Cot</div>
-
-                            <div class="doc" class="trig" id="varx">X</div>
-                            <div class="doc" class="trig" id="degree">°</div>
-                            <div class="doc" class="trig" id="hyp">HYP</div>
-                            <div class="doc" class="trig" id="sine">Sin</div>
-                            <div class="doc" class="trig" id="cosine">Cos</div>
-                            <div class="doc" class="trig" id="tangent">Tan</div>
-        
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>  
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-
-                            <div class="doc" class="subset" id="sto">STO</div>
-                            <div class="doc" class="subset" id="eng">ENG</div>
-                            <div class="doc" class="subset" id="open">(</div>
-                            <div class="doc" class="subset" id="close">)</div>
-                            <div class="doc" class="subset" id="convert">S &harr; D</div>
-                            <div class="doc" class="subset" id="storem">M+</div>
-        
-                    </div>
-        
-                    <div class="fivebuttons">
-
-                            <div class="sft"></div>
-                            <div class="alt">G</div>
-                            <div class="sft"></div>
-                            <div class="alt">H</div>
-                            <div class="sft"></div>
-                            <div class="alt">I</div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>  
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-
-                            <!-- <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>  
-                            <div class="sft"></div>
-                            <div class="alt"></div> -->
-
-
-                            <div class="num" id="seven">7</div>
-                            <div class="num" id="eight">8</div>
-                            <div class="num" id="nine">9</div>
-                            <div class="deact" id="delete">DEL</div>
-                            <div class="deact" id="ace">AC</div>
-
-                            <div class="sft"></div>
-                            <div class="alt">D</div>
-                            <div class="sft"></div>
-                            <div class="alt">E</div>
-                            <div class="sft"></div>
-                            <div class="alt">F</div>
-                            <div class="sft">nPr</div>
-                            <div class="alt">GCD</div>
-                            <div class="sft">nCr</div>
-                            <div class="alt">LCM</div>
-
-                            <div class="num" id="four">4</div>
-                            <div class="num" id="five">5</div>
-                            <div class="num" id="six">6</div>
-                            <div class="opera" id="multiply">×</div>
-                            <div class="opera" id="divide">÷</div>
-
-                            <div class="sft"></div>
-                            <div class="alt">A</div>
-                            <div class="sft"></div>
-                            <div class="alt">B</div>
-                            <div class="sft"></div>
-                            <div class="alt">C</div>
-                            <div class="sft">Pol</div>
-                            <div class="alt">or</div>
-                            <div class="sft">Rec</div>
-                            <div class="alt">and</div>
-
-
-                            <div class="num" id="one">1</div>
-                            <div class="num" id="two">2</div>
-                            <div class="num" id="three">3</div>
-                            <div class="opera" id="plus">+</div>
-                            <div class="opera" id="minus">-</div>
-
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft">%</div>
-                            <div class="alt">‰</div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-                            <div class="sft"></div>
-                            <div class="alt"></div>
-
-                            <div class="num" id="zero">0</div>
-                            <div class="num" id="dot">.</div>
-                            <div class="opera" id="expoten">×10^</div>
-                            <div class="opera" id="Answer">Ans</div>
-                            <div class="opera" id="Calc">≈</div>
-        
+                    <div style="margin: 1rem;"></div>
+                    <div id="txtclr">
+                        <center style="margin: 0.4em;"> 
+                            <div> Enter RGB </div>
+                            <div> text color </div> 
+                        </center>
+                        <input type="text" class="txtclr" id = "operadispcolor" placeholder="Calculator typing display">
+                        <input type="text" class="txtclr" id = "ansdispcolor" placeholder="Calculator answer display">
+                        <input type="text" class="txtclr" id = "setcolor" placeholder="Setting buttons">
+                        <input type="text" class="txtclr" id = "doccolor" placeholder="Documentary buttons">
+                        <input type="text" class="txtclr" id = "numcolor" placeholder="Number keyboard ">
+                        <input type="text" class="txtclr" id = "deactcolor" placeholder="Deactive buttons">
+                        <input type="text" class="txtclr" id = "operacolor" placeholder="Opera buttons">
+                        <button class="txtclr" id="resetclr"> Reset</button>
                     </div>
                 </div>
-        
             </div>
-        
-            <div id="tabclr">
-                <div id="clrtable">
-                    <b class="name" style="font-size: 3em; margin: 0.5em;">Calculator style</b>
-                    <div id="colorsetting">
-                        <div id="bgclr">
-                            <center style="margin: 0.4em;"> 
-                                <div> Enter RGB </div> 
-                                <div> background color </div>
-                            </center>
-                            <input type="text" class="bgclr" id = "bgcalccolor" placeholder="Calculator">
-                            <input type="text" class="bgclr" id = "bgdispcolor" placeholder="Calculator display">
-                            <input type="text" class="bgclr" id = "bgsetcolor" placeholder="Setting buttons">
-                            <input type="text" class="bgclr" id = "bgdoccolor" placeholder="Documentary buttons">
-                            <input type="text" class="bgclr" id = "bgnumcolor" placeholder="Number keyboard ">
-                            <input type="text" class="bgclr" id = "bgdeactcolor" placeholder="Deactive buttons">
-                            <input type="text" class="bgclr" id = "bgoperacolor" placeholder="Opera buttons">
-                            <button class="bgclr" id="clickbtn"> Enter </button>
-                        </div>
-                        <div style="margin: 1rem;"></div>
-                        <div id="txtclr">
-                            <center style="margin: 0.4em;"> 
-                                <div> Enter RGB </div>
-                                <div> text color </div> 
-                            </center>
-                            <input type="text" class="txtclr" id = "operadispcolor" placeholder="Calculator typing display">
-                            <input type="text" class="txtclr" id = "ansdispcolor" placeholder="Calculator answer display">
-                            <input type="text" class="txtclr" id = "setcolor" placeholder="Setting buttons">
-                            <input type="text" class="txtclr" id = "doccolor" placeholder="Documentary buttons">
-                            <input type="text" class="txtclr" id = "numcolor" placeholder="Number keyboard ">
-                            <input type="text" class="txtclr" id = "deactcolor" placeholder="Deactive buttons">
-                            <input type="text" class="txtclr" id = "operacolor" placeholder="Opera buttons">
-                            <button class="txtclr" id="resetclr"> Reset</button>
-                        </div>
-                    </div>
+            <table id="colorpicker", border="4", cellpadding="2", cellspacing="0">
+                <thead>
+                    <tr>
+                        <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>COLOR PICKER</strong>
+                    </tr>
+                    <tr>
+                        <th style="color: red; background-color: blanchedalmond;"> Red </th>
+                        <th style="color: green; background-color: blanchedalmond;"> Green </th>
+                        <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="Rclr" style="background-color: red; width: 8em; height: 4em;">
+                        <td id="Gclr" style="background-color: green; width: 8em; height: 4em;">
+                        <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;">
+                    </tr>
+                    <tr>
+                        <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255
+                        <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0
+                        <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
+                        <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
+                        <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+                    </tr>
+                </tfoot>
+    
+    
+            </table>
+    
+        </div>
+    
+        <div id="instruction">
+            <h1 class="name"> Instruction Box </h1>
+            <div style="display:flex; flex-flow: row; justify-content: center;">
+                <div id="menuinstruct">
+                    <button class="inbtn" onclick= "openMenu(`general`)"> General Instruction</button>
+                    <button class="inbtn" onclick = "openMenu(`baseopera`)"> Basic operator </button>
+                    <button class="inbtn" onclick = "openMenu(`supopera`)"> Super operator </button>
+                    <button class="inbtn" onclick = "openMenu(`trigopera`)"> Trigonometry operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+                    <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
+
+    
                 </div>
-                <table id="colorpicker", border="4", cellpadding="2", cellspacing="0">
-                    <thead>
-                        <tr>
-                            <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>COLOR PICKER</strong>
-                        </tr>
-                        <tr>
-                            <th style="color: red; background-color: blanchedalmond;"> Red </th>
-                            <th style="color: green; background-color: blanchedalmond;"> Green </th>
-                            <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="Rclr" style="background-color: red; width: 8em; height: 4em;">
-                            <td id="Gclr" style="background-color: green; width: 8em; height: 4em;">
-                            <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;">
-                        </tr>
-                        <tr>
-                            <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255
-                            <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0
-                            <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
-                            <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
-                            <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
-                        </tr>
-                        <tr>
-                            <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
-                        </tr>
-                    </tfoot>
-        
-        
-                </table>
-        
-            </div>
-        
-            <div id="instruction">
-                <h1 class="name"> Instruction Box </h1>
-                <div style="display:flex; flex-flow: row; justify-content: center;">
-                    <div id="menuinstruct">
-                        <button class="inbtn" onclick= "openMenu(`general`)"> General Instruction</button>
-                        <button class="inbtn" onclick = "openMenu(`baseopera`)"> Basic operator </button>
-                        <button class="inbtn" onclick = "openMenu(`supopera`)"> Super operator </button>
-                        <button class="inbtn" onclick = "openMenu(`trigopera`)"> Trigonometry operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-                        <button class="inbtn" onclick = "openMenu(`colopera`)"> Collosal operator </button>
-
-        
+                <div id="menucontent">
+                    <div class="menucontent" id="general">
+                        <h2 class="contenttitle"> General Instruction </h2>
+                        <p><strong>DEL</strong> means delete a character</p>
+                        <p><strong>AC</strong> means delete all character but doesn't delete storage </p>
+                        <p><strong>RESET</strong> means delete all setting buttons and storage</p>
                     </div>
-                    <div id="menucontent">
-                        <div class="menucontent" id="general">
-                            <h2 class="contenttitle"> General Instruction </h2>
-                            <p><strong>DEL</strong> means delete a character</p>
-                            <p><strong>AC</strong> means delete all character but doesn't delete storage </p>
-                            <p><strong>RESET</strong> means delete all setting buttons and storage</p>
-                        </div>
-                        <div class="menucontent" id="baseopera">
-                            <h2 class="contenttitle"> Basic Operator </h2>
-                            <h3> Plus </h3>
-                            <p> To plus, you need to click the plus sign (+) button and the display will show the plus symbol. </p>
-                            <h3> Minus </h3>
-                            <p> To subtract, you need to click the minus sign (-) button and the display will show the minus symbol. </p>
-                            <h3> Multiply </h3>
-                            <p> To multiply, you need to click the multiply sign (×) button and the display will show the multiply symbol. </p>
-                            <h3> Minus </h3>
-                            <p> To divide, you need to click the divide sign (÷) button and the display will show the divide symbol. </p>
-                        </div>
-                        <div class="menucontent" id="supopera"> 
-                            <h2 class="contenttitle"> Super Operator </h2>
-
-                            <h3> Power </h3>
-                            <p> To power, you need to click the power sign (^) button and the display will show the power symbol.</p>
-                            <p> Also, if you want to square, just click (^2) button and the display will show.</p>
-                            <p> Rememner these one:
-                                <strong>Shift</strong> + <strong>^</strong> = <strong>%</strong>
-                                <strong>Alpha</strong> + <strong>^</strong> = <strong>‰</strong>
-                            </p>
-
-                            <h3> Square root</h3>
-                            <p> To square root, you need to click the square root sign (√) button and the display will show the plus symbol.</p>
-
-                            <h3>Logarithm</h3>
-                            <p>Simple <strong>Log</strong> button is decimal logarithm.</p>
-                            <p><strong>Ln</strong> button is Napierian logarithm or natural lagarithm.</p>
-                            <p><strong>Loga</strong> button is logarithm with random base, it should be typed as <strong>Loga(a,b)</strong> where a is base and b is anti-logarithm.</p>
-
-                            <h3> Variable</h3>
-                            <p> To assign number to variable, click <strong>Shift</strong> and number button from 1 to 9 or just simply click only <strong>M+</strong> button.</p>
-                            <p> To recall variable, click <strong>Alpha</strong> and a number button from 1 to 9 or <strong>M+</strong> button. </p>
-                            <p> Remember these one:</p>
-                            <div>1 : A</div>
-                            <div>2 : B</div>
-                            <div>3 : C</div>
-                            <div>4 : D</div>
-                            <div>5 : E</div>
-                            <div>6 : F</div>
-                            <div>7 : G</div>
-                            <div>8 : H</div>
-                            <div>9 : I</div>
-
-                            <h3>GCD and LCM</h3>
-                            <p>GCD is Greatest Common Divisor, it is also known as Highest Common Factor - LCF</p>
-                            <p>LCM is Least Common Multiple</p>
-                            <p>Remember these one:
-                                <strong>Alpha</strong> + <strong>x</strong> = <strong>GCD</strong>
-                                <strong>Alpha</strong> + <strong>÷</strong> = <strong>LCM</strong>
-                            </p>
-                            <p>Note: GCD and LCM is just for 2 numbers, for 3 or more mubers, we should type as <strong>GCD(a,GCD(b,c))</strong> or <strong>LCM(a,LCM(b,LCM(c,LCM(d,e))))</strong></p>
-                        </div>
-                        <div class="menucontent" id="colopera"></div>
-                        <div class="menucontent" id="trigopera">
-                            <h2 class="contenttitle"> Trigonometry Operator</h2>
-                            <h3> Basic Trigonometry </h3>
-                            <p> There are 3 trigonometry operators that are the most basic. They are <strong>Sine, Cosine and Tangent</strong> </p>
-                            <p> Simply, you can see and click these buttons in normal mode to display those one, but remember to type ")" after any function. </p>
-                            <h3> Inverse Trigonometry </h3>
-                            <p> If the ratio is not enough and you want an inverse function to determine the angle, you should click on <strong>Shift Button</strong> to have an inverse function; after that, you click which trigonometry you want to inverse.</p>
-                            <h3> More further </h3>
-                            <p> If you want to calculate reciprocal function, you can click on <strong>Alpha Button</strong> then one of three basic trigonometry.</p>
-                            <p> Of course these one have their inverse function, which means you can click <strong>Alpha Button + Shift Button</strong> to have an inverse reciprocal trigonometry.</p>
-                            <h3> Hyperbolic Trigonometry </h3>
-                            <p> For a higher class, we must use hyperbolic trigonometry which means you click <strong>HYP Button</strong> and other basic trigonometry. </p>
-                            <p> If you want reciprocal, just add more <strong>Alpha Button</strong> </p>
-                            <p> If you want inverse, just add more <strong>Shift Button</strong> </p>
-                            <p> If you want inverse reciprocal hyperbolic trigonometry operators, just simply click <strong>HYP Button + Alpha Button + Shift Button </strong> </p>
-                            <h3> Inverse Trigonometry </h3>
-                        </div>
-                        <div class="menucontent"></div>
+                    <div class="menucontent" id="baseopera">
+                        <h2 class="contenttitle"> Basic Operator </h2>
+                        <h3> Plus </h3>
+                        <p> To plus, you need to click the plus sign (+) button and the display will show the plus symbol. </p>
+                        <h3> Minus </h3>
+                        <p> To subtract, you need to click the minus sign (-) button and the display will show the minus symbol. </p>
+                        <h3> Multiply </h3>
+                        <p> To multiply, you need to click the multiply sign (×) button and the display will show the multiply symbol. </p>
+                        <h3> Minus </h3>
+                        <p> To divide, you need to click the divide sign (÷) button and the display will show the divide symbol. </p>
                     </div>
+                    <div class="menucontent" id="supopera"> 
+                        <h2 class="contenttitle"> Super Operator </h2>
+
+                        <h3> Power </h3>
+                        <p> To power, you need to click the power sign (^) button and the display will show the power symbol.</p>
+                        <p> Also, if you want to square, just click (^2) button and the display will show.</p>
+                        <p> Rememner these one:
+                            <strong>Shift</strong> + <strong>^</strong> = <strong>%</strong>
+                            <strong>Alpha</strong> + <strong>^</strong> = <strong>‰</strong>
+                        </p>
+
+                        <h3> Square root</h3>
+                        <p> To square root, you need to click the square root sign (√) button and the display will show the plus symbol.</p>
+
+                        <h3>Logarithm</h3>
+                        <p>Simple <strong>Log</strong> button is decimal logarithm.</p>
+                        <p><strong>Ln</strong> button is Napierian logarithm or natural lagarithm.</p>
+                        <p><strong>Loga</strong> button is logarithm with random base, it should be typed as <strong>Loga(a,b)</strong> where a is base and b is anti-logarithm.</p>
+
+                        <h3> Variable</h3>
+                        <p> To assign number to variable, click <strong>Shift</strong> and number button from 1 to 9 or just simply click only <strong>M+</strong> button.</p>
+                        <p> To recall variable, click <strong>Alpha</strong> and a number button from 1 to 9 or <strong>M+</strong> button. </p>
+                        <p> Remember these one:</p>
+                        <div>1 : A</div>
+                        <div>2 : B</div>
+                        <div>3 : C</div>
+                        <div>4 : D</div>
+                        <div>5 : E</div>
+                        <div>6 : F</div>
+                        <div>7 : G</div>
+                        <div>8 : H</div>
+                        <div>9 : I</div>
+
+                        <h3>GCD and LCM</h3>
+                        <p>GCD is Greatest Common Divisor, it is also known as Highest Common Factor - LCF</p>
+                        <p>LCM is Least Common Multiple</p>
+                        <p>Remember these one:
+                            <strong>Alpha</strong> + <strong>x</strong> = <strong>GCD</strong>
+                            <strong>Alpha</strong> + <strong>÷</strong> = <strong>LCM</strong>
+                        </p>
+                        <p>Note: GCD and LCM is just for 2 numbers, for 3 or more mubers, we should type as <strong>GCD(a,GCD(b,c))</strong> or <strong>LCM(a,LCM(b,LCM(c,LCM(d,e))))</strong></p>
+                    </div>
+                    <div class="menucontent" id="colopera"></div>
+                    <div class="menucontent" id="trigopera">
+                        <h2 class="contenttitle"> Trigonometry Operator</h2>
+                        <h3> Basic Trigonometry </h3>
+                        <p> There are 3 trigonometry operators that are the most basic. They are <strong>Sine, Cosine and Tangent</strong> </p>
+                        <p> Simply, you can see and click these buttons in normal mode to display those one, but remember to type ")" after any function. </p>
+                        <h3> Inverse Trigonometry </h3>
+                        <p> If the ratio is not enough and you want an inverse function to determine the angle, you should click on <strong>Shift Button</strong> to have an inverse function; after that, you click which trigonometry you want to inverse.</p>
+                        <h3> More further </h3>
+                        <p> If you want to calculate reciprocal function, you can click on <strong>Alpha Button</strong> then one of three basic trigonometry.</p>
+                        <p> Of course these one have their inverse function, which means you can click <strong>Alpha Button + Shift Button</strong> to have an inverse reciprocal trigonometry.</p>
+                        <h3> Hyperbolic Trigonometry </h3>
+                        <p> For a higher class, we must use hyperbolic trigonometry which means you click <strong>HYP Button</strong> and other basic trigonometry. </p>
+                        <p> If you want reciprocal, just add more <strong>Alpha Button</strong> </p>
+                        <p> If you want inverse, just add more <strong>Shift Button</strong> </p>
+                        <p> If you want inverse reciprocal hyperbolic trigonometry operators, just simply click <strong>HYP Button + Alpha Button + Shift Button </strong> </p>
+                        <h3> Inverse Trigonometry </h3>
+                    </div>
+                    <div class="menucontent"></div>
                 </div>
             </div>
         </div>
