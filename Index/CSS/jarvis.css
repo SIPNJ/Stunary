@@ -55,7 +55,7 @@ body{
 /* welcome */
 
 .welcome{
-    font-family: fantasy;
+    font-family: monospace;
     color: blanchedalmond;
 
     width: 70%;

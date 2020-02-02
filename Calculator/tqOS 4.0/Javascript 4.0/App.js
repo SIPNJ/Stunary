@@ -363,11 +363,14 @@ degree.addEventListener("click", function(){
         newjoint.push(`°`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == false){
-        ansans.push(`Fact(`);
-        newjoint.push(`Fact(`);
-        operadisp.value = newjoint.join(``);
+        // ansans.push(`Fact(`);
+        // newjoint.push(`Fact(`);
+        // operadisp.value = newjoint.join(``);
+        ansdisp.value = Fact(Number(ansdisp.value));
     } else if (shiftStatus == false && alphaStatus == true){
-
+        ansans.push(`Math.abs(`);
+        newjoint.push(`Abs(`);
+        operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == true){
 
 }})
@@ -681,7 +684,7 @@ square.addEventListener("click", function(){
 });
 
 sqrt.addEventListener("click", function(){
-    ansans.push(`Math.sqrt(`);
+    ansans.push(`Sqrt(`);
     newjoint.push(`√(`);
     operadisp.value = newjoint.join(``);
 });
@@ -707,6 +710,15 @@ power.addEventListener("click", function(){
 
 // dinh nghia cac collosal operator khong co san trong javscript
 // ham logarith
+
+function Sqrt(a){
+    if (a>=0){
+        return Math.sqrt(a);
+    } else {
+        return Math.sqrt(-a);
+    }
+}
+
 function logasa(a,b){
     return Math.log(b)/Math.log(a);    
 };
