@@ -1,0 +1,78 @@
+body{
+    background-color: lightcoral;
+}
+.space{
+    margin: 1em;
+}
+
+#big-fact-container{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.fact-container{
+    display: grid;
+    grid-template-columns: 1em 1em 1em 1em;
+    grid-template-rows: 1em;
+    gap: 1em;
+    margin: 1em;
+}
+.fact1, .fact2, .fact3, .fact4{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}
+
+
+#big-num-container{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transform: scale(2);
+}
+
+#number-container{
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em;
+    grid-template-rows: 3em 3em 3em;
+    gap: 1em;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.num{
+    align-items: center;
+    justify-content: center;
+}
+
+.big-ans-container{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.answer-container{
+    display: grid;
+    grid-template-columns: 1em 1em 1em 1em;
+    grid-template-rows: 3em;
+    gap: 1em;
+    font-size: 70px;
+    text-align: center;
+}
+
+#hint{
+    font-size: 56pt;
+}
