@@ -1,5 +1,6 @@
 body{
-    background-image: url("Picture/greengrass.jpg");
+    background-image: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Picture/greengrass.jpg?raw=true");
     background-attachment: fixed; 
-    background-color: blueviolet;  
+    background-repeat: no-repeat;
+    background-size: cover;
 }
