@@ -1,116 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Studently Stationary</title>
-    <link rel="stylesheet" href="Index/CSS/jarvis.css">
-    <link rel="stylesheet" href="Index/CSS/SE.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studently Stationary</title>
+  <link rel="stylesheet" href="Index/CSS/Index.css">
 </head>
 <body>
-  <div class="welcome">
-    <h1 id="welcome" style="margin: 1em;">
-      Welcome to Studently Stationary
-    </h1>
-  </div>
-  <div id="rowten">
-    <!--  dinh nghia hieu ung -->
-    <svg id="defvec">
-      <defs>
-        <filter id="light-circle">
-          <fegaussianblur result="blurred" in="SourceGraphic" stdDeviation="1" />
-        </filter>
-      </defs>
-    </svg>
-
-    <!-- draw svg 1 -->
-    <div id="jarvis1" class="prev" onclick="pluslid(-1)">
-      <svg width="210", height="210" class="jarvis-like">
-        <circle cx="105" cy="105" r="100" fill="transparent" stroke="#B4F6FB" stroke-width="2" stroke-dasharray="50, 5"></circle>
-        <circle cx="105" cy="105" r="95" fill="transparent" stroke="#64E6EF" stroke-width="1.5"></circle>
-        <circle cx="105" cy="105" r="80" fill="transparent" stroke="#B4F6FB" stroke-width="10" stroke-dasharray="2, 2.29">
-          <animateTransform attributename="transform" attributetype="XML" type="rotate" from="0 105 105" to="360 105 105" begin="0s" dur="10s" repeatcount="indefinite"></animateTransform>
-        </circle>
-        <circle cx="105" cy="105" r="61" fill="transparent" stroke="#B4F6FB" stroke-width="2" stroke-dasharray="50, 25">
-          <animateTransform attributename="transform" attributetype="XML" type="rotate" from="360 105 105" to="0 105 105" begin="0s" dur="10s" repeatcount="indefinite"></animateTransform>
-        </circle>
-        <circle cx="105" cy="105" r="50" fill="transparent" stroke="#64E6EF" stroke-width="15" filter="url(#light-circle)"></circle>
-        <circle cx="105" cy="105" r="40" fill="transparent" stroke="#64E6EF" stroke-width="2"></circle>
-        <path d="M 120 125 L 80 105 L 120 85 Z" fill="#D1FBFC" stroke="#B4F6FB" stroke-width="5"></path>
-        <text x="102.5" y="110" fill="green" stroke="red">L</text>
-      </svg>
-    </div>
-
-    <div class="slideshow-container">
-
-      <div class="mySlide fade">
-        <a href="tqOS1.html">
-          <img src="Picture/tqOS1.png" style="width: 50em;">
-        </a>
-      </div>
-      
-      <div class="mySlide fade">
-        <a href="tqOS2.html">
-          <img src="Picture/tqOS2.png" style="width: 50em;">
-        </a>
-      </div>
-
-      <div class="mySlide fade">
-        <a href="tqOS3.html">
-          <img src="Picture/tqOS3.png" style="width: 50em;">
-        </a>
-      </div>
-
-      <div class="mySlide fade">
-        <a href="tqOS4.html">
-          <img src="Picture/tqOS4.png" style="width: 50em;">
-        </a>
-      </div>
-
-      <div class="mySlide fade">
-        <a href="PeTa.html">
-          <img src="Picture/periodic table.jpg" style="width: 50em;">
-        </a>
-      </div>
-
-      <div class="mySlide fade">
-        <a href="Solubility.html">
-          <img src="Picture/solubility.png" style="width: 50em;filter: grayscale(120%)">
-        </a>
-      </div>
-    </div>
-    
-
-    <!-- draw svg 2 -->
-    <div id="jarvis2" class="next" onclick="pluslid(+1)">
-      <svg width="210", height="210" class="jarvis-like">
-        <circle cx="105" cy="105" r="100" fill="transparent" stroke="#B4F6FB" stroke-width="2" stroke-dasharray="50, 5"></circle>
-        <circle cx="105" cy="105" r="95" fill="transparent" stroke="#64E6EF" stroke-width="1.5"></circle>
-        <circle cx="105" cy="105" r="80" fill="transparent" stroke="#B4F6FB" stroke-width="10" stroke-dasharray="2, 2.29">
-          <animateTransform attributename="transform" attributetype="XML" type="rotate" from="360 105 105" to="0 105 105" begin="0s" dur="10s" repeatcount="indefinite"></animateTransform>
-        </circle>
-        <circle cx="105" cy="105" r="61" fill="transparent" stroke="#B4F6FB" stroke-width="2" stroke-dasharray="50, 25">
-          <animateTransform attributename="transform" attributetype="XML" type="rotate" from="0 105 105" to="360 105 105" begin="0s" dur="10s" repeatcount="indefinite"></animateTransform>
-        </circle>
-        <circle cx="105" cy="105" r="50" fill="transparent" stroke="#64E6EF" stroke-width="15" filter="url(#light-circle)"></circle>
-        <circle cx="105" cy="105" r="40" fill="transparent" stroke="#64E6EF" stroke-width="2"></circle>
-        <path d="M 90 125 L 130 105 L 90 85 Z"  fill="#D1FBFC" stroke="#B4F6FB" stroke-width="5"></path>
-        <text x="102.5" y="110" fill="green" stroke="red">R</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="abot">
-      <h1 style="font-family: sans-serif;"><span style="color: black;">ABOUT</span> <span style="color: rgb(255, 204, 0);">ME</span></h1>
-      <p style="font-family: cursive;">Full name: Phan Duc Tai</p>
-      <p style="font-family: cursive;">Nick name: John Phan</p>
-      <p style="font-family: cursive;">Contact: phanductai2003@gmail.com</p>
-      <p style="font-family: cursive;">Location: HCM City</p>
-    </div>
-
-  </div>
- <script src="Index/Javascript/slideshow.js"></script>
+    <img src="" alt="">
 </body>
 </html>

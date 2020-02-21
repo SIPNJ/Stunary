@@ -1,0 +1,114 @@
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#rowten{
+    background-attachment: local;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* jarvis */
+#defvec{
+    width: 0px;
+    height: 0px;
+}
+
+#jarvis1{
+    width: 210px;
+    height: 210px;
+    margin: 2rem;
+    opacity: 50%;
+    justify-content: flex-start;
+}
+#jarvis2{
+    width: 210px;
+    height: 210px;
+    margin-top: 7rem;
+    margin: 2rem;
+    opacity: 50%;
+    justify-content: flex-end;
+}
+
+#jarvis1:hover{
+    opacity: 100%;
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+#jarvis2:hover{
+    opacity: 100%;
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+/* welcome */
+
+.welcome{
+    font-family: monospace;
+    color: blanchedalmond;
+
+    width: 70%;
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: cahy;
+    animation-duration: 5s;
+}
+
+@keyframes cahy{
+    0% {left: 100px;}
+    50% {left: -50px;}
+    100% {left: 0px;}
+}
+
+/* slideshow */
+img{
+    clip-path: circle(50%);
+}
+.slideshow-container{
+    position: relative;
+    max-width: 100em;
+    margin: auto;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+@keyframes fade{
+    0% {opacity: 0;}
+    20% {opacity: .2;}
+    50% {opacity: .5;}
+    70% {opacity: .7;}
+    100% {opacity: 1;}
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.abot{
+    margin: 2em;
+
+}
