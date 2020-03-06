@@ -1,6 +1,137 @@
-body{
-    background-image: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Picture/greengrass.jpg?raw=true");
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    background-size: cover;
+@media only screen and (max-width : 812px){
+    .center{
+        display: flex;
+        flex-flow: row;
+        /* align-items: baseline; */
+    }
+    .limpng{
+        width: 23px;
+        height: 23px;
+    }
+    .bodytext1{
+        
+    }
+}
+
+
+
+
+
+body {
+    background-image: url(Picture/city.jpg);
+    background-attachment: fixed;
+}
+/* cho nay cua chung */
+.center {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+.png:hover {
+    transform: scale(1.1,1.1);
+    opacity: 50%;
+    color: black;
+}
+.linklink {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+.linklink::before, .linklink::after{
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 3em;
+}
+.linklink::before{
+    z-index: 0;
+    width: 150px; /* 10% */
+    height: 50px; /* 3% */
+    background: linear-gradient(to right,
+    #F8AB5E calc(100% / 6),
+    #F56A62 calc(100% / 6 * 2), 
+    #A176C8 calc(100% / 6 * 3), 
+    #759BEB calc(100% / 6 * 4), 
+    #65BEB3 calc(100% / 6 * 5), 
+    #70DB96 100%);
+}
+.linklink::after{
+    z-index: 1;
+    width: 130px; /* 9% */
+    height: 30px; /* 2% */
+    background: whitesmoke;
+}
+a {
+    z-index: 2;
+    text-decoration: none;
+    color: rgba(186, 22, 22, 0.831);
+}
+.linklink:hover {
+    transform: scale(1.2,1.2);
+}
+.city {
+    background-image: url(Picture/city.jpg);
+    background-attachment: fixed;
+    height: 40em;
+    width: 30rem;
+    position: relative;
+    margin: 3em 1em 3em 3em;
+
+    border: 1em black;
+    border-radius: 1em;
+    border-width: 1em;
+}
+/* cho nay doan 1 */
+.headtext {
+    position: relative;
+
+    font-family: 'Boldine rounded';
+    font-size: 3em;
+    color: blanchedalmond;
+    letter-spacing: 10px;
+
+    margin: 1em;
+}
+.bodyhead {
+    border-radius: 3em;
+    border: 2em;
+    margin: 3em;
+}
+.white {
+    color: whitesmoke;
+}
+.black {
+    color: black;
+}
+/* cho nay hinh nhu la doan 2 */
+.bodytext1 {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-family: Iciel Grandma;
+    font-size: 2em;
+    margin: 1em;
+}
+
+/* cho nay chac la doan 3, sai thi xem lai dum roi report minh nha :> */
+
+.limpng {
+    width: 451px;
+    height: 451px;
+}
+
+/* cai nay trang tri cho minh toa sang */
+.footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border: 1em black;
+    background-color: rgb(196, 188, 156);
+}
+.footess {
+    margin: 3em;
 }
