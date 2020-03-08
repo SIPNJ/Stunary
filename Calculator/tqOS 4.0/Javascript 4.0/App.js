@@ -762,7 +762,6 @@ function arccsch(a){
 function arccoth(a){
     return (Math.log((a+1)/(a-1)))/2;
 };
-
 function GCD(num,denom){
     for (let factor = num; factor > 0; factor--) {
         if ((num % factor == 0) && (denom % factor == 0)) {
@@ -770,7 +769,6 @@ function GCD(num,denom){
         }
     }
 }
-
 function LCM(num,denom){
     for (let factor = denom; factor > 0; factor++) {
         if ((factor % num == 0) && (factor % denom == 0)) {
@@ -791,6 +789,14 @@ function Fact(number){
     }
     return fact.join(`×`);
 }
+
+function splitplus(array){
+    for (let i = 0; i < array.length; i++){
+        array[i] = array[i].split("+");
+        return array[i];
+    }
+}
+
 
 // function Fact(number){
 //     let prei = 2;

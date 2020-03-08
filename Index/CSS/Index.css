@@ -39,6 +39,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1em;
+    margin-bottom: 2em;
 }
 .linklink::before, .linklink::after{
     display: block;
