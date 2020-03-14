@@ -32,7 +32,6 @@
 .leftcalc{
     width: 56vw;
     height: 36vw;
-    background-color: blanchedalmond;
 }
 
 .rightcalc {
@@ -47,7 +46,7 @@
     grid-template-columns: 3vw 3vw 3vw 3vw;
     grid-template-rows: 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw;
     row-gap: 0.25vw;
-    column-gap: 0.25vw;
+    column-gap: 1vw;
 }
 
 .downcalc {
@@ -66,11 +65,13 @@
 
 .leftup {
     display: grid;
-    grid-template-columns: 2vw 2vw;
+    grid-template-columns: 2vw 2vw ;
     grid-template-rows: 3vw 3vw 3vw 3vw 3vw ;
+    column-gap: 1vw;
+    row-gap: 0.5vw;
     margin-left: 2vw;
 
-    width: 14vw;
+    /* width: 14vw; */
     height: 18vw;
 }
 
@@ -83,8 +84,16 @@
 
 /* hien thi */
 
+#name {
+    margin: 1vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 2vw;
+}
+
 .display {
-    padding: 4vw;
+    padding: 2vw;
     border: 1vw black;
     border-radius: 2vw;
     height: 10vw;
@@ -125,6 +134,16 @@
     text-align: center;
     font-size: 1vw;
     color: rgb(141, 47, 0);
+}
+
+.button-5 {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 89, 163);
+    color: whitesmoke;
+    font-size: 1vw;
 }
 
 .button-space {
