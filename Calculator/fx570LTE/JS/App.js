@@ -334,7 +334,7 @@ dot.addEventListener("click", function(){
 });
 varx.addEventListener("click", function(){
     if (shiftStatus == false && alphaStatus == false && stoStatus == false){
-        ansans.push(`X`);
+        ansans.push(StorageX);
         newjoint.push(`X`);
         operadisp.value = newjoint.join(``);
     } else if (shiftStatus == true && alphaStatus == false && stoStatus == false){
@@ -793,57 +793,34 @@ function Fact(number){
 // cai nay de array he so cua ham
 let arrest = [];
 let deg = 0;
-let coeff = [];
 
-var ss = "5*x**2-2*x**42+4*x-2";
 // xac dinh bac cua ham
 function deger(func){
-    let findex = /[\d]+\*x(\*\*[\d]+)?/g;
-    let matchex = func.match(findex);
-    console.log(matchex);
-    for(let i = 0; i < matchex.length; i++){
-        // let numeff;
-        // numeff = matchex[i].split('*x')[0];
-        // coeff = conca(coeff, numeff, exp);
-        // console.log(exp); 
-        // console.log(`coeff is ${coeff}`);
-
-        let exp = matchex[i].split('**')[1];
+    let r = /varx(\**\d)?/g;
+    let matches = func.match(r);
+    for(let i = 0, j = matches.length ; i < j; i++){
+        let exp = matches[i].split('**')[1];
         if(exp && (exp > deg)){
           deg = exp;
         }
     }
-    return(deg);
+    console.log(deg);
 }
-
-// xac dinh array he so
-
 
 function splitsplit(str){
+    str = str + "+0s"
     str = str.replace(/-/g,"+-")
-    str = str.split("+");
-    for (let i = 0; i < str.length; i++){
-        let exp = str[i].split("**");
-        console.log(exp);
-    }
+    // str = str.split("+");
+    // str = String(str);
+    // Remove character by first time
+    console.log(str);
 }
 
-let aa = [2,3,4];
-let bb = 34;
-// them muc vao vi tri bat ki cua array
-function conca(arr, thing, pos){
-    let arr1 = arr.slice(0, pos-1);
-    arr1.push(thing);
-    let arr2 = arr.slice(pos-1, arr.length);
-    arr = arr1.concat(arr2);
-    return arr;
-}
 
 
 function integral(func,argu,upper,lower){
 
 }
-
 
 // function Fact(number){
 //     let prei = 2;
@@ -1118,18 +1095,6 @@ del.addEventListener("click", function(){
     operadisp.value = newjoint.join(``);
 });
 
-function lookX(equa){
-    for (let i = 0; i < equa.length; i++){
-        if (equa[i].includes("X") === true){
-            prompt
-        }
-    }
-}
-function replaceX(equa){
-    for (let i = 0; i < equa.length; i++){
-        equa[i] = equa[i].replace(/X/gi, `${StorageX}`)
-    }
-}
 calc.addEventListener("click", function(){
     // ansans = operadisp.value;
     // ansans = ansans.replace(/×/gi, "*");
@@ -1148,9 +1113,6 @@ calc.addEventListener("click", function(){
     // // ansans = ansans.replace(/Loga/gi,"logasa");
     // ansans = ansans.replace(/√/gi, "Math.sqrt");
     try{
-        replaceX(ansans);
-        console.log(ansans);
-        // calculating process
         ansdisp.value = eval(ansans.join(``));
         storageans = ansdisp.value;;
     }

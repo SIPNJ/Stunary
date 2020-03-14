@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+<body>
+    <div id="colorpicker">
+        <table border="4", cellpadding="2", cellspacing="0">
+            <thead>
+                <tr>
+                    <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>RGB Model</strong>
+                </tr>
+                <tr>
+                    <th style="color: red; background-color: blanchedalmond;"> Red </th>
+                    <th style="color: green; background-color: blanchedalmond;"> Green </th>
+                    <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="Rclr" style="background-color: red; width: 8em; height: 4em;">
+                    <td id="Gclr" style="background-color: green; width: 8em; height: 4em;">
+                    <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;">
+                </tr>
+                <tr>
+                    <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255
+                    <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0
+                    <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
+                    <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
+                    <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+                </tr>
+            </tfoot>
+    
+    
+        </table>
+    
+        <table border="4", cellpadding="2", cellspacing="0">
+            <thead>
+                <tr>
+                    <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>HSB Model</strong>
+                </tr>
+                <tr>
+                    <th style="color: red; background-color: blanchedalmond;"> Red </th>
+                    <th style="color: green; background-color: blanchedalmond;"> Green </th>
+                    <th style="color: blue; background-color: blanchedalmond;"> Blue </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="Rclr" style="background-color: red; width: 8em; height: 4em;">
+                    <td id="Gclr" style="background-color: green; width: 8em; height: 4em;">
+                    <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;">
+                </tr>
+                <tr>
+                    <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255
+                    <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0
+                    <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255" value="255"></td>
+                    <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255" value="0"></td>
+                    <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+                </tr>
+            </tfoot>
+    
+    
+        </table>
+    </div>
+
+
+    <script src="Other/ColorPicker/JS/App.js"></script>
+</body>
+</html>

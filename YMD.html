@@ -6,6 +6,41 @@
     <title>Year Month Day</title>
 </head>
 <body>
-    
+    <table border="4", cellpadding="2", cellspacing="0">
+        <thead>
+            <tr>
+                <td colspan="3" class="name" style="background-color: blanchedalmond; text-align: center;"><strong>Solar Calendar</strong>
+            </tr>
+            <tr>
+                <th style="color: red; background-color: blanchedalmond;"> Day </th>
+                <th style="color: green; background-color: blanchedalmond;"> Month </th>
+                <th style="color: blue; background-color: blanchedalmond;"> Year </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="Rclr" style="background-color: red; width: 8em; height: 4em;"></td>
+                <td id="Gclr" style="background-color: green; width: 8em; height: 4em;"></td>
+                <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;"></td>
+            </tr>
+            <tr>
+                <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255</td>
+                <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0</td>
+                <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="1" max="31" value="1"></td>
+                <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="1" max="12" value="1"></td>
+                <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="-" max="3797" value="1"></td>
+            </tr>
+            <tr>
+                <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+            </tr>
+        </tfoot>
+    </table>
+    <input type="week">
+    <script src="Other/YMD/JS/App.js"></script>
 </body>
 </html>

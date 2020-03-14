@@ -1,0 +1,151 @@
+.calculator {
+    margin: auto;
+    width: 84vw;
+    height: 36vw;
+    border: 1vw black;
+    border-radius: 4vw;
+}
+
+#hidden {
+    visibility: hidden;
+}
+/* mau */
+.green {
+    background-color: darkgreen;
+}
+.grey {
+    background-color: rgb(189, 189, 189);
+}
+
+/* ngan day */
+.row {
+    display: flex;
+    flex-flow: row;
+}
+.column {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Vi tri cua cac calc */
+
+.leftcalc{
+    width: 56vw;
+    height: 36vw;
+    background-color: blanchedalmond;
+}
+
+.rightcalc {
+    height: 36vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    
+    display: grid;
+    grid-template-columns: 3vw 3vw 3vw 3vw;
+    grid-template-rows: 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw 1.25vw 1.75vw;
+    row-gap: 0.25vw;
+    column-gap: 0.25vw;
+}
+
+.downcalc {
+    display: grid;
+    grid-template-columns: 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw ;
+    grid-template-rows: 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw 1.5vw ;
+    row-gap: 0.5vw;
+    column-gap: 1vw;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* width: 56vw;
+    height: 20vw; */
+}
+
+.leftup {
+    display: grid;
+    grid-template-columns: 2vw 2vw;
+    grid-template-rows: 3vw 3vw 3vw 3vw 3vw ;
+    margin-left: 2vw;
+
+    width: 14vw;
+    height: 18vw;
+}
+
+.rightup {
+    width: 42vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* hien thi */
+
+.display {
+    padding: 4vw;
+    border: 1vw black;
+    border-radius: 2vw;
+    height: 10vw;
+}
+
+/* Cac dang nut */
+
+.button{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: cadetblue;
+    border: 1vw black;
+    border-radius: 5vw;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.button-2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    grid-area: span 1 / span 2;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border: 1vw black;
+    border-radius: 5vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+}
+
+.button-3 {
+    display: flex;
+    /* flex-flow: column; */
+    justify-content: center;
+    grid-area: span 1 / span 1;
+    text-align: center;
+    font-size: 1vw;
+    color: rgb(141, 47, 0);
+}
+
+.button-space {
+    grid-area: span 1 / span 6 ;
+    background-color: rgb(0, 0, 0);
+    border: 1vw black;
+    border-radius: 5vw;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.button-enter {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    grid-area: span 3 / span 2 ;
+    background-color: rgb(58, 89, 163);
+    border: 1vw black;
+    border-radius: 1vw;
+    text-align: center;
+    font-size: 1vw;  
+    color: whitesmoke; 
+}
+

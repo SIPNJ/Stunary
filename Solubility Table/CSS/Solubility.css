@@ -7,15 +7,16 @@ body{
 #content{
     position: relative;
     overflow-x: scroll;
-}
-table{
-    position: relative;
     margin: 1em;
-    transform: scale(0.9,0.9);
 }
 
+#Solubility{
+    display: grid;
+    grid-template-columns: 7rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem ;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
+}
 .solu,.insolu,.slu,.unavai,.reftex{
-    padding: 5px;
+    padding: 0.5em;
     text-align: center;
 }
 
@@ -43,7 +44,7 @@ table{
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 5em 10em 10em 10em 10em 10em ;
+    grid-template-columns: 5em 10em 10em 10em 13em 10em ;
     grid-template-rows: 5em;
     grid-gap: 0.25em;
 }
@@ -53,6 +54,7 @@ table{
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border: 5px black solid;
-    border-radius: 5px;
+    border: 0.25em black solid;
+    border-radius: 0.5em;
+    font-size: 1em;
 }
