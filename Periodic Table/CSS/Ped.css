@@ -6,57 +6,47 @@ body{
 }
 #periodic{
     display: grid;
-    grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+    grid-template-rows: 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw;
 /*                      nam nam 1   2   3   4   5   6   7   8   9 */
-    grid-template-columns: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+    grid-template-columns: 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw;
     /* grid-gap: 1em; */
     text-align: center;
     border: black;
-
-    overflow-x: scroll;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* #periodic div{
     border: black;
 } */
 #title{
     grid-area: 1 / 4 / 2 / 14;
-    padding-top: 10px;
+    padding-top: 1vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
+    font-size: 4vw;
 }
-
-
-
-
+#cap{
+    display: flex;
+    flex-flow: row;
+}
 .element{
     border: 0.5px black solid ;
-    padding-top: 13px;
+    /* padding-top: 13px; */
 }
-
-
-
-
-
 .numcol,.numrow{
     display: flex;
     flex-flow: column;
     align-items: center;
-    border: 0.5px black solid;
+    border: 0.125vw black solid;
     background-color: teal;
     color: rgb(255, 255, 255);
-    padding-top: 15px;
-    font-size: 1rem;
+    padding-top: 1vw;
+    font-size: 1.5vw;
 }
 .namcol, .group{
-    font-size: xx-small;
-    padding-top: 15px;
+    font-size: 0.9vw;
+    padding-top: 1.5vw;
     border: 0.5px black solid;
 }
-
-
-
-
-
 /* space */
 #space0{
     grid-column: 4/ span 10;
@@ -70,18 +60,10 @@ body{
 .spacenoid{
     grid-column: span 3;
 }
-
-
-
-
-
 /*  */
 #B8{
     grid-column: span 3;
 }
-
-
-
 /* block */
 .sbl{
     background-color: green;
@@ -99,25 +81,21 @@ body{
     background-color: burlywood;
     color: rgb(0, 0, 0);
 }
-
-
-
-
 /* chuthich */
 
 #chuthich{
     background-color: seashell;
-    border: 5px black solid;
+    border: 0.25vw black solid;
     margin: 2em;
 
-    width: 25em;
-    height: 25em;
+    width: 10vw;
+    height: 20vw;
 }
 
 .chu{
     margin: auto;
     border: sandybrown;
-    border-radius: 1rem;
+    border-radius: 1vw;
 }
 
 
@@ -134,8 +112,8 @@ body{
     border: 5px black solid;
     margin: 2em;
 
-    width: 25em;
-    height: 25em;
+    width: 20em;
+    height: 20em;
 }
 
 .eletop{
