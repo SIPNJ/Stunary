@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="Calculator/NIC 1.0/CSS/App.css">
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Calculator</button>
+            <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
+        </div>
+        <a href="BeTaApp.html">BeTaApp</a>
+      </div>
     <div id="hidden">
         <div>Please rotate your device to use this app !</div>
     </div>
@@ -28,7 +48,7 @@
                             <div class="button-f">G</div>
                         </div>
                         <div class="rightup">
-                            <div >Nextgen Integrated Calculator</div>
+                            <div class="name">Nextgen Integrated Calculator</div>
                             <div class="column green display">
                                 <input type="text" id="operadisp" disabled>
                                 <input type="text" id="ansdisp" disabled>
@@ -57,7 +77,7 @@
                         <div class="button-3"></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
-
+                        <!--  -->
                         <div class="button-2">Q</div>
                         <div class="button-2">W</div>
                         <div class="button-2">E</div>
@@ -68,7 +88,7 @@
                         <div class="button-2">I</div>
                         <div class="button-2">O</div>
                         <div class="button-2">P</div>
-
+                        <!--  -->
                         <div class="button-3"></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
@@ -88,7 +108,7 @@
                         <div class="button-3"></div>
                         <div class="button-3x">"</div>
                         <div class="button-3"></div>
-
+                        <!--  -->
                         <div class="button-3"></div>
                         <div class="button-2">A</div>
                         <div class="button-2">S</div>
@@ -99,7 +119,7 @@
                         <div class="button-2">J</div>
                         <div class="button-2">K</div>
                         <div class="button-2">L</div>
-
+                        <!--  -->
                         <div class="button-3"></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
@@ -120,7 +140,7 @@
                         <div class="button-3"></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
-
+                        <!--  -->
                         <div class="button-2">CAPS</div>
                         <div class="button-2">Z</div>
                         <div class="button-2">X</div>
@@ -131,7 +151,7 @@
                         <div class="button-2">M</div>
                         <div class="button-2">Ø</div>
                         <div class="button-enter">ENTER</div>
-
+                        <!--  -->
                         <div class="button-3"></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
@@ -150,7 +170,7 @@
                         <div class="button-3">></div>
                         <div class="button-3"></div>
                         <div class="button-3"></div>
-
+                        <!--  -->
                         <div class="button-2f" >Ctrl</div>
                         <div class="button-2f" >Alpha</div>
                         <div class="button-2f" >Shift</div>
@@ -158,9 +178,9 @@
                         <div class="button-space" ></div>
                         <div class="button-2" >=</div>
                         <div class="button-2" >DEL</div>
-
                     </div>
             </div>
+
             <!-- phai -->
             <div class="rightcalc column">
                 <div class="rightupcalc ">
@@ -173,27 +193,25 @@
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
     
-                    <div class="button">Shift</div>
+                    <div class="button">Ctrl</div>
                     <div class="button">Mode</div>
-                    <div class="button left">←</div>
-                    <div class="button right">→</div>
+                    <div class="circle-control">
+                        <div class="control up">↑</div>
+                        <div class="twoleri">
+                            <div class="control left">←</div>
+                            <div class="control right">→</div>
+                        </div>
+                        <div class="control down">↓</div>
+                    </div>
     
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
-    
-                    <div class="button"></div>
-                    <div class="button"></div>
-                    <div class="button up">↑</div>
-                    <div class="button down">↓</div>
-    
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
+
+                    <div class="button">Shift</div>
+                    <div class="button-graph">GRAPH</div>
+
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
                     <div class="button-3sh"></div>
@@ -201,10 +219,8 @@
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
     
-                    <div class="button"></div>
-                    <div class="button"></div>
-                    <div class="button"></div>
-                    <div class="button"></div>
+                    <div class="button">Alpha</div>
+                    <div class="button-enter-3 enter">ENTER</div>
     
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
@@ -266,12 +282,9 @@
                     <div class="button-del del">DEL</div>
                     <div class="button-del ac">AC</div>
     
-                    <div class="button-3sh">∑</div>
-                    <div class="button-3alpha">Math</div>
-                    <div class="button-3sh">Mem</div>
-                    <div class="button-3alpha">Var-Link</div>
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
+                    <div class="button-3shx">Math</div>
+                    <div class="button-3shx">Mem</div>
+                    <div class="button-3shx">Var-Link</div>
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
                     <div class="button-3sh"></div>
@@ -297,14 +310,12 @@
                     <div class="button-opera plus" >+</div>
                     <div class="button-opera minus" >-</div>
     
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
-                    <div class="button-3sh"></div>
-                    <div class="button-3alpha"></div>
+                    <div class="button-3shx">Ran#</div>
+                    <div class="button-3sh">,</div>
+                    <div class="button-3alpha">;</div>
                     <div class="button-3sh">%</div>
                     <div class="button-3alpha">‰</div>
-                    <div class="button-3sh">PreAns</div>
-                    <div class="button-3alpha"></div>
+                    <div class="button-3shx">PreAns</div>
                     <div class="button-3sh"></div>
                     <div class="button-3alpha"></div>
 
@@ -320,6 +331,9 @@
 
 
 
-    <script src="Calculator/NIC 1.0/JS/App.js"></script>
+
+    </div>
+
+    <script src="Calculator/JS/Calculator.js"></script>
 </body>
 </html>

@@ -1,28 +1,22 @@
 <menunt>
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <div class="dropdown">
-        <button class="dropbtn">Calculator</button>
-        <div class="dropdown-content">
-        <a href="tqOS1.html">Gen 1.0</a>
-        <a href="tqOS2.html">Gen 2.0</a>
-        <a href="tqOS3.html">Gen 3.0</a>
-        <a href="tqOS4.html">Gen 4.0</a>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Calculator</button>
+            <div class="dropdown-content">
+            <a href="tqOS1.html">Gen 1.0</a>
+            <a href="tqOS2.html">Gen 2.0</a>
+            <a href="tqOS3.html">Gen 3.0</a>
+            <a href="tqOS4.html">Gen 4.0</a>
+            </div>
         </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn"> Chemistry </button>
-        <div class="dropdown-content"> 
-            <a href="PeTa.html"> Periodic Table </a>
-            <a href="Solubility.html"> Solubility Table</a>
+        <div class="dropdown">
+            <button class="dropbtn"> Chemistry </button>
+            <div class="dropdown-content"> 
+                <a href="PeTa.html"> Periodic Table </a>
+                <a href="Solubility.html"> Solubility Table</a>
+            </div>
         </div>
+        <a href="BeTaApp.html">BeTaApp</a>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn"> Beta </button>
-        <div class="dropdown-content"> 
-            <a href="PeTa.html"> Pass the Pass </a>
-            <a href="rsp.html">Rock Paper Scissor</a>
-        </div>
-    </div>
-</div>
 </menunt>

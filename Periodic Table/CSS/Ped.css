@@ -89,12 +89,14 @@ body{
     margin: 2em;
 
     width: 10vw;
-    height: 20vw;
+    /* height: 20vw; */
+    display: grid;
 }
 
 .chu{
     margin: auto;
-    border: sandybrown;
+    padding: 1vw;
+    border: 0.125vw black solid;
     border-radius: 1vw;
 }
 
