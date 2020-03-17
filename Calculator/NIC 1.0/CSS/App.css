@@ -383,6 +383,10 @@
         grid-area: span 1 / span 2;
     }
 
+    .button, .button-2, .button-2f, .button-space, .button-enter, .button-enter-2, .button-enter-3, .button-graph, .button-f, .button-num, .button-opera, .button-del, .button-hand {
+        cursor: crosshair;
+    }
+
 
     .circle-control {
         background-color: blueviolet;
@@ -404,7 +408,7 @@
         align-items: center;
     }
     .control {
-        background-color: blue;
+        /* background-color: blue; */
         border-radius: 1vw;
         font-size: 1vw;
         text-align: center;

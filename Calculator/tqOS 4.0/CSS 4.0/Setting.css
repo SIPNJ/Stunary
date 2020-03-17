@@ -37,7 +37,7 @@
     border-radius: 2em;
 
     width: 26em;
-    height: 25em;
+    height: 28em;
 
     background-color: brown;
 }
@@ -57,8 +57,8 @@
     flex-flow: column;
     align-items: center;
 
-    height: 17em;
-    width: 10em;
+    /* height: 17em;
+    width: 10em; */
 
     border: black solid;
     border-radius: 1em ;
@@ -70,8 +70,8 @@
     flex-flow: column;
     align-items: center;
 
-    height: 17em;
-    width: 10em;
+    /* height: 17em;
+    width: 10em; */
 
     border: black solid;
     border-radius: 1em ;
@@ -86,7 +86,7 @@ center{
     background-color: blanchedalmond;
     color: dimgrey;
     text-align: center;
-    margin: 0.25em 1em 0.5em 1em;
+    margin: 0.5em 1em 0.5em 1em;
     border-radius: 1em;
 }
 
