@@ -5,16 +5,85 @@
     #content {
         visibility: hidden;
     }
-    #hidden {
+
+    #mini {
+        margin-left: auto;
+        margin-right: auto;
+
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+        grid-template-rows: 8vw 16vw 10vw 10vw 10vw 10vw 10vw ;
+
+        visibility: visible;
+        /* background-color: rgb(58, 52, 52); */
+        border-radius: 5vw;
+        border: 0.15vw black solid;
+    }
+
+    .btn {
         display: flex;
         flex-flow: column;
-        justify-content: center;
         align-items: center;
-
-        text-align: center;
-        visibility: visible;
-        font-size: 25vw;
+        justify-content: center;
+        border: 0.125vw grey solid;
     }
+
+    .zeromini {
+        grid-area: span 1 / span 2;
+    }
+    
+    .mini-disp {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        /* width: 18vw; */
+        /* margin: 3vw; */
+        grid-area: span 1 / span 4;
+        border: 0.125vw grey solid;
+    }
+
+    .operadisp2 {
+        text-align: left;
+        width: 18vw;
+    }
+
+    .ansdisp2 {
+        text-align: right;;
+        width: 18vw;
+    }
+
+    /* mau */
+    .green {
+        background-color: darkgreen;
+    }
+    .grey {
+        background-color: rgb(189, 189, 189);
+    }
+    .orange {
+        background-color: coral;
+    }
+
+    .name {
+        border: 0.125vw grey solid;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        font-size: 5vw;
+        grid-area: span 1 /span 4;
+        animation-name: anim;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes anim {
+        0% {color: orangered;}
+        20% {color: rgb(0, 0, 0);}
+        50% {color: rgb(79, 111, 61)}
+        70% {color: rgb(204, 0, 255);}
+        100% {color: rgb(255, 0, 98);}
+    }
+
 }
 
 @media only screen and (min-width: 415px){
@@ -31,7 +100,7 @@
         border-radius: 4vw;
     }
 
-    #hidden {
+    #mini {
         visibility: hidden;
     }
 
@@ -41,6 +110,9 @@
     }
     .grey {
         background-color: rgb(189, 189, 189);
+    }
+    .orange {
+        background-color: coral;
     }
 
     /* ngan day */
