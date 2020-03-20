@@ -102,6 +102,8 @@
 
     #mini {
         visibility: hidden;
+        height: 0vw;
+        width: 0vw;
     }
 
     /* mau */

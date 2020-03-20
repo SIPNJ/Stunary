@@ -6,13 +6,13 @@
     margin: 1em;
     border: black solid;
     border-radius: 1em;
-    /* width: 105%; */
+    width: 105%;
 }
 
 /* Links inside the navbar */
 .navbar a {
 float: left;
-font-size: 4vw;
+font-size: 16px;
 color: white;
 padding: 14px 16px;
 text-decoration: none;
@@ -26,11 +26,11 @@ overflow: hidden;
 
 /* Dropdown button */
 .dropdown .dropbtn {
-font-size: 4vw;
+font-size: 16px;
 border: none;
 outline: none;
 color: white;
-padding: 4vw 4vw;
+padding: 14px 16px;
 background-color: inherit;
 font-family: inherit; /* Important for vertical align on mobile phones */
 margin: 0; /* Important for vertical align on mobile phones */
@@ -46,8 +46,8 @@ background-color: red;
 display: none;
 position: absolute;
 background-color: #f9f9f9;
-min-width: 10vw;
-box-shadow: 0vw 2vw 4vw 0vw rgba(0,0,0,0.2);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
 }
 
@@ -55,7 +55,7 @@ z-index: 1;
 .dropdown-content a {
 float: none;
 color: black;
-padding: 4vw;
+padding: 12px;
 text-decoration: none;
 display: block;
 text-align: center;
