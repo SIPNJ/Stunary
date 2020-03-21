@@ -17,8 +17,10 @@
 
         visibility: visible;
         /* background-color: rgb(58, 52, 52); */
-        border-radius: 5vw;
-        border: 0.15vw black solid;
+        width: 80vw;
+        height: 73.5vw;
+        /* border-radius: 5vw; */
+        border: 1vw black solid;
     }
 
     .btn {
@@ -26,7 +28,7 @@
         flex-flow: column;
         align-items: center;
         justify-content: center;
-        border: 0.125vw grey solid;
+        border: 0.125vw black solid;
     }
 
     .zeromini {
@@ -41,7 +43,7 @@
         /* width: 18vw; */
         /* margin: 3vw; */
         grid-area: span 1 / span 4;
-        border: 0.125vw grey solid;
+        border: 0.125vw black solid;
     }
 
     .operadisp2 {
@@ -66,7 +68,7 @@
     }
 
     .name {
-        border: 0.125vw grey solid;
+        border: 0.125vw black solid;
         display: flex;
         flex-flow: row;
         justify-content: center;
