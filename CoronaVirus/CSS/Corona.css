@@ -27,6 +27,14 @@ a:link {
     vertical-align: middle;
 }
 
+.black-color {
+    color : black;
+}
+
+.white-color {
+    color: ivory;
+}
+
 /* hieu ung */
 
 @keyframes enter1 {
@@ -54,7 +62,6 @@ a:link {
 }
 
 .titlelin1, .titlelin2 {
-    color: ivory;
     font-size: 15vw;
     position: relative;
 }
@@ -108,20 +115,9 @@ a:link {
 
 /* xem mo dau */
 
-.head1st {
-    background-color: seashell;
-    border-top: 0.175vw #dadada solid;
-    border-bottom: 0.175vw #dadada solid;
-    animation-name: fadein;
-    animation-duration: 2s;
-    box-shadow: 0.125vw 0.125vw 30vw -10vw black;
-}
-
-
 .hea1st {
     padding: 2vw;
     margin: 5vw;
-    color: black;
     font-size: 7vw;
     font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
@@ -155,7 +151,6 @@ a:link {
     margin: 3vw;
     font-size: 5vw;
     font-family: 'Arial', Times, serif;
-    color: black;
 }
 
 /* Main content */
@@ -168,16 +163,36 @@ a:link {
     box-shadow: 0.125vw 0.125vw 30vw -10vw black;
 } */
 
-.content1st {
-    background-color: rgb(67, 156, 155);
-    border-bottom: 0.175vw #dadada solid;
+.head1st ,.content1st, .content2nd, .content3rd, .content3-5rd, .content4th {
+    border: 0.175vw #dadada solid;
+    /* border-radius: 2vw; */
     animation-name: fadein;
     animation-duration: 2s;
     box-shadow: 0.125vw 0.125vw 30vw -10vw black;
+    width: 100vw;
+}
+
+.head1st {
+    background-color: seashell;
+}
+
+.content1st {
+    background-color: rgb(67, 156, 155);
+}
+
+.content2nd {
+    background-color: rgb(190, 146, 70);
+}
+
+.content3rd {
+    background-color: rgb(127, 142, 130);
+}
+
+.content3-5rd {
+    background-color: ;
 }
 
 .heading {
-    color: seashell;
     font-size: 5vw;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -185,15 +200,18 @@ a:link {
 }
 
 .img {
-    margin: 3vw;
+    margin: 3vw 3vw 1vw 3vw;
     background-size: cover;
     background-attachment: fixed;
+    width: 40vw;
+    height: 40vw;
 }
 
 .tt {
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-    margin: 1vw;
+    font-size: 2vw;
+    margin: 1.5vw;
 }
+
 
