@@ -257,18 +257,19 @@ a:link {
 }
 
 
-.disp {
+/* .disp {
     margin: 3vw;
-    width: 60vw;
+    width: 70vw;
     height: 30vw;
     background-color: rgb(74, 74, 74);
     border: 1vw black solid;
     border-radius: 3vw;
-}
+} */
 
 .disp iframe {
-    width: 56vw;
-    height: 26vw;
+    width: 70vw;
+    height: 35vw;
+    border: 0.125vw black solid;
     border-radius: 3vw;
 }
 
