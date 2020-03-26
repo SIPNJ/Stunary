@@ -3,6 +3,11 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 a:link {
@@ -64,6 +69,7 @@ a:link {
 .titlelin1, .titlelin2 {
     font-size: 15vw;
     position: relative;
+    left: 5vw;
 }
 
 .titlelin1::before {
@@ -165,9 +171,9 @@ a:link {
 
 .head1st ,.content1st, .content2nd, .content3rd, .content3-5rd, .content4th {
     border: 0.175vw #dadada solid;
-    /* border-radius: 2vw; */
-    animation-name: fadein;
-    animation-duration: 2s;
+    /* border-radius: 2vw;  */
+    animation-name: fadein; 
+    animation-duration: 2s; 
     box-shadow: 0.125vw 0.125vw 30vw -10vw black;
     width: 100vw;
 }
@@ -189,7 +195,7 @@ a:link {
 }
 
 .content3-5rd {
-    background-color: ;
+    background-color: rgba(95, 149, 210, 0.76);
 }
 
 .heading {
@@ -200,11 +206,17 @@ a:link {
 }
 
 .img {
-    margin: 3vw 3vw 1vw 3vw;
+    margin: 3vw 3vw 3vw 3vw;
     background-size: cover;
     background-attachment: fixed;
     width: 40vw;
     height: 40vw;
+}
+
+.canvas {
+    height: 20vw; /* 150 */
+    width: 40vw; /* 300 */
+    margin: 7vw;
 }
 
 .tt {
@@ -214,4 +226,74 @@ a:link {
     margin: 1.5vw;
 }
 
+/* game */
 
+.machine {
+    width: 80vw;
+    height: 40vw;
+    background-color: rgb(179, 163, 163);
+    border: 1vw black solid;
+    border-radius: 5vw;   
+    margin: 3vw;
+}
+
+.btn {
+    background-color: cadetblue;
+    padding: 2vw;
+    border: 0.125vw black solid;
+    border-radius: 5vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-lef {
+    display: grid;
+    grid-template-columns: 4vw 4vw;
+    grid-template-rows: 2vw 4vw 2vw 4vw 2vw 4vw;
+    row-gap: 1vw ;
+    column-gap: 1vw ;
+}
+
+
+.disp {
+    margin: 3vw;
+    width: 60vw;
+    height: 30vw;
+    background-color: rgb(74, 74, 74);
+    border: 1vw black solid;
+    border-radius: 3vw;
+}
+
+.disp iframe {
+    width: 56vw;
+    height: 26vw;
+    border-radius: 3vw;
+}
+
+.col-lef div {
+    font-size: 2vw;
+    text-align: center;
+}
+
+/* footer */
+
+.footer {
+    background-color: rgb(255, 255, 255);
+}
+
+#footess {
+    font-size: 4vw;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+    0% {color: orangered;}
+    20% {color: rgb(176, 209, 54);}
+    50% {color: rgb(94, 255, 0);}
+    70% {color: rgb(204, 0, 255);}
+    100% {color: rgb(255, 0, 98);}
+}
