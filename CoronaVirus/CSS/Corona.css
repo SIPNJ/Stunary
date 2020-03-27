@@ -73,7 +73,7 @@ a:link {
 }
 
 .titlelin1::before {
-    content: "What-a-heck";
+    content: "What-the-heck";
     position: absolute;
     transform-origin: bottom right;
     top: 0vw;
@@ -230,7 +230,7 @@ a:link {
 
 .machine {
     width: 80vw;
-    height: 40vw;
+    height: 50vw;
     background-color: rgb(179, 163, 163);
     border: 1vw black solid;
     border-radius: 5vw;   
@@ -297,4 +297,10 @@ a:link {
     50% {color: rgb(94, 255, 0);}
     70% {color: rgb(204, 0, 255);}
     100% {color: rgb(255, 0, 98);}
+}
+
+.last {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 3vw;
+    font-size: 3vw;
 }
