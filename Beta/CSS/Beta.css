@@ -1,0 +1,40 @@
+body {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    row-gap: 2.5vw;
+}
+
+.navbar {
+    grid-area: span 1 / span 2;
+}
+
+/* welcome */
+
+.welcome{
+    font-family: monospace;
+    color: blanchedalmond;
+
+    width: 70%;
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: cahy;
+    animation-duration: 5s;
+}
+
+
+/* class */
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+

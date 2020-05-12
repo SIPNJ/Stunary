@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Year Month Day</title>
+    <link rel="stylesheet" href="Other/YMD/CSS/YMD.css">
 </head>
 <body>
     <table border="4", cellpadding="2", cellspacing="0">
@@ -20,27 +21,30 @@
         <tbody>
             <tr>
                 <td id="Rclr" style="background-color: red; width: 8em; height: 4em;"></td>
-                <td id="Gclr" style="background-color: green; width: 8em; height: 4em;"></td>
-                <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;"></td>
+                <td id="Gclr" style="background-color: black; width: 8em; height: 4em;"></td>
+                <td id="Bclr" style="background-color: black; width: 8em; height: 4em;"></td>
             </tr>
             <tr>
-                <td id="redval" style="text-align: center; color: red; background-color: blanchedalmond;">255</td>
-                <td id="greenval" style="text-align: center; color: green; background-color: blanchedalmond;">0</td>
-                <td id="blueval" style="text-align: center; color:blue; background-color: blanchedalmond;">0</td>
+                <td class="blanmond center red" id="redval" ><input class="center" id="redvalput"></td>
+                <td class="blanmond center green" id="greenval"><input class="center" id="greenvalput"></td>
+                <td class="blanmond center blue" id="blueval"><input class="center" id="bluevalput"></td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="1" max="31" value="1"></td>
+                <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="1" max="31" value="31"></td>
                 <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="1" max="12" value="1"></td>
-                <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="-" max="3797" value="1"></td>
+                <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="-" max="4500" value="1"></td>
             </tr>
             <tr>
                 <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
             </tr>
         </tfoot>
     </table>
-    <input type="week">
+    <!-- <input type="week"> -->
+
+    <canvas class="center" id="clock"></canvas>
     <script src="Other/YMD/JS/App.js"></script>
+    <script src="Other/YMD/JS/Clock.js"></script>
 </body>
 </html>

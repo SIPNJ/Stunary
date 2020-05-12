@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/* class */
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.blanmond {
+    background-color: blanchedalmond;
+}
+
+.bgred {
+    background-color: red;
+}
+
+.bggreen {
+    background-color: green;
+}
+
+.bgblue {
+    background-color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.black {
+    color: black;
+}
+
+/* time table */
+
+
+
+/* time value */
+
+#redvalput, #greenvalput, #bluevalput {
+    text-align: center;
+    background-color: blanchedalmond;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+/* clock */
+
+#clock {
+    width: 24vw;
+    height: 12vw;
+    margin: 5vw;
+    /* background-color: #333; */
+}

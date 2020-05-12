@@ -31,23 +31,37 @@ var btn = document.getElementById("clickbtn");
 var resetclr = document.getElementById("resetclr");
 
 resetclr.addEventListener("click", function(){
+    // all calculator
     document.getElementById("calculator").style.backgroundColor = `rgb(189, 189, 189)`;
-    for(let i=0 ; i<8 ; i++){
-        document.getElementsByClassName("set")[i].style.backgroundColor = `gba(30, 143, 255, 0.651)`;
+    // screen
+    document.getElementById("display").style.backgroundColor = `rgb(74, 119, 63)`;
+    document.getElementById("operadisp").style.backgroundColor = `rgb(74, 119, 63)`;
+    document.getElementById("ansdisp").style.backgroundColor = `rgb(74, 119, 63)`;
+    // text on screen
+    document.getElementById("operadisp").style.color = `rgb()`;
+    document.getElementById("ansdisp").style.color = `rgb()`;
+
+    // setting color
+    for(let i=0 ; i<7 ; i++){
+        document.getElementsByClassName("set")[i].style.backgroundColor = `rgba(30, 143, 255, 0.651)`;
         document.getElementsByClassName("set")[i].style.color = `rgb(0,0,0)`;
     };
+    // document color
     for(let i=0 ; i<22 ; i++){
         document.getElementsByClassName("doc")[i].style.backgroundColor = `black`;
         document.getElementsByClassName("doc")[i].style.color = `whitesmoke`;
     };
+    // numkey color
     for(let i=0 ; i<11 ; i++){
         document.getElementsByClassName("num")[i].style.backgroundColor = `rgb(226, 223, 185)`;
         document.getElementsByClassName("num")[i].style.color = `rgb(50, 50, 50)`;
     };
+    // deactive color
     for(let i=0 ; i<2 ; i++){
         document.getElementsByClassName("deact")[i].style.backgroundColor = `rgb(255,99,71)`;
         document.getElementsByClassName("deact")[i].style.color = `rgb(50, 50, 50)`;
     };
+    // opera color
     for(let i=0 ; i<7 ; i++){
         document.getElementsByClassName("opera")[i].style.backgroundColor = `rgb(226, 223, 185)`;
         document.getElementsByClassName("opera")[i].style.color = `rgb(50, 50, 50)`;
@@ -55,45 +69,53 @@ resetclr.addEventListener("click", function(){
 })
 
 btn.addEventListener("click", function(){
-    var bgcalccolor=document.getElementById("bgcalccolor").value;
-    var bgdispcolor=document.getElementById("bgdispcolor").value;
-    var bgsetccolor=document.getElementById("bgsetcolor").value;
-    var bgdocccolor=document.getElementById("bgdoccolor").value;
-    var bgnumcolor=document.getElementById("bgnumcolor").value;
-    var bgdeactcolor=document.getElementById("bgdeactcolor").value;
-    var bgoperacolor=document.getElementById("bgoperacolor").value;
+    let bgcalccolor = document.getElementById("bgcalccolor").value;
+    let bgdispcolor = document.getElementById("bgdispcolor").value;
+    let bgsetccolor = document.getElementById("bgsetcolor").value;
+    let bgdocccolor = document.getElementById("bgdoccolor").value;
+    let bgnumcolor = document.getElementById("bgnumcolor").value;
+    let bgdeactcolor = document.getElementById("bgdeactcolor").value;
+    let bgoperacolor = document.getElementById("bgoperacolor").value;
 
-    var operadispcolor=document.getElementById("operadispcolor").value;
-    var ansdispcolor=document.getElementById("ansdispcolor").value;
-    var setcolor=document.getElementById("setcolor").value;
-    var doccolor=document.getElementById("doccolor").value;
-    var numcolor=document.getElementById("numcolor").value;
-    var deactcolor=document.getElementById("deactcolor").value;
-    var operacolor=document.getElementById("operacolor").value;
+    let operadispcolor = document.getElementById("operadispcolor").value;
+    let ansdispcolor = document.getElementById("ansdispcolor").value;
+    let setcolor = document.getElementById("setcolor").value;
+    let doccolor = document.getElementById("doccolor").value;
+    let numcolor = document.getElementById("numcolor").value;
+    let deactcolor = document.getElementById("deactcolor").value;
+    let operacolor = document.getElementById("operacolor").value;
 
+    // all calculator
     document.getElementById("calculator").style.backgroundColor = `rgb(${bgcalccolor})`;
-    document.getElementById("realdisp").style.backgroundColor = `rgb(${bgdispcolor})`;
+    // screen
+    document.getElementById("display").style.backgroundColor = `rgb(${bgdispcolor})`;
     document.getElementById("operadisp").style.backgroundColor = `rgb(${bgdispcolor})`;
     document.getElementById("ansdisp").style.backgroundColor = `rgb(${bgdispcolor})`;
+    // text on screen
     document.getElementById("operadisp").style.color = `rgb(${operadispcolor})`;
     document.getElementById("ansdisp").style.color = `rgb(${ansdispcolor})`;
 
-    for(let i=0 ; i<8 ; i++){
+    // setting button
+    for(let i=0 ; i<7 ; i++){
         document.getElementsByClassName("set")[i].style.backgroundColor = `rgb(${bgsetccolor})`;
         document.getElementsByClassName("set")[i].style.color = `rgb(${setcolor})`;
     };
+    // document color
     for(let i=0 ; i<22 ; i++){
         document.getElementsByClassName("doc")[i].style.backgroundColor = `rgb(${bgdocccolor})`;
         document.getElementsByClassName("doc")[i].style.color = `rgb(${doccolor})`;
     };
+    // numkey color
     for(let i=0 ; i<11 ; i++){
         document.getElementsByClassName("num")[i].style.backgroundColor = `rgb(${bgnumcolor})`;
         document.getElementsByClassName("num")[i].style.color = `rgb(${numcolor})`;
     };
+    // deactive color
     for(let i=0 ; i<2 ; i++){
         document.getElementsByClassName("deact")[i].style.backgroundColor = `rgb(${bgdeactcolor})`;
         document.getElementsByClassName("deact")[i].style.color = `rgb(${deactcolor})`;
     };
+    // opera color
     for(let i=0 ; i<7 ; i++){
         document.getElementsByClassName("opera")[i].style.backgroundColor = `rgb(${bgoperacolor})`;
         document.getElementsByClassName("opera")[i].style.color = `rgb(${operacolor})`;

@@ -1,33 +1,19 @@
-/* @media only screen and (max-width: 375px){
-   #welcome{
-       font-size: 1em;
-       width: 100%;
-       margin-left: auto;
-       margin-right: auto;
-   }
-   #rowten{
-       transform: scale(0.25);
-   }
-} */
-
-
 /* Navbar container */
 .navbar {
-    overflow: hidden;
-    background-color: #333;
+    position: fixed;
+    background-color: #1D1D1F;
     font-family: Arial;
-    margin: 1em;
+    margin: 3vw;
     border: black solid;
-    border-radius: 1em;
-    width: 105%;
+    border-radius: 2vw;
 }
 
 /* Links inside the navbar */
 .navbar a {
 float: left;
-font-size: 16px;
+font-size: 1.5vw;
 color: white;
-padding: 14px 16px;
+padding: 1.5vw 1.5vw;
 text-decoration: none;
 }
 
@@ -39,11 +25,11 @@ overflow: hidden;
 
 /* Dropdown button */
 .dropdown .dropbtn {
-font-size: 16px;
+font-size: 1.5vw;
 border: none;
 outline: none;
 color: white;
-padding: 14px 16px;
+padding: 1.5vw 1.5vw;
 background-color: inherit;
 font-family: inherit; /* Important for vertical align on mobile phones */
 margin: 0; /* Important for vertical align on mobile phones */
@@ -59,8 +45,8 @@ background-color: red;
 display: none;
 position: absolute;
 background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+min-width: 10vw;
+box-shadow: 0vw 0.5vw 1vw 0vw rgba(0,0,0,0.2);
 z-index: 1;
 }
 

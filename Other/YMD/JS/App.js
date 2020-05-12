@@ -9,18 +9,27 @@ let slidegreen = document.getElementById("slideGreen");
 let slideblue = document.getElementById("slideBlue");
 
 slidered.oninput = function(){
-    redval.innerHTML = slidered.value;
-    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
-    document.getElementById("Rclr").style.backgroundColor = `rgb(${slidered.value},0,0)`;
+    redvalput.value = slidered.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value*8},${slidegreen.value*21},${slideblue.value*0.064})`;
+    document.getElementById("Rclr").style.backgroundColor = `rgb(${slidered.value*8},0,0)`;
 }
 slidegreen.oninput = function(){
-    greenval.innerHTML = slidegreen.value;
-    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
-    document.getElementById("Gclr").style.backgroundColor = `rgb(0,${slidegreen.value},0)`;
+    greenvalput.value = slidegreen.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value*8},${slidegreen.value*21},${slideblue.value*0.064})`;
+    document.getElementById("Gclr").style.backgroundColor = `rgb(0,${slidegreen.value*21},0)`;
 }
 slideblue.oninput = function(){
-    blueval.innerHTML = slideblue.value;
-    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value},${slidegreen.value},${slideblue.value})`;
-    document.getElementById("Bclr").style.backgroundColor = `rgb(0,0,${slideblue.value})`;
+    bluevalput.value = slideblue.value;
+    document.getElementById("resclr").style.backgroundColor = `rgb(${slidered.value*8},${slidegreen.value*21},${slideblue.value*0.064})`;
+    document.getElementById("Bclr").style.backgroundColor = `rgb(0,0,${slideblue.value*0.064})`;
 }
 
+// time value
+
+let redvalput = document.getElementById("redvalput");
+let greenvalput = document.getElementById("greenvalput");
+let bluevalput = document.getElementById("bluevalput");
+
+redvalput.value = 31;
+greenvalput.value = 1;
+bluevalput.value = 0;
