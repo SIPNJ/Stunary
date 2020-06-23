@@ -1145,7 +1145,7 @@ calc.addEventListener("click", function(){
 
     // ansans = ansans.replace(/Log/gi, "Math.log10");
     // ansans = ansans.replace(/Ln/gi, "Math.log");
-    // // ansans = ansans.replace(/Loga/gi,"logasa");
+    // ansans = ansans.replace(/Loga/gi,"logasa");
     // ansans = ansans.replace(/√/gi, "Math.sqrt");
     try{
         replaceX(ansans);

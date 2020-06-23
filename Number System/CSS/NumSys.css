@@ -1,7 +1,53 @@
 .center {
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.column {
+    display: flex;
+    flex-flow: column;
+}
+.row {
+    display: flex;
+    flex-flow: row;
 }
 .mainform {
-    border: 1vw red;
+    border: 0.5vw solid black;
+    border-radius: 5vw;
+    box-shadow: black;
+    height: 50vw;
+    width: 40vw;
+    margin: 1vw;
+}
+/* files */
+#dec {
+    cursor: not-allowed;
+}
+#bin, #dec, #rom, #ara {
+    font-size: 1.5vw;
+    padding: 2vw;
+    border: 0.25vw dashed black;
+    border-radius: 3vw;
+}
+#btnctv {
+    border: 0.25vw dashed black;
+    border-radius: 3vw;
+    font-size: 1.5vw;
+    margin: 3vw;
+    font-weight: bold;
+}
+/* table */
+.title {
+    font-size: 2vw;
+    font-weight: 900;
+}
+.tableform {
+    display: grid;
+    grid-template-rows: 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
+    grid-template-columns: 6vw 6vw;
+    border: 0.25vw black solid;
+    border-radius: 1vw;
+    margin: 1vw;
 }

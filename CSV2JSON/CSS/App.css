@@ -1,0 +1,38 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.column {
+    display: flex;
+    flex-flow: column;
+}
+.row{
+    display: flex;
+    flex-flow: row;
+}
+.blue {
+    padding: 1vw;
+    font-size: 1vw;
+    border: 0.25vw dotted grey;
+    border-radius: 3vw;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+.threerow {
+    margin: 1vw;
+}
+.mainform {
+    border: 0.5vw solid black;
+    border-radius: 3vw;
+    padding: 2vw;
+}
+#csvdata, #jsondata {
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 1vw;
+    padding: 3vw;
+    border: 0.25vw dashed black;
+    border-radius: 1vw;
+    height: 10vw;
+    width: 30vw;
+}

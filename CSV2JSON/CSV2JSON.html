@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to JSON</title>
+    <link rel="stylesheet" href="./CSS/App.css">
+</head>
+<body>
+    <div class="center column">
+        <div class="center" style="font-size: 5vw; margin-bottom: 3vw;">Convert CSV to JSON</div>
+        <div class="mainform center row">
+            <div class="csvform column">
+                <h2 class="center">CSV data</h2>
+                <textarea id="csvdata" placeholder="Enter CSV file"></textarea>
+                <div class="center row">
+                    <div class="threerow blue" id="toJSON">Convert to JSON</div>
+                    <div class="threerow blue" id="toCSV">Convert to CSV</div>
+                </div>
+            </div>
+            <div class="jsonform column">
+                <h2 class="center">JSON data</h2>
+                <textarea id="jsondata"></textarea>
+                <div class="center blue" id="linklink">Download</div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/App.js"></script>
+</body>
+</html>
