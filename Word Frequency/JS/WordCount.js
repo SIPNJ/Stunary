@@ -87,7 +87,6 @@ function sortable(){
 }
 function ranking(){
     for (let i=1; i<=wordscount.length; i++){
-        console.log(table.rows[i])
         table.rows[i].cells[0].innerHTML = i;
     }
 }
