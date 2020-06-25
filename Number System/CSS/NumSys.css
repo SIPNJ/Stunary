@@ -21,6 +21,11 @@
     width: 40vw;
     margin: 1vw;
 }
+.label {
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 3vw;
+}
 /* files */
 #dec {
     cursor: not-allowed;
@@ -50,4 +55,7 @@
     border: 0.25vw black solid;
     border-radius: 1vw;
     margin: 1vw;
+}
+.letter {
+    font-size: 2vw;
 }

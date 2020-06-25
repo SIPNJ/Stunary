@@ -29,6 +29,8 @@ function checkNum(StringNum, Separator,
             StrSplit[1].includes(NLA4) == true ||
             StrSplit[1].includes(NLA5) == true ||
             StrSplit[1].includes(NLA6) == true
+
+
         ) {
             ara.value = "Wrong Order !";
             console.log(StringNum);
@@ -135,16 +137,128 @@ function Change2Ara(aaa){
     rep = rep.replace(/I/g, "1+");
     ara.value = eval(rep);
 }
+function checkV(para){
+    let rep = para.split("V");
+    console.log(rep);
+    if (
+        rep[0].includes("V") == true ||
+        rep[1].includes("V") == true ||
+        rep[1].includes("X") == true ||
+        rep[1].includes("L") == true ||
+        rep[1].includes("C") == true ||
+        rep[1].includes("D") == true ||
+        rep[1].includes("M") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }
+}
+function checkX(para){
+    let rep = para.split("X");
+    if (
+        rep[0].includes("V") == true ||
+        rep[1].includes("L") == true ||
+        rep[1].includes("C") == true ||
+        rep[1].includes("D") == true ||
+        rep[1].includes("M") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }
+}
+function checkL(para){
+    let rep = para.split("L");
+    if (
+        rep[0].includes("I") == true ||
+        rep[0].includes("V") == true ||
+        rep[0].includes("L") == true |
+        rep[1].includes("L") == true ||
+        rep[1].includes("C") == true ||
+        rep[1].includes("D") == true ||
+        rep[1].includes("M") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }
+}
+function checkC(para){
+    let rep = para.split("C");
+    if (
+        rep[0].includes("I") == true ||
+        rep[0].includes("V") == true ||
+        rep[0].includes("L") == true ||
+        rep[1].includes("X") == true ||
+        rep[1].includes("D") == true ||
+        rep[1].includes("M") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }
+}
+function checkD(para){
+    let rep = para.split("D");
+    if (
+        rep[0].includes("I") == true ||
+        rep[0].includes("V") == true ||
+        rep[0].includes("X") == true ||
+        rep[0].includes("L") == true ||
+        rep[0].includes("D") == true ||
+        rep[1].includes("D") == true ||
+        rep[1].includes("M") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }  
+}
+function checkM(para){
+    let rep = para.split("M");
+    console.log(rep);
+    if (
+        rep[0].includes("I") == true ||
+        rep[0].includes("V") == true ||
+        rep[0].includes("X") == true ||
+        rep[0].includes("L") == true ||
+        rep[0].includes("D") == true
+    ) {
+        ara.value = "Typing Wrong !"
+    }  
+}
 function Ara2Rom(){
     aaa = rom.value;
     checkKey(aaa);
-    checkNum(aaa, "CM", "D", "C", "L", "X", "V", "I");
-    checkNum(aaa, "CD", "D", "C", "L", "X", "V", "I");
-    checkNum(aaa, "XC", "L", undefined, "L", "X", "V", "I");
-    checkNum(aaa, "XL", "L", undefined, "L", "X", "V", "I");
-    checkNum(aaa, "IX", "V", undefined, undefined, undefined, "V", "I");
-    checkNum(aaa, "IV", "V", undefined, undefined, undefined, "V", "I");
-    checkCount(aaa);
+    if (
+        aaa.includes("CM") == true ||
+        aaa.includes("CD") == true ||
+        aaa.includes("XC") == true ||
+        aaa.includes("XL") == true ||
+        aaa.includes("IX") == true ||
+        aaa.includes("IV") == true
+    ){
+        checkNum(aaa, "CM", "D", "C", "L", "X", "V", "I");
+        checkNum(aaa, "CD", "D", "C", "L", "X", "V", "I");
+        checkNum(aaa, "XC", "L", undefined, "L", "X", "V", "I");
+        checkNum(aaa, "XL", "L", undefined, "L", "X", "V", "I");
+        checkNum(aaa, "IX", "V", undefined, undefined, undefined, "V", "I");
+        checkNum(aaa, "IV", "V", undefined, undefined, undefined, "V", "I");
+        checkCount(aaa);
+    } else if (
+        aaa.includes("CM") == false &&
+        aaa.includes("CD") == false &&
+        aaa.includes("XC") == false &&
+        aaa.includes("XL") == false &&
+        aaa.includes("IX") == false &&
+        aaa.includes("IV") == false
+    ) {
+        if (aaa.includes("V")){
+            checkV(aaa);
+        } else if (aaa.includes("X")){
+            checkX(aaa);
+        } else if (aaa.includes("L")){
+            checkL(aaa);
+        } else if (aaa.includes("C")){
+            checkC(aaa);
+        } else if (aaa.includes("D")){
+            checkD(aaa);
+        } else if (aaa.includes("M")){
+            checkM(aaa);
+        }
+        checkCount(aaa);
+    }
 }
 // I
 // V

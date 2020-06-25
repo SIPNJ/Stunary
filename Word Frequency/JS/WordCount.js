@@ -10,7 +10,7 @@ let counting=0;
 function count(){
     wordscount = [];
     unique = [];
-    all = para.value.split(" ");
+    all = para.value.split(/\W+/gm);
     if (all == ""){
         error = "Don't leave the blank in box, please !";
     } else {
@@ -74,7 +74,7 @@ function sortable(){
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("td")[1];
             y = rows[i+1].getElementsByTagName("td")[1];
-            if (x.innerHTML<y.innerHTML){
+            if (Number(x.innerHTML)<Number(y.innerHTML)){
                 shouldSwitch = true;
                 break;
             }
@@ -96,3 +96,9 @@ btn.addEventListener("click", function(){
     sortable();
     ranking();
 })
+function increase(){
+    para.style.fontSize = `${String(Number(para.style.fontSize) + 1)}vw`;
+}
+function decrease(){
+    para.style.fontSize = `${String(Number(para.style.fontSize) - 1)}vw`;
+}

@@ -19,12 +19,13 @@
     border: gainsboro solid 0.25vw;
     border-radius: 2vw;
     box-shadow: gray;
+    cursor: pointer;
 }
 #tableform, #paraform {
     margin: 5vw
 }
 td, th {
-    font-size: 2vw;
+    font-size: 1.25vw;
     padding: 1vw;
 }
 tr:hover {
@@ -39,7 +40,7 @@ th:hover, td:hover {
     width: 40vw;
     height: 40vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2vw;
+    font-size: 1.25vw;
     font-weight: 500;
     font-style: oblique;
 }
