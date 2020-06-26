@@ -277,7 +277,8 @@ function Ara2Rom(){
     let res;
     let result;
     if (
-        typeof(eval(aaa)) == "number"
+        typeof(eval(aaa)) == "number" &&
+        eval(aaa) < 4000
     ){
         // calculate exponential of numbers
         for (let i=1; i<=arr.length; i++){
@@ -357,8 +358,14 @@ function Ara2Rom(){
         result = res.toString();
         result = result.replace(/,/gi,"");
         rom.value = result;
-    } else {
+    } else if (
+        typeof(eval(aaa)) !== "number" 
+    ) {
         rom.value = "Not an Arabic Numeral";
+    } else if (
+        eval(aaa) >= 4000
+    ) {
+        rom.value = "Sorry, I cannot calculate."
     }
     
 }
