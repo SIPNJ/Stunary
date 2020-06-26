@@ -59,3 +59,7 @@
 .letter {
     font-size: 2vw;
 }
+.note {
+    color: red;
+    font-size: 1vw;
+}
