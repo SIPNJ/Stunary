@@ -30,7 +30,6 @@ function count(){
             counting = 0;
         }
     }
-
 }
 function createTable(){
     // delete previous table

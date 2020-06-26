@@ -29,8 +29,6 @@ function checkNum(StringNum, Separator,
             StrSplit[1].includes(NLA4) == true ||
             StrSplit[1].includes(NLA5) == true ||
             StrSplit[1].includes(NLA6) == true
-
-
         ) {
             ara.value = "Wrong Order !";
             console.log(StringNum);
@@ -55,7 +53,7 @@ function checkCount(para){
     }
     for (let i=0; i<unique.length; i++){
         if (wordscount[i]>3){
-            ara.value = "Not a Roman Numeral !";
+            ara.value = "Typing too much letters of Roman Numeral !";
         }
     }
 }
@@ -80,7 +78,6 @@ function checkKey(para){
     } catch (err) {
         ara.value = "Not a number !";
     }
-
     let Keys = para.split("");
     if (
         Keys.includes("I") == false &&
@@ -218,7 +215,7 @@ function checkM(para){
         ara.value = "Typing Wrong !"
     }  
 }
-function Ara2Rom(){
+function Rom2Ara(){
     aaa = rom.value;
     checkKey(aaa);
     if (
@@ -270,11 +267,110 @@ function Ara2Rom(){
 // _
 
 // Convert Ara to Rom
-function Rom2Ara(){
+function Ara2Rom(){
+    let aaa = ara.value;
+    // 1234
+    let arr = aaa.split("");
+    // [1,2,3,4]
+    let expo = [];
+    let rep = "0";
+    let res;
+    let result;
+    if (
+        typeof(eval(aaa)) == "number"
+    ){
+        // calculate exponential of numbers
+        for (let i=1; i<=arr.length; i++){
+            expo.push(arr.length-i);
+        }
+        // split the value into sum of standard forms
+        for (let i=0; i<arr.length; i++){
+            rep = rep + `+${arr[i]}*10**${expo[i]}`;
+        }
+        // delete first letter
+        res = rep.split("+");
+        res.shift();
+        // change arabic numerals to roman numerals
+        for (let i=0; i<res.length; i++){
+            if (eval(res[i]) == "1"){
+                res[i] = "I";
+            } else if (eval(res[i]) == "2"){
+                res[i] = "II";
+            } else if (eval(res[i]) == "3"){
+                res[i] = "III";
+            } else if (eval(res[i]) == "4"){
+                res[i] = "IV";
+            } else if (eval(res[i]) == "5"){
+                res[i] = "V";
+            } else if (eval(res[i]) == "6"){
+                res[i] = "VI";
+            } else if (eval(res[i]) == "7"){
+                res[i] = "VII";
+            } else if (eval(res[i]) == "8"){
+                res[i] = "VIII";
+            } else if (eval(res[i]) == "9"){
+                res[i] = "IX";
+            } else if (eval(res[i]) == "10"){
+                res[i] = "X";
+            } else if (eval(res[i]) == "20"){
+                res[i] = "XX";
+            } else if (eval(res[i]) == "30"){
+                res[i] = "XXX";
+            } else if (eval(res[i]) == "40"){
+                res[i] = "XL";
+            } else if (eval(res[i]) == "50"){
+                res[i] = "L";
+            } else if (eval(res[i]) == "60"){
+                res[i] = "LX";
+            } else if (eval(res[i]) == "70"){
+                res[i] = "LXX";
+            } else if (eval(res[i]) == "80"){
+                res[i] = "LXXX";
+            } else if (eval(res[i]) == "90"){
+                res[i] = "XC";
+            } else if (eval(res[i]) == "100"){
+                res[i] = "C";
+            } else if (eval(res[i]) == "200"){
+                res[i] = "CC";
+            } else if (eval(res[i]) == "300"){
+                res[i] = "CCC";
+            } else if (eval(res[i]) == "400"){
+                res[i] = "CD";
+            } else if (eval(res[i]) == "500"){
+                res[i] = "D";
+            } else if (eval(res[i]) == "600"){
+                res[i] = "DC";
+            } else if (eval(res[i]) == "700"){
+                res[i] = "DCC";
+            } else if (eval(res[i]) == "800"){
+                res[i] = "DCCC";
+            } else if (eval(res[i]) == "900"){
+                res[i] = "CM";
+            } else if (eval(res[i]) == "1000"){
+                res[i] = "M";
+            } else if (eval(res[i]) == "2000"){
+                res[i] = "MM";
+            } else if (eval(res[i]) == "3000"){
+                res[i] = "MMM";
+            }
+        }
+        result = res.toString();
+        result = result.replace(/,/gi,"");
+        rom.value = result;
+    } else {
+        rom.value = "Not an Arabic Numeral";
+    }
     
 }
 // Convert function
 function Convert(){
-    Ara2Rom();
-    Rom2Ara();
+    if (rom.value == ""){
+        Ara2Rom();    
+    } else if (ara.value == ""){
+        Rom2Ara();
+    }
+}
+function Clear(){
+    rom.value = "";
+    ara.value = "";
 }
