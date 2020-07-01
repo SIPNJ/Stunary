@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Now</title>
+    <link rel="stylesheet" href="./CSS/Weather.css">
+</head>
+<body>
+    <h1 class="title">SIMPLE WEATHER APP</h1>
+    <div class="row">
+        <input id="input" type="text" placeholder="Search for city">
+        <input id="submit" type="button" value="Submit" onclick="SubMit()">
+        <div id="Error"></div>
+    </div>
+    <div class="row" id="eachTag">
+        <div class="column" id="Tag">
+            <div class="row">
+                <div id="nameCity">City Name</div>
+                <div id="nameCountry">Country Name</div>
+            </div>
+            <div id="Temperature">Temperature</div>
+            <div class="row">
+                <div id="Cloud">Cloudiness</div>
+                <div id="Humid">Humidity</div>
+                <div id="Pressure">Pressure</div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/Weather.js"></script>
+</body>
+</html>
