@@ -5,7 +5,7 @@ let eachTag = document.getElementById("eachTag");
 let Tag = document.getElementById("Tag");
 function SubMit(){
     let input = document.getElementById("input").value;
-    weather = fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=ffb53bbdace7d0b05094aef809bd2445`)
+    weather = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=ffb53bbdace7d0b05094aef809bd2445`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
