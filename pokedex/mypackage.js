@@ -23,17 +23,8 @@ function toNumberfromArray(array) {
   }
   return ans;
 }
-function checkDomain(domain) {
-  let chars = domain.split("");
-  if (chars[0] == "/") {
-    chars.shift();
-    return chars.join("");
-  } else {
-    return domain;
-  }
-}
 module.exports = {
-  checkDomain,
+  isPrimes,
 };
 function onRequest(request, response) {
   let pathname = url.parse(request.url).pathname;

@@ -1,33 +1,20 @@
-const mypackage = require("./pokedex/mypackage");
+// const mypackage = require("/pokedex/mypackage");
 const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const path = require("path");
-
-// function onRequest(request, response) {
-//   let pathname = url.parse(request.url).pathname;
-//   let parentFolder = path.dirname(pathname);
-//   console.log(`pathname is ${pathname}`);
-//   // console.log(__dirname + "/" + parentFolder + "/CSS/WordCount.css");
-//   // fs.readFile(__dirname + parentFolder + "/CSS/WordCount.css", function (err, data) {
-//   //   if (err) {
-//   //     console.log(err);
-//   //   } else {
-//   //     console.log("good job");
-//   //   }
-//   // });
-//   fs.readFile(pathname, function (err, data) {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       response.writeHead(200, { "Content-Type": "text/html" });
-//       response.write(data);
-//     }
-//   });
-// }
+function checkDomain(domain) {
+  let chars = domain.split("");
+  if (chars[0] == "/") {
+    chars.shift();
+    return chars.join("");
+  } else {
+    return domain;
+  }
+}
 function onRequest(request, response) {
-  // beginning
-  let pathname = mypackage.checkDomain(url.parse(request.url).pathname);
+  // Beginning
+  let pathname = checkDomain(url.parse(request.url).pathname);
   let parentFolder = path.dirname(pathname);
   // Head of HTML
   let HeadDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</head>")[0];
