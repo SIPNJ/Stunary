@@ -1,0 +1,57 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.anim {
+  animation-name: changecolor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes changecolor {
+  0% {
+    color: black;
+  }
+  20% {
+    color: rgb(66, 48, 36);
+  }
+  40% {
+    color: rgb(190, 157, 27);
+  }
+  60% {
+    color: rgb(26, 26, 214);
+  }
+  80% {
+      color: darkseagreen;
+  }
+  100% {
+      color: dimgray;
+  }
+}
+.mask, .shape {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+}
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+.grey {
+  background-color: grey;
+}
+.z1 {
+  z-index: 1;
+}
+.z0 {
+  z-index: 0;
+}
+#deck {
+  display: grid;
+  grid-template-columns: 2vw 2vw 2vw 2vw;
+  grid-template-rows: 2vw 2vw 2vw 2vw;
+  row-gap: 5vw;
+  column-gap: 5vw;
+
+}

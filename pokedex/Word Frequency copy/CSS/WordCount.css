@@ -1,0 +1,50 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.column {
+    display: flex;
+    flex-flow: column;
+}
+.row {
+    display: flex;
+    flex-flow: row;
+}
+#btn {
+    margin: 2vw;
+    background-color: darkcyan;
+    color: whitesmoke;
+    font-size: 3vw;
+    text-align: center;
+    border: gainsboro solid 0.25vw;
+    border-radius: 2vw;
+    box-shadow: gray;
+    cursor: pointer;
+}
+#tableform, #paraform {
+    margin: 5vw
+}
+td, th {
+    font-size: 1.25vw;
+    padding: 1vw;
+}
+tr:hover {
+    background-color: navy;
+    color: burlywood;
+}
+th:hover, td:hover {
+    background-color: royalblue;
+    color: seashell;
+}
+#para {
+    width: 40vw;
+    height: 40vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    font-style: oblique;
+}
+#error {
+    color: red;
+    font-style: italic;
+}
