@@ -12,64 +12,8 @@ function checkDomain(domain) {
     return domain;
   }
 }
-function onRequest(request, response) {
-  // Beginning
-  let pathname = checkDomain(url.parse(request.url).pathname);
-  let parentFolder = path.dirname(pathname);
-  // Head of HTML
-  let HeadDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</head>")[0];
-  response.write(HeadDataOfHTML);
-  // CSS
-  function checkCSSExist(parentFolder) {
-    let childrenFolder = fs.readdirSync(parentFolder, "utf-8");
-    for (let i = 0; i < childrenFolder.length; i++) {
-      if (childrenFolder[i] == "CSS") {
-        // writeCSS();
-        let CSSfiles = fs.readdirSync(
-          `${parentFolder}/${childrenFolder[i]}`,
-          "utf-8"
-        );
-        // console.log(CSSfiles);
-        for (let n = 0; n < CSSfiles.length; n++) {
-          let CSSdata = fs.readFileSync(
-            `${parentFolder}/${childrenFolder[i]}/${CSSfiles[n]}`,
-            "utf-8"
-          );
-          response.write(`\n<style>${CSSdata}</style>\n`);
-        }
-      }
-    }
-  }
-  checkCSSExist(parentFolder);
-  // Body of HTML
-  let BodyDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</head>")[1];
-  // BodyDataOfHTML = BodyDataOfHTML.split("</body>")[0];
-  response.write(`\n</head>\n${BodyDataOfHTML}`);
-  // JS
-  function checkJSExist(parentFolder) {
-    let childrenFolder = fs.readdirSync(parentFolder, "utf-8");
-    for (let i = 0; i < childrenFolder.length; i++) {
-      if (childrenFolder[i] == "JS") {
-        let JSfiles = fs.readdirSync(
-          `${parentFolder}/${childrenFolder[i]}`,
-          "utf-8"
-        );
-        for (let n = 0; n < JSfiles.length; n++) {
-          let JSdata = fs.readFileSync(
-            `${parentFolder}/${childrenFolder[i]}/${JSfiles[n]}`,
-            "utf-8"
-          );
-          response.write(`\n<script>${JSdata}</script>\n`);
-        }
-      }
-    }
-  }
-  checkJSExist(parentFolder);
-  // Foot of HTML
-  let FootDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</body>")[1];
-  response.write(`\n</body>\n${FootDataOfHTML}`);
-  // Ending
-  response.end();
+function onRequest(request, response){
+  
 }
 
 let server = http.createServer(onRequest);
@@ -151,5 +95,64 @@ server.listen(31415, "127.0.0.1", () => {
 //       response.write(FootDataOfHTML);
 //     }
 //   });
+//   response.end();
+// }
+// function onRequest(request, response) {
+//   console.log(request.url);
+//   // Beginning
+//   let pathname = checkDomain(url.parse(request.url).pathname);
+//   let parentFolder = path.dirname(pathname);
+//   // Head of HTML
+//   let HeadDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</head>")[0];
+//   response.write(HeadDataOfHTML);
+//   // CSS
+//   function checkCSSExist(parentFolder) {
+//     let childrenFolder = fs.readdirSync(parentFolder, "utf-8");
+//     for (let i = 0; i < childrenFolder.length; i++) {
+//       if (childrenFolder[i] == "CSS") {
+//         // writeCSS();
+//         let CSSfiles = fs.readdirSync(
+//           `${parentFolder}/${childrenFolder[i]}`,
+//           "utf-8"
+//         );
+//         for (let n = 0; n < CSSfiles.length; n++) {
+//           let CSSdata = fs.readFileSync(
+//             `${parentFolder}/${childrenFolder[i]}/${CSSfiles[n]}`,
+//             "utf-8"
+//           );
+//           response.write(`\n<style>${CSSdata}</style>\n`);
+//         }
+//       }
+//     }
+//   }
+//   checkCSSExist(parentFolder);
+//   // Body of HTML
+//   let BodyDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</head>")[1];
+//   // BodyDataOfHTML = BodyDataOfHTML.split("</body>")[0];
+//   response.write(`\n</head>\n${BodyDataOfHTML}`);
+//   // JS
+//   function checkJSExist(parentFolder) {
+//     let childrenFolder = fs.readdirSync(parentFolder, "utf-8");
+//     for (let i = 0; i < childrenFolder.length; i++) {
+//       if (childrenFolder[i] == "JS") {
+//         let JSfiles = fs.readdirSync(
+//           `${parentFolder}/${childrenFolder[i]}`,
+//           "utf-8"
+//         );
+//         for (let n = 0; n < JSfiles.length; n++) {
+//           let JSdata = fs.readFileSync(
+//             `${parentFolder}/${childrenFolder[i]}/${JSfiles[n]}`,
+//             "utf-8"
+//           );
+//           response.write(`\n<script>${JSdata}</script>\n`);
+//         }
+//       }
+//     }
+//   }
+//   checkJSExist(parentFolder);
+//   // Foot of HTML
+//   let FootDataOfHTML = fs.readFileSync(pathname, "utf-8").split("</body>")[1];
+//   response.write(`\n</body>\n${FootDataOfHTML}`);
+//   // Ending
 //   response.end();
 // }
