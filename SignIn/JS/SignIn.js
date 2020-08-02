@@ -1,18 +1,24 @@
-let name = document.getElementById("name");
-let pass = document.getElementById("pass");
 let button = document.getElementById("btn");
-
-fetch("ispass.json")
-  .then((response) => response.json())
-  .then((data) => {
+let situ = document.getElementById("situation");
+button.addEventListener("click", function () {
+  let username = document.getElementById("name").value;
+  let password = document.getElementById("pass").value;
+  let query = `?username=${username}&password=${password}`;
+  fetch(`http://localhost:31415/login${query}`)
+    .then((response) => response.json())
+    .then((data) => {
       console.log(data);
-  });
-// button.addEventListener("click", function(){
-//     name.value
-// })
+      button.addEventListener("click", function () {
+        if (response.message == "Login Success") {
+          alert("Login Successfull !");
+        } else {
+          alert("Login Fail");
+        }
+      });
+    });
+});
 
 // function onRequest(request, response){
-
 // }
 // let server = http.createServer(onRequest);
 // server.listen(8080, "127.0.0.1", ()=>{

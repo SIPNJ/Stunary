@@ -3,23 +3,109 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const path = require("path");
-function checkDomain(domain) {
-  let chars = domain.split("");
-  if (chars[0] == "/") {
-    chars.shift();
-    return chars.join("");
-  } else {
-    return domain;
+const host = "localhost";
+const port = 31415;
+
+function onRequest(request, response) {
+  let pathname = url.parse(request.url, true).pathname;
+  let filename = "." + pathname;
+  let query = null;
+  if (pathname.match(/\/login/gi)){
+    query = new URL(pathname, request.headers.host);
+    console.log(query);
   }
-}
-function onRequest(request, response){
-  
+  console.log("line7" + JSON.stringify(pathname));
+  // console.log("line 9" + url);
+  if (pathname == "/") {
+    // ORIGIN - INDEX.HTML
+    fs.readFile("./index.html", "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "text/html" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (pathname.includes(`.html`) == true) {
+    // HOME
+    fs.readFile(filename, "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "text/html" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (pathname.includes(`.css`) == true) {
+    // CASCADING STYLE SHEET
+    fs.readFile(filename, "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "text/css" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (pathname.includes(`.js`) == true) {
+    // JAVASCRIPT
+    fs.readFile(filename, "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "text/js" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (pathname.includes(`.png`) == true) {
+    // IMAGES - PNG
+    fs.readFile(filename, "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "image/png" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (
+    pathname.includes(`.jpg`) == true ||
+    pathname.includes(`.jpeg`) == true
+  ) {
+    // IMAGES - JPG - JPEG
+    fs.readFile(filename, "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        response.end(JSON.stringify({ message: "Do not have file !" }));
+      } else {
+        response.writeHead(200, { "Content-Type": "image/jpeg" });
+        response.write(data);
+        response.end();
+      }
+    });
+  } else if (pathname.includes(`/login`) == true) {
+    // LOG IN
+    console.log(request.headers.host);
+  } else {
+    response.end(
+      JSON.stringify({ message: `Do not have file at ${filename} !` })
+    );
+  }
 }
 
 let server = http.createServer(onRequest);
-server.listen(31415, "127.0.0.1", () => {
-  console.log(`Server is running at http://127.0.0.1:31415/WeatherNow/Weather.html`);
+server.listen(port, host, () => {
+  console.log(`Server is running at http://${host}:${port}/`);
 });
+
 // function onRequest(request, response) {
 //   let pathname = url.parse(request.url).pathname;
 //   let parentFolder = path.dirname(pathname);
@@ -155,4 +241,13 @@ server.listen(31415, "127.0.0.1", () => {
 //   response.write(`\n</body>\n${FootDataOfHTML}`);
 //   // Ending
 //   response.end();
+// }
+// function checkDomain(domain) {
+//   let chars = domain.split("");
+//   if (chars[0] == "/") {
+//     chars.shift();
+//     return chars.join("");
+//   } else {
+//     return domain;
+//   }
 // }
