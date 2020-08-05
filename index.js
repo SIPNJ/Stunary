@@ -9,13 +9,15 @@ const port = 31415;
 function onRequest(request, response) {
   let pathname = url.parse(request.url, true).pathname;
   let filename = "." + pathname;
-  let query = null;
-  if (pathname.match(/\/login/gi)){
-    query = new URL(pathname, request.headers.host);
-    console.log(query);
+  let query;
+  let username;
+  let password;
+  if (pathname.match(/\/login/gi)) {
+    query = new URL(request.url, `http://${request.headers.host}`);
+    pathname = "/login";
+    username = query.searchParams.get("username");
+    password = query.searchParams.get("password");
   }
-  console.log("line7" + JSON.stringify(pathname));
-  // console.log("line 9" + url);
   if (pathname == "/") {
     // ORIGIN - INDEX.HTML
     fs.readFile("./index.html", "utf-8", (err, data) => {
@@ -93,15 +95,29 @@ function onRequest(request, response) {
     });
   } else if (pathname.includes(`/login`) == true) {
     // LOG IN
-    console.log(request.headers.host);
+    if (username == "" || password == "") {
+      console.log("good");
+      response.end(JSON.stringify({ message: "You should not leave blank !" }));
+    } else {
+      let maindata = JSON.parse(
+        fs.readFileSync("SignIn/JS/ispass.json", "utf-8")
+      );
+      console.log(maindata);
+      for (let i = 0; i < maindata.length; i++) {
+        if (username == maindata[i].name && password == maindata[i].password) {
+          console.log("good");
+          return response.end(JSON.stringify({ message: "Login Success" }));
+        }
+      }
+      return response.end(JSON.stringify({ message: "Login Fail" }));
+    }
   } else {
     response.end(
       JSON.stringify({ message: `Do not have file at ${filename} !` })
     );
   }
 }
-
-let server = http.createServer(onRequest);
+const server = http.createServer(onRequest);
 server.listen(port, host, () => {
   console.log(`Server is running at http://${host}:${port}/`);
 });
