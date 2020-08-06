@@ -1,0 +1,153 @@
+@media only screen and (max-width : 812px){
+    .center{
+        display: flex;
+        flex-flow: row;
+        /* align-items: baseline; */
+    }
+    .limpng{
+        width: 23px;
+        height: 23px;
+    }
+    .bodytext1{
+        
+    }
+}
+
+
+
+
+
+body {
+    background-image: url(Picture/city.jpg);
+    background-attachment: fixed;
+}
+/* cho nay cua chung */
+.png {
+    max-width: 30vw;
+    max-height: 65vw;
+}
+.center {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+.png:hover {
+    transform: scale(1.1,1.1);
+    opacity: 50%;
+    color: black;
+}
+.linklink {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    width: 30vw; 
+    height: 1.5vw; 
+}
+.linklink::before, .linklink::after{
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 2vw;
+}
+.linklink::before{
+    z-index: 0;
+    width: 17vw; /* 150px 10% */
+    height: 5vw; /* 50px 3% */
+    background: linear-gradient(to right,
+    #F8AB5E calc(100% / 6),
+    #F56A62 calc(100% / 6 * 2), 
+    #A176C8 calc(100% / 6 * 3), 
+    #759BEB calc(100% / 6 * 4), 
+    #65BEB3 calc(100% / 6 * 5), 
+    #70DB96 100%);
+}
+.linklink::after{
+    z-index: 1;
+    width: 15vw; /* 130px 9% */
+    height: 3vw; /* 30px 2% */
+    background: whitesmoke;
+}
+a {
+    z-index: 2;
+    text-decoration: none;
+    color: rgba(186, 22, 22, 0.831);
+    font-size: 2vw;
+    text-align: center;
+}
+.linklink:hover {
+    transform: scale(1.2,1.2);
+}
+.city {
+    background-image: url(Picture/city.jpg);
+    background-attachment: fixed;
+    height: 50vw; /* 40rem */
+    width: 37.5vw;
+    position: relative;
+    margin: 3em 1em 3em 3em;
+
+    border: 1em black;
+    border-radius: 1em;
+    border-width: 1em;
+}
+/* cho nay doan 1 */
+.headtext {
+    position: relative;
+
+    font-family: 'Boldine rounded';
+    font-size: 6vw;
+    color: blanchedalmond;
+    letter-spacing: 0.25vw;
+
+    margin: 1em;
+}
+.bodyhead {
+    border-radius: 3vw;
+    border: 3vw;
+    margin: 3vw;
+    max-width: 50vw;
+    max-height: 50vw;
+}
+.white {
+    color: whitesmoke;
+}
+.black {
+    color: black;
+}
+/* cho nay hinh nhu la doan 2 */
+.bodytext1 {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-family: Iciel Grandma;
+    font-size: 3.5vw;
+    margin: 1.5vw;
+    text-align: center;
+    margin: 3vw ;
+}
+
+/* cho nay chac la doan 3, sai thi xem lai dum roi report minh nha :> */
+
+/* cai nay trang tri cho minh toa sang */
+.footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border: 1em black;
+    background-color: rgb(196, 188, 156);
+}
+.footess {
+    margin: 3vw;
+    width: 50vw;
+}
+.poffootess {
+    width: 40vw;
+    margin: 3vw;
+    font-size: 3vw;
+}

@@ -1,250 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Periodic Table</title>
-    <link rel="stylesheet" href="Periodic Table/CSS/Ped.css">
-    <link rel="stylesheet" href="Periodic Table/CSS/Menu.css">
-    <link rel="stylesheet" href="Periodic Table/CSS/phone.css">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://sipnj.github.io/Stunary/CSS/required.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Calculator</button>
-            <div class="dropdown-content">
-            <a href="tqOS1.html">Gen 1.0</a>
-            <a href="tqOS2.html">Gen 2.0</a>
-            <a href="tqOS3.html">Gen 3.0</a>
-            <a href="tqOS4.html">Gen 4.0</a>
-            </div>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="https://sipnj.github.io/Stunary/index2.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav nav-pills nav-justify mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/index2.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark"
+                        href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link title2nd text-dark" href="#">Account</a>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
+                <button class="btn btn smallText px-3 py-3-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+            </form>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn"> Chemistry </button>
-            <div class="dropdown-content"> 
-                <a href="PeTa.html"> Periodic Table </a>
-                <a href="Solubility.html"> Solubility Table</a>
-            </div>
-        </div>
-        <a href="BeTaApp.html">BeTaApp</a>
-      </div>
-
-    <div id="contenttitle">
-        <div id="periodic">
-            <div id="title">PERIODIC TABLE</div>
-
-            <button onclick="conte(this)" class="numcol"></button>
-            <button onclick="conte(this)" class="numcol" id="alkali">IA</button>
-            <button onclick="conte(this)" class="numcol" id="alkaline">IIA</button>
-            <!-- <div class="space" id="space0"></div> -->
-            <button onclick="conte(this)" class="numcol">IIIA</button>
-            <button onclick="conte(this)" class="numcol">IVA</button>        
-            <button onclick="conte(this)" class="numcol">VA</button>
-            <button onclick="conte(this)" class="numcol">VIA</button>
-            <button onclick="conte(this)" class="numcol">VIIA</button>
-            <button onclick="conte(this)" class="numcol">VIIIA</button>
-
-            <!-- <div></div>
-            <div class="namcol" id="alkali"> Alkali Metal </div>
-            <div class="namcol" id="alkaline"> Alkaline Earth Metal </div>
-            <div class="space" id="space0"></div>
-            <div class="namcol" id="Icosagen"> Icosagen </div>
-            <div class="namcol" id="Crystallogen"> Crystallogen </div>        
-            <div class="namcol" id="Pnictogen"> Pnictogen </div>
-            <div class="namcol" id="Chalcogen"> Chalcogen </div>
-            <div class="namcol" id="Halogen"> Halogen</div>
-            <div class="namcol" id="Noble"> Noble Gas </div> -->
-
-            <div class="numrow">1</div>
-
-            <button onclick="conte(this)" class="element sbl" id="H">H</button>
-            <div class="space" id="space1"></div>
-            <button onclick="conte(this)" class="element sbl" id="He">He</button>
-
-            <div class="numrow">2</div>
-
-            <button onclick="conte(this)" class="element sbl" id="Li">Li</button>
-            <button onclick="conte(this)" class="element sbl" id="Be">Be</button>
-            <div class="space" id="space2"></div>
-            <button onclick="conte(this)" class="element pbl" id="B">B</button>
-            <button onclick="conte(this)" class="element pbl" id="C">C</button>
-            <button onclick="conte(this)" class="element pbl" id="N">N</button>
-            <button onclick="conte(this)" class="element pbl" id="O">O</button>
-            <button onclick="conte(this)" class="element pbl" id="F">F</button>
-            <button onclick="conte(this)" class="element pbl" id="Ne">Ne</button>
-
-            <div class="numrow">3</div>
-
-            <button onclick="conte(this)" class="element sbl" id="Na">Na</button>
-            <button onclick="conte(this)" class="element sbl" id="Mg">Mg</button>
-            <div onclick="conte(this)" class="numcol">IIIB</div>
-            <div onclick="conte(this)" class="numcol">IVB</div>
-            <div onclick="conte(this)" class="numcol">VB</div>
-            <div onclick="conte(this)" class="numcol">VIB</div>
-            <div onclick="conte(this)" class="numcol">VIIB</div>
-            <div onclick="conte(this)" class="numcol" id="B8">VIIIB</div>
-            <div onclick="conte(this)" class="numcol">IB</div>
-            <div onclick="conte(this)" class="numcol">IIB</div>
-            <!-- ten mot so kim loai chuyen tiep -->
-            <button onclick="conte(this)" class="element pbl" id="Al">Al</button>
-            <button onclick="conte(this)" class="element pbl" id="Si">Si</button>
-            <button onclick="conte(this)" class="element pbl" id="P">P</button>
-            <button onclick="conte(this)" class="element pbl" id="S">S</button>
-            <button onclick="conte(this)" class="element pbl" id="Cl">Cl</button>
-            <button onclick="conte(this)" class="element pbl" id="Ar">Ar</button>
-
-            <div class="numrow">4</div>
-
-            <button onclick="conte(this)" class="element sbl" id="K">K</button>
-            <button onclick="conte(this)" class="element sbl" id="Ca">Ca</button>
-            <button onclick="conte(this)" class="element dbl" id="Sc">Sc</button>
-            <button onclick="conte(this)" class="element dbl" id="Ti">Ti</button>
-            <button onclick="conte(this)" class="element dbl" id="V">V</button>
-            <button onclick="conte(this)" class="element dbl" id="Cr">Cr</button>
-            <button onclick="conte(this)" class="element dbl" id="Mn">Mn</button>
-            <button onclick="conte(this)" class="element dbl" id="Fe">Fe</button>
-            <button onclick="conte(this)" class="element dbl" id="Co">Co</button>
-            <button onclick="conte(this)" class="element dbl" id="Ni">Ni</button>
-            <button onclick="conte(this)" class="element dbl" id="Cu">Cu</button>
-            <button onclick="conte(this)" class="element dbl" id="Zn">Zn</button>
-            <button onclick="conte(this)" class="element pbl" id="Ga">Ga</button>
-            <button onclick="conte(this)" class="element pbl" id="Ge">Ge</button>
-            <button onclick="conte(this)" class="element pbl" id="As">As</button>
-            <button onclick="conte(this)" class="element pbl" id="Se">Se</button>
-            <button onclick="conte(this)" class="element pbl" id="Br">Br</button>
-            <button onclick="conte(this)" class="element pbl" id="Kr">Kr</button>
-
-            <div class="numrow">5</div>     
-
-            <button onclick="conte(this)" class="element sbl" id="Rb">Rb</button>
-            <button onclick="conte(this)" class="element sbl" id="Sr">Sr</button>
-            <button onclick="conte(this)" class="element dbl" id="Y">Y</button>
-            <button onclick="conte(this)" class="element dbl" id="Zr">Zr</button>
-            <button onclick="conte(this)" class="element dbl" id="Nb">Nb</button>
-            <button onclick="conte(this)" class="element dbl" id="Mo">Mo</button>
-            <button onclick="conte(this)" class="element dbl" id="Tc">Tc</button>
-            <button onclick="conte(this)" class="element dbl" id="Ru">Ru</button>
-            <button onclick="conte(this)" class="element dbl" id="Rh">Rh</button>
-            <button onclick="conte(this)" class="element dbl" id="Pd">Pd</button>
-            <button onclick="conte(this)" class="element dbl" id="Ag">Ag</button>
-            <button onclick="conte(this)" class="element dbl" id="Cd">Cd</button>
-            <button onclick="conte(this)" class="element pbl" id="In">In</button>
-            <button onclick="conte(this)" class="element pbl" id="Sn">Sn</button>
-            <button onclick="conte(this)" class="element pbl" id="Sb">Sb</button>
-            <button onclick="conte(this)" class="element pbl" id="Te">Te</button>
-            <button onclick="conte(this)" class="element pbl" id="I">I</button>
-            <button onclick="conte(this)" class="element pbl" id="Xe">Xe</button>
-
-            <div class="numrow">6</div>  
-
-            <button onclick="conte(this)" class="element sbl" id="Cs">Cs</button>
-            <button onclick="conte(this)" class="element sbl" id="Ba">Ba</button>
-            <div class="group" id="lathanoid">Lathanoid</div>
-            <button onclick="conte(this)" class="element dbl" id="Hf">Hf</button>
-            <button onclick="conte(this)" class="element dbl" id="Ta">Ta</button>
-            <button onclick="conte(this)" class="element dbl" id="W">W</button>
-            <button onclick="conte(this)" class="element dbl" id="Re">Re</button>
-            <button onclick="conte(this)" class="element dbl" id="Os">Os</button>
-            <button onclick="conte(this)" class="element dbl" id="Ir">Ir</button>
-            <button onclick="conte(this)" class="element dbl" id="Pt">Pt</button>
-            <button onclick="conte(this)" class="element dbl" id="Au">Au</button>
-            <button onclick="conte(this)" class="element dbl" id="Hg">Hg</button>
-            <button onclick="conte(this)" class="element pbl" id="Tl">Tl</button>
-            <button onclick="conte(this)" class="element pbl" id="Pb">Pb</button>
-            <button onclick="conte(this)" class="element pbl" id="Bi">Bi</button>
-            <button onclick="conte(this)" class="element pbl" id="Po">Po</button>
-            <button onclick="conte(this)" class="element pbl" id="At">At</button>
-            <button onclick="conte(this)" class="element pbl" id="Rn">Rn</button>
-
-            <div class="numrow">7</div>  
-
-            <button onclick="conte(this)" class="element sbl" id="Fr">Fr</button>
-            <button onclick="conte(this)" class="element sbl" id="Ra">Ra</button>
-            <div class="group" id="Actinoid">Actinoid</div>
-            <button onclick="conte(this)" class="element dbl" id="Rf">Rf</button>
-            <button onclick="conte(this)" class="element dbl" id="Db">Db</button>
-            <button onclick="conte(this)" class="element dbl" id="Sg">Sg</button>
-            <button onclick="conte(this)" class="element dbl" id="Bh">Bh</button>
-            <button onclick="conte(this)" class="element dbl" id="Hs">Hs</button>
-            <button onclick="conte(this)" class="element dbl" id="Mt">Mt</button>
-            <button onclick="conte(this)" class="element dbl" id="Ds">Ds</button>
-            <button onclick="conte(this)" class="element dbl" id="Rg">Rg</button>
-            <button onclick="conte(this)" class="element dbl" id="Cn">Cn</button>
-            <button onclick="conte(this)" class="element ssbl" id="Nh">Nh</button>
-            <button onclick="conte(this)" class="element ssbl" id="Fl">Fl</button>
-            <button onclick="conte(this)" class="element ssbl" id="Mc">Mc</button>
-            <button onclick="conte(this)" class="element ssbl" id="Lv">Lv</button>
-            <button onclick="conte(this)" class="element ssbl" id="Ts">Ts</button>
-            <button onclick="conte(this)" class="element ssbl" id="Og">Og</button>
-
-            <div class="spacenoid"></div>
-            <button onclick="conte(this)" class="element fbl" id="La">La</button>
-            <button onclick="conte(this)" class="element fbl" id="Ce">Ce</button>
-            <button onclick="conte(this)" class="element fbl" id="Pr">Pr</button>
-            <button onclick="conte(this)" class="element fbl" id="Nd">Nd</button>
-            <button onclick="conte(this)" class="element fbl" id="Pm">Pm</button>
-            <button onclick="conte(this)" class="element fbl" id="Sm">Sm</button>
-            <button onclick="conte(this)" class="element fbl" id="Eu">Eu</button>
-            <button onclick="conte(this)" class="element fbl" id="Gd">Gd</button>
-            <button onclick="conte(this)" class="element fbl" id="Tb">Tb</button>
-            <button onclick="conte(this)" class="element fbl" id="Dy">Dy</button>
-            <button onclick="conte(this)" class="element fbl" id="Ho">Ho</button>
-            <button onclick="conte(this)" class="element fbl" id="Er">Er</button>
-            <button onclick="conte(this)" class="element fbl" id="Tm">Tm</button>
-            <button onclick="conte(this)" class="element fbl" id="Yb">Yb</button>
-            <button onclick="conte(this)" class="element fbl" id="Lu">Lu</button>
-
-            <div class="spacenoid"></div>
-            <button onclick="conte(this)" class="element fbl" id="Ac">Ac</button>
-            <button onclick="conte(this)" class="element fbl" id="Th">Th</button>
-            <button onclick="conte(this)" class="element fbl" id="Pa">Pa</button>
-            <button onclick="conte(this)" class="element fbl" id="U">U</button>
-            <button onclick="conte(this)" class="element fbl" id="Np">Np</button>
-            <button onclick="conte(this)" class="element fbl" id="Pu">Pu</button>
-            <button onclick="conte(this)" class="element fbl" id="Am">Am</button>
-            <button onclick="conte(this)" class="element fbl" id="Cm">Cm</button>
-            <button onclick="conte(this)" class="element fbl" id="Bk">Bk</button>
-            <button onclick="conte(this)" class="element fbl" id="Cf">Cf</button>
-            <button onclick="conte(this)" class="element fbl" id="Es">Es</button>
-            <button onclick="conte(this)" class="element fbl" id="Fm">Fm</button>
-            <button onclick="conte(this)" class="element fbl" id="Md">Md</button>
-            <button onclick="conte(this)" class="element fbl" id="No">No</button>
-            <button onclick="conte(this)" class="element fbl" id="Lr">Lr</button>
-
-        </div>
-        <div id="cap">
-            <div id="elementcontent">
-                <div class="eletop">
-                    <div class="elelef">
-                        <div class="atomnum">Atomic Number</div>
-                        <div class="elesym">Element Symbol</div>
-                        <div class="config">Electron Configuration</div>
-                    </div>
-                    <div class="elerig">
-                        <div class="elemass">Atomic Mass</div>
-                        <div class="elenam">Element Name</div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item" aria-current="page">Official App</li>
+            <li class="breadcrumb-item" aria-current="page">Chemistry</li>
+            <li class="breadcrumb-item active" aria-current="page">Periodic Table</li>
+        </ol>
+    </nav>
+    <!-- Content -->
+    <div class="container-fluid row d-none d-sm-block">
+        <!-- Periodic Table -->
+        <div class="col-12 col-md-12 col-lg-8 ">
+            <!-- 0 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <br style="height: 1px;">
-                <div class="elebot">
-                    <div class="elenegati">Electronegativity</div>
-                    <!-- <div class="boil">Boiling Point</div>
-                    <div class="melt">Melting Point</div> -->
-                    <div class="fusion"></div>
-                    <div class="vapor"></div>
+            </div>
+            <!-- 1 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="chuthich">
-                <div class="sbl chu">s block</div>
-                <div class="pbl chu">p block</div>
-                <div class="dbl chu">d block</div>
-                <div class="fbl chu">f block</div>
+            <!-- 2 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- 3 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 PERIOD -->
+            <div class="row">
+                <!-- NAME OF PERIOD -->
+                <div class="col-1 col-md-1 col-lg-1 text-center subtitle btn smallText px-3 py-3">0</div>
+                <div class="col-11 col-md-11 col-lg-11">
+                    <div class="row">
+                        <!-- 1ST AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIB</button>
+                            </div>
+                        </div>
+                        <!-- 2ND AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIB</button>
+                            </div>
+                        </div>
+                        <!-- 3RD AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIB</button>
+                            </div>
+                        </div>
+                        <!-- 4TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)"></button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IB</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIB</button>
+                            </div>
+                        </div>
+                        <!-- 5TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">IVA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VA</button>
+                            </div>
+                        </div>
+                        <!-- 6TH AREA -->
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="row">
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIA</button>
+                                <button class="col-4 col-md-4 col-lg-4 text-center subtitle btn smallText px-3 py-3" id=""
+                                    onclick="conte(this)">VIIIA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
+    <!-- Information of Elements -->
+    <div class="col-lg-4"></div>
+    </div>
 
-    <script src="Periodic Table/Javascript/Ped.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
