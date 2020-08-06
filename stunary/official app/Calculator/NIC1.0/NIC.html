@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiCalculator</title>
+    <link rel="shortcut icon" href="/Picture/LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/required.css">
+    <link rel="stylesheet" href="./CSS/Menu.css">
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="/index2.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav mr-autr">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark active" href="/index2.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link title2nd text-dark">Account</a>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-r title2nd" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item" aria-current="page">Official App</li>
+            <li class="breadcrumb-item" aria-current="page">Calculator</li>
+            <li class="breadcrumb-item active" aria-current="page">NiCalculator</li>
+        </ol>
+    </nav>
+    <div class="calcultor container-md">
+        <div class="row justify-content-center output">
+            <div class="previous-value"></div>
+            <div class="current-value"></div>
+        </div>
+        <div class="row justify-content-center input">
+            <div class="col-md-2 col-sm-2 col-2 bgbase0 bdbase1 text-center paratext key">AC</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">DEL</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">%</div>
+            <div class="w-100"></div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">7</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">8</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">9</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">÷</div>
+            <div class="w-100"></div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">4</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">5</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">6</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">x</div>
+            <div class="w-100"></div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">1</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">2</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">3</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">-</div>
+            <div class="w-100"></div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">.</div>
+            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">0</div>
+            <div class="col-md-2 col-sm-2 col-2 bgbase0 bdbase1 text-center paratext key">=</div>
+        </div>
+    </div>
+    <!-- <div id="mini">
+        <div class="name grey">Nextgen Inconsequential Calculator</div>
+        <div class="mini-disp grey">
+            <input type="text" id="operadisp2" disabled>
+            <input type="text" id="ansdisp2" disabled>
+        </div>
+        <div class="btn ac orange">AC</div>
+        <div class="btn del orange">DEL</div>
+        <div class="btn percent orange">%</div>
+        <div class="btn divide orange">÷</div>
+        <div class="btn seven grey">7</div>
+        <div class="btn eight grey">8</div>
+        <div class="btn nine grey">9</div>
+        <div class="btn times orange">x</div>
+        <div class="btn four grey">4</div>
+        <div class="btn five grey">5</div>
+        <div class="btn six grey">6</div>
+        <div class="btn minus orange">-</div>
+        <div class="btn one grey">1</div>
+        <div class="btn two grey">2</div>
+        <div class="btn three grey">3</div>
+        <div class="btn plus orange">+</div>
+        <div class="btn zeromini grey">0</div>
+        <div class="btn dot grey">.</div>
+        <div class="btn enter orange">=</div>
+    </div> -->
+
+    <!-- <script src="Calculator/JS/Calculator.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
