@@ -4,36 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="/Picture/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/required.css">
 </head>
 
 <body>
     <!-- Top navigation -->
-    <section>
-        <div class="navbar">
-            <a href="https://sipnj.github.io/Studently-Stationary/index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Calculator</button>
-                <div class="dropdown-content">
-                    <a href="https://sipnj.github.io/Studently-Stationary/Calculator/NIC 1.0/NIC1.html">Ni
-                        Calculator</a>
-                    <a href="https://sipnj.github.io/Studently-Stationary/Calculator/tqOS 4.0/tqOS4.html">tqOS 4.0</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Chemistry </button>
-                <div class="dropdown-content">
-                    <a href="https://sipnj.github.io/Studently-Stationary/Periodic Table/PeTa.html"> Periodic Table </a>
-                    <a href="https://sipnj.github.io/Studently-Stationary/Solubility Table/Solubility.html"> Solubility
-                        Table</a>
-                </div>
-            </div>
-            <a href="https://sipnj.github.io/Studently-Stationary/BeTaApp.html">BeTaApp</a>
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="/index2.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark active" href="/index2.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link title2nd text-dark">Account</a>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+            </form>
         </div>
-    </section>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
+        </ol>
+    </nav>
+    <!-- Side navivgarton -->
+    <div class="container-fluid">
+            <div class="col-lg-12 col-xl-8">
+                <div class="title1st text-center" style="font-size:7vw">We hope you find your best place !</div>
+            </div>
+            <div class="col-xl-4 d-none d-sm-none d-md-none d-lg-none d-xl-block">
+                <div class="outline-content mt-xl-4">
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb title2nd">
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        </ol>
+                    </nav>
+                    <!-- menu -->
+                    <nav class="outline-content mt-xl-4">
+                        <div class="navbar-brand">MENU</div>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

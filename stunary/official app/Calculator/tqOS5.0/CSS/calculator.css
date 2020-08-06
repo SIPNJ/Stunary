@@ -1,0 +1,14 @@
+/* @media screen and (max-width: 576px) {
+
+} */
+.grid-6 {
+  display: grid;
+  grid-template-columns: 12vw 12vw 12vw 12vw 12vw 12vw;
+  column-gap: 5vw;
+  font-size: 3.5vw;
+}
+.key {
+  width: 8vw;
+  height: 5vw;
+  background-color: #eee;
+}

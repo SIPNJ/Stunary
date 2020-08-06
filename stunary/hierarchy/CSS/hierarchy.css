@@ -1,0 +1,16 @@
+.table-content {
+  position: relative;
+  overflow-y: scroll;
+  height: 25vw;
+}
+@media screen and (max-width: 576px) {
+  .table-content {
+    height: 65vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .table-content {
+    height: 65vw;
+  }
+}

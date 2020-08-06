@@ -2,25 +2,25 @@
 /* Import Font-Family */
 @font-face {
   font-family: Iciel-Brush-Up;
-  src: url("Font/iCiel Brush Up.otf");
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/iCiel%20Brush%20Up.otf?raw=true");
 }
 @font-face {
   font-family: Andes-Rounded-Light;
-  src: url("Font/AndesRoundedLight.otf");
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/AndesRoundedLight.otf?raw=true");
 }
 @font-face {
   font-family: Gotham-Thin;
-  src: url("Font/Gotham-Thin.otf");
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Thin.otf");
   font-weight: lighter;
 }
 @font-face {
   font-family: Gotham-Medium;
-  src: url("Font/Gotham-Medium.otf");
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Medium.otf");
   font-weight: normal;
 }
 @font-face {
   font-family: Gotham-Ultra;
-  src: url("Font/Gotham-Ultra.otf");
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Ultra.otf");
   font-weight: bold;
 }
 /* Class Font-Family */
@@ -29,12 +29,18 @@
 }
 .title2nd {
   font-family: Gotham-Ultra;
+  font-weight: bold;
 }
 .subtitle {
   font-family: Gotham-Medium;
+  font-weight: normal;
 }
-.text {
-  font-family: Andes-Rounded-Light Gotham-Thin;
+.paratext {
+  font-family: Gotham-Thin;
+  font-weight: lighter;
+}
+.curved-text{
+  font-family: Andes-Rounded-Light;
 }
 /* Base Color for Background */
 .bgbase0 {
@@ -109,16 +115,21 @@
 .largeText {
   font-size: 2vw;
 }
+/* LOGO */
+.LOGO {
+  max-width: 6vw;
+  max-height: 6vw;
+  cursor: pointer;
+}
 /* Top Navigation */
 .topnav div a {
   float: left;
   padding: 1.25vw;
   text-decoration: none;
 }
-
-.LOGO {
-  max-width: 5vw;
-  max-height: 5vw;
+.outline-content {
+  border: 1vw #eee;
+  /* border-radius: 2vw; */
 }
 /* 
 1/ 248,122,141
