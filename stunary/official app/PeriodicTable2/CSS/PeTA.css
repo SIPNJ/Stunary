@@ -1,0 +1,42 @@
+.period-row {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+}
+/* recolor element components */
+.element {
+    position: relative;
+    height: 5.75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 5%;
+    cursor: pointer;
+    border: 1px #ffffff solid;
+    font-size: 0.85vw;
+}
+.number {
+    position: absolute;
+    top: 0.3vw;
+    right: 0.3vw;
+    font-size: 0.75vw;
+}
+.symbol {
+    font-size: 1.7vw;
+}
+/* classifications of elements : s,p,d,f blocks */
+.s-element {
+    background-color: rgba(107, 229, 140, 75%);
+}
+.p-element {
+    background-color: rgba(194, 120, 213, 75%);
+}
+.d-element {
+    background-color: rgba(113, 117, 200, 75%);
+}
+.f-element {
+    background-color: rgba(248, 122, 141, 75%);
+}

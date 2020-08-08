@@ -146,3 +146,20 @@
 3/ 0,0,0
 3/ 255,255,255
 */
+
+/* z-index */
+.index-10 {
+  z-index: 10;
+}
+.index-20 {
+  z-index: 20;
+}
+.index-30 {
+  z-index: 30;
+}
+.index-40 {
+  z-index: 40;
+}
+.index-50 {
+  z-index: 50;
+}
