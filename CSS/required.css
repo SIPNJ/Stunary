@@ -236,3 +236,10 @@
 .index-50 {
   z-index: 50;
 }
+/* Pointer-Events */
+.pointer-none {
+  pointer-events: none;
+}
+.pointer-all {
+  pointer-events: all;
+}
