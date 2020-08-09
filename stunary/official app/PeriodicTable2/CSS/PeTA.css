@@ -53,7 +53,6 @@
 /* Period Number */
 .period-number {
   font-size: 1.75vw !important;
-  cursor: pointer;
 }
 .period-class {
   font-size: 1vw;
@@ -98,21 +97,16 @@
 /* Classifications of Elements : s,p,d,f and unknown blocks */
 .s-element {
   background-color: rgba(107, 229, 140, 75%);
-  cursor: pointer;
 }
 .p-element {
   background-color: rgba(194, 120, 213, 75%);
-  cursor: pointer;
 }
 .d-element {
   background-color: rgba(113, 117, 200, 75%);
-  cursor: pointer;
 }
 .f-element {
   background-color: rgba(248, 122, 141, 75%);
-  cursor: pointer;
 }
 .unk-element {
   background-color: rgba(224, 224, 228, 75%);
-  cursor: pointer;
 }
