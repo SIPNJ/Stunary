@@ -3,7 +3,7 @@
   /* display */
   position: fixed;
   height: 100vh;
-  width: 35vw;
+  width: 50vw;
   /* other */
   transform: translate(-150%, 0%);
   transition: 1000ms;
@@ -29,8 +29,8 @@
 .overlay {
   /* position */
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 200vh;
+  width: 200vw;
   /* other */
   opacity: 0;
   transition: 1000ms;
@@ -43,7 +43,7 @@
 .period-row {
   /* position */
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   /* display */
   display: flex;
   flex-flow: row;
@@ -66,10 +66,9 @@
   flex-flow: column;
   justify-content: flex-start;
   /* other */
-  font-size: 0.565vw;
+  font-size: 0.555vw;
   word-wrap: break-word;
 }
-.period-row 
 /* Element Components */
 .element {
   /* position */
@@ -83,13 +82,13 @@
   align-items: center;
   /* other */
   border: 1px #ffffff solid;
-  font-size: 0.85vw;
+  font-size: 0.67vw;
 }
 .element-number {
   position: absolute;
   top: 0.3vw;
   right: 0.3vw;
-  font-size: 0.75vw;
+  font-size: 0.7vw;
 }
 .element-symbol {
   font-size: 1.7vw;
@@ -102,11 +101,26 @@
   background-color: rgba(194, 120, 213, 75%);
 }
 .d-element {
-  background-color: rgba(113, 117, 200, 75%);
+  background-color: rgba(240, 215, 148, 75%);
 }
 .f-element {
   background-color: rgba(248, 122, 141, 75%);
 }
 .unk-element {
   background-color: rgba(224, 224, 228, 75%);
+}
+.s-element:hover,
+.p-element:hover,
+.d-element:hover,
+.f-element:hover,
+.unk-element:hover {
+  border: 1px #000000 solid;
+}
+/* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal;  */
+
+/* Settings and Label */
+.settingPanel {
+  position: absolute;
+  width: 12vw;
+  height: 5vw;
 }
