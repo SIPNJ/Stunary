@@ -1,3 +1,5 @@
+/* LIGHT MODE vs DARK MODE */
+
 /* Info Panel */
 .infoPanel {
   /* display */
@@ -93,6 +95,16 @@
 .element-symbol {
   font-size: 1.7vw;
 }
+#Lanthanoid .element-name,
+#Actinoid .element-name {
+  font-size: 0.8vw;
+}
+/* Space */
+.space {
+  position: relative;
+  height: 5.75vw;
+  width: 5%;
+}
 /* Classifications of Elements : s,p,d,f and unknown blocks */
 .s-element {
   background-color: rgba(107, 229, 140, 75%);
@@ -106,17 +118,13 @@
 .f-element {
   background-color: rgba(248, 122, 141, 75%);
 }
-.unk-element {
-  background-color: rgba(224, 224, 228, 75%);
-}
 .s-element:hover,
 .p-element:hover,
 .d-element:hover,
-.f-element:hover,
-.unk-element:hover {
+.f-element:hover {
   border: 1px #000000 solid;
 }
-/* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal;  */
+/* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal; Unknown Elements  */
 
 /* Settings and Label */
 .settingPanel {
