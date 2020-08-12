@@ -25,10 +25,10 @@ toggleLight.addEventListener("click", function () {
       bgthird1[i].style.backgroundColor = "rgb(0, 0, 0)";
     }
     for (let i = 0; i < bgthird2.length; i++) {
-      bgthird2[i].style.backgroundColor = "";
+      bgthird2[i].style.backgroundColor = "rgb(224, 224, 228)";
     }
     for (let i = 0; i < bgthird3.length; i++) {
-      bgthird3[i].style.backgroundColor = "";
+      bgthird3[i].style.backgroundColor = "rgb(45, 45, 45)";
     }
     // TEXT COLOR
     for (let i = 0; i < third0.length; i++) {
@@ -37,11 +37,11 @@ toggleLight.addEventListener("click", function () {
     for (let i = 0; i < third1.length; i++) {
       third1[i].style.color = "rgb(0, 0, 0)";
     }
-    for (let i = 0; i < third0.length; i++) {
-      third2[i].style.color = "";
+    for (let i = 0; i < third2.length; i++) {
+      third2[i].style.color = "rgb(224, 224, 228)";
     }
-    for (let i = 0; i < third1.length; i++) {
-      third3[i].style.color = "";
+    for (let i = 0; i < third3.length; i++) {
+      third3[i].style.color = "rgb(45, 45, 45)";
     }
     // BORDER COLOR
     for (let i = 0; i < bdthird0.length; i++) {
@@ -51,10 +51,10 @@ toggleLight.addEventListener("click", function () {
       bdthird1[i].style.borderColor = "rgb(0, 0, 0)";
     }
     for (let i = 0; i < bdthird2.length; i++) {
-      bdthird0[i].style.borderColor = "";
+      bdthird0[i].style.borderColor = "rgb(224, 224, 228)";
     }
     for (let i = 0; i < bdthird3.length; i++) {
-      bdthird1[i].style.borderColor = "";
+      bdthird1[i].style.borderColor = "rgb(45, 45, 45)";
     }
   } else {
     // DOCUMENT COLOR
@@ -67,10 +67,10 @@ toggleLight.addEventListener("click", function () {
       bgthird1[i].style.backgroundColor = "rgb(255, 255, 255)";
     }
     for (let i = 0; i < bgthird2.length; i++) {
-      bgthird2[i].style.backgroundColor = "";
+      bgthird2[i].style.backgroundColor = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < bgthird3.length; i++) {
-      bgthird3[i].style.backgroundColor = "";
+      bgthird3[i].style.backgroundColor = "rgb(224, 224, 228)";
     }
     // TEXT COLOR
     for (let i = 0; i < third0.length; i++) {
@@ -80,10 +80,10 @@ toggleLight.addEventListener("click", function () {
       third1[i].style.color = "rgb(255,255,255)";
     }
     for (let i = 0; i < third2.length; i++) {
-      third2[i].style.color = "";
+      third2[i].style.color = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < third3.length; i++) {
-      third3[i].style.color = "";
+      third3[i].style.color = "rgb(224, 224, 228)";
     }
     // BORDER COLOR
     for (let i = 0; i < bdthird0.length; i++) {
@@ -93,10 +93,10 @@ toggleLight.addEventListener("click", function () {
       bdthird1[i].style.borderColor = "rgb(255,255,255)";
     }
     for (let i = 0; i < bdthird2.length; i++) {
-      bdthird2[i].style.borderColor = "rgb(0, 0, 0)";
+      bdthird2[i].style.borderColor = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < bdthird3.length; i++) {
-      bdthird3[i].style.borderColor = "rgb(255,255,255)";
+      bdthird3[i].style.borderColor = "rgb(224, 224, 228)";
     }
   }
 });

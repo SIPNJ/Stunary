@@ -136,14 +136,6 @@
 .f-element {
   background-color: rgba(248, 122, 141, 75%);
 }
-.period-number:hover,
-.s-element:hover,
-.p-element:hover,
-.d-element:hover,
-.f-element:hover {
-  border: 1px #000000 solid;
-  transition: 500ms;
-}
 /* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal; Unknown Elements  */
 
 /* Settings and Label */
