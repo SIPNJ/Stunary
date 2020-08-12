@@ -17,6 +17,12 @@
 
 /* LIGHT MODE vs DARK MODE */
 
+
+
+/* RIGHT PANEL */
+
+
+
 /* Info Panel */
 .infoPanel {
   /* display */
@@ -58,7 +64,15 @@
   opacity: 0.7;
   pointer-events: all;
 }
-/* Period Table */
+
+
+
+
+/* MEDIUM PERIODIC TABLE */
+
+
+
+
 .period-row {
   /* position */
   position: relative;
@@ -69,12 +83,10 @@
   /* other */
   overflow: hidden;
 }
-/* Period Number */
-.period-number {
+/* Period, Group Number */
+.period-number,
+.group-number {
   font-size: 1.75vw !important;
-}
-.period-class {
-  font-size: 1vw;
 }
 .electron-class {
   /* position */
@@ -103,7 +115,6 @@
   /* border: 1px #ffffff solid; */
   font-size: 0.67vw;
 }
-
 .element-number {
   position: absolute;
   top: 0.3vw;
@@ -138,9 +149,17 @@
 }
 /* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal; Unknown Elements  */
 
+
+
+/* SMALL PERIODIC TABLE */
+
+
+
 /* Settings and Label */
 .settingPanel {
   position: absolute;
   width: 12vw;
   height: 5vw;
 }
+
+

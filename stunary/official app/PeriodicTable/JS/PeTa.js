@@ -23,17 +23,17 @@ overlay0.addEventListener("click", function () {
 });
 
 // const key = "yGg3vfUNjYISO6uyxB3ofg2pE7xXsvkA";
-fetch(
-  `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=Sodium`
-)
-  .then((response) => response.json())
-  .then((data) => {
-    let html_code = data["parse"]["text"]["*"];
-    let parser = new DOMParser();
-    let html = parser.parseFromString(html_code, "text/html");
-    let tables = html.querySelectorAll(".infobox");
-    console.log(tables);
-  });
+// fetch(
+//   `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=Sodium`
+// )
+//   .then((response) => response.json())
+//   .then((data) => {
+//     let html_code = data["parse"]["text"]["*"];
+//     let parser = new DOMParser();
+//     let html = parser.parseFromString(html_code, "text/html");
+//     let tables = html.querySelectorAll(".infobox");
+//     console.log(tables);
+//   });
 
 // Get all elements
 let element = document.getElementsByClassName("element");
@@ -50,28 +50,33 @@ let non_metal = document.getElementsByClassName("non-metal");
 let noble_gas = document.getElementsByClassName("noble-gas");
 let lanthanoid = document.getElementsByClassName("lanthanoid");
 let actinoid = document.getElementsByClassName("actinoid");
-// Title group A
-let groupIA = document.getElementById("IA");
-let groupIIA = document.getElementById("IIA");
-let groupIIIA = document.getElementById("IIIA");
-let groupIVA = document.getElementById("IVA");
-let groupVA = document.getElementById("VA");
-let groupVIA = document.getElementById("VIA");
-let groupVIIA = document.getElementById("VIIA");
-let groupVIIIA = document.getElementById("VIIIA");
-// Title group B
-let groupIB = document.getElementById("IB");
-let groupIIB = document.getElementById("IIB");
-let groupIIIB = document.getElementById("IIIB");
-let groupIVB = document.getElementById("IVB");
-let groupVB = document.getElementById("VB");
-let groupVIB = document.getElementById("VIB");
-let groupVIIB = document.getElementById("VIIB");
-let groupVIIIB = document.getElementById("VIIIB");
+// Group Title
+let group_number = document.getElementsByClassName("group-number");
+let period_number = document.getElementsByClassName("period-number");
+// Title Group A
+let groupIA = document.getElementsByClassName("IA");
+let groupIIA = document.getElementsByClassName("IIA");
+let groupIIIA = document.getElementsByClassName("IIIA");
+let groupIVA = document.getElementsByClassName("IVA");
+let groupVA = document.getElementsByClassName("VA");
+let groupVIA = document.getElementsByClassName("VIA");
+let groupVIIA = document.getElementsByClassName("VIIA");
+let groupVIIIA = document.getElementsByClassName("VIIIA");
+// Title Group B
+let groupIB = document.getElementsByClassName("IB");
+let groupIIB = document.getElementsByClassName("IIB");
+let groupIIIB = document.getElementsByClassName("IIIB");
+let groupIVB = document.getElementsByClassName("IVB");
+let groupVB = document.getElementsByClassName("VB");
+let groupVIB = document.getElementsByClassName("VIB");
+let groupVIIB = document.getElementsByClassName("VIIB");
+let groupVIIIBa = document.getElementsByClassName("VIIIBa");
+let groupVIIIB = document.getElementsByClassName("VIIIB");
+let groupVIIIBc = document.getElementsByClassName("VIIIBc");
 // Title f-block
 let groupLanthanoid = document.getElementById("Lanthanoid");
 let groupActinoid = document.getElementById("Actinoid");
-// Group Number
+// Group Elements
 let group1 = document.getElementsByClassName("alkali");
 let group2 = document.getElementsByClassName("alkaline-earth");
 let group3 = document.getElementsByClassName("Scandium-group");
@@ -92,113 +97,116 @@ let group17 = document.getElementsByClassName("Halogen");
 let group18 = document.getElementsByClassName("noble-gas");
 //  Hover
 
+// SMALL SIZE
+
 // Group 1
-groupIA.addEventListener("mouseover", function () {
+groupIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group1.length; i++) {
     group1[i].style.opacity = "1";
   }
-  groupIA.style.opacity = "1";
+  groupIA[0].style.opacity = "1";
 });
-groupIA.addEventListener("mouseout", function () {
+groupIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 2
-groupIIA.addEventListener("mouseover", function () {
+groupIIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group2.length; i++) {
     group2[i].style.opacity = "1";
   }
-  groupIIA.style.opacity = "1";
+  groupIIA[0].style.opacity = "1";
 });
-groupIIA.addEventListener("mouseout", function () {
+groupIIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 3
-groupIIIB.addEventListener("mouseover", function () {
+groupIIIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group3.length; i++) {
     group3[i].style.opacity = "1";
   }
-  groupIIIB.style.opacity = "1";
+  groupIIIB[0].style.opacity = "1";
 });
-groupIIIB.addEventListener("mouseout", function () {
+groupIIIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 4
-groupIVB.addEventListener("mouseover", function () {
+groupIVB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group4.length; i++) {
     group4[i].style.opacity = "1";
   }
-  groupIVB.style.opacity = "1";
+  groupIVB[0].style.opacity = "1";
 });
-groupIVB.addEventListener("mouseout", function () {
+groupIVB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 5
-groupVB.addEventListener("mouseover", function () {
+groupVB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group5.length; i++) {
     group5[i].style.opacity = "1";
   }
-  groupVB.style.opacity = "1";
+  groupVB[0].style.opacity = "1";
 });
-groupVB.addEventListener("mouseout", function () {
+groupVB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 6
-groupVIB.addEventListener("mouseover", function () {
+groupVIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group6.length; i++) {
     group6[i].style.opacity = "1";
   }
-  groupVIB.style.opacity = "1";
+  groupVIB[0].style.opacity = "1";
 });
-groupVIB.addEventListener("mouseout", function () {
+groupVIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 7
-groupVIIB.addEventListener("mouseover", function () {
+groupVIIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group7.length; i++) {
     group7[i].style.opacity = "1";
   }
-  groupVIIB.style.opacity = "1";
+  groupVIIB[0].style.opacity = "1";
 });
-groupVIIB.addEventListener("mouseout", function () {
+groupVIIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
-// Group 8, 9, 10
-groupVIIIB.addEventListener("mouseover", function () {
+// Group 8, 9, 10 is in change IUPAC function
+// HOVER Group 8, 9, 10
+groupVIIIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
@@ -211,133 +219,384 @@ groupVIIIB.addEventListener("mouseover", function () {
   for (let i = 0; i < group10.length; i++) {
     group10[i].style.opacity = "1";
   }
-  groupVIIIB.style.opacity = "1";
+  groupVIIIB[0].style.opacity = "1";
 });
-groupVIIIB.addEventListener("mouseout", function () {
+groupVIIIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 11
-groupIB.addEventListener("mouseover", function () {
+groupIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group11.length; i++) {
     group11[i].style.opacity = "1";
   }
-  groupIB.style.opacity = "1";
+  groupIB[0].style.opacity = "1";
 });
-groupIB.addEventListener("mouseout", function () {
+groupIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 12
-groupIIB.addEventListener("mouseover", function () {
+groupIIB[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group12.length; i++) {
     group12[i].style.opacity = "1";
   }
-  groupIIB.style.opacity = "1";
+  groupIIB[0].style.opacity = "1";
 });
-groupIIB.addEventListener("mouseout", function () {
+groupIIB[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 13
-groupIIIA.addEventListener("mouseover", function () {
+groupIIIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group13.length; i++) {
     group13[i].style.opacity = "1";
   }
-  groupIIIA.style.opacity = "1";
+  groupIIIA[0].style.opacity = "1";
 });
-groupIIIA.addEventListener("mouseout", function () {
+groupIIIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 14
-groupIVA.addEventListener("mouseover", function () {
+groupIVA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group14.length; i++) {
     group14[i].style.opacity = "1";
   }
-  groupIVA.style.opacity = "1";
+  groupIVA[0].style.opacity = "1";
 });
-groupIVA.addEventListener("mouseout", function () {
+groupIVA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 15
-groupVA.addEventListener("mouseover", function () {
+groupVA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group15.length; i++) {
     group15[i].style.opacity = "1";
   }
-  groupVA.style.opacity = "1";
+  groupVA[0].style.opacity = "1";
 });
-groupVA.addEventListener("mouseout", function () {
+groupVA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 16
-groupVIA.addEventListener("mouseover", function () {
+groupVIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group16.length; i++) {
     group16[i].style.opacity = "1";
   }
-  groupVIA.style.opacity = "1";
+  groupVIA[0].style.opacity = "1";
 });
-groupVIA.addEventListener("mouseout", function () {
+groupVIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 17
-groupVIIA.addEventListener("mouseover", function () {
+groupVIIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group17.length; i++) {
     group17[i].style.opacity = "1";
   }
-  groupVIIA.style.opacity = "1";
+  groupVIIA[0].style.opacity = "1";
 });
-groupVIIA.addEventListener("mouseout", function () {
+groupVIIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
 // Group 18
-groupVIIIA.addEventListener("mouseover", function () {
+groupVIIIA[0].addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "0.25";
   }
   for (let i = 0; i < group18.length; i++) {
     group18[i].style.opacity = "1";
   }
-  groupVIIIA.style.opacity = "1";
+  groupVIIIA[0].style.opacity = "1";
 });
-groupVIIIA.addEventListener("mouseout", function () {
+groupVIIIA[0].addEventListener("mouseout", function () {
   for (let i = 0; i < element.length; i++) {
     element[i].style.opacity = "1";
   }
 });
+
+// MEDIUM SIZE
+
+// Group 1
+groupIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group1.length; i++) {
+    group1[i].style.opacity = "1";
+  }
+  groupIA[1].style.opacity = "1";
+});
+groupIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 2
+groupIIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group2.length; i++) {
+    group2[i].style.opacity = "1";
+  }
+  groupIIA[1].style.opacity = "1";
+});
+groupIIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 3
+groupIIIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group3.length; i++) {
+    group3[i].style.opacity = "1";
+  }
+  groupIIIB[1].style.opacity = "1";
+});
+groupIIIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 4
+groupIVB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group4.length; i++) {
+    group4[i].style.opacity = "1";
+  }
+  groupIVB[1].style.opacity = "1";
+});
+groupIVB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 5
+groupVB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group5.length; i++) {
+    group5[i].style.opacity = "1";
+  }
+  groupVB[1].style.opacity = "1";
+});
+groupVB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 6
+groupVIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group6.length; i++) {
+    group6[i].style.opacity = "1";
+  }
+  groupVIB[1].style.opacity = "1";
+});
+groupVIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 7
+groupVIIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group7.length; i++) {
+    group7[i].style.opacity = "1";
+  }
+  groupVIIB[1].style.opacity = "1";
+});
+groupVIIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 8, 9, 10 is in change IUPAC function
+// HOVER Group 8, 9, 10
+groupVIIIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group8.length; i++) {
+    group8[i].style.opacity = "1";
+  }
+  for (let i = 0; i < group9.length; i++) {
+    group9[i].style.opacity = "1";
+  }
+  for (let i = 0; i < group10.length; i++) {
+    group10[i].style.opacity = "1";
+  }
+  groupVIIIB[1].style.opacity = "1";
+});
+groupVIIIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 11
+groupIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group11.length; i++) {
+    group11[i].style.opacity = "1";
+  }
+  groupIB[1].style.opacity = "1";
+});
+groupIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 12
+groupIIB[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group12.length; i++) {
+    group12[i].style.opacity = "1";
+  }
+  groupIIB[1].style.opacity = "1";
+});
+groupIIB[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 13
+groupIIIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group13.length; i++) {
+    group13[i].style.opacity = "1";
+  }
+  groupIIIA[1].style.opacity = "1";
+});
+groupIIIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 14
+groupIVA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group14.length; i++) {
+    group14[i].style.opacity = "1";
+  }
+  groupIVA[1].style.opacity = "1";
+});
+groupIVA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 15
+groupVA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group15.length; i++) {
+    group15[i].style.opacity = "1";
+  }
+  groupVA[1].style.opacity = "1";
+});
+groupVA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 16
+groupVIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group16.length; i++) {
+    group16[i].style.opacity = "1";
+  }
+  groupVIA[1].style.opacity = "1";
+});
+groupVIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 17
+groupVIIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group17.length; i++) {
+    group17[i].style.opacity = "1";
+  }
+  groupVIIA[1].style.opacity = "1";
+});
+groupVIIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+// Group 18
+groupVIIIA[1].addEventListener("mouseover", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "0.25";
+  }
+  for (let i = 0; i < group18.length; i++) {
+    group18[i].style.opacity = "1";
+  }
+  groupVIIIA[1].style.opacity = "1";
+});
+groupVIIIA[1].addEventListener("mouseout", function () {
+  for (let i = 0; i < element.length; i++) {
+    element[i].style.opacity = "1";
+  }
+});
+
 // Lanthanoid
 groupLanthanoid.addEventListener("mouseover", function () {
   for (let i = 0; i < element.length; i++) {
@@ -451,6 +710,103 @@ hide_mass.addEventListener("click", function () {
     }
   }
 });
+// CHANGE TO IUPAC LABEL
+let change_IUPAC = document.getElementById("change-IUPAC");
+change_IUPAC.addEventListener("click", function () {
+  change_IUPAC.classList.toggle("active-button-for-code");
+  if (change_IUPAC.classList.contains("active-button-for-code") == true) {
+    for (let i = 0; i < 18; i++) {
+      group_number[i].innerHTML = i + 1;
+    }
+    // HOVER Group 8
+    groupVIIIBa[1].addEventListener("mouseover", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "0.25";
+      }
+      for (let i = 0; i < group8.length; i++) {
+        group8[i].style.opacity = "1";
+      }
+      groupVIIIBa[1].style.opacity = "1";
+    });
+    groupVIIIBa[1].addEventListener("mouseout", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "1";
+      }
+    });
+    // HOVER Group 9
+    groupVIIIB[1].addEventListener("mouseover", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "0.25";
+      }
+      for (let i = 0; i < group9.length; i++) {
+        group9[i].style.opacity = "1";
+      }
+      groupVIIIB[1].style.opacity = "1";
+    });
+    groupVIIIB[1].addEventListener("mouseout", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "1";
+      }
+    });
+    // HOVER Group 10
+    groupVIIIBc[1].addEventListener("mouseover", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "0.25";
+      }
+      for (let i = 0; i < group10.length; i++) {
+        group10[i].style.opacity = "1";
+      }
+      groupVIIIBc[1].style.opacity = "1";
+    });
+    groupVIIIBc[1].addEventListener("mouseout", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "1";
+      }
+    });
+  } else {
+    group_number[0].innerHTML = "IA";
+    group_number[1].innerHTML = "IIA";
+    group_number[2].innerHTML = "IIIB";
+    group_number[3].innerHTML = "IVB";
+    group_number[4].innerHTML = "VB";
+    group_number[5].innerHTML = "VIB";
+    group_number[6].innerHTML = "VIIB";
+    group_number[7].innerHTML = "";
+    group_number[8].innerHTML = "VIIIB";
+    group_number[9].innerHTML = "";
+    group_number[10].innerHTML = "IB";
+    group_number[11].innerHTML = "IIB";
+    group_number[12].innerHTML = "IIIA";
+    group_number[13].innerHTML = "IVA";
+    group_number[14].innerHTML = "VA";
+    group_number[15].innerHTML = "VIA";
+    group_number[16].innerHTML = "VIIA";
+    group_number[17].innerHTML = "VIIIA";
+    // HOVER Group 8, 9, 10
+    groupVIIIB[1].addEventListener("mouseover", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "0.25";
+      }
+      for (let i = 0; i < group8.length; i++) {
+        group8[i].style.opacity = "1";
+      }
+      for (let i = 0; i < group9.length; i++) {
+        group9[i].style.opacity = "1";
+      }
+      for (let i = 0; i < group10.length; i++) {
+        group10[i].style.opacity = "1";
+      }
+      groupVIIIB[1].style.opacity = "1";
+    });
+    groupVIIIB[1].addEventListener("mouseout", function () {
+      for (let i = 0; i < element.length; i++) {
+        element[i].style.opacity = "1";
+      }
+    });
+    groupVIIIBa[1].addEventListener("mouseover", function () {});
+    groupVIIIBc[1].addEventListener("mouseover", function () {});
+  }
+});
 
 // REQUIRED FILE SUPPORT
 document.getElementById("toggle-light").addEventListener("click", function () {
@@ -458,7 +814,6 @@ document.getElementById("toggle-light").addEventListener("click", function () {
     document.getElementById("toggle-light").classList.contains("toggle-dark") ==
     true
   ) {
-    console.log("dark");
     // s-block Elements
     for (let i = 0; i < s_element.length; i++) {
       s_element[i].addEventListener("mouseover", function () {
