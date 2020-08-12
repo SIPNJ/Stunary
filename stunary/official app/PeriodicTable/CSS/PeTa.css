@@ -1,3 +1,20 @@
+/* REQUIRED FILE SUPPORT */
+
+.bdthird0 {
+  border: 1px solid rgb(0, 0, 0);
+}
+.bdthird1 {
+  border: 1px solid rgb(255, 255, 255);
+}
+/* .bdthird1 {
+  border: 1px;
+}
+.bdthird1 {
+  border-color: rgb(255, 255, 255);
+  border-radius: 1vw;
+  border-style: solid;
+} */
+
 /* LIGHT MODE vs DARK MODE */
 
 /* Info Panel */
@@ -83,9 +100,10 @@
   justify-content: center;
   align-items: center;
   /* other */
-  border: 1px #ffffff solid;
+  /* border: 1px #ffffff solid; */
   font-size: 0.67vw;
 }
+
 .element-number {
   position: absolute;
   top: 0.3vw;
@@ -95,8 +113,8 @@
 .element-symbol {
   font-size: 1.7vw;
 }
-#Lanthanoid .element-name,
-#Actinoid .element-name {
+#Lanthanoid .element-symbol,
+#Actinoid .element-symbol {
   font-size: 0.8vw;
 }
 /* Space */
@@ -118,11 +136,13 @@
 .f-element {
   background-color: rgba(248, 122, 141, 75%);
 }
+.period-number:hover,
 .s-element:hover,
 .p-element:hover,
 .d-element:hover,
 .f-element:hover {
   border: 1px #000000 solid;
+  transition: 500ms;
 }
 /* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal; Unknown Elements  */
 

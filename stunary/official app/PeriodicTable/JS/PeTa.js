@@ -356,20 +356,87 @@ groupActinoid.addEventListener("mouseout", function () {
   }
 });
 
-// Editable Buttons
-
-// Hide elements' name
+// Memory for all display data
 let memory_of_name = [];
+let memory_of_number = [];
+let memory_of_mass = []
+for (let i = 0; i < element.length; i++) {
+  let element_name = element[i].querySelector(".element-name");
+  memory_of_name.push(element_name);
+  let element_number = element[i].querySelector(".element-number");
+  memory_of_number.push(element_number);
+  let element_mass = element[i].querySelector(".element-mass");
+  memory_of_mass.push(element_mass);
+}
+// Editable Buttons
+function insertAfter(newNode, existingNode) {
+  existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+// HIDE NAME
 let hide_name = document.getElementById("hide-name");
 hide_name.addEventListener("click", function () {
-  for (let i = 0; i < element.length; i++) {
-    let element_name = element[i].querySelector(".element-name");
-    memory_of_name.push(element_name);
-    if (element_name !== null) {
-      element_name.remove();
+  hide_name.classList.toggle("active-button-for-code");
+  if (hide_name.classList.contains("active-button-for-code") == true) {
+    for (let i = 0; i < element.length; i++) {
+      let element_name = element[i].querySelector(".element-name");
+      if (element_name !== null) {
+        element_name.remove();
+      }
+    }
+  } else {
+    for (let i = 0; i < element.length; i++) {
+      let element_symbol = element[i].querySelector(".element-symbol");
+      if (memory_of_name[i] == null) {
+        continue;
+      } else {
+        insertAfter(memory_of_name[i], element_symbol);
+      }
     }
   }
-  console.log(memory_of_name)
+});
+// HIDE NUMBER
+let hide_number = document.getElementById("hide-number");
+hide_number.addEventListener("click", function () {
+  hide_number.classList.toggle("active-button-for-code");
+  if (hide_number.classList.contains("active-button-for-code") == true) {
+    for (let i = 0; i < element.length; i++) {
+      let element_number = element[i].querySelector(".element-number");
+      if (element_number !== null) {
+        element_number.remove();
+      }
+    }
+  } else {
+    for (let i = 0; i < element.length; i++) {
+      let element_symbol = element[i].querySelector(".element-symbol");
+      if (memory_of_number[i] == null) {
+        continue;
+      } else {
+        insertAfter(memory_of_number[i], element_symbol);
+      }
+    }
+  }
+});
+// HIDE MASS
+let hide_mass = document.getElementById("hide-mass");
+hide_mass.addEventListener("click", function () {
+  hide_mass.classList.toggle("active-button-for-code");
+  if (hide_mass.classList.contains("active-button-for-code") == true) {
+    for (let i = 0; i < element.length; i++) {
+      let element_mass = element[i].querySelector(".element-mass");
+      if (element_mass !== null) {
+        element_mass.remove();
+      }
+    }
+  } else {
+    for (let i = 0; i < element.length; i++) {
+      let element_symbol = element[i].querySelector(".element-symbol");
+      if (memory_of_mass[i] == null) {
+        continue;
+      } else {
+        insertAfter(memory_of_mass[i], element_symbol);
+      }
+    }
+  }
 });
 
 // const key = "yGg3vfUNjYISO6uyxB3ofg2pE7xXsvkA";

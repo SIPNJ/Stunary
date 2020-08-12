@@ -96,31 +96,26 @@ body {
   border-color: rgb(248, 122, 141);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdbase1 {
   border-color: rgb(113, 117, 200);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdbase2 {
   border-color: rgb(194, 120, 213);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdbase3 {
   border-color: rgb(107, 229, 140);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdbase4 {
   border-color: rgb(106, 201, 212);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 
 /* 
@@ -154,19 +149,16 @@ body {
   border-color: rgb(248, 146, 122);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdsecond1 {
   border-color: rgb(236, 102, 070);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdsecond2 {
   border-color: rgb(240, 215, 148);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 /*
   Other Colors :
@@ -184,6 +176,9 @@ body {
 .bgthird2 {
   background-color: rgb(224, 224, 228);
 }
+.bgthird3 {
+  background-color: rgb(45, 45, 45);
+}
 /* Other Color for Text */
 .third0 {
   color: rgb(0, 0, 0);
@@ -194,24 +189,29 @@ body {
 .third2 {
   color: rgb(224, 224, 228);
 }
+.third3 {
+  color: rgb(45, 45, 45);
+}
 /* Other Color for Border */
-.bdbthird0 {
+.bdthird0 {
   border-color: rgb(0, 0, 0);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdthird1 {
   border-color: rgb(255, 255, 255);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
 }
 .bdthird2 {
   border-color: rgb(224, 224, 228);
   border-radius: 1vw;
   border-style: solid;
-  border: 1vw;
+}
+.bdthird3 {
+  border-color: rgb(45, 45, 45);
+  border-radius: 1vw;
+  border-style: solid;
 }
 /* LOGO */
 .LOGO {
@@ -254,38 +254,38 @@ body {
 }
 /* Cursor */
 .cursor-default {
-  cursor: default!important;
+  cursor: default !important;
 }
 .cursor-alias {
-  cursor: alias!important;
+  cursor: alias !important;
 }
 .cursor-pointer {
-  cursor: pointer!important;
+  cursor: pointer !important;
 }
 .cursor-help {
-  cursor: help!important;
+  cursor: help !important;
 }
 .cursor-zoom-in {
-  cursor: zoom-in!important;
+  cursor: zoom-in !important;
 }
 .cursor-zoom-out {
-  cursor: zoom-out!important;
+  cursor: zoom-out !important;
 }
 .cursor-grab {
-  cursor: grab!important;
+  cursor: grab !important;
 }
 .cursor-grabbing {
-  cursor: grabbing!important;
+  cursor: grabbing !important;
 }
 .cursor-text {
-  cursor: text!important;
+  cursor: text !important;
 }
 .cursor-not-allowed {
-  cursor: not-allowed!important;
+  cursor: not-allowed !important;
 }
 .cursor-crosshair {
-  cursor: crosshair!important;
+  cursor: crosshair !important;
 }
 .cursor-copy {
-  cursor: copy!important;
+  cursor: copy !important;
 }
