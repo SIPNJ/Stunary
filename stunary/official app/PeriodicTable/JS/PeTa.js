@@ -2,9 +2,9 @@
 let overlay0 = document.getElementsByClassName("overlay")[0];
 let overlay1 = document.getElementsByClassName("overlay");
 let infoPanelforElement = document.getElementsByClassName("infoPanel")[0];
-let infoPanelforGroup = document.getElementsByClassName("infoPanel");
+let infoPanelforGroup = document.getElementsByClassName("infoPanel")[1];
 function elementInfo(thing) {
-  console.log(thing);
+  // console.log(thing);
   // let element = document.getElementById(thing.id);
   overlay0.classList.toggle("darken-background");
   infoPanelforElement.classList.toggle("openPanel");
@@ -561,6 +561,17 @@ change_IUPAC.addEventListener("click", function () {
 });
 
 // REQUIRED FILE SUPPORT
+let d_block_for_small = document.getElementsByClassName("d-block-for-small");
+if (screen.width < 568) {
+  for (let i = 0; i < d_block_for_small; i++) {
+    d_block_for_small[i].classList.toggle("d-none");
+  }
+} else {
+  for (let i = 0; i < d_block_for_small; i++) {
+    d_block_for_small[i].classList.toggle("d-block");
+  }
+  document.getElementsByClassName("rotate-error")[0].style.opacity = "0";
+}
 document.getElementById("toggle-light").addEventListener("click", function () {
   if (
     document.getElementById("toggle-light").classList.contains("toggle-dark") ==
@@ -692,3 +703,63 @@ document.getElementById("toggle-light").addEventListener("click", function () {
     }
   }
 });
+// s-block Elements
+for (let i = 0; i < s_element.length; i++) {
+  s_element[i].addEventListener("mouseover", function () {
+    s_element[i].style.borderColor = "rgb(0, 0, 0)";
+    s_element[i].style.borderStyle = "solid";
+    s_element[i].style.borderWidth = "1px";
+  });
+}
+for (let i = 0; i < s_element.length; i++) {
+  s_element[i].addEventListener("mouseout", function () {
+    s_element[i].style.borderColor = "rgb(255, 255, 255)";
+    s_element[i].style.borderStyle = "solid";
+    s_element[i].style.borderWidth = "1px";
+  });
+}
+// p-block Elements
+for (let i = 0; i < p_element.length; i++) {
+  p_element[i].addEventListener("mouseover", function () {
+    p_element[i].style.borderColor = "rgb(0, 0, 0)";
+    p_element[i].style.borderStyle = "solid";
+    p_element[i].style.borderWidth = "1px";
+  });
+}
+for (let i = 0; i < p_element.length; i++) {
+  p_element[i].addEventListener("mouseout", function () {
+    p_element[i].style.borderColor = "rgb(255, 255, 255)";
+    p_element[i].style.borderStyle = "solid";
+    p_element[i].style.borderWidth = "1px";
+  });
+}
+// d-block Elements
+for (let i = 0; i < d_element.length; i++) {
+  d_element[i].addEventListener("mouseover", function () {
+    d_element[i].style.borderColor = "rgb(0, 0, 0)";
+    d_element[i].style.borderStyle = "solid";
+    d_element[i].style.borderWidth = "1px";
+  });
+}
+for (let i = 0; i < d_element.length; i++) {
+  d_element[i].addEventListener("mouseout", function () {
+    d_element[i].style.borderColor = "rgb(255, 255, 255)";
+    d_element[i].style.borderStyle = "solid";
+    d_element[i].style.borderWidth = "1px";
+  });
+}
+// f-block Elements
+for (let i = 0; i < f_element.length; i++) {
+  f_element[i].addEventListener("mouseover", function () {
+    f_element[i].style.borderColor = "rgb(0, 0, 0)";
+    f_element[i].style.borderStyle = "solid";
+    f_element[i].style.borderWidth = "1px";
+  });
+}
+for (let i = 0; i < f_element.length; i++) {
+  f_element[i].addEventListener("mouseout", function () {
+    f_element[i].style.borderColor = "rgb(255, 255, 255)";
+    f_element[i].style.borderStyle = "solid";
+    f_element[i].style.borderWidth = "1px";
+  });
+}

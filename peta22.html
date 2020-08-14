@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
+</head>
+
+<body>
+    <style>
+        /* SMALL PERIODIC TABLE */
+
+        .xs-group-number,
+        .xs-period-number {
+            /* position */
+            position: relative;
+            height: 5.75vw;
+            width: 7.5%;
+            /* display */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* other */
+            font-size: 2vw;
+        }
+        /* Element Components */
+
+        .xs-element {
+            /* position */
+            position: relative;
+            height: 5.75vw;
+            width: 7.5%;
+            /* display */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* other */
+            /* border: 1px #ffffff solid; */
+            font-size: 1vw;
+        }
+
+        /* s-block, p-block elements */
+
+        .xs-element-symbol-sp {
+            position: absolute;
+            top: 0.5vw;
+            left: 1vw;
+        }
+
+        .xs-element-number-sp {
+            position: absolute;
+            top: 1vw;
+            right: 1vw;
+            font-size: 1vw;
+        }
+
+        .xs-element-name-sp {
+            position: absolute;
+            bottom: 0.5vw;
+            right: 1vw;
+            font-size: 0.9vw;
+        }
+
+        /* d-block, f-block elements */
+
+        /* Space */
+        .xs-space {
+            position: relative;
+            height: 5.75vw;
+            width: 7.5%;
+        }
+    </style>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="https://sipnj.github.io/Stunary/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav nav-pills nav-justify mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/index.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark"
+                        href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link title2nd text-dark" href="#">Account</a>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
+        </ol>
+    </nav>
+
+    <!-- Periodic Table just for xs-size -->
+    <div class="container-fluid index-10">
+        <!-- PERIOD 0 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="xs-group-number bdthird1 title2nd third0 cursor-help">Period</div>
+            <div class="xs-space"></div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="I">
+                <div class="paratext">a</div>
+                <div class="title2nd">I</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="II">
+                <div class="paratext">a</div>
+                <div class="title2nd">II</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="III">
+                <div class="paratext">a</div>
+                <div class="title2nd">III</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="IV">
+                <div class="paratext">a</div>
+                <div class="title2nd">IV</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="V">
+                <div class="paratext">a</div>
+                <div class="title2nd">V</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="VI">
+                <div class="paratext">a</div>
+                <div class="title2nd">VI</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 third0 cursor-help" id="VII">
+                <div class="paratext">a</div>
+                <div class="title2nd">VII</div>
+                <div class="paratext">b</div>
+            </div>
+            <div class="xs-group-number bdthird1 title2nd third0 cursor-help" id="VIIIa">
+            </div>
+            <div class="xs-group-number bdthird1 title2nd third0 cursor-help" id="VIIIb">
+                <div>VIIIB</div>
+            </div>
+            <div class="xs-group-number bdthird1 title2nd third0 cursor-help" id="VIIIc">
+            </div>
+            <div class="xs-group-number bdthird1 title2nd third0 cursor-help" id="VIIId">
+                <div>VIIIA</div>
+            </div>
+        </div>
+        <!-- PERIOD 1 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="xs-period-number bdthird1 title2nd third0 cursor-help">1</div>
+            <div class="xs-period-number bdthird1 title2nd third0 cursor-help">1</div>
+            <button class="btn xs-group-number s-element bdthird1 third0 cursor-help" id="xs-H"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number-sp paratext third0">1</div>
+                <div class="xs-element-symbol-sp title2nd third0">H</div>
+                <div class="xs-element-name-sp paratext third0">Hydrogen</div>
+            </button>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <div class="xs-space"></div>
+            <button class="xs-group-number s-element bdthird1 third0 cursor-help" id="xs-He"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number-sp paratext third0">2</div>
+                <div class="xs-element-symbol-sp title2nd third0">He</div>
+                <div class="xs-element-name-sp paratext third0">Helium</div>
+            </button>
+        </div>
+        <!-- PERIOD 2 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="xs-period-number bdthird1 title2nd third0 cursor-help">1</div>
+            <div class="xs-period-number bdthird1 title2nd third0 cursor-help">1</div>
+            <button class="xs-element bdthird1 s-element alkali cursor-help" id="Li" onclick="elementInfo(this)">
+                <div class="xs-element-number-sp paratext third0">3</div>
+                <div class="xs-element-symbol-sp title2nd third0">Li</div>
+                <div class="xs-element-name-sp paratext third0">Lithium</div>
+            </button>
+            <button class="xs-group-number s-element bdthird1 third0 cursor-help" id="xs-He"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number-sp paratext third0">2</div>
+                <div class="xs-element-symbol-sp title2nd third0">He</div>
+                <div class="xs-element-name-sp paratext third0">Helium</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Be"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">4</div>
+                <div class="xs-element-symbol title2nd third0">Be</div>
+                <div class="xs-element-name paratext third0">Beryllium</div>
+                <div class="xs-element-mass paratext third0">9</div>
+            </button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn xs-element bdthird1 p-element Boron-group metalloid cursor-help" id="B"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">5</div>
+                <div class="xs-element-symbol title2nd third0">B</div>
+                <div class="xs-element-name paratext third0">Boron</div>
+                <div class="xs-element-mass paratext third0">10</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Carbon-group non-metal cursor-help" id="C"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">6</div>
+                <div class="xs-element-symbol title2nd third0">C</div>
+                <div class="xs-element-name paratext third0">Carbon</div>
+                <div class="xs-element-mass paratext third0">12</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Nitrogen-group non-metal cursor-help" id="N"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">7</div>
+                <div class="xs-element-symbol title2nd third0">N</div>
+                <div class="xs-element-name paratext third0">Nitrogen</div>
+                <div class="xs-element-mass paratext third0">14</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Oxygen-group non-metal cursor-help" id="O"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">8</div>
+                <div class="xs-element-symbol title2nd third0">O</div>
+                <div class="xs-element-name paratext third0">Oxygen</div>
+                <div class="xs-element-mass paratext third0">16</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Halogen non-metal cursor-help" id="F"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">9</div>
+                <div class="xs-element-symbol title2nd third0">F</div>
+                <div class="xs-element-name paratext third0">Fluorine</div>
+                <div class="xs-element-mass paratext third0">19</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element noble-gas cursor-help" id="Ne" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">10</div>
+                <div class="xs-element-symbol title2nd third0">Ne</div>
+                <div class="xs-element-name paratext third0">Neon</div>
+                <div class="xs-element-mass paratext third0">20</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</div>
+        </div>
+        <!-- PERIOD 3 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="element period-number bdthird1 title2nd third0 cursor-help">3</div>
+            <button class="btn xs-element bdthird1 s-element alkali cursor-help" id="Na" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">11</div>
+                <div class="xs-element-symbol title2nd third0">Na</div>
+                <div class="xs-element-name paratext third0">Sodium</div>
+                <div class="xs-element-mass paratext third0">23</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Mg"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">12</div>
+                <div class="xs-element-symbol title2nd third0">Mg</div>
+                <div class="xs-element-name paratext third0">Magnesium</div>
+                <div class="xs-element-mass paratext third0">24</div>
+            </button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn space cursor-default"></button>
+            <button class="btn xs-element bdthird1 p-element Boron-group post-transition cursor-help" id="Al"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">13</div>
+                <div class="xs-element-symbol title2nd third0">Al</div>
+                <div class="xs-element-name paratext third0">Aluminium</div>
+                <div class="xs-element-mass paratext third0">27</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Carbon-group metalloid cursor-help" id="Si"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">14</div>
+                <div class="xs-element-symbol title2nd third0">Si</div>
+                <div class="xs-element-name paratext third0">Silicon</div>
+                <div class="xs-element-mass paratext third0">28</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Nitrogen-group non-metal cursor-help" id="P"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">15</div>
+                <div class="xs-element-symbol title2nd third0">P</div>
+                <div class="xs-element-name paratext third0">Phosphorus</div>
+                <div class="xs-element-mass paratext third0">31</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Oxygen-group non-metal cursor-help" id="S"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">16</div>
+                <div class="xs-element-symbol title2nd third0">S</div>
+                <div class="xs-element-name paratext third0">Sulfur</div>
+                <div class="xs-element-mass paratext third0">32</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element Halogen non-metal cursor-help" id="Cl"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">17</div>
+                <div class="xs-element-symbol title2nd third0">Cl</div>
+                <div class="xs-element-name paratext third0">Chlorine</div>
+                <div class="xs-element-mass paratext third0">35.5</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element noble-gas cursor-help" id="Ar" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">18</div>
+                <div class="xs-element-symbol title2nd third0">Ar</div>
+                <div class="xs-element-name paratext third0">Argon</div>
+                <div class="xs-element-mass paratext third0">40</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</br>M</div>
+        </div>
+        <!-- PERIOD 4 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="element period-number bdthird1 title2nd third0 cursor-help">4</div>
+            <button class="btn xs-element bdthird1 s-element alkali cursor-help" id="K" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">19</div>
+                <div class="xs-element-symbol title2nd third0">K</div>
+                <div class="xs-element-name paratext third0">Potassium</div>
+                <div class="xs-element-mass paratext third0">39</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Ca"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">20</div>
+                <div class="xs-element-symbol title2nd third0">Ca</div>
+                <div class="xs-element-name paratext third0">Calcium</div>
+                <div class="xs-element-mass paratext third0">40</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Scandium-group cursor-help" id="Sc"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">21</div>
+                <div class="xs-element-symbol title2nd third0">Sc</div>
+                <div class="xs-element-name paratext third0">Scandium</div>
+                <div class="xs-element-mass paratext third0">45</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Titanium-group cursor-help" id="Ti"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">22</div>
+                <div class="xs-element-symbol title2nd third0">Ti</div>
+                <div class="xs-element-name paratext third0">Titanium</div>
+                <div class="xs-element-mass paratext third0">48</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Vanadium-group cursor-help" id="V"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">23</div>
+                <div class="xs-element-symbol title2nd third0">V</div>
+                <div class="xs-element-name paratext third0">Vanadium</div>
+                <div class="xs-element-mass paratext third0">51</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Chromium-group cursor-help" id="Cr"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">24</div>
+                <div class="xs-element-symbol title2nd third0">Cr</div>
+                <div class="xs-element-name paratext third0">Chromium</div>
+                <div class="xs-element-mass paratext third0">52</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Manganese-group cursor-help" id="Mn"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">25</div>
+                <div class="xs-element-symbol title2nd third0">Mn</div>
+                <div class="xs-element-name paratext third0">Manganese</div>
+                <div class="xs-element-mass paratext third0">55</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Iron-group cursor-help" id="Fe"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">26</div>
+                <div class="xs-element-symbol title2nd third0">Fe</div>
+                <div class="xs-element-name paratext third0">Iron</div>
+                <div class="xs-element-mass paratext third0">56</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Cobalt-group cursor-help" id="Co"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">27</div>
+                <div class="xs-element-symbol title2nd third0">Co</div>
+                <div class="xs-element-name paratext third0">Cobalt</div>
+                <div class="xs-element-mass paratext third0">59</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Nikel-group cursor-help" id="Ni"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">28</div>
+                <div class="xs-element-symbol title2nd third0">Ni</div>
+                <div class="xs-element-name paratext third0">Nikel</div>
+                <div class="xs-element-mass paratext third0">58.7</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Copper-group cursor-help" id="Cu"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">29</div>
+                <div class="xs-element-symbol title2nd third0">Cu</div>
+                <div class="xs-element-name paratext third0">Copper</div>
+                <div class="xs-element-mass paratext third0">64</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Zinc-group cursor-help" id="Zn"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">30</div>
+                <div class="xs-element-symbol title2nd third0">Zn</div>
+                <div class="xs-element-name paratext third0">Zinc</div>
+                <div class="xs-element-mass paratext third0">65</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Boron-group cursor-help" id="Ga"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">31</div>
+                <div class="xs-element-symbol title2nd third0">Ga</div>
+                <div class="xs-element-name paratext third0">Gallium</div>
+                <div class="xs-element-mass paratext third0">69.7</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element metalloid Carbon-group cursor-help" id="Ge"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">32</div>
+                <div class="xs-element-symbol title2nd third0">Ge</div>
+                <div class="xs-element-name paratext third0">Germanium</div>
+                <div class="xs-element-mass paratext third0">72.6</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element metalloid Nitrogen-group cursor-help" id="As"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">33</div>
+                <div class="xs-element-symbol title2nd third0">As</div>
+                <div class="xs-element-name paratext third0">Arsenium</div>
+                <div class="xs-element-mass paratext third0">75</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element non-metal Oxygen-group cursor-help" id="Se"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">34</div>
+                <div class="xs-element-symbol title2nd third0">Se</div>
+                <div class="xs-element-name paratext third0">Selenium</div>
+                <div class="xs-element-mass paratext third0">79</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element non-metal Halogen cursor-help" id="Br"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">35</div>
+                <div class="xs-element-symbol title2nd third0">Br</div>
+                <div class="xs-element-name paratext third0">Bromine</div>
+                <div class="xs-element-mass paratext third0">80</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element noble-gas cursor-help" id="Kr" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">36</div>
+                <div class="xs-element-symbol title2nd third0">Kr</div>
+                <div class="xs-element-name paratext third0">Krypton</div>
+                <div class="xs-element-mass paratext third0">83.8</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</br>M</br>N</div>
+        </div>
+        <!-- PERIOD 5 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="element period-number bdthird1 title2nd third0 cursor-help">5</div>
+            <button class="btn xs-element bdthird1 s-element alkali cursor-help" id="Rb" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">37</div>
+                <div class="xs-element-symbol title2nd third0">Rb</div>
+                <div class="xs-element-name paratext third0">Rubidium</div>
+                <div class="xs-element-mass paratext third0">85.47</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Sr"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">38</div>
+                <div class="xs-element-symbol title2nd third0">Sr</div>
+                <div class="xs-element-name paratext third0">Strontium</div>
+                <div class="xs-element-mass paratext third0">87.62</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Scandium-group cursor-help" id="Y"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">39</div>
+                <div class="xs-element-symbol title2nd third0">Y</div>
+                <div class="xs-element-name paratext third0">Yttrium</div>
+                <div class="xs-element-mass paratext third0">88.91</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Titanium-group cursor-help" id="Zr"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">40</div>
+                <div class="xs-element-symbol title2nd third0">Zr</div>
+                <div class="xs-element-name paratext third0">Zirconium</div>
+                <div class="xs-element-mass paratext third0">91.22</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Vanadium-group cursor-help" id="Nb"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">41</div>
+                <div class="xs-element-symbol title2nd third0">Nb</div>
+                <div class="xs-element-name paratext third0">Niobium</div>
+                <div class="xs-element-mass paratext third0">93</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Chromium-group cursor-help" id="Mo"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">42</div>
+                <div class="xs-element-symbol title2nd third0">Mo</div>
+                <div class="xs-element-name paratext third0">Molybdenum</div>
+                <div class="xs-element-mass paratext third0">96</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Manganese-group cursor-help" id="Tc"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">43</div>
+                <div class="xs-element-symbol title2nd third0">Tc</div>
+                <div class="xs-element-name paratext third0">Technetium</div>
+                <div class="xs-element-mass paratext third0">98</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Iron-group cursor-help" id="Ru"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">44</div>
+                <div class="xs-element-symbol title2nd third0">Ru</div>
+                <div class="xs-element-name paratext third0">Ruthenium</div>
+                <div class="xs-element-mass paratext third0">101</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Cobalt-group cursor-help" id="Rh"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">45</div>
+                <div class="xs-element-symbol title2nd third0">Rh</div>
+                <div class="xs-element-name paratext third0">Rhodium</div>
+                <div class="xs-element-mass paratext third0">103</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Nikel-group cursor-help" id="Pd"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">46</div>
+                <div class="xs-element-symbol title2nd third0">Pd</div>
+                <div class="xs-element-name paratext third0">Palladium</div>
+                <div class="xs-element-mass paratext third0">106.4</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Copper-group cursor-help" id="Ag"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">47</div>
+                <div class="xs-element-symbol title2nd third0">Ag</div>
+                <div class="xs-element-name paratext third0">Silver</div>
+                <div class="xs-element-mass paratext third0">108</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Zinc-group cursor-help" id="Cd"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">48</div>
+                <div class="xs-element-symbol title2nd third0">Cd</div>
+                <div class="xs-element-name paratext third0">Cadimium</div>
+                <div class="xs-element-mass paratext third0">112.4</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Boron-group cursor-help" id="In"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">49</div>
+                <div class="xs-element-symbol title2nd third0">In</div>
+                <div class="xs-element-name paratext third0">Indium</div>
+                <div class="xs-element-mass paratext third0">69.72</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Carbon-group cursor-help" id="Sn"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">50</div>
+                <div class="xs-element-symbol title2nd third0">Sn</div>
+                <div class="xs-element-name paratext third0">Tin</div>
+                <div class="xs-element-mass paratext third0">118.7</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element metalloid Nitrogen-group cursor-help" id="Sb"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">51</div>
+                <div class="xs-element-symbol title2nd third0">Sb</div>
+                <div class="xs-element-name paratext third0">Antimony</div>
+                <div class="xs-element-mass paratext third0">121.8</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element metalloid Oxygen-group cursor-help" id="Te"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">52</div>
+                <div class="xs-element-symbol title2nd third0">Te</div>
+                <div class="xs-element-name paratext third0">Tellurium</div>
+                <div class="xs-element-mass paratext third0">127.6</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element non-metal Halogen cursor-help" id="I"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">53</div>
+                <div class="xs-element-symbol title2nd third0">I</div>
+                <div class="xs-element-name paratext third0">Iodine</div>
+                <div class="xs-element-mass paratext third0">127</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element noble-gas cursor-help" id="Xe" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">54</div>
+                <div class="xs-element-symbol title2nd third0">Xe</div>
+                <div class="xs-element-name paratext third0">Xenon</div>
+                <div class="xs-element-mass paratext third0">131.3</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</br>M</br>N</br>O</div>
+        </div>
+        <!-- PERIOD 6 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="element period-number bdthird1 title2nd third0 cursor-help">6</div>
+            <button class="btn xs-element bdthird1 s-element alkali cursor-help" id="Cs" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">55</div>
+                <div class="xs-element-symbol title2nd third0">Cs</div>
+                <div class="xs-element-name paratext third0">Cesium</div>
+                <div class="xs-element-mass paratext third0">133</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Ba"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">56</div>
+                <div class="xs-element-symbol title2nd third0">Ba</div>
+                <div class="xs-element-name paratext third0">Barium</div>
+                <div class="xs-element-mass paratext third0">137.3</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element cursor-help" onclick="groupInfo(this)">
+                <div class="xs-element-number paratext third0">57-71</div>
+                <div class="xs-element-symbol title2nd third0">Lanthanoid</div>
+                <div class="xs-element-name third0"></div>
+                <div class="xs-element-mass paratext third0"></div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Titanium-group cursor-help" id="Hf"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">72</div>
+                <div class="xs-element-symbol title2nd third0">Hf</div>
+                <div class="xs-element-name paratext third0">Hafnium</div>
+                <div class="xs-element-mass paratext third0">178.5</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Vanadium-group cursor-help" id="Ta"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">73</div>
+                <div class="xs-element-symbol title2nd third0">Ta</div>
+                <div class="xs-element-name paratext third0">Tantalum</div>
+                <div class="xs-element-mass paratext third0">180.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Chromium-group cursor-help" id="W"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">74</div>
+                <div class="xs-element-symbol title2nd third0">W</div>
+                <div class="xs-element-name paratext third0">Tungsten</div>
+                <div class="xs-element-mass paratext third0">183.8</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Manganese-group cursor-help" id="Re"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">75</div>
+                <div class="xs-element-symbol title2nd third0">Re</div>
+                <div class="xs-element-name paratext third0">Rhenium</div>
+                <div class="xs-element-mass paratext third0">186.2</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Iron-group cursor-help" id="Os"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">76</div>
+                <div class="xs-element-symbol title2nd third0">Os</div>
+                <div class="xs-element-name paratext third0">Osimium</div>
+                <div class="xs-element-mass paratext third0">190.2</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Cobalt-group cursor-help" id="Ir"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">77</div>
+                <div class="xs-element-symbol title2nd third0">Ir</div>
+                <div class="xs-element-name paratext third0">Iridium</div>
+                <div class="xs-element-mass paratext third0">192.2</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Nikel-group cursor-help" id="Pt"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">78</div>
+                <div class="xs-element-symbol title2nd third0">Pt</div>
+                <div class="xs-element-name paratext third0">Platinum</div>
+                <div class="xs-element-mass paratext third0">195.1</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Copper-group cursor-help" id="Au"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">79</div>
+                <div class="xs-element-symbol title2nd third0">Au</div>
+                <div class="xs-element-name paratext third0">Gold</div>
+                <div class="xs-element-mass paratext third0">197</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Zinc-group cursor-help" id="Hg"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">80</div>
+                <div class="xs-element-symbol title2nd third0">Hg</div>
+                <div class="xs-element-name paratext third0">Mercury</div>
+                <div class="xs-element-mass paratext third0">200.6</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Boron-group cursor-help" id="Tl"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">81</div>
+                <div class="xs-element-symbol title2nd third0">Tl</div>
+                <div class="xs-element-name paratext third0">Talium</div>
+                <div class="xs-element-mass paratext third0">204.38</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Carbon-group cursor-help" id="Pb"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">82</div>
+                <div class="xs-element-symbol title2nd third0">Pb</div>
+                <div class="xs-element-name paratext third0">Lead</div>
+                <div class="xs-element-mass paratext third0">207.2</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Nitrogen-group cursor-help" id="Bi"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">83</div>
+                <div class="xs-element-symbol title2nd third0">Bi</div>
+                <div class="xs-element-name paratext third0">Bismuth</div>
+                <div class="xs-element-mass paratext third0">208.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Oxygen-group cursor-help" id="Po"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">84</div>
+                <div class="xs-element-symbol title2nd third0">Po</div>
+                <div class="xs-element-name paratext third0">Polonium</div>
+                <div class="xs-element-mass paratext third0">209</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element metalloid Halogen cursor-help" id="At"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">85</div>
+                <div class="xs-element-symbol title2nd third0">At</div>
+                <div class="xs-element-name paratext third0">Astatine</div>
+                <div class="xs-element-mass paratext third0">210</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element noble-gas cursor-help" id="Rn" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">86</div>
+                <div class="xs-element-symbol title2nd third0">Rn</div>
+                <div class="xs-element-name paratext third0">Radon</div>
+                <div class="xs-element-mass paratext third0">222</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</br>M</br>N</br>O</br>P</div>
+        </div>
+        <!-- PERIOD 7 -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto">
+            <div class="element period-number bdthird1 title2nd third0 cursor-help">7</div>
+            <button class="btn xs-element bdthird1 s-element alkali cursor-help" id="Fr" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">87</div>
+                <div class="xs-element-symbol title2nd third0">Fr</div>
+                <div class="xs-element-name paratext third0">Francium</div>
+                <div class="xs-element-mass paratext third0">223</div>
+            </button>
+            <button class="btn xs-element bdthird1 s-element alkaline-earth cursor-help" id="Ra"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">88</div>
+                <div class="xs-element-symbol title2nd third0">Ra</div>
+                <div class="xs-element-name paratext third0">Radium</div>
+                <div class="xs-element-mass paratext third0">226</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element cursor-help" onclick="groupInfo(this)">
+                <div class="xs-element-number paratext third0">89-103</div>
+                <div class="xs-element-symbol title2nd third0">Actinoid</div>
+                <div class="xs-element-name third0"></div>
+                <div class="xs-element-mass paratext third0"></div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Titanium-group cursor-help" id="Rf"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">104</div>
+                <div class="xs-element-symbol title2nd third0">Rf</div>
+                <div class="xs-element-name paratext third0">Rutherfordium</div>
+                <div class="xs-element-mass paratext third0">267</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Vanadium-group cursor-help" id="Db"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">105</div>
+                <div class="xs-element-symbol title2nd third0">Db</div>
+                <div class="xs-element-name paratext third0">Dubnium</div>
+                <div class="xs-element-mass paratext third0">268</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Chromium-group cursor-help" id="Sg"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">106</div>
+                <div class="xs-element-symbol title2nd third0">Sg</div>
+                <div class="xs-element-name paratext third0">Seaborgium</div>
+                <div class="xs-element-mass paratext third0">269</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Manganese-group cursor-help" id="Bh"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">107</div>
+                <div class="xs-element-symbol title2nd third0">Bh</div>
+                <div class="xs-element-name paratext third0">Bohrium</div>
+                <div class="xs-element-mass paratext third0">270</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Iron-group cursor-help" id="Hs"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">108</div>
+                <div class="xs-element-symbol title2nd third0">Hs</div>
+                <div class="xs-element-name paratext third0">Hassium</div>
+                <div class="xs-element-mass paratext third0">269</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element unk-element Cobalt-group cursor-help" id="Mt"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">109</div>
+                <div class="xs-element-symbol title2nd third0">Mt</div>
+                <div class="xs-element-name paratext third0">Meitnerium</div>
+                <div class="xs-element-mass paratext third0">278</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element unk-element Nikel-group cursor-help" id="Ds"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">110</div>
+                <div class="xs-element-symbol title2nd third0">Ds</div>
+                <div class="xs-element-name paratext third0">Darmstadium</div>
+                <div class="xs-element-mass paratext third0">281</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element unk-element Copper-group cursor-help" id="Rg"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">111</div>
+                <div class="xs-element-symbol title2nd third0">Rg</div>
+                <div class="xs-element-name paratext third0">Roentgenium</div>
+                <div class="xs-element-mass paratext third0">282</div>
+            </button>
+            <button class="btn xs-element bdthird1 d-element transiton Zinc-group cursor-help" id="Cn"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">112</div>
+                <div class="xs-element-symbol title2nd third0">Cn</div>
+                <div class="xs-element-name paratext third0">Copernicium</div>
+                <div class="xs-element-mass paratext third0">285</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element unk-element Boron-group cursor-help" id="Nh"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">113</div>
+                <div class="xs-element-symbol title2nd third0">Nh</div>
+                <div class="xs-element-name paratext third0">Nihonium</div>
+                <div class="xs-element-mass paratext third0">286</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element post-transition Carbon-group cursor-help" id="Fl"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">114</div>
+                <div class="xs-element-symbol title2nd third0">Fl</div>
+                <div class="xs-element-name paratext third0">Flerovium</div>
+                <div class="xs-element-mass paratext third0">289</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element unk-element Nitrogen-group cursor-help" id="Mc"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">115</div>
+                <div class="xs-element-symbol title2nd third0">Mc</div>
+                <div class="xs-element-name paratext third0">Moscovium</div>
+                <div class="xs-element-mass paratext third0">289</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element unk-element Oxygen-group cursor-help" id="Lv"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">116</div>
+                <div class="xs-element-symbol title2nd third0">Lv</div>
+                <div class="xs-element-name paratext third0">Livermorium</div>
+                <div class="xs-element-mass paratext third0">293</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element unk-element Halogen cursor-help" id="Ts"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">117</div>
+                <div class="xs-element-symbol title2nd third0">Ts</div>
+                <div class="xs-element-name paratext third0">Tennessine</div>
+                <div class="xs-element-mass paratext third0">294</div>
+            </button>
+            <button class="btn xs-element bdthird1 p-element unk-element noble-gas cursor-help" id="Og"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">118</div>
+                <div class="xs-element-symbol title2nd third0">Og</div>
+                <div class="xs-element-name paratext third0">Oganesson</div>
+                <div class="xs-element-mass paratext third0">294</div>
+            </button>
+            <div class="electron-class ml-2 ml-md-2 ml-xl-2 text-center">K</br>L</br>M</br>N</br>O</br>P</br>Q</div>
+        </div>
+        <!-- LANTHANOID -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto mt-3 mt-md-3 mt-xl-3">
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="La"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">57</div>
+                <div class="xs-element-symbol title2nd third0">Sc</div>
+                <div class="xs-element-name paratext third0">Lanthanum</div>
+                <div class="xs-element-mass paratext third0">138.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Ce"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">58</div>
+                <div class="xs-element-symbol title2nd third0">Ce</div>
+                <div class="xs-element-name paratext third0">Cerium</div>
+                <div class="xs-element-mass paratext third0">140.1</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Pr"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">59</div>
+                <div class="xs-element-symbol title2nd third0">Pr</div>
+                <div class="xs-element-name paratext third0">Praseodymium</div>
+                <div class="xs-element-mass paratext third0">140.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Nd"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">60</div>
+                <div class="xs-element-symbol title2nd third0">Nd</div>
+                <div class="xs-element-name paratext third0">Neodymium</div>
+                <div class="xs-element-mass paratext third0">144.2</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Pm"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">61</div>
+                <div class="xs-element-symbol title2nd third0">Pm</div>
+                <div class="xs-element-name paratext third0">Promethium</div>
+                <div class="xs-element-mass paratext third0">144.5</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Sm"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">62</div>
+                <div class="xs-element-symbol title2nd third0">Sm</div>
+                <div class="xs-element-name paratext third0">Samarium</div>
+                <div class="xs-element-mass paratext third0">150.4</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Eu"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">63</div>
+                <div class="xs-element-symbol title2nd third0">Eu</div>
+                <div class="xs-element-name paratext third0">Europium</div>
+                <div class="xs-element-mass paratext third0">152</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Gd"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">64</div>
+                <div class="xs-element-symbol title2nd third0">Gd</div>
+                <div class="xs-element-name paratext third0">Gadolinium</div>
+                <div class="xs-element-mass paratext third0">157.3</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Tb"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">65</div>
+                <div class="xs-element-symbol title2nd third0">Tb</div>
+                <div class="xs-element-name paratext third0">Terbium</div>
+                <div class="xs-element-mass paratext third0">158.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Dy"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">66</div>
+                <div class="xs-element-symbol title2nd third0">Dy</div>
+                <div class="xs-element-name paratext third0">Dysprosium</div>
+                <div class="xs-element-mass paratext third0">162.5</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Ho"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">67</div>
+                <div class="xs-element-symbol title2nd third0">Ho</div>
+                <div class="xs-element-name paratext third0">Holmium</div>
+                <div class="xs-element-mass paratext third0">164.9</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Er"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">68</div>
+                <div class="xs-element-symbol title2nd third0">Er</div>
+                <div class="xs-element-name paratext third0">Erbium</div>
+                <div class="xs-element-mass paratext third0">167.3</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Tm"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">69</div>
+                <div class="xs-element-symbol title2nd third0">As</div>
+                <div class="xs-element-name paratext third0">Thulium</div>
+                <div class="xs-element-mass paratext third0">75</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Yb"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">70</div>
+                <div class="xs-element-symbol title2nd third0">Yb</div>
+                <div class="xs-element-name paratext third0">Ytterbium</div>
+                <div class="xs-element-mass paratext third0">173.1</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element lanthanoid cursor-help" id="Lu"
+                onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">71</div>
+                <div class="xs-element-symbol title2nd third0">Lu</div>
+                <div class="xs-element-name paratext third0">Lutetium</div>
+                <div class="xs-element-mass paratext third0">175</div>
+            </button>
+            <div class="space"></div>
+            <div class="ml-2 ml-md-2 ml-xl-2"></div>
+        </div>
+        <!-- ACTINOID -->
+        <div class="period-row mx-auto mx-md-auto mx-xl-auto mb-3 mb-md-3 mb-xl-3">
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Ac" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">89</div>
+                <div class="xs-element-symbol title2nd third0">Ac</div>
+                <div class="xs-element-name paratext third0">Actinium</div>
+                <div class="xs-element-mass paratext third0">227</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Th" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">90</div>
+                <div class="xs-element-symbol title2nd third0">Th</div>
+                <div class="xs-element-name paratext third0">Thorium</div>
+                <div class="xs-element-mass paratext third0">232</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Pa" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">91</div>
+                <div class="xs-element-symbol title2nd third0">Pa</div>
+                <div class="xs-element-name paratext third0">Protactinium</div>
+                <div class="xs-element-mass paratext third0">231</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="U" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">92</div>
+                <div class="xs-element-symbol title2nd third0">U</div>
+                <div class="xs-element-name paratext third0">Uranium</div>
+                <div class="xs-element-mass paratext third0">238</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Np" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">93</div>
+                <div class="xs-element-symbol title2nd third0">Np</div>
+                <div class="xs-element-name paratext third0">Neptunium</div>
+                <div class="xs-element-mass paratext third0">237</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Pu" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">94</div>
+                <div class="xs-element-symbol title2nd third0">Pu</div>
+                <div class="xs-element-name paratext third0">Plutonium</div>
+                <div class="xs-element-mass paratext third0">244</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Am" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">95</div>
+                <div class="xs-element-symbol title2nd third0">Am</div>
+                <div class="xs-element-name paratext third0">Americium</div>
+                <div class="xs-element-mass paratext third0">243</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Cm" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">96</div>
+                <div class="xs-element-symbol title2nd third0">Cm</div>
+                <div class="xs-element-name paratext third0">Curium</div>
+                <div class="xs-element-mass paratext third0">247</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Bk" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">97</div>
+                <div class="xs-element-symbol title2nd third0">Bk</div>
+                <div class="xs-element-name paratext third0">Berkelium</div>
+                <div class="xs-element-mass paratext third0">247</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Cf" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">98</div>
+                <div class="xs-element-symbol title2nd third0">Cf</div>
+                <div class="xs-element-name paratext third0">Californium</div>
+                <div class="xs-element-mass paratext third0">251</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Es" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">99</div>
+                <div class="xs-element-symbol title2nd third0">Es</div>
+                <div class="xs-element-name paratext third0">Einsteinium</div>
+                <div class="xs-element-mass paratext third0">252</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Fm" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">100</div>
+                <div class="xs-element-symbol title2nd third0">Fm</div>
+                <div class="xs-element-name paratext third0">Fermium</div>
+                <div class="xs-element-mass paratext third0">257</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Md" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">101</div>
+                <div class="xs-element-symbol title2nd third0">Md</div>
+                <div class="xs-element-name paratext third0">Mendelevium</div>
+                <div class="xs-element-mass paratext third0">258</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="No" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">102</div>
+                <div class="xs-element-symbol title2nd third0">No</div>
+                <div class="xs-element-name paratext third0">Nobelium</div>
+                <div class="xs-element-mass paratext third0">259</div>
+            </button>
+            <button class="btn xs-element bdthird1 f-element actinoid cursor-help" id="Lr" onclick="elementInfo(this)">
+                <div class="xs-element-number paratext third0">103</div>
+                <div class="xs-element-symbol title2nd third0">Lr</div>
+                <div class="xs-element-name paratext third0">Lawrencium</div>
+                <div class="xs-element-mass paratext third0">266</div>
+            </button>
+            <div class="space"></div>
+            <div class="ml-2 ml-md-2 ml-xl-2"></div>
+        </div>
+    </div>
+    <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

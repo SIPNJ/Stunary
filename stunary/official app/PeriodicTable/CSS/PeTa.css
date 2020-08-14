@@ -6,22 +6,6 @@
 .bdthird1 {
   border: 1px solid rgb(255, 255, 255);
 }
-/* .bdthird1 {
-  border: 1px;
-}
-.bdthird1 {
-  border-color: rgb(255, 255, 255);
-  border-radius: 1vw;
-  border-style: solid;
-} */
-
-/* LIGHT MODE vs DARK MODE */
-
-
-
-/* RIGHT PANEL */
-
-
 
 /* Info Panel */
 .infoPanel {
@@ -65,13 +49,14 @@
   pointer-events: all;
 }
 
-
-
+/* Settings and Label */
+.settingPanel {
+  position: absolute;
+  width: 12vw;
+  height: 5vw;
+}
 
 /* MEDIUM PERIODIC TABLE */
-
-
-
 
 .period-row {
   /* position */
@@ -134,6 +119,7 @@
   height: 5.75vw;
   width: 5%;
 }
+
 /* Classifications of Elements : s,p,d,f and unknown blocks */
 .s-element {
   background-color: rgba(107, 229, 140, 75%);
@@ -148,18 +134,3 @@
   background-color: rgba(248, 122, 141, 75%);
 }
 /* Classifications of Elements : Alkali, Alkaline Earth Metals; Transtition, Post-Transition Metal; Unknown Elements  */
-
-
-
-/* SMALL PERIODIC TABLE */
-
-
-
-/* Settings and Label */
-.settingPanel {
-  position: absolute;
-  width: 12vw;
-  height: 5vw;
-}
-
-

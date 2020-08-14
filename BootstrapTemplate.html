@@ -43,38 +43,26 @@
             </ul>
             <!-- Second navbar -->
             <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
-                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
-                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
             </form>
         </div>
     </nav>
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb title2nd">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Template</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div></button>
+            </li>
         </ol>
     </nav>
-    <!-- Side navivgarton -->
-    <div class="container-fluid">
-        <div class="col-lg-12 col-xl-8">
-            <div class="title1st text-center" style="font-size:7vw">We hope you find your best place !</div>
-        </div>
-        <div class="col-xl-4 d-none d-sm-none d-md-none d-lg-none d-xl-block">
-            <div class="outline-content mt-xl-4">
-                <!-- breadcrumb -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb title2nd">
-                        <li class="breadcrumb-item active" aria-current="page">Home</li>
-                    </ol>
-                </nav>
-                <!-- menu -->
-                <nav class="outline-content mt-xl-4">
-                    <div class="navbar-brand">MENU</div>
-                </nav>
-            </div>
-        </div>
-    </div>
     <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
