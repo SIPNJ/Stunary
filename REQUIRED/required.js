@@ -102,15 +102,56 @@ toggleLight.addEventListener("click", function () {
   }
 });
 // Top navigation
-let account_drop_down = document.getElementById("account-drop-down");
-// Login or Not
+let account_drop_down = document.getElementById("accountDropdown");
+// signin or Not
 let keyLogin = localStorage.getItem("keyLogin");
+console.log(keyLogin);
 if (keyLogin == null) {
-  let login_item = document.createElement("a");
-  login_item.classList.add("dropdown-item");
-  login_item.classList.add("subtitle");
-  login_item.classList.add("text-dark");
-  login_item.innerHTML = "Log in";
-  // login_item.href = ""
-  // account_drop_down.appendChild
+  let signin_item = document.createElement("a");
+  signin_item.classList.add("dropdown-item");
+  signin_item.classList.add("subtitle");
+  signin_item.classList.add("text-dark");
+  signin_item.innerHTML = "Sign in";
+  signin_item.href =
+    "https://sipnj.github.io/Stunary/stunary/account/signin/signin.html";
+  let signup_item = document.createElement("a");
+  signup_item.classList.add("dropdown-item");
+  signup_item.classList.add("subtitle");
+  signup_item.classList.add("text-dark");
+  signup_item.innerHTML = "Sign up";
+  signup_item.href =
+    "https://sipnj.github.io/Stunary/stunary/account/signip/signip.html";
+  account_drop_down.appendChild(signin_item);
+  account_drop_down.appendChild(signup_item);
+} else {
+  let profile = document.createElement("a");
+  profile.classList.add("dropdown-item");
+  profile.classList.add("subtitle");
+  profile.classList.add("text-dark");
+  profile.innerHTML = "Profile";
+  profile.href =
+    "https://sipnj.github.io/Stunary/stunary/account/signin/signin.html";
+  let signout_item = document.createElement("a");
+  signout_item.classList.add("dropdown-item");
+  signout_item.classList.add("subtitle");
+  signout_item.classList.add("text-danger");
+  signout_item.innerHTML = "Sign out";
+  signout_item.addEventListener("click", function () {
+    localStorage.setItem("keyLogin", null);
+    console.log(signout_item);
+    window.open("http://localhost:31415/", "_self")
+  });
+  account_drop_down.appendChild(profile);
+  account_drop_down.appendChild(signout_item);
 }
+
+// Top Navigation
+let nav = document.createElement("nav");
+nav.classList.add(
+  "navbar",
+  "navbar-expand-md",
+  "navbar-light",
+  "bgbase3",
+  "container-fluid"
+);
+let button_nav = document.createEl;

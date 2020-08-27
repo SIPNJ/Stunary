@@ -19,37 +19,52 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="/stunary/beta app/pokedex/pokedex.html" class="navbar-brand text-dark">
+        <a href="https://sipnj.github.io/Stunary/index.html" class="navbar-brand text-dark">
             <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav nav-pills nav-justify mr-auto">
+            <ul class="nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
                     <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/index.html">Home</a>
                 </li>
                 <!-- HIERARCHY -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                    <a class="nav-link title2nd text-dark"
+                        href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link title2nd text-dark" href="#">Account</a>
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
                 </li>
             </ul>
             <!-- Second navbar -->
             <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
-                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
-                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
             </form>
         </div>
     </nav>
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb title2nd">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item active" aria-current="page">Home</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Home</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div></button>
+            </li>
         </ol>
     </nav>
     <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>

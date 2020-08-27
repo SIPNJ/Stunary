@@ -10,7 +10,7 @@ const backendPokedex = require("./backend-function/pokedex");
 async function onRequest(request, response) {
   let pathname = url.parse(request.url, true).pathname;
   let filename = "." + pathname;
-  // console.log(pathname);
+  console.log(pathname);
   // query
   let query;
   let namePokemon;
@@ -125,11 +125,12 @@ async function onRequest(request, response) {
       let ispass = JSON.parse(
         fs.readFileSync("stunary/account/ispass.json", "utf-8")
       );
-      console.log(ispass);
-      for (let i = 0; i < maindata.length; i++) {
-        if (username == ispass[i].name && password == ispass[i].password) {
-          console.log("good");
-          return response.end(JSON.stringify({"username": username}));
+      for (let i = 0; i < ispass.length; i++) {
+        if (username == ispass[i].username && password == ispass[i].password) {
+          console.log(ispass[i].username);
+          return response.end(
+            JSON.stringify({ message: "Login Success", username: username })
+          );
         }
       }
       return response.end(JSON.stringify({ message: "Login Fail" }));
