@@ -49,13 +49,6 @@
   pointer-events: all;
 }
 
-/* Settings and Label */
-.settingPanel {
-  position: absolute;
-  width: 12vw;
-  height: 5vw;
-}
-
 /* MEDIUM PERIODIC TABLE */
 
 .period-row {
@@ -118,6 +111,11 @@
   position: relative;
   height: 5.75vw;
   width: 5%;
+}
+
+/* Label */
+.label {
+  width: 40%;
 }
 
 /* Classifications of Elements : s,p,d,f and unknown blocks */

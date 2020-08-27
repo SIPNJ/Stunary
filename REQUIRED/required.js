@@ -1,4 +1,5 @@
 let toggleLight = document.getElementById("toggle-light");
+let topnav = document.getElementById("topnav");
 let bgthird0 = document.getElementsByClassName("bgthird0");
 let bgthird1 = document.getElementsByClassName("bgthird1");
 let bgthird2 = document.getElementsByClassName("bgthird2");
@@ -11,7 +12,7 @@ let third0 = document.getElementsByClassName("third0");
 let third1 = document.getElementsByClassName("third1");
 let third2 = document.getElementsByClassName("third2");
 let third3 = document.getElementsByClassName("third3");
-
+// DARK / LIGHT MODE
 toggleLight.addEventListener("click", function () {
   toggleLight.classList.toggle("toggle-dark");
   if (toggleLight.classList.contains("toggle-dark") == true) {
@@ -100,3 +101,16 @@ toggleLight.addEventListener("click", function () {
     }
   }
 });
+// Top navigation
+let account_drop_down = document.getElementById("account-drop-down");
+// Login or Not
+let keyLogin = localStorage.getItem("keyLogin");
+if (keyLogin == null) {
+  let login_item = document.createElement("a");
+  login_item.classList.add("dropdown-item");
+  login_item.classList.add("subtitle");
+  login_item.classList.add("text-dark");
+  login_item.innerHTML = "Log in";
+  // login_item.href = ""
+  // account_drop_down.appendChild
+}

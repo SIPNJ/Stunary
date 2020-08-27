@@ -1,0 +1,16 @@
+[
+    {
+        "email": "admin",
+        "username": "admin",
+        "password": "admin",
+        "month": "January",
+        "year": "2020"
+    },
+    {
+        "email": "aha",
+        "username": "bb",
+        "password": "cc",
+        "month": "January",
+        "year": "2020"
+    }
+]

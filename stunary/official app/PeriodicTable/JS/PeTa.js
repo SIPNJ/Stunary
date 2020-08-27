@@ -1,40 +1,3 @@
-// Info Panel
-let overlay0 = document.getElementsByClassName("overlay")[0];
-let overlay1 = document.getElementsByClassName("overlay");
-let infoPanelforElement = document.getElementsByClassName("infoPanel")[0];
-let infoPanelforGroup = document.getElementsByClassName("infoPanel")[1];
-function elementInfo(thing) {
-  // console.log(thing);
-  // let element = document.getElementById(thing.id);
-  overlay0.classList.toggle("darken-background");
-  infoPanelforElement.classList.toggle("openPanel");
-}
-function groupInfo(thing) {
-  overlay0.classList.toggle("darken-background");
-  infoPanelforGroup.classList.toggle("openPanel");
-}
-overlay0.addEventListener("click", function () {
-  overlay0.classList.toggle("darken-background");
-  if (infoPanelforElement.classList.contains("openPanel")) {
-    infoPanelforElement.classList.toggle("openPanel");
-  } else if (infoPanelforGroup.classList.contains("openPanel")) {
-    infoPanelforGroup.classList.toggle("openPanel");
-  }
-});
-
-// const key = "yGg3vfUNjYISO6uyxB3ofg2pE7xXsvkA";
-// fetch(
-//   `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=Sodium`
-// )
-//   .then((response) => response.json())
-//   .then((data) => {
-//     let html_code = data["parse"]["text"]["*"];
-//     let parser = new DOMParser();
-//     let html = parser.parseFromString(html_code, "text/html");
-//     let tables = html.querySelectorAll(".infobox");
-//     console.log(tables);
-//   });
-
 // Get all elements
 let element = document.getElementsByClassName("element");
 let s_element = document.getElementsByClassName("s-element");
@@ -559,6 +522,43 @@ change_IUPAC.addEventListener("click", function () {
     groupVIIIBc.addEventListener("mouseover", function () {});
   }
 });
+
+// Info Panel
+let overlay0 = document.getElementsByClassName("overlay")[0];
+let overlay1 = document.getElementsByClassName("overlay")[1];
+let infoPanelforElement = document.getElementsByClassName("infoPanel")[0];
+let infoPanelforGroup = document.getElementsByClassName("infoPanel")[1];
+function elementInfo(thing) {
+  overlay0.classList.toggle("darken-background");
+  infoPanelforElement.classList.toggle("openPanel");
+  let elementName = document.getElementById(thing.id).getElementsByClassName("element-name")[0].innerHTML;
+  fetch(
+    `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=${elementName}`
+  )
+  .then((response) => response.json())
+  .then((data) => {
+    // Get InfoBox
+    let html_code = data["parse"]["text"]["*"];
+    let parser = new DOMParser();
+    let html = parser.parseFromString(html_code, "text/html");
+    let table = html.querySelectorAll(".infobox")[0];
+    console.log(table);
+  });
+}
+function groupInfo(thing) {
+  overlay0.classList.toggle("darken-background");
+  infoPanelforGroup.classList.toggle("openPanel");
+}
+overlay0.addEventListener("click", function () {
+  overlay0.classList.toggle("darken-background");
+  if (infoPanelforElement.classList.contains("openPanel")) {
+    infoPanelforElement.classList.toggle("openPanel");
+  } else if (infoPanelforGroup.classList.contains("openPanel")) {
+    infoPanelforGroup.classList.toggle("openPanel");
+  }
+});
+
+// const key = "yGg3vfUNjYISO6uyxB3ofg2pE7xXsvkA";
 
 // REQUIRED FILE SUPPORT
 let d_block_for_small = document.getElementsByClassName("d-block-for-small");

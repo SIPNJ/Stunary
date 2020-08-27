@@ -10,66 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
-    <link rel="stylesheet" href="./CSS/Pokedex.css">
+    <link rel="stylesheet" href="../CSS/Signin&Signup.css">
 </head>
 
 <body>
-    <!-- Info of Elements -->
-    <div class="infoPanel index-30 bgthird1">
-        <div class="row text-center my-2">
-            <div class="h2 mx-auto title1st third0" id="pokemonName"></div>
-            <div class="h2 mx-auto title1st third0" id="pokemonId"></div>
-        </div>
-        <div class="row my-4">
-            <img class="rounded mx-auto img-fluid" id="pokemonImage" alt="Pokemon Picture">
-        </div>
-        <table class="table table-striped mx-2 mx-md-2 mx-xl-2 my-2">
-            <thead>
-                <tr>
-                    <th scope="col" class="title2nd third0">#</th>
-                    <th scope="col" class="title2nd third0">Main Properties</th>
-                    <th scope="col" class="title2nd third0">Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="title2nd third0">1</th>
-                    <td class="subtitle third0">Hit Points</td>
-                    <td class="paratext third0" id="hp"></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="title2nd third0">2</th>
-                    <td class="subtitle">Attack</td>
-                    <td class="paratext third0" id="attack"></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="title2nd third0">3</th>
-                    <td class="subtitle">Defense</td>
-                    <td class="paratext third0" id="defense"></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="title2nd third0">4</th>
-                    <td class="subtitle">Special Attack</td>
-                    <td class="paratext third0" id="special-attack"></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="title2nd third0">5</th>
-                    <td class="subtitle">Special Defense</td>
-                    <td class="paratext third0" id="special-defense"></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="title2nd third0">6</th>
-                    <td class="subtitle">Speed</td>
-                    <td class="paratext third0" id="speed"></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="title2nd mx-auto text-center">Evolution</div>
-        <div id="evolution-group">
-        </div>
-    </div>
-    <!-- Overlay -->
-    <div class="container-fluid overlay bgthird0 index-20 pointer-none"></div>
     <!-- Top navigation -->
     <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
@@ -110,7 +54,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item active mr-auto" aria-current="page">Template</li>
+            <li class="breadcrumb-item" aria-current="page">Account</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Sign Up</li>
             <!-- LIGHT / DARK MODE -->
             <li class="ml-auto">
                 <div class="custom-control custom-switch">
@@ -120,24 +65,66 @@
             </li>
         </ol>
     </nav>
-    <!-- Search bar -->
-    <form class="container-fluid form-inline mx-md-3 my-md-3" autocomplete="off">
-        <input class="form-control text-dark mx-2 mx-md-2" type="text" id="name" placeholder="Name or ID">
-        <input class="btn btn-outline-dark mx-2 mx-md-2" type="button" id="btn" value="Search">
-        <div class="invalid-feedback">Please choose a right name of a Pokemon</div>
-    </form>
-    <!-- Infomation -->
     <div class="container-fluid">
-        <div class="row mx-auto" id="pokemons-group">
-        </div>
-        <div class="container-fluid row">
-            <button class="btn btn-outline-dark mx-auto mx-md-auto my-4" id="view-more">View more</button>
+        <div class="row">
+            <div class="col-1 col-md-3"></div>
+            <div class="col-10 col-md-6">
+                <div class="h1 title1st third0 my-3 text-center">CREATE AN ACCOUNT</div>
+                <div class="card my-3 bgbase1 rounded">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="email" class='h6 curved-text text-light'><b>EMAIL</b></label>
+                            <input type="text" class="form-control curved-text text-dark" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class='h6 curved-text text-light'><b>USERNAME</b></label>
+                            <input type="text" class="form-control curved-text text-dark" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass" class='h6 curved-text text-light'><b>PASSWORD</b></label>
+                            <input type="text" class="form-control curved-text text-dark" id="pass">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="month" class='h6 curved-text text-light'><b>MONTH OF BIRTH</b></label>
+                                    <select class="form-control curved-text text-dark" id="month">
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                        <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="year" class='h6 curved-text text-light'><b>YEAR OF BIRTH</b></label>
+                                    <input type="text" class="form-control curved-text text-dark" id="year">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="button" class="mx-auto btn curved-text bdbase4 base4" id="submit-btn"
+                                value="Create now !">
+                        </div>
+                        <div class="row">
+                            <small class="form-text mx-auto my-1 curved-text text-light my-3">
+                                <a href="../signin/signin.html" class="text-light">ALREADY HAVE AN ACCOUNT ?</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 col-md-3"></div>
         </div>
     </div>
-
-
-
-    <script src="./JS/pokedex.js"></script>
+    <script src="./JS/signup.js"></script>
     <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

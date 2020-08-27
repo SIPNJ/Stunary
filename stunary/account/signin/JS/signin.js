@@ -1,5 +1,5 @@
-let button = document.getElementById("btn");
-button.addEventListener("click", function () {
+let submit_button = document.getElementById("submit-btn");
+submit_button.addEventListener("click", function () {
   let username = document.getElementById("name").value;
   let password = document.getElementById("pass").value;
   let query = `?username=${username}&password=${password}`;
@@ -7,7 +7,8 @@ button.addEventListener("click", function () {
     .then((response) => response.json())
     .then((response) => {
       if (response.message == "Login Success") {
-        alert("Login Successful !");
+        localStorage.setItem("keyLogin", "Success");
+        localStorage.setItem("userName", response.username)
       } else if (response.message == "Login Fail") {
         console.log("haha");
         alert("Login Fail");
@@ -16,10 +17,5 @@ button.addEventListener("click", function () {
       }
     });
 });
-
-// function onRequest(request, response){
-// }
-// let server = http.createServer(onRequest);
-// server.listen(8080, "127.0.0.1", ()=>{
-//     console.log(`Server is running at http://127.0.0.1:8080/SignIn/SignIn.html`);
-// })
+let key = localStorage.getItem("keyLogin");
+console.log(key == null);
