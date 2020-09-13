@@ -1,3 +1,4 @@
+localStorage.setItem("toggleLight", true);
 let toggleLight = document.getElementById("toggle-light");
 let topnav = document.getElementById("topnav");
 let bgthird0 = document.getElementsByClassName("bgthird0");
@@ -16,6 +17,7 @@ let third3 = document.getElementsByClassName("third3");
 toggleLight.addEventListener("click", function () {
   toggleLight.classList.toggle("toggle-dark");
   if (toggleLight.classList.contains("toggle-dark") == true) {
+    /* DARK MODE */
     // DOCUMENT COLOR
     document.body.style.backgroundColor = "rgb(0, 0 ,0)";
     // BACKGROUND COLOR
@@ -26,10 +28,10 @@ toggleLight.addEventListener("click", function () {
       bgthird1[i].style.backgroundColor = "rgb(0, 0, 0)";
     }
     for (let i = 0; i < bgthird2.length; i++) {
-      bgthird2[i].style.backgroundColor = "rgb(224, 224, 228)";
+      bgthird2[i].style.backgroundColor = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < bgthird3.length; i++) {
-      bgthird3[i].style.backgroundColor = "rgb(45, 45, 45)";
+      bgthird3[i].style.backgroundColor = "rgb(224, 224, 228)";
     }
     // TEXT COLOR
     for (let i = 0; i < third0.length; i++) {
@@ -39,10 +41,10 @@ toggleLight.addEventListener("click", function () {
       third1[i].style.color = "rgb(0, 0, 0)";
     }
     for (let i = 0; i < third2.length; i++) {
-      third2[i].style.color = "rgb(224, 224, 228)";
+      third2[i].style.color = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < third3.length; i++) {
-      third3[i].style.color = "rgb(45, 45, 45)";
+      third3[i].style.color = "rgb(224, 224, 228)";
     }
     // BORDER COLOR
     for (let i = 0; i < bdthird0.length; i++) {
@@ -52,12 +54,13 @@ toggleLight.addEventListener("click", function () {
       bdthird1[i].style.borderColor = "rgb(0, 0, 0)";
     }
     for (let i = 0; i < bdthird2.length; i++) {
-      bdthird0[i].style.borderColor = "rgb(224, 224, 228)";
+      bdthird0[i].style.borderColor = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < bdthird3.length; i++) {
-      bdthird1[i].style.borderColor = "rgb(45, 45, 45)";
+      bdthird1[i].style.borderColor = "rgb(224, 224, 228)";
     }
   } else {
+    /* LIGHT MODE */
     // DOCUMENT COLOR
     document.body.style.backgroundColor = "rgb(255, 255, 255)";
     // BACKGROUND COLOR
@@ -68,10 +71,10 @@ toggleLight.addEventListener("click", function () {
       bgthird1[i].style.backgroundColor = "rgb(255, 255, 255)";
     }
     for (let i = 0; i < bgthird2.length; i++) {
-      bgthird2[i].style.backgroundColor = "rgb(45, 45, 45)";
+      bgthird2[i].style.backgroundColor = "rgb(224, 224, 228)";
     }
     for (let i = 0; i < bgthird3.length; i++) {
-      bgthird3[i].style.backgroundColor = "rgb(224, 224, 228)";
+      bgthird3[i].style.backgroundColor = "rgb(45, 45, 45)";
     }
     // TEXT COLOR
     for (let i = 0; i < third0.length; i++) {
@@ -81,10 +84,10 @@ toggleLight.addEventListener("click", function () {
       third1[i].style.color = "rgb(255,255,255)";
     }
     for (let i = 0; i < third2.length; i++) {
-      third2[i].style.color = "rgb(45, 45, 45)";
+      third2[i].style.color = "rgb(224, 224, 228)";
     }
     for (let i = 0; i < third3.length; i++) {
-      third3[i].style.color = "rgb(224, 224, 228)";
+      third3[i].style.color = "rgb(45, 45, 45)";
     }
     // BORDER COLOR
     for (let i = 0; i < bdthird0.length; i++) {
@@ -97,30 +100,30 @@ toggleLight.addEventListener("click", function () {
       bdthird2[i].style.borderColor = "rgb(45, 45, 45)";
     }
     for (let i = 0; i < bdthird3.length; i++) {
-      bdthird3[i].style.borderColor = "rgb(224, 224, 228)";
+      bdthird3[i].style.borderColor = "rgb(45, 45, 45)";
     }
   }
 });
 // Top navigation
 let account_drop_down = document.getElementById("accountDropdown");
-// signin or Not
+// Signin or Not
 let keyLogin = localStorage.getItem("keyLogin");
-console.log(keyLogin);
-if (keyLogin == null) {
+// console.log(keyLogin);
+if (keyLogin == null || keyLogin == "null") {
   let signin_item = document.createElement("a");
   signin_item.classList.add("dropdown-item");
   signin_item.classList.add("subtitle");
   signin_item.classList.add("text-dark");
   signin_item.innerHTML = "Sign in";
   signin_item.href =
-    "https://sipnj.github.io/Stunary/stunary/account/signin/signin.html";
+    "/stunary/account/signin/signin.html";
   let signup_item = document.createElement("a");
   signup_item.classList.add("dropdown-item");
   signup_item.classList.add("subtitle");
   signup_item.classList.add("text-dark");
   signup_item.innerHTML = "Sign up";
   signup_item.href =
-    "https://sipnj.github.io/Stunary/stunary/account/signip/signip.html";
+    "/stunary/account/signup/signup.html";
   account_drop_down.appendChild(signin_item);
   account_drop_down.appendChild(signup_item);
 } else {
@@ -130,15 +133,15 @@ if (keyLogin == null) {
   profile.classList.add("text-dark");
   profile.innerHTML = "Profile";
   profile.href =
-    "https://sipnj.github.io/Stunary/stunary/account/signin/signin.html";
+    "/stunary/account/profile/profile.html";
   let signout_item = document.createElement("a");
   signout_item.classList.add("dropdown-item");
   signout_item.classList.add("subtitle");
   signout_item.classList.add("text-danger");
   signout_item.innerHTML = "Sign out";
   signout_item.addEventListener("click", function () {
-    localStorage.setItem("keyLogin", null);
-    console.log(signout_item);
+    keyLogin = localStorage.setItem("keyLogin", null);
+    console.log(keyLogin);
     window.open("http://localhost:31415/", "_self")
   });
   account_drop_down.appendChild(profile);
@@ -146,12 +149,16 @@ if (keyLogin == null) {
 }
 
 // Top Navigation
-let nav = document.createElement("nav");
-nav.classList.add(
-  "navbar",
-  "navbar-expand-md",
-  "navbar-light",
-  "bgbase3",
-  "container-fluid"
-);
-let button_nav = document.createEl;
+
+// let rootnav = document.getElementById("root-nav");
+// let nav = document.createElement("nav");
+// nav.classList.add(
+//   "navbar",
+//   "navbar-expand-md",
+//   "navbar-light",
+//   "bgbase3",
+//   "container-fluid"
+// );
+// let button_nav = document.createElement("button");
+// button_nav.classList.add("navbar-toggler");
+// button_nav.type = "button";

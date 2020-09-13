@@ -21,25 +21,30 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="https://sipnj.github.io/Stunary/index.html" class="navbar-brand text-dark">
+        <a href="/index.html" class="navbar-brand text-dark">
             <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav nav-pills nav-justify mr-auto">
+            <ul class="nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/index.html">Home</a>
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
                 <!-- HIERARCHY -->
                 <li class="nav-item">
                     <a class="nav-link title2nd text-dark"
-                        href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                        href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link title2nd text-dark" href="#">Account</a>
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
                 </li>
             </ul>
             <!-- Second navbar -->
@@ -54,8 +59,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item" aria-current="page">Account</li>
-            <li class="breadcrumb-item active mr-auto" aria-current="page">Sign Up</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Template</li>
             <!-- LIGHT / DARK MODE -->
             <li class="ml-auto">
                 <div class="custom-control custom-switch">
@@ -125,7 +129,7 @@
         </div>
     </div>
     <script src="./JS/signup.js"></script>
-    <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>
+    <script src="/REQUIRED/required.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

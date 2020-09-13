@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/REQUIRED/required.css">
+    <link rel="stylesheet" href="./CSS/calculator.css">
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav nav-justify mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="mx-auto btn mx-auto btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Template</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-7" id="calculator">
+            <!-- <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Smx-auto btn">S</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Amx-auto btn">A</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="HYPmx-auto btn">HYP</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Dmx-auto btn">D</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Rmx-auto btn">R</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Gmx-auto btn">G</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Smx-auto btn">STO</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Amx-auto btn">CMPLX</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="HYPmx-auto btn">VCT</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Dmx-auto btn">MAT</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Rmx-auto btn">FIX</div>
+                <div class="my-auto mx-auto btn text-center col-2 key bdthird1 bgthird2" id="Gmx-auto btn">SCI</div>
+            </div> -->
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{SOLVE} \)</div>
+                    <div class="alphaKey">\( \text{=} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{x}^{-1} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \int \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">&uarr;</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">&darr;</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{!} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \log_{n}{x} \)</div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey"></div>
+                    <div class="alphaKey"></div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \frac{x}{n} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \sqrt {x} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( x^{2} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( x^{n} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \log \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \ln \)</div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{x} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \deg \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{hyp} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \sin \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \cos \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \tan \)</div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{STO} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{ENG} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">(</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{S} \leftrightarrow \text{D} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{M}+ \)</div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">7</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">8</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">9</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{DEL} \)</div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center">\( \text{AC} \)</div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center"></div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center"></div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center"></div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center"></div>
+                </div>
+                <div class="my-auto mx-auto col-2 element">
+                    <div class="shiftKey">\( \text{} \)</div>
+                    <div class="alphaKey">\( \text{} \)</div>
+                    <div class="key bgthird2 bdthird1 text-center"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/REQUIRED/required.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

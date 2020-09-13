@@ -23,11 +23,11 @@ document.getElementById("btn").addEventListener("click", function () {
   pokemonInfo(namePokemon);
 });
 function pokemonInfo(thing) {
-  while (evolution_group.firstChild){
-    evolution_group.removeChild(evolution_group.firstChild)
+  while (evolution_group.firstChild) {
+    evolution_group.removeChild(evolution_group.firstChild);
   }
   let query = `?name=${thing}`;
-  fetch(`http://localhost:31415/pokedict${query}`)
+  fetch(`/pokedict${query}`)
     .then((response) => response.json())
     .then((response) => {
       // DISPLAY DATA
@@ -70,6 +70,7 @@ function pokemonInfo(thing) {
         let card_to = document.createElement("div");
         card_to.classList.add("text-center");
         card_to.classList.add("mx-auto");
+        card_to.classList.add("third0");
         card_to.innerHTML = "To";
         evolution_group.appendChild(card_to);
         for (let i = 0; i < response.evolution[1].length; i++) {
@@ -102,6 +103,7 @@ function pokemonInfo(thing) {
         let card_to = document.createElement("div");
         card_to.classList.add("mx-auto");
         card_to.classList.add("text-center");
+        card_to.classList.add("third0");
         card_to.innerHTML = "To";
         evolution_group.appendChild(card_to);
         for (let i = 0; i < response.evolution[2].length; i++) {
@@ -134,8 +136,8 @@ function pokemonInfo(thing) {
 // FUNCTION CREATE TAGS
 function createPokemonTags(numberID, quantity) {
   let maindatas = [];
-  let queries = `?numberID=${numberID}&quantity=${quantity}`;
-  fetch(`http://localhost:31415/pokesdict${queries}`)
+  let query = `?numberID=${numberID}&quantity=${quantity}`;
+  fetch(`/pokesdict${query}`)
     .then((data) => data.json())
     .then((data) => {
       maindatas = data;
@@ -180,13 +182,53 @@ function createPokemonTags(numberID, quantity) {
         pokemon_card.appendChild(pokemon_card_body);
         pokemon_card_body.appendChild(pokemon_number);
         pokemon_card_body.appendChild(pokemon_title);
-        pokemon_card.addEventListener("click", () => {
+        pokemon_img.addEventListener("click", () => {
           pokemonInfo(maindatas[i].name);
         });
+        // favorite
+        if (keyLogin == null || keyLogin == "null") {
+          console.log("haha");
+        } else {
+          let pokemon_favorite = document.createElement("i");
+          pokemon_favorite.classList.add("far", "fa-heart");
+          pokemon_favorite.id = `${maindatas[i].name}-favorite`;
+          pokemon_card_body.appendChild(pokemon_favorite);
+          pokemon_favorite.addEventListener("click", function () {
+            let queries = `?favPoke=${pokemon_favorite.id}`;
+            if (pokemon_favorite.classList.contains("fas")) {
+              fetch(`/DeactiveFavoritePokemon${queries}`);
+            } else if (pokemon_favorite.classList.contains("far")) {
+              fetch(`/ActiveFavoritePokemon${queries}`);
+            }
+            pokemon_favorite.classList.toggle("far");
+            pokemon_favorite.classList.toggle("fas");
+          });
+        }
       }
+      fetch("/favoritePokemon")
+        .then((data) => data.json())
+        .then((data) => {
+          let pokemon_favorite_data = data.favorite_pokemons_data
+            .split("[")[1]
+            .split("]")[0]
+            .split(",");
+          for (let i = 0; i < pokemon_favorite_data.length; i++) {
+            document
+              .getElementById(
+                pokemon_favorite_data[i].split(`{"name": "`)[1].split(`"}`)[0]
+              )
+              .classList.toggle("far", false);
+            document
+              .getElementById(
+                pokemon_favorite_data[i].split(`{"name": "`)[1].split(`"}`)[0]
+              )
+              .classList.toggle("fas", true);
+          }
+        });
     });
 }
 createPokemonTags(1, 8);
+
 // VIEW MORE
 document.getElementById("view-more").addEventListener("click", function () {
   let pokemon_card_quantity = document.getElementsByClassName("pokemon_card")
@@ -194,5 +236,3 @@ document.getElementById("view-more").addEventListener("click", function () {
   console.log(pokemon_card_quantity);
   createPokemonTags(pokemon_card_quantity + 1, 8);
 });
-
-// find storage

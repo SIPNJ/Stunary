@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUNARY</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
+    <script src="https://kit.fontawesome.com/bbb353060e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index/CalendarPicker.style.css">
+    <link rel="stylesheet" href="./index/index.css">
 </head>
 
 <body>
@@ -19,7 +23,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="https://sipnj.github.io/Stunary/index.html" class="navbar-brand text-dark">
+        <a href="/index.html" class="navbar-brand text-dark">
             <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
@@ -28,12 +32,11 @@
             <ul class="nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/index.html">Home</a>
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
                 <!-- HIERARCHY -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark"
-                        href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
@@ -63,20 +66,135 @@
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="toggle-light">
                     <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
-                </div></button>
+                </div>
             </li>
         </ol>
     </nav>
-    <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+
+    <div class="container-fluid my-2 mx-auto row">
+        <div class="col-12 col-md-6 col-lg-8">
+            <p class="h1 text-center mx-auto my-2 title1st third0">WELCOME TO STUNARY</p>
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Picture/city.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Picture/greengrass.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Picture/Plane.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <!-- TIME -->
+            <div class="mx-auto row">
+                <div class="col card border rounded-circle bgbase1 third1">
+                    <div class="card-text text-center title2nd" id="Hour"></div>
+                </div>
+                <div class="col text-center title2nd third0">:</div>
+                <div class="col card border rounded-circle bgbase1 third1">
+                    <div class="card-text text-center title2nd" id="Minute"></div>
+                </div>
+                <div class="col text-center title2nd third0">:</div>
+                <div class="col card border rounded-circle bgbase1 third1">
+                    <div class="card-text text-center title2nd" id="Second"></div>
+                </div>
+            </div>
+            <!-- WEATHER NOW -->
+            <div class="card mx-1 my-3">
+                <div class="card-header bgbase4">
+                    <div class="card-text text-center mx-auto title2nd third0">Weather in <span id="location">Saigon
+                            (VN)</span></div>
+                </div>
+                <div class="card-body px-0 py-0 bgthird1 table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="title2nd third0" scope="col"></th>
+                                <th class="title2nd third0" scope="col">Weather Variable</th>
+                                <th class="title2nd third0" scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center third0" scope="row"><i class="fas fa-thermometer-half"></i></th>
+                                <td class="curved-text third0">Temperature</td>
+                                <td class="curved-text third0" id="Temperature"></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center third0" scope="row"><i class="fas fa-tint"></i></th>
+                                <td class="curved-text third0">Humidity</td>
+                                <td class="curved-text third0" id="Humid"></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center third0" scope="row"><i class="fas fa-cloud"></i></th>
+                                <td class="curved-text third0">Cloudiness</td>
+                                <td class="curved-text third0" id="Cloud"></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center third0" scope="row"><i class="fas fa-compress-arrows-alt"></i>
+                                </th>
+                                <td class="curved-text third0">Pressure</td>
+                                <td class="curved-text third0" id="Pressure"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer bgthird2">
+                    <form class="form-inline">
+                        <input type="text" id="input" class="mx-auto form-control curved-text"
+                            placeholder="Enter the city">
+                        <input type="button" id="submit" class="mx-auto btn btn-primary curved-text" onclick="SubMit()"
+                            value="Search">
+                    </form>
+                </div>
+            </div>
+            <!-- CALENDAR -->
+            <div class="mx-auto my-2 bgthird1 rounded" id="myCalendarWrapper"
+                style="border: 0.13vw solid rgb(224, 224, 228);"></div>
+        </div>
+
+
+        <script src="./index/CalendarPicker.js"></script>
+        <script src="./index/index.js"></script>
+        <script src="/REQUIRED/required.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

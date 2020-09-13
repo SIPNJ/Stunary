@@ -1,3 +1,10 @@
+// Get data of all elements
+let ElementData;
+fetch(`/ElementOfPeriodicTable`)
+  .then((data) => data.json())
+  .then((data) => {
+    ElementData = data;
+  });
 // Get all elements
 let element = document.getElementsByClassName("element");
 let s_element = document.getElementsByClassName("s-element");
@@ -528,22 +535,116 @@ let overlay0 = document.getElementsByClassName("overlay")[0];
 let overlay1 = document.getElementsByClassName("overlay")[1];
 let infoPanelforElement = document.getElementsByClassName("infoPanel")[0];
 let infoPanelforGroup = document.getElementsByClassName("infoPanel")[1];
+function superElecConfig(EC) {
+  return EC.replace(/s/gi, "s^")
+    .replace(/p/gi, "p^")
+    .replace(/d/gi, "d^")
+    .replace(/f/gi, "f^")
+    .replace(/\^/gi, "<sup>")
+    .replace(/\s/gi, "</sup> ");
+}
+/**
+ *
+ * @param {string} thing Name of an element
+ */
 function elementInfo(thing) {
   overlay0.classList.toggle("darken-background");
   infoPanelforElement.classList.toggle("openPanel");
-  let elementName = document.getElementById(thing.id).getElementsByClassName("element-name")[0].innerHTML;
-  fetch(
-    `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=${elementName}`
-  )
-  .then((response) => response.json())
-  .then((data) => {
-    // Get InfoBox
-    let html_code = data["parse"]["text"]["*"];
-    let parser = new DOMParser();
-    let html = parser.parseFromString(html_code, "text/html");
-    let table = html.querySelectorAll(".infobox")[0];
-    console.log(table);
-  });
+  let elementName = thing.id;
+  for (let i = 0; i < ElementData.length; i++) {
+    if (" " + elementName + " " == ElementData[i].symbol) {
+      // console.log(ElementData[i]);
+      // NAME
+      document.getElementById("Name").innerHTML = ElementData[i].name;
+      // SYMBOL
+      document.getElementById("Symbol").innerHTML = ElementData[i].symbol;
+      // CPK COLORING
+      if (ElementData[i].cpkHexColor !== "N/A") {
+        document.getElementById("Name").style.color =
+          "#" + ElementData[i].cpkHexColor;
+        document.getElementById("Symbol").style.color =
+          "#" + ElementData[i].cpkHexColor;
+      }
+      // YEAR DISCOVERED
+      document.getElementById("Year-Discovered").innerHTML =
+        ElementData[i].yearDiscovered;
+      // ATOMIC MASS
+      document.getElementById("Atomic-Mass").innerHTML =
+        ElementData[i].atomicMass + " u";
+      // ATOMIC NUMBER
+      document.getElementById("Atomic-Number").innerHTML =
+        ElementData[i].atomicNumber;
+      // GROUP
+      document.getElementById("CAS-Group").innerHTML =
+        ElementData[i]["CAS-Group"];
+      document.getElementById("IUPAC-Group").innerHTML =
+        ElementData[i]["IUPAC-Group"];
+      // PERIOD
+      document.getElementById("Period").innerHTML = ElementData[i].Period;
+      // BLOCK AND CATEGORY
+      document.getElementById("Block").innerHTML = ElementData[i].block;
+      document.getElementById("Element-Category").innerHTML =
+        ElementData[i].groupBlock;
+      // SIMPLE EC
+
+      document.getElementById("Simple-Electron-Configuration").innerHTML =
+        ElementData[i].SimpleElectronicConfiguration.split("] ")[0] +
+        "] " +
+        superElecConfig(
+          ElementData[i].SimpleElectronicConfiguration.split("] ")[1]
+        );
+      // COMPLEX EC
+      document.getElementById(
+        "Complex-Electron-Configuration"
+      ).innerHTML = superElecConfig(
+        ElementData[i].ComplexElectronicConfiguration
+      );
+      // Electrons Per Shell
+      // PHASE
+      document.getElementById("Phase-STP").innerHTML =
+        ElementData[i].standardState;
+      // DENSITY
+      document.getElementById("Density").innerHTML = ElementData[i].density;
+      // MELTING / BOILING POINT
+      document.getElementById("Melting-Point").innerHTML =
+        ElementData[i].meltingPoint;
+      document.getElementById("Boiling-Point").innerHTML =
+        ElementData[i].boilingPoint;
+      // OXIDATION STATES
+      document.getElementById("Oxidation-States").innerHTML =
+        ElementData[i].oxidationStates;
+      //ELECTRONEGAIVITY
+      document.getElementById("Electronegativity").innerHTML =
+        ElementData[i].electronegativity;
+      // ELECTRON AFFINITY
+      document.getElementById("Electron-Affinity").innerHTML =
+        ElementData[i].electronAffinity;
+      // IONIZATION ENERGY
+      document.getElementById("First-Ionization-Energy").innerHTML =
+        ElementData[i].ionizationEnergy;
+      // BONDING
+      document.getElementById("Bonding-Type").innerHTML =
+        ElementData[i].bondingType;
+      document.getElementById("Atomic-Radius").innerHTML =
+        ElementData[i].atomicRadius;
+      document.getElementById("Ion-Radius").innerHTML =
+        ElementData[i].ionRadius;
+      document.getElementById("VanderWaals-Radius").innerHTML =
+        ElementData[i].vanDelWaalsRadius;
+    }
+  }
+  // fetch(
+  //   `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=${elementName}`
+  // )
+  // .then((response) => response.json())
+  // .then((data) => {
+  //   // Get InfoBox
+  //   let html_code = data["parse"]["text"]["*"];
+  //   let parser = new DOMParser();
+  //   let html = parser.parseFromString(html_code, "text/html");
+  //   let table = html.querySelectorAll(".infobox")[0];
+  //   console.log(table);
+  // });
 }
 function groupInfo(thing) {
   overlay0.classList.toggle("darken-background");

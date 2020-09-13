@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/REQUIRED/required.css">
+    <link rel="stylesheet" href="./CSS/app.css">
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt d-flex
+                flex-column-justify-content-center align-items-center="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav nav-justify mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item" aria-current="page">Official App</li>
+            <li class="breadcrumb-item" aria-current="page">Calculator</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">𝖙𝖖𝕆𝕊 5.0</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="container-fluid bgthird2 d-flex flex-column align-items-center p-2 mx-auto rounded">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="my-1" id="setdisp">
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="Sbtn">\( \text{S} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="Abtn">\( \text{A} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="HYPbtn">\( \text{HYP} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="Dbtn">\( \text{R} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="stobtn">\( \text{STO} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="modebtn">\( \text{mode} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="fixbtn">\( \text{FIX} \)</span></div>
+                <div class="d-flex flex-column justify-content-center align-items-center bgthird1 third0"><span id="scibtn">\( \text{SCI} \)</span></div>
+            </div>
+            <div class="bdthird0 d-flex flex-column justify-content-center mx-auto bgthird1" id="display">
+                <div class="d-flex flex-column justify-content-center">
+                    <input class="py-2 text-left bgthird1 third0" type="text" id="operadisp" disabled>
+                    <!-- <span id="cursor">|</span> -->
+                    <input class="py-2 text-right bgthird1 third0" type="text" id="ansdisp" disabled>
+                </div>
+            </div>
+            <div class="sixbuttons">
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Shift">\( \text{Shift} \)
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Alpha">\( \text{Alpha} \)
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Left">\( \leftarrow \)
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Right">\( \rightarrow \)
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="mode">\( \text{Mode} \)
+                </div>
+                <div class="deact d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="Reset"> Reset </div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">∑</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Π</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="collo"
+                    id="minusone">\( \text{x}^{-1} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="collo"
+                    id="integral" disabled>\( \int \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Up">&uarr;</div>
+                <div class="d-flex flex-row justify-content-center align-items-center set" id="Down">&darr;</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="collo"
+                    id="factorial">!</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="collo"
+                    id="Loga">\( \log_{n}{x} \)</div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="frac">\( \frac{x}{n} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="sqrt">\( \sqrt{x} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="square">\( \text{x}^2 \)</sup> </div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="expo">\( \text{x}^n \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="Log">\( \log \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="sup"
+                    id="Ln">\( \ln \)</div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center">Y</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Z</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">Fact</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Abs</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">ArcHYP</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">CoHYP</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">ArcSin</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Sec</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">ArcCos</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Cosec</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">ArcTan</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">Cot</div>
+
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="varx">\( \text{X} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="degree">°</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="hyp">\( \text{HYP} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="sine">\( \sin \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="cosine">\( \cos \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc" class="trig"
+                    id="tangent">\( \tan \)</div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="sto">\( \text{STO} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="eng">\( \text{ENG} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="open">(</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="close">)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="convert">\( \text{S} \leftrightarrow \text{D} \)</div>
+                <div class="d-flex flex-row justify-content-center align-items-center third1 bgthird0 doc"
+                    class="subset" id="storem">\( \text{M}+ \)</div>
+
+            </div>
+
+            <div class="fivebuttons">
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">G</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">H</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">I</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+
+                <!-- <div class text-t d-flex flex-c lumn-justify-content-center align-items-center"></div>
+                    <div class="text d-flex flex-co umn-justify-content-center align-items-center"></div>
+                    <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="alt d-flex flex-column justify-content-center align-items-center"></div>  
+                    <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                    <div class="alt d-flex flex-column justify-content-center align-items-center"></div> -->
+
+
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="seven">7</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="eight">8</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="nine">9</div>
+                <div class="deact d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="delete">\(
+                    \text{DEL} \)</div>
+                <div class="deact d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="ace">\( \text{AC} \)
+                </div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">D</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">E</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">F</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">nPr</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">GCD</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">nCr</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">LCM</div>
+
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="four">4</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="five">5</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="six">6</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="multiply">\( \times
+                    \)</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="divide">\( \div \)
+                </div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">A</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">B</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">C</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">Pol</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">or</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">Rec</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">and</div>
+
+
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="one">1</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="two">2</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="three">3</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="plus">\( + \)</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="minus">\( - \)</div>
+
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center">%</div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center">‰</div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="sft d-flex flex-column justify-content-center align-items-center"></div>
+                <div class="alt d-flex flex-column justify-content-center align-items-center"></div>
+
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="zero">0</div>
+                <div class="num d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="dot">.</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="expoten">\( \times
+                    10^{n} \)</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="Answer">Ans</div>
+                <div class="opera d-flex flex-column justify-content-center align-items-center bgthird1 third0" id="Calc">≈</div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+    <script src="/REQUIRED/required.js"></script>
+    <script src="App.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

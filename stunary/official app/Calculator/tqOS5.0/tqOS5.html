@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" conten keyt="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUNARY</title>
-    <link rel="shortcut icon" href="/Picture/LOGO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integ keyrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/required.css">
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/REQUIRED/required.css">
     <link rel="stylesheet" href="./CSS/calculator.css">
 </head>
 
@@ -20,16 +21,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="/index2.html" class="navbar-brand text-dark">
-            <img class="LOGO" src="/Picture/LOGO.png" alt="LOGO">
+        <a href="/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav mr-auto">
+            <ul class="nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark active" href="/index2.html">Home</a>
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
                 <!-- HIERARCHY -->
                 <li class="nav-item">
@@ -37,63 +38,247 @@
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link title2nd text-dark">Account</a>
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
                 </li>
             </ul>
             <!-- Second navbar -->
             <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
-                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
-                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter key</button>
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="mx-auto btn mx-auto btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
             </form>
         </div>
     </nav>
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb title2nd">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Template</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div>
+            </li>
         </ol>
     </nav>
     <div class="row">
         <div class="col-12 col-md-8 col-lg-7" id="calculator">
-            <div class="row container-sm ml-auto mr-auto grid-6">
-                <div class="text-center col-2 key ctrl" id="Sbtn"> S </div>
-                <div class="text-center col-2 key ctrl" id="Abtn"> A </div>
-                <div class="text-center col-2 key ctrl" id="HYPbtn"> HYP</div>
-                <div class="text-center col-2 key ctrl" id="Dbtn"> D </div>
-                <div class="text-center col-2 key ctrl" id="Rbtn"> R </div>
-                <div class="text-center col-2 key ctrl" id="Gbtn"> G </div>
+            <!-- <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Smx-auto btn">S</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Amx-auto btn">A</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="HYPmx-auto btn">HYP</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Dmx-auto btn">D</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Rmx-auto btn">R</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Gmx-auto btn">G</div>
             </div>
-            <!-- <div class="row container-md">
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="stobtn"> STO </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="cmlxbtn"> CMLX </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="vctbtn"> VCT </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="matbtn"> MAT </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="fixbtn"> FIX </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="scibtn"> SCI </span></div>
-            </div>
-            <div class="row container-md">
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="Shift"> Shift </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="Alpha"> Alpha </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="Left"> &larr; </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="Right"> &rarr; </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="mode"> Mode </span></div>
-                <div class="ids btn btn-light col-1 col-md-1 col-xl-1"><span class="ctrl" id="Reset"> Reset </span></div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Smx-auto btn">STO</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Amx-auto btn">CMPLX</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="HYPmx-auto btn">VCT</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Dmx-auto btn">MAT</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Rmx-auto btn">FIX</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="Gmx-auto btn">SCI</div>
             </div> -->
+
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">Shift</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">Alpha</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">&larr;</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">&rarr;</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">Mode</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">Reset</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( x^{-1} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \int \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">&uarr;</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">&darr;</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">!</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \log_{n}{x} \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \frac{x}{n} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \sqrt {x} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( x^{2} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( x^{n} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \log \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \ln \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id="">Y</div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id="">Z</div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id="">Fact</div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id="">Abs</div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id="">\( \arcsin \)</div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id="">\( \cosec \)</div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id="">\( \arccos \)</div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id="">\( \sec \)</div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id="">\( \arctan \)</div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id="">\( \cot \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">x</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \deg \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">hyp</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \sin \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \cos \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \tan \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">STO</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">ENG</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( ( \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( ) \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">S\(\leftrightarrow\)D</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">M+</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">7</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">8</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">9</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">DEL</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">AC</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">4</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">5</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">6</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \times \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \div \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">1</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">2</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">3</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( + \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( - \)</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">0</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">.</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">\( \times 10^{x} \)</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">Ans</div>
+                <div class="my-auto mx-auto btn text-center col-2 key ctrl bdthird1 bgthird2" id="">=</div>
+            </div>
+            <div class="row container-sm mx-auto">
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 shiftKey ctrl bdthird1" id=""></div>
+                <div class="my-auto mx-auto btn text-center col-1 alphaKey ctrl bdthird1" id=""></div>
+            </div>
+
         </div>
     </div>
-
-    <!-- <script src="./JS/Calculator.js"></script> -->
-
-    </div>
+    <script src="/REQUIRED/required.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integ keyrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integ keyrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integ keyrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 </body>
 

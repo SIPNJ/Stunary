@@ -6,11 +6,11 @@ submit_button.addEventListener("click", function () {
   let month = document.getElementById("month").value;
   let year = document.getElementById("year").value;
   let query = `?email=${email}&username=${username}&password=${password}&month=${month}&year=${year}`;
-  fetch(`http://localhost:31415/logup${query}`)
+  fetch(`/logup${query}`)
     .then((response) => response.json())
     .then((response) => {
       if (response.message == "Login Success") {
-
+        alert("success");
       } else if (response.message == "Login Fail") {
         console.log("haha");
         alert("Login Fail");

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUNARY</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
@@ -20,30 +21,36 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="https://sipnj.github.io/Stunary/index.html" class="navbar-brand text-dark">
+        <a href="/index.html" class="navbar-brand text-dark">
             <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav mr-auto">
+            <ul class="nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark active" href="https://sipnj.github.io/Stunary/index.html">Home</a>
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
                 <!-- HIERARCHY -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link title2nd text-dark">Account</a>
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
                 </li>
             </ul>
             <!-- Second navbar -->
             <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
-                <input class="form-control mr-sm-2 title2nd" type="search" placeholder="Search">
-                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
             </form>
         </div>
     </nav>
@@ -52,6 +59,13 @@
         <ol class="breadcrumb title2nd">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
             <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div></button>
+            </li>
         </ol>
     </nav>
     <!-- Hierarchy -->
@@ -104,7 +118,7 @@
                         anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim
                         veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit
                         dolore.
-                        <a href="https://sipnj.github.io/Stunary/index.html">Get there now !</a>
+                        <a href="/index.html">Get there now !</a>
                     </p>
                     <hr>
                     <!-- HIERARCHY -->
@@ -117,7 +131,7 @@
                         anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim
                         veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit
                         dolore.
-                        <a href="https://sipnj.github.io/Stunary/stunary/hierarchy/hierarchy.html">Get there now !</a>
+                        <a href="/stunary/hierarchy/hierarchy.html">Get there now !</a>
                     </p>
                     <hr>
                     <!-- ACCOUNT -->
@@ -140,7 +154,7 @@
                         anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim
                         veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit
                         dolore.
-                        <a href="">Get there now !</a>
+                        <a href="/stunary/account/signin/signin.html">Get there now !</a>
                     </p>
                     <!-- SIGN UP -->
                     <h4 class="ml-2" id="signup">Sign up</h4>
@@ -152,7 +166,7 @@
                         anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim
                         veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit
                         dolore.
-                        <a href="">Get there now !</a>
+                        <a href="/stunary/account/signup/signup.html">Get there now !</a>
                     </p>
                     <hr>
                     <!-- OFFICIAL APP -->
@@ -231,7 +245,8 @@
                         anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim
                         veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit
                         dolore.
-                        <a href="https://sipnj.github.io/Stunary/stunary/official%20app/PeriodicTable/PeTa.html">Get there now !</a>
+                        <a href="/stunary/official%20app/PeriodicTable/PeTa.html">Get
+                            there now !</a>
                     </p>
                     <!-- SOLUBILITY CHART -->
                     <h5 class="subtitle ml-2" id="solubility">Solubility Chart</h5>

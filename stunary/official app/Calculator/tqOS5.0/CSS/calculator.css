@@ -1,14 +1,52 @@
-/* @media screen and (max-width: 576px) {
-
-} */
-.grid-6 {
-  display: grid;
-  grid-template-columns: 12vw 12vw 12vw 12vw 12vw 12vw;
-  column-gap: 5vw;
-  font-size: 3.5vw;
+.period-row {
+  /* position */
+  position: relative;
+  /* width: 100vw; */
+  /* display */
+  display: flex;
+  flex-flow: row;
+  /* other */
+  overflow: hidden;
+}
+.element {
+  /* position */
+  position: relative;
+  height: 6vh;
+  width: 15vw;
+  /* display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .key {
-  width: 8vw;
-  height: 5vw;
-  background-color: #eee;
+  /* position */
+  position: absolute;
+  bottom: -1vw;
+  height: 5vh;
+  width: 100%;
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* other */
+  font-size: 1.75vw
+}
+.shiftKey {
+  /* position */
+  position: absolute;
+  top: 0vw;
+  left: 1.25vw;
+  /* other */
+  color: rgb(141, 47, 0);
+  font-size: 1.25vw;
+}
+.alphaKey {
+  /* position */
+  position: absolute;
+  top: 0vw;
+  right: 1.25vw;
+  /* other */
+  color: rgb(183, 0, 0);
+  font-size: 1.25vw;
 }
