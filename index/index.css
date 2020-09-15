@@ -1,0 +1,12 @@
+.img-carousel {
+    object-fit: cover;
+    height: 30rem;
+    opacity: 45%;
+}
+.background-img-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 30rem;
+}

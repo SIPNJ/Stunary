@@ -2,15 +2,15 @@
 let submit = document.getElementById("submit");
 let eachTag = document.getElementById("eachTag");
 let inputForm = document.getElementById("input");
-inputForm.addEventListener("keyup", function (event) {
-  if (event.keyCode == 13) {
-    event.preventDefault();
-    SubMit();
-  }
-});
+// inputForm.addEventListener("keyup", function (event) {
+//   if (event.keyCode == 13) {
+//     event.preventDefault();
+//     SubMit();
+//   }
+// });
 function SubMit(city) {
   let input = document.getElementById("input").value;
-  console.log(city);
+  // console.log(city);
   if (input == "" && city == undefined) {
     alert("Please give the name of city !");
   } else if (input !== "" && city == undefined) {
@@ -25,7 +25,7 @@ function createTag(input) {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       document.getElementById("Temperature").innerHTML = `${(
         data.main.temp - 273
       ).toFixed(2)}°C`;

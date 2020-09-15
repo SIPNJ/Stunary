@@ -10,7 +10,7 @@ const backendPokedex = require("./backend-function/pokedex");
 async function onRequest(request, response) {
   let pathname = url.parse(request.url, true).pathname.replace(/%20/gi, " ");
   let filename = "." + pathname;
-  // console.log(pathname);
+  console.log(pathname);
   // query
   let query;
   // pokedex
@@ -113,9 +113,9 @@ async function onRequest(request, response) {
         console.log(err);
         response.end(JSON.stringify({ message: "Do not have file !" }));
       } else {
+        // console.log(data);
         response.writeHead(200, { "Content-Type": "image/png" });
-        response.write(data);
-        response.end();
+        response.end(data);
       }
     });
   } else if (
@@ -128,9 +128,9 @@ async function onRequest(request, response) {
         console.log(err);
         response.end(JSON.stringify({ message: "Do not have file !" }));
       } else {
-        response.writeHead(200, { "Content-Type": "image/jpeg" });
-        response.write(data);
-        response.end();
+        console.log(err);
+        response.writeHead(200, { "Content-type": "image/jpg" });
+        response.end(data);
       }
     });
   } else if (pathname.includes(`/login`) == true) {
