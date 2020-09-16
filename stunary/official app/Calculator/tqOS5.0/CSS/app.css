@@ -1,7 +1,6 @@
 #display {
-  height: 25vw;
-  width: 90vw;
-  /* background-color: rgb(74, 119, 63); */
+  height: 10rem;
+  width: 30rem;
 }
 /*
 #setdisp{
@@ -25,19 +24,20 @@
 #operadisp {
   border-style: hidden;
   height: 2em;
-
   overflow-x: scroll;
   white-space: pre;
+  font-weight: bold;
 }
 #ansdisp {
   border-style: hidden;
   height: 2em;
+  font-weight: bold;
 }
 
 .sixbuttons {
   display: grid;
-  grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
-  grid-template-rows: 6vh 2vh 6vh 2vh 6vh 2vh 6vh 2vh 6vh;
+  grid-template-columns: 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em 2.25em;
+  grid-template-rows: 2em 2em 2em 2em 2em 2em 2em 2em 2em 2em;
   grid-column-gap: 0.6vw;
   grid-row-gap: 0.25em;
   margin: 0.5em 1em 0em 1em;
@@ -45,10 +45,19 @@
 
 .fivebuttons {
   display: grid;
-  grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
-  grid-template-rows: 2vh 6vh 2vh 6vh 2vh 6vh 2vh 6vh;
+  /* grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw; */
+  grid-template-columns: 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em;
+  /* grid-template-rows: 2vh 6vh 2vh 6vh 2vh 6vh 2vh 6vh; */
+  grid-template-rows: 1.5em 2.5em 1.5em 2.5em 1.5em 2.5em 1.5em 2.5em;
   grid-column-gap: 2.5vw;
   grid-row-gap: 0.25em;
+}
+
+#setdisp {
+  display: grid;
+  grid-template-columns: 3.5em 3.5em 3.5em 3.5em 3.5em 3.5em 3.5em 3.5em;
+  grid-template-rows: 2em;
+  grid-column-gap: 1.25vw;
 }
 
 .set,
@@ -56,25 +65,21 @@
 .num,
 .deact,
 .opera {
-  font-size: 4vw;
+  font-size: 1.3vw;
   font-weight: bold;
   border-radius: 2vw;
   grid-area: span 1 / span 2;
-}
-.deact {
-  background-color: rgb(255, 99, 71);
-  color: rgb(50, 50, 50);
 }
 .set {
   background-color: rgba(30, 143, 255, 0.651);
 }
 .sft {
   color: rgb(141, 47, 0);
-  font-size: 2vw;
+  font-size: 0.7vw;
 }
 .alt {
   color: rgb(183, 0, 0);
-  font-size: 2vw;
+  font-size: 0.7vw;
 }
 /* #cursor{
     animation-duration: 1s ;
@@ -88,12 +93,6 @@
     100% {opacity: 1}
 } */
 
-#setdisp {
-  display: grid;
-  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
-  grid-template-rows: 2em;
-  grid-column-gap: 1.25vw;
-}
 #Sbtn,
 #Abtn,
 #HYPbtn,
@@ -102,4 +101,88 @@
 #scibtn,
 #modebtn {
   opacity: 0;
+}
+@media only screen and (max-width: 992px) {
+  #display {
+    height: 12em;
+    width: 22em;
+  }
+  .sixbuttons {
+    display: grid;
+    grid-template-columns: 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.75em;
+    grid-template-rows: 2em 2em 2em 2em 2em 2em 2em 2em 2em 2em;
+    grid-column-gap: 0.6vw;
+    grid-row-gap: 0.25em;
+    margin: 0.5em 1em 0em 1em;
+  }
+  .fivebuttons {
+    display: grid;
+    grid-template-columns: 1.25em 1.25em 1.25em 1.25em 1.25em 1.25em 1.25em 1.25em 1.25em 1.25em;
+    grid-template-rows: 1.5em 2.5em 1.5em 2.5em 1.5em 2.5em 1.5em 2.5em;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 0.25em;
+  }
+  #setdisp {
+    display: grid;
+    grid-template-columns: 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em;
+    grid-template-rows: 2em;
+    grid-column-gap: 1.25vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #display {
+    height: 12vh;
+    width: 90vw;
+  }
+  .sixbuttons {
+    display: grid;
+    grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
+    grid-template-rows: 6vh 2vh 6vh 2vh 6vh 2vh 6vh 2vh 6vh;
+    grid-column-gap: 0.6vw;
+    grid-row-gap: 0.25em;
+    margin: 0.5em 1em 0em 1em;
+  }
+  .fivebuttons {
+    display: grid;
+    grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
+    grid-template-rows: 2vh 6vh 2vh 6vh 2vh 6vh 2vh 6vh;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 0.25em;
+  }
+  #setdisp {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 2em;
+    grid-column-gap: 1.25vw;
+  }
+  .sft {
+    color: rgb(141, 47, 0);
+    font-size: 2vw;
+  }
+  .alt {
+    color: rgb(183, 0, 0);
+    font-size: 2vw;
+  }
+  .set,
+  .doc,
+  .num,
+  .deact,
+  .opera {
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 2vw;
+    grid-area: span 1 / span 2;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .set,
+  .doc,
+  .num,
+  .deact,
+  .opera {
+    font-size: 4vw;
+    font-weight: bold;
+    border-radius: 2vw;
+    grid-area: span 1 / span 2;
+  }
 }

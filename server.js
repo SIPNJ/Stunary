@@ -3,7 +3,7 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const path = require("path");
-const host = "localhost";
+const host = "192.168.1.12";
 const port = 31415;
 const backendPokedex = require("./backend-function/pokedex");
 
