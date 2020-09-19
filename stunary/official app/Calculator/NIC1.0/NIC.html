@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NiCalculator</title>
-    <link rel="shortcut icon" href="/Picture/LOGO.png" type="image/x-icon">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/required.css">
-    <link rel="stylesheet" href="./CSS/Menu.css">
+    <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
+    <script src="https://kit.fontawesome.com/bbb353060e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/App.css">
 </head>
 
 <body>
@@ -20,100 +22,418 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a href="/index2.html" class="navbar-brand text-dark">
-            <img class="LOGO" src="/Picture/LOGO.png" alt="LOGO">
+        <a href="/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
         </a>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav mr-autr">
+            <ul class="navbar-nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link title2nd text-dark active" href="/index2.html">Home</a>
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
-                <!-- HIERARCHY -->
-                <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                <!-- Official App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="official-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Official App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                    </div>
+                </li>
+                <!-- Beta App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="beta-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Beta App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                    </div>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link title2nd text-dark">Account</a>
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
                 </li>
             </ul>
             <!-- Second navbar -->
             <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
-                <input class="form-control mr-sm-r title2nd" type="search" placeholder="Search">
-                <button class="btn btn-outline-dark title2nd my-2 my-sm-0" type="submit">Enter</button>
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
             </form>
         </div>
     </nav>
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb title2nd">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
             <li class="breadcrumb-item" aria-current="page">Official App</li>
             <li class="breadcrumb-item" aria-current="page">Calculator</li>
-            <li class="breadcrumb-item active" aria-current="page">NiCalculator</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Nextgen Inconsequential Calculator</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div>
+            </li>
         </ol>
     </nav>
-    <div class="calcultor container-md">
-        <div class="row justify-content-center output">
-            <div class="previous-value"></div>
-            <div class="current-value"></div>
-        </div>
-        <div class="row justify-content-center input">
-            <div class="col-md-2 col-sm-2 col-2 bgbase0 bdbase1 text-center paratext key">AC</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">DEL</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">%</div>
-            <div class="w-100"></div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">7</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">8</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">9</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">÷</div>
-            <div class="w-100"></div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">4</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">5</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">6</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">x</div>
-            <div class="w-100"></div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">1</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">2</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">3</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">-</div>
-            <div class="w-100"></div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">.</div>
-            <div class="col-md-1 col-sm-1 col-1 bgbase0 bdbase1 text-center paratext key">0</div>
-            <div class="col-md-2 col-sm-2 col-2 bgbase0 bdbase1 text-center paratext key">=</div>
-        </div>
-    </div>
-    <!-- <div id="mini">
-        <div class="name grey">Nextgen Inconsequential Calculator</div>
-        <div class="mini-disp grey">
+
+    <div id="mini">
+        <div class="name bgthird2">Nextgen Inconsequential Calculator</div>
+        <div class="mini-disp bgthird2">
             <input type="text" id="operadisp2" disabled>
             <input type="text" id="ansdisp2" disabled>
         </div>
-        <div class="btn ac orange">AC</div>
-        <div class="btn del orange">DEL</div>
-        <div class="btn percent orange">%</div>
-        <div class="btn divide orange">÷</div>
-        <div class="btn seven grey">7</div>
-        <div class="btn eight grey">8</div>
-        <div class="btn nine grey">9</div>
-        <div class="btn times orange">x</div>
-        <div class="btn four grey">4</div>
-        <div class="btn five grey">5</div>
-        <div class="btn six grey">6</div>
-        <div class="btn minus orange">-</div>
-        <div class="btn one grey">1</div>
-        <div class="btn two grey">2</div>
-        <div class="btn three grey">3</div>
-        <div class="btn plus orange">+</div>
-        <div class="btn zeromini grey">0</div>
-        <div class="btn dot grey">.</div>
-        <div class="btn enter orange">=</div>
-    </div> -->
+        <div class="btn ac bgsecond1">AC</div>
+        <div class="btn del bgsecond1">DEL</div>
+        <div class="btn percent bgsecond1">%</div>
+        <div class="btn divide bgsecond1">÷</div>
+        <div class="btn seven bgthird2">7</div>
+        <div class="btn eight bgthird2">8</div>
+        <div class="btn nine bgthird2">9</div>
+        <div class="btn times bgsecond1">x</div>
+        <div class="btn four bgthird2">4</div>
+        <div class="btn five bgthird2">5</div>
+        <div class="btn six bgthird2">6</div>
+        <div class="btn minus bgsecond1">-</div>
+        <div class="btn one bgthird2">1</div>
+        <div class="btn two bgthird2">2</div>
+        <div class="btn three bgthird2">3</div>
+        <div class="btn plus bgsecond1">+</div>
+        <div class="btn zeromini bgthird2">0</div>
+        <div class="btn dot bgthird2">.</div>
+        <div class="btn enter bgsecond1">=</div>
+    </div>
+    <div id="content" class="container-fluid">
+        <div class="calculator row bgthird2">
+            <!-- trai  -->
+            <div class="leftcalc column">
+                <!-- tren  -->
+                    <div class="upcalc row ">
+                        <div class="leftup">
+                            <div class="button-hand">LOCK</div>
+                            <div class="button-f">Lock</div>
+                            <div class="button-f">CAPS</div>
+                            <div class="button-f">S</div>
+                            <div class="button-f">D</div>
+                            <div class="button-f">A</div>
+                            <div class="button-f">R</div>
+                            <div class="button-f">STO</div>
+                            <div class="button-f">G</div>
+                        </div>
+                        <div class="mx-auto my-auto rightup">
+                            <div class="bdthird0 d-flex flex-column bgthird1" id="display">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <input class="ml-1 py-2 d-flex justify-content-flex-start align-items-start text-left bgthird1 third0" type="text" id="operadisp">
+                                    <!-- <span id="cursor">|</span> -->
+                                    <input class="mr-1 py-2 d-flex justify-content-flex-end align-items-end text-right bgthird1 third0" type="text" id="ansdisp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- duoi -->
+                    <div class="downcalc row bgthird2">
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3x">i</div>
+                        <!-- <div class="button-3x"></div> -->
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <!--  -->
+                        <div class="button-2">Q</div>
+                        <div class="button-2">W</div>
+                        <div class="button-2">E</div>
+                        <div class="button-2">R</div>
+                        <div class="button-2">T</div>
+                        <div class="button-2">Y</div>
+                        <div class="button-2">U</div>
+                        <div class="button-2">I</div>
+                        <div class="button-2">O</div>
+                        <div class="button-2">P</div>
+                        <!--  -->
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <!-- <div class="button-3x">∞</div> -->
+                        <div class="button-3x">∞</div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3x">"</div>
+                        <div class="button-3"></div>
+                        <!--  -->
+                        <div class="button-3"></div>
+                        <div class="button-2">A</div>
+                        <div class="button-2">S</div>
+                        <div class="button-2">D</div>
+                        <div class="button-2">F</div>
+                        <div class="button-2">G</div>
+                        <div class="button-2">H</div>
+                        <div class="button-2">J</div>
+                        <div class="button-2">K</div>
+                        <div class="button-2">L</div>
+                        <!--  -->
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3x">;</div>
+                        <!-- <div class="button-3x"></div> -->
+                        <div class="button-3x">:</div>
+                        <!-- <div class="button-3x"></div> -->
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <!--  -->
+                        <div class="button-2">CAPS</div>
+                        <div class="button-2">Z</div>
+                        <div class="button-2">X</div>
+                        <div class="button-2">C</div>
+                        <div class="button-2">V</div>
+                        <div class="button-2">B</div>
+                        <div class="button-2">N</div>
+                        <div class="button-2">M</div>
+                        <div class="button-2">Ø</div>
+                        <div class="button-enter">ENTER</div>
+                        <!--  -->
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"><</div>
+                        <div class="button-3">></div>
+                        <div class="button-3"></div>
+                        <div class="button-3"></div>
+                        <!--  -->
+                        <div class="button-2f" >Ctrl</div>
+                        <div class="button-2f" >Alpha</div>
+                        <div class="button-2f" >Shift</div>
+                        <div class="button-2f" >STO</div>
+                        <div class="button-space" ></div>
+                        <div class="button-2" >=</div>
+                        <div class="button-2" >DEL</div>
+                    </div>
+            </div>
 
-    <!-- <script src="Calculator/JS/Calculator.js"></script> -->
+            <!-- phai -->
+            <div class="rightcalc column">
+                <div class="rightupcalc ">
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+    
+                    <div class="button">Ctrl</div>
+                    <div class="button">Mode</div>
+                    <div class="circle-control">
+                        <div class="control up">↑</div>
+                        <div class="twoleri">
+                            <div class="control left">←</div>
+                            <div class="control right">→</div>
+                        </div>
+                        <div class="control down">↓</div>
+                    </div>
+    
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+
+                    <div class="button">Shift</div>
+                    <div class="button-graph">GRAPH</div>
+
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+    
+                    <div class="button">Alpha</div>
+                    <div class="button-enter-3 enter">ENTER</div>
+    
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh">Ln</div>
+                    <div class="button-3alpha">e</div>
+                    <div class="button-3sh">∑</div>
+                    <div class="button-3alpha">∏</div>
+    
+                    <div class="button expo">^</div>
+                    <div class="button root">√</div>
+                    <div class="button loga">Log<sub>a</sub>(x)</div>
+                    <div class="button">!</div>
+    
+                    <div class="button-3sh">ArcSin</div>
+                    <div class="button-3alpha">Sec</div>
+                    <div class="button-3sh">ArcCos</div>
+                    <div class="button-3alpha">Cosec</div>
+                    <div class="button-3sh">ArcTan</div>
+                    <div class="button-3alpha">Cot</div>
+                    <div class="button-3sh">ArcHYP</div>
+                    <div class="button-3alpha">CoHYP</div>
+    
+                    <div class="button sin">Sin</div>
+                    <div class="button cos">Cos</div>
+                    <div class="button tan">Tan</div>
+                    <div class="button hyp">HYP</div>
+    
+                    <div class="button-3sh">{</div>
+                    <div class="button-3alpha">[</div>
+                    <div class="button-3sh">}</div>
+                    <div class="button-3alpha">]</div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+    
+                    <div class="button open">(</div>
+                    <div class="button close">)</div>
+                    <div class="button sd">S ↔ D</div>
+                    <div class="button frac">frac</div>
+                </div>
+                <div class="rightdowncalc">
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+
+                    <div class="button-num seven">7</div>
+                    <div class="button-num eight">8</div>
+                    <div class="button-num nine">9</div>
+                    <div class="button-del del">DEL</div>
+                    <div class="button-del ac">AC</div>
+    
+                    <div class="button-3shx">Math</div>
+                    <div class="button-3shx">Mem</div>
+                    <div class="button-3shx">Var-Link</div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+    
+                    <div class="button-num four" >4</div>
+                    <div class="button-num five" >5</div>
+                    <div class="button-num six" >6</div>
+                    <div class="button-opera times" >x</div>
+                    <div class="button-opera divide" >÷</div>
+    
+                    <div class="button-3shx">Catalog</div>
+                    <div class="button-3shx">Custom</div>
+                    <div class="button-3shx">Char</div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+    
+                    <div class="button-num one" >1</div>
+                    <div class="button-num two" >2</div>
+                    <div class="button-num three" >3</div>
+                    <div class="button-opera plus" >+</div>
+                    <div class="button-opera minus" >-</div>
+    
+                    <div class="button-3shx">Ran#</div>
+                    <div class="button-3sh">,</div>
+                    <div class="button-3alpha">;</div>
+                    <div class="button-3sh">%</div>
+                    <div class="button-3alpha">‰</div>
+                    <div class="button-3shx">PreAns</div>
+                    <div class="button-3sh"></div>
+                    <div class="button-3alpha"></div>
+
+    
+                    <div class="button-num zero" >0</div>
+                    <div class="button-opera dot" >.</div>
+                    <div class="button-opera expoten" >EE</div>
+                    <div class="button-opera ans" >Ans</div>
+                    <div class="button-enter-2 enter">ENTER</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="Calculator/JS/Calculator.js"></script>
+
+    <script src="/REQUIRED/required.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
