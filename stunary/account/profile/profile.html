@@ -11,6 +11,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
     <script src="https://kit.fontawesome.com/bbb353060e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/profile.css">
 </head>
 
 <body>
@@ -27,14 +28,41 @@
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav nav-justify mr-auto">
+            <ul class="navbar-nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
                     <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
-                <!-- HIERARCHY -->
-                <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                <!-- Official App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="official-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Official App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                    </div>
+                </li>
+                <!-- Beta App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="beta-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Beta App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                    </div>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
@@ -71,21 +99,49 @@
     </nav>
     <div class="container">
         <div  class="row">
+            <!-- MAIN CONTENT -->
             <div class="col-12 col-md-8">
                 <!-- Data -->
                 <!-- Profile Data -->
-                <div class="jumbotron"></div>
-                <!-- My Account Data -->
-                <div class="jumbotron"></div>
+                <div class="jumbotron bgthird2">
+                    <div class="h2 title2nd third0">Profile Data</div>
+                    <hr class="my-3">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <th scope="col" class="title2nd third0">1</th>
+                                <td class="subtitle third0">Birthday</td>
+                                <td class="paratext third0" id="birthday"></td>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="title2nd third0">2</th>
+                                <td class="subtitle third0">Gender</td>
+                                <td class="paratext third0" id="gender"></td>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="title2nd third0">3</th>
+                                <td class="subtitle third0">Email</td>
+                                <td class="paratext third0" id="email"></td>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="title2nd third0">4</th>
+                                <td class="subtitle third0">Phone Number</td>
+                                <td class="paratext third0" id="phone"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <!-- SIDE INFOMATION -->
             <div class="col-12 col-md-4">
                 <!-- Profile -->
                 <div class="my-1 card">
-                    <img class="card-img-top" id="avatar"></img>
+                    <img class="card-img-top" id="avatar" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"></img>
                     <div class="card-body">
                         <div class="card-title title2nd" style="text-transform: capitalize;" id="username"></div>
                         <div class="card-text paratext"></div>
                     </div>
+                    <input class="mx-auto btn" type="file" name="Update Avatar" onchange="openFile(event)">
                 </div>
                 <!-- Side Navigation -->
                 <nav class="my-1 table-content">

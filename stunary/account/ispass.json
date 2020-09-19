@@ -4,13 +4,17 @@
         "username": "admin",
         "password": "admin",
         "month": "January",
-        "year": "2020"
+        "year": "2020",
+        "phone": "N/A",
+        "gender": "N/A"
     },
     {
         "email": "aha",
         "username": "bb",
         "password": "cc",
         "month": "January",
-        "year": "2020"
+        "year": "2020",
+        "phone": "N/A",
+        "gender": "N/A"
     }
 ]

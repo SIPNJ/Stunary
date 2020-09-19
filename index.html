@@ -29,14 +29,41 @@
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarToggler">
             <!-- First navbar -->
-            <ul class="nav nav-justify mr-auto">
+            <ul class="navbar-nav nav-justify mr-auto">
                 <!-- HOME -->
                 <li class="nav-item">
                     <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
                 </li>
-                <!-- HIERARCHY -->
-                <li class="nav-item">
-                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                <!-- Official App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="official-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Official App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                    </div>
+                </li>
+                <!-- Beta App -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="beta-app-drop-down"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Beta App
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                            <a class="dropdown-item subtitle text-dark"
+                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                    </div>
                 </li>
                 <!-- ACCOUNT -->
                 <li class="nav-item dropdown">
@@ -70,11 +97,12 @@
             </li>
         </ol>
     </nav>
-
+    <!-- ROOT -->
     <div class="container-fluid my-2 mx-auto row">
+        <!-- MAIN CONTENT -->
         <div class="col-12 col-md-6 col-lg-8">
             <p class="h1 text-center mx-auto my-2 title1st third0">WELCOME TO STUNARY</p>
-            <div id="carousel" class="my-2 my-lg-4 carousel slide" data-ride="carousel">
+            <!-- <div id="carousel" class="my-2 my-lg-4 carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -122,62 +150,49 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div> -->
+            <div class="row">
+                <div class="mx-auto my-1 col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">Calculator</div>
+                        </div>
+                        <img class="card-img-bottom" src="https://sipnj.github.io/Stunary/Picture/tqOS5.png"></img>
+                    </div>
+                </div>
+                <div class="mx-auto my-1 col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+
+                        </div>
+                        <img class="card-img-bottom" src=""></img>
+                    </div>
+                </div>
+                <div class="mx-auto my-1 col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+
+                        </div>
+                        <img class="card-img-bottom" src=""></img>
+                    </div>
+                </div>
             </div>
             <div class="jumbotron jumbotron-fluid rounded bgthird2">
                 <div class="container">
                     <h2><span class="third0">ABOUT</span> <span class="second3">US</span></h2>
                     <p class="h4 lead third0">We provided an online stationary for every students, anything can be found
                         here
-                        such as calculator, periodic table, solubility chart and so on. Hope you enjoy it!</p>
-                    <div class="row">
-                        <div class="mx-auto my-1 col-12 col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">Free your style.</div>
-                                </div>
-                                <img class="card-img-bottom" src=""></img>
-                            </div>
-                        </div>
-                        <div class="mx-auto my-1 col-12 col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">Flexible. Fast.</div>
-                                </div>
-                                <img class="card-img-bottom" src=""></img>
-                            </div>
-                        </div>
-                        <div class="mx-auto my-1 col-12 col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">All in your hand.</div>
-                                </div>
-                                <img class="card-img-bottom" src=""></img>
-                            </div>
-                        </div>
-                    </div>
+                        such as calculator, periodic table, solubility chart and so on. Hope you enjoy it!
+                    </p>
                 </div>
             </div>
         </div>
+        <!-- SIDE LAUNCHPAD -->
         <div class="d-none d-md-block col-md-6 col-lg-4">
-            <!-- TIME -->
-            <div class="mx-auto row">
-                <div class="col card border rounded-circle bgbase1 third1">
-                    <div class="card-text text-center title2nd" id="Hour"></div>
-                </div>
-                <div class="col text-center title2nd third0">:</div>
-                <div class="col card border rounded-circle bgbase1 third1">
-                    <div class="card-text text-center title2nd" id="Minute"></div>
-                </div>
-                <div class="col text-center title2nd third0">:</div>
-                <div class="col card border rounded-circle bgbase1 third1">
-                    <div class="card-text text-center title2nd" id="Second"></div>
-                </div>
-            </div>
             <!-- WEATHER NOW -->
             <div class="card mx-1 my-3">
                 <div class="card-header bgbase4">
-                    <div class="card-text text-center mx-auto title2nd third0">Weather in <span id="location">Saigon
-                            (VN)</span></div>
+                    <div class="card-text text-center mx-auto title2nd third0">Weather in <span id="location"></span></div>
                 </div>
                 <div class="card-body px-0 py-0 bgthird1 table-responsive">
                     <table class="table table-hover">
@@ -189,6 +204,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td class="text-center third0" scopr="row"><i class="far fa-clock"></i></td>
+                                <td class="curved-text third0">Time</td>
+                                <td class="curved-text third0"><span id="Hour"></span>:<span id="Minute"></span>:<span id="Second"></span></td>
+                            </tr>
                             <tr>
                                 <th class="text-center third0" scope="row"><i class="fas fa-thermometer-half"></i></th>
                                 <td class="curved-text third0">Temperature</td>

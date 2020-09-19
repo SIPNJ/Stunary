@@ -3,7 +3,7 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const path = require("path");
-const host = "192.168.1.12";
+const host = "localhost";
 const port = 31415;
 const backendPokedex = require("./backend-function/pokedex");
 
@@ -167,11 +167,15 @@ async function onRequest(request, response) {
         .replace(`\n]`, `,`);
       fs.writeFileSync(
         "stunary/account/ispass.json",
-        `${ispass}\n{\n"email": "${email}",\n"username": "${username}",\n"password": "${password}",\n"month": "${month}",\n"year": "${year}"\n}\n]`,
+        `${ispass}\n{\n"email": "${email}",\n"username": "${username}",\n"password": "${password}",\n"month": "${month}",\n"year": "${year}",\n"phone": "N/A",\n"gender": "N/A"\n}\n]`,
         "utf-8"
       );
       return response.end(JSON.stringify({ message: "Finish Sign Up !" }));
     }
+  } else if (pathname.includes(`/profileGetting`) == true) {
+    // PROFILE
+    let ispass = fs.readFileSync("stunary/account/ispass.json", "utf-8");
+    return response.end(ispass);
   } else if (pathname.includes(`/pokedict`) == true) {
     // Pokedex
     if (namePokemon == "") {

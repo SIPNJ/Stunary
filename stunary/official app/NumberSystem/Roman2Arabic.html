@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
-    <link rel="stylesheet" href="../CSS/Signin&Signup.css">
+    <script src="https://kit.fontawesome.com/bbb353060e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/NumSys.css">
 </head>
 
 <body>
@@ -39,15 +40,15 @@
                         Official App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
                     </div>
                 </li>
                 <!-- Beta App -->
@@ -57,10 +58,10 @@
                         Beta App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                        <a class="dropdown-item subtitle text-dark" href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV
+                            - JSON</a>
                     </div>
                 </li>
                 <!-- ACCOUNT -->
@@ -85,53 +86,84 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb title2nd text-dark mr-auto">
             <li class="breadcrumb-item" aria-current="page">Stunary</li>
-            <li class="breadcrumb-item" aria-current="page">Account</li>
-            <li class="breadcrumb-item active mr-auto" aria-current="page">Sign In</li>
+            <li class="breadcrumb-item" aria-current="page">Official App</li>
+            <li class="breadcrumb-item" aria-current="page">Number System</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Roman - Arabic Converter</li>
             <!-- LIGHT / DARK MODE -->
             <li class="ml-auto">
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="toggle-light">
                     <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
-                </div></button>
+                </div>
             </li>
         </ol>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-1 col-md-3"></div>
-            <div class="col-10 col-md-6">
-                <div class="h1 title1st third0 my-3 text-center">LOG IN TO YOUR ACCOUNT</div>
-                <div class="card my-3 bgbase1 rounded">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="name" class='h6 curved-text text-light'><b>USERNAME</b></label>
-                            <input type="text" class="form-control curved-text text-dark" id="name">
-                            <div class="h6" id="situation"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="pass" class='h6 curved-text text-light'><b>PASSWORD</b></label>
-                            <input type="text" class="form-control curved-text text-dark" id="pass">
-                            <small class="form-text curved-text text-light my-3 cursor-help"
-                                id="forget-password"><u>Forgot your password ?</u></small>
-                        </div>
-                        <div class="row">
-                            <input type="button" class="mx-auto btn curved-text bdbase4 base4" id="submit-btn"
-                                value="Log In">
-                        </div>
-                        <div class="row">
-                            <small class="form-text mx-auto my-1 curved-text text-light my-3">New to Stunary ?
-                                <a href="../signup/signup.html" class="text-light">SIGN UP NOW</a>
-                            </small>
-                        </div>
+    <div class="column center">
+        <div class="title center">
+            <h1>Number system converter</h1>
+        </div>
+        <div class="row center">
+            <div class="center column mainform">
+                <div class="title">Roman to Arabic Numeral Converter</div>
+                <form class="column">
+                    <div class="label">Roman Numeral :</div>
+                    <input id="rom" type="text" placeholder="Enter Roman Numberal">
+                    <div class="label">Arabic Numeral :</div>
+                    <input id="ara" type="text" placeholder="Enter Arabic Numeral">
+                    <div class="row">
+                        <input class="btnctv" type="button" onclick="Convert()" value="Convert">
+                        <input class="btnctv" type="button" onclick="Clear()" value="Clear">
+                    </div>
+                    <div class="note center">Note: Please clear all inputs before enter value !</div>
+                    <div class="note center"> The numbers should be from 1 to 3999</div>
+                </form>
+            </div>
+            <div class="instform">
+                <div class="center title row">INSTRUCTION BOX</div>
+                <div class="center row">
+                    <div class="tableform">
+                        <!-- titles -->
+                        <div class="center letter">Roman</div>
+                        <div class="center letter">Arabic</div>
+                        <div class="center letter">I</div>
+                        <div class="center letter">1</div>
+                        <div class="center letter">V</div>
+                        <div class="center letter">5</div>
+                        <div class="center letter">X</div>
+                        <div class="center letter">10</div>
+                        <div class="center letter">L</div>
+                        <div class="center letter">50</div>
+                        <div class="center letter">C</div>
+                        <div class="center letter">100</div>
+                        <div class="center letter">D</div>
+                        <div class="center letter">500</div>
+                        <div class="center letter">M</div>
+                        <div class="center letter">1000</div>
+                    </div>
+                    <div class="tableform">
+                        <div class="center letter">Roman</div>
+                        <div class="center letter">Arabic</div>
+                        <div class="center letter"></div>
+                        <div class="center letter"></div>
+                        <div class="center letter">IV</div>
+                        <div class="center letter">4</div>
+                        <div class="center letter">IX</div>
+                        <div class="center letter">9</div>
+                        <div class="center letter">XL</div>
+                        <div class="center letter">40</div>
+                        <div class="center letter">XC</div>
+                        <div class="center letter">90</div>
+                        <div class="center letter">CD</div>
+                        <div class="center letter">400</div>
+                        <div class="center letter">CM</div>
+                        <div class="center letter">900</div>
                     </div>
                 </div>
             </div>
-            <div class="col-1 col-md-3"></div>
         </div>
     </div>
-    <script src="./JS/signin.js"></script>
+    <script src="./JS/Rom2Ara.js"></script>
     <script src="/REQUIRED/required.js"></script>
-    <!-- <script src="https://sipnj.github.io/Stunary/REQUIRED/required.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

@@ -147,18 +147,3 @@ if (keyLogin == null || keyLogin == "null") {
   account_drop_down.appendChild(profile);
   account_drop_down.appendChild(signout_item);
 }
-
-// Top Navigation
-
-// let rootnav = document.getElementById("root-nav");
-// let nav = document.createElement("nav");
-// nav.classList.add(
-//   "navbar",
-//   "navbar-expand-md",
-//   "navbar-light",
-//   "bgbase3",
-//   "container-fluid"
-// );
-// let button_nav = document.createElement("button");
-// button_nav.classList.add("navbar-toggler");
-// button_nav.type = "button";
