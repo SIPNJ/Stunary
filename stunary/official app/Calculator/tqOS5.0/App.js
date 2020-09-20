@@ -1249,8 +1249,8 @@ mode.addEventListener("click", function () {
 
 // DARK / LIGHT MODE
 
-toggleLight.addEventListener("click", function () {
-  if (toggleLight.classList.contains("toggle-dark") == true) {
+document.getElementById("toggle-light").addEventListener("click", function () {
+  if (document.getElementById("toggle-light").classList.contains("toggle-dark") == false) {
     for (let i = 0; i < document.getElementsByClassName("sft").length; i++) {
       document.getElementsByClassName("sft")[i].style.color =
         "rgb(255, 204, 000)";
@@ -1259,11 +1259,11 @@ toggleLight.addEventListener("click", function () {
       document.getElementsByClassName("alt")[i].style.color =
         "rgb(248, 146, 122)";
     }
-    document.querySelector("#operadisp:disabled").style.color =
-      "rgb(255, 255, 255)";
-    document.querySelector("#ansdisp:disabled").style.color =
-      "rgb(255, 255, 255)";
-  } else if (toggleLight.classList.contains("toggle-dark") == false) {
+    // document.querySelector("#operadisp:disabled").style.color =
+    //   "rgb(255, 255, 255)";
+    // document.querySelector("#ansdisp:disabled").style.color =
+    //   "rgb(255, 255, 255)";
+  } else if (document.getElementById("toggle-light").classList.contains("toggle-dark") == true) {
     for (let i = 0; i < document.getElementsByClassName("sft").length; i++) {
       document.getElementsByClassName("sft")[i].style.color =
         "rgb(141, 047, 000)";
@@ -1272,9 +1272,9 @@ toggleLight.addEventListener("click", function () {
       document.getElementsByClassName("alt")[i].style.color =
         "rgb(183, 000, 000)";
     }
-    document.querySelector("#operadisp:disabled").style.color =
-      "rgb(000, 000, 000)";
-    document.querySelector("#ansdisp:disabled").style.color =
-      "rgb(000, 000, 000)";
+    // document.querySelector("#operadisp:disabled").style.color =
+    //   "rgb(000, 000, 000)";
+    // document.querySelector("#ansdisp:disabled").style.color =
+    //   "rgb(000, 000, 000)";
   }
 });

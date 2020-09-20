@@ -3,6 +3,7 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const path = require("path");
+const formidable = require("formidable");
 const host = "localhost";
 const port = 31415;
 const backendPokedex = require("./backend-function/pokedex");
@@ -10,7 +11,7 @@ const backendPokedex = require("./backend-function/pokedex");
 async function onRequest(request, response) {
   let pathname = url.parse(request.url, true).pathname.replace(/%20/gi, " ");
   let filename = "." + pathname;
-  console.log(pathname);
+  // console.log(pathname);
   // query
   let query;
   // pokedex
@@ -34,6 +35,10 @@ async function onRequest(request, response) {
     password = query.searchParams.get("password");
     month = query.searchParams.get("month");
     year = query.searchParams.get("year");
+  } else if (pathname.match(/\/uploadAvatar/gi)) {
+    query = new URL(request.url, `http://${request.headers.host}`);
+    pathname = "/uploadAvatar";
+    username = query.searchParams.get("username");
   } else if (pathname.match(/\/pokedict/gi)) {
     query = new URL(request.url, `http://${request.headers.host}`);
     pathname = "/pokedict";
@@ -167,7 +172,7 @@ async function onRequest(request, response) {
         .replace(`\n]`, `,`);
       fs.writeFileSync(
         "stunary/account/ispass.json",
-        `${ispass}\n{\n"email": "${email}",\n"username": "${username}",\n"password": "${password}",\n"month": "${month}",\n"year": "${year}",\n"phone": "N/A",\n"gender": "N/A"\n}\n]`,
+        `${ispass}\n{\n"email": "${email}",\n"username": "${username}",\n"password": "${password}",\n"month": "${month}",\n"year": "${year}",\n"phone": "N/A",\n"gender": "N/A", \n"img": ""\n}\n]`,
         "utf-8"
       );
       return response.end(JSON.stringify({ message: "Finish Sign Up !" }));
@@ -176,6 +181,29 @@ async function onRequest(request, response) {
     // PROFILE
     let ispass = fs.readFileSync("stunary/account/ispass.json", "utf-8");
     return response.end(ispass);
+  } else if (pathname.includes(`/uploadAvatar`) == true) {
+    // AVATAR
+    let form = new formidable.IncomingForm();
+    form.parse(request, function (err, fields, files) {
+      let oldpath = files.filetoupload.path;
+      // console.log(oldpath);
+      let newpath =
+        "/Users/dorothy17/Documents/Stunary/stunary/account/avatar/" +
+        files.filetoupload.name;
+      let ispass = JSON.parse(fs.readFileSync("stunary/account/ispass.json"));
+      fs.rename(oldpath, newpath, function (err) {
+        if (err) throw err;
+        response.writeHead(301, {
+          Location: `http://${host}:${port}/stunary/account/profile/profile.html`
+        })
+        response.end(
+          // {
+        //   data: ispass,
+        //   img: newpath
+        // }
+        );
+      });
+    });
   } else if (pathname.includes(`/pokedict`) == true) {
     // Pokedex
     if (namePokemon == "") {

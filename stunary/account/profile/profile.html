@@ -40,15 +40,15 @@
                         Official App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
                     </div>
                 </li>
                 <!-- Beta App -->
@@ -58,10 +58,10 @@
                         Beta App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                        <a class="dropdown-item subtitle text-dark" href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV
+                            - JSON</a>
                     </div>
                 </li>
                 <!-- ACCOUNT -->
@@ -98,7 +98,7 @@
         </ol>
     </nav>
     <div class="container">
-        <div  class="row">
+        <div class="row">
             <!-- MAIN CONTENT -->
             <div class="col-12 col-md-8">
                 <!-- Data -->
@@ -136,12 +136,16 @@
             <div class="col-12 col-md-4">
                 <!-- Profile -->
                 <div class="my-1 card">
-                    <img class="card-img-top" id="avatar" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"></img>
+                    <img class="card-img-top" id="avatar"
+                        src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"></img>
                     <div class="card-body">
                         <div class="card-title title2nd" style="text-transform: capitalize;" id="username"></div>
                         <div class="card-text paratext"></div>
                     </div>
-                    <input class="mx-auto btn" type="file" name="Update Avatar" onchange="openFile(event)">
+                    <form action="/uploadAvatar" method="post" enctype="multipart/form-data">
+                        <input class="mx-auto btn" type="file" name="filetoupload" onchange="openFile(event)">
+                        <input type="submit">
+                    </form>
                 </div>
                 <!-- Side Navigation -->
                 <!-- <nav class="my-1 table-content">

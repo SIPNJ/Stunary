@@ -6,7 +6,8 @@
         "month": "January",
         "year": "2020",
         "phone": "N/A",
-        "gender": "N/A"
+        "gender": "N/A",
+        "img": ""
     },
     {
         "email": "aha",
@@ -15,6 +16,7 @@
         "month": "January",
         "year": "2020",
         "phone": "N/A",
-        "gender": "N/A"
+        "gender": "N/A",
+        "img": ""
     }
 ]

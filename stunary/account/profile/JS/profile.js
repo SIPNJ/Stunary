@@ -3,7 +3,7 @@ let birthday = document.getElementById("birthday");
 let gender = document.getElementById("gender");
 let email = document.getElementById("email");
 let phone = document.getElementById("phone");
-fetch(`/profileGetting?username=${localStorage.getItem("keyLogin")}`)
+fetch(`/profileGetting`)
   .then((data) => data.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
@@ -19,8 +19,12 @@ function openFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
     avatar.src = reader.result;
-    console.log(reader.result);
+    // console.log(reader.result);
     avatar.style.objectFit = "cover";
   };
   reader.readAsDataURL(event.target.files[0]);
+}
+function uploadAvatar() {
+  let query = `?username=${localStorage.getItem("keyLogin")}`;
+  fetch(`/uploadAvatar${query}`);
 }

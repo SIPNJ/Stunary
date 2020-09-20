@@ -39,15 +39,15 @@
                         Official App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="official-app-drop-down" id="officialDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/tqOS5.0/tqOS5.html">tqOS 5.0</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/Calculator/NIC1.0/NIC.html">NiC 1.0</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/PeriodicTable/PeTa.html">Periodic Table</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/official app/SolubilityTable/Solubility.html">Solubility Chart</a>
                     </div>
                 </li>
                 <!-- Beta App -->
@@ -57,10 +57,10 @@
                         Beta App
                     </a>
                     <div class="dropdown-menu" aria-labelledby="beta-app-drop-down" id="betaDropdown">
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
-                            <a class="dropdown-item subtitle text-dark"
-                                href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV - JSON</a>
+                        <a class="dropdown-item subtitle text-dark"
+                            href="/stunary/beta app/pokedex/pokedex.html">Pokedex</a>
+                        <a class="dropdown-item subtitle text-dark" href="/stunary/beta app/CSV2JSON/CSV2JSON.html">CSV
+                            - JSON</a>
                     </div>
                 </li>
                 <!-- ACCOUNT -->
@@ -121,9 +121,13 @@
                     </div>
                     <div class="bdthird0 d-flex flex-column bgthird1" id="display">
                         <div class="d-flex flex-column justify-content-center">
-                            <input class="ml-1 py-2 d-flex justify-content-flex-start align-items-start text-left bgthird1 third0" type="text" id="operadisp">
+                            <input
+                                class="ml-1 py-2 d-flex justify-content-flex-start align-items-start text-left bgthird1 third0"
+                                type="text" id="operadisp">
                             <!-- <span id="cursor">|</span> -->
-                            <input class="mr-1 py-2 d-flex justify-content-flex-end align-items-end text-right bgthird1 third0" type="text" id="ansdisp">
+                            <input
+                                class="mr-1 py-2 d-flex justify-content-flex-end align-items-end text-right bgthird1 third0"
+                                type="text" id="ansdisp">
                         </div>
                     </div>
                     <div class="sixbuttons">
@@ -360,15 +364,91 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 col-xl-6"></div>
+        <div class="d-sm-none d-md-block col-md-4 col-xl-6">
+            <div id="tabclr">
+                <div id="clrtable">
+                    <b class="name mx-auto text-center title1st" style="font-size: 3em">Calculator style</b>
+                    <div id="colorsetting">
+                        <div id="bgclr">
+                            <center style="margin: 0.4em;">
+                                <div> Enter RGB </div>
+                                <div> background color </div>
+                            </center>
+                            <input type="text" class="bgclr" id="bgcalccolor" placeholder="Calculator">
+                            <input type="text" class="bgclr" id="bgdispcolor" placeholder="Calculator input display">
+                            <input type="text" class="bgclr" id="bgsetcolor" placeholder="Setting buttons">
+                            <input type="text" class="bgclr" id="bgdoccolor" placeholder="Scientific buttons">
+                            <input type="text" class="bgclr" id="bgnumcolor" placeholder="Number keyboard ">
+                            <input type="text" class="bgclr" id="bgdeactcolor" placeholder="Deactive buttons">
+                            <input type="text" class="bgclr" id="bgoperacolor" placeholder="Operator buttons">
+                            <button class="bgclr" id="clickbtn"> Enter </button>
+                        </div>
+                        <div style="margin: 1rem;"></div>
+                        <div id="txtclr">
+                            <center style="margin: 0.4em;">
+                                <div> Enter RGB </div>
+                                <div> text color </div>
+                            </center>
+                            <input type="text" class="txtclr" id="operadispcolor"
+                                placeholder="Calculator typing display">
+                            <input type="text" class="txtclr" id="ansdispcolor" placeholder="Calculator output display">
+                            <input type="text" class="txtclr" id="setcolor" placeholder="Setting buttons">
+                            <input type="text" class="txtclr" id="doccolor" placeholder="Scientific buttons">
+                            <input type="text" class="txtclr" id="numcolor" placeholder="Number keyboard ">
+                            <input type="text" class="txtclr" id="deactcolor" placeholder="Deactive buttons">
+                            <input type="text" class="txtclr" id="operacolor" placeholder="Operator buttons">
+                            <button class="txtclr" id="resetclr"> Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table my-2" id="colorpicker" , border="4" , cellpadding="2" , cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td colspan="3" class="text-center bgbase3 name">
+                                <strong>COLOR PICKER</strong>
+                        </tr>
+                        <tr>
+                            <th class="text-center bgthird2" style="color: red;"> Red </th>
+                            <th class="text-center bgthird2" style="color: green;"> Green </th>
+                            <th class="text-center bgthird2" style="color: blue;"> Blue </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="Rclr" style="background-color: red; width: 8em; height: 4em;"></td>
+                            <td id="Gclr" style="background-color: green; width: 8em; height: 4em;"></td>
+                            <td id="Bclr" style="background-color: blue; width: 8em; height: 4em;"></td>
+                        </tr>
+                        <tr>
+                            <td class="bgthird2" id="redval" style="text-align: center; color: red;">255</td>
+                            <td class="bgthird2"  id="greenval" style="text-align: center; color: green;">0</td>
+                            <td class="bgthird2" id="blueval" style="text-align: center; color:blue;">0</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="range" class="clpk" id="slideRed" name="slideRed" min="0" max="255"
+                                    value="255"></td>
+                            <td><input type="range" class="clpk" id="slideGreen" name="slideGreen" min="0" max="255"
+                                    value="0"></td>
+                            <td><input type="range" class="clpk" id="slideBlue" name="slideBlue" min="0" max="255"
+                                    value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="resclr" colspan="3" style="background-color: red; height: 2em;">
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
     </div>
 
 
 
-
-
+    <script src="./JS/Calccolor.js"></script>
+    <script src="./App.js"></script>
     <script src="/REQUIRED/required.js"></script>
-    <script src="App.js"></script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
         </script>

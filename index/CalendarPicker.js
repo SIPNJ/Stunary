@@ -198,7 +198,6 @@ class CalendarPicker {
     this.calendarHeader.appendChild(this.calendarHeaderTitle);
     this.calendarHeader.appendChild(this.nextMonthArrow);
     this.calendarWrapper.appendChild(this.calendarHeader);
-    this.calendarHeader.style.backgroundColor = "rgb(248, 146, 122)";
   };
 
   /**

@@ -94,11 +94,11 @@
 }
 #calendar-wrapper header {
   position: relative;
+  background-color:  rgb(107, 229, 140);
 }
 
 #calendar-wrapper header button {
   position: absolute;
-  background-color:  rgb(107, 229, 140);
   border: inherit;
   cursor: pointer;
   background: transparent;
