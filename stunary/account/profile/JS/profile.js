@@ -24,7 +24,7 @@ function openFile(event) {
   };
   reader.readAsDataURL(event.target.files[0]);
 }
-function uploadAvatar() {
-  let query = `?username=${localStorage.getItem("keyLogin")}`;
-  fetch(`/uploadAvatar${query}`);
-}
+// function uploadAvatar() {
+//   let query = `?username=${localStorage.getItem("keyLogin")}`;
+//   fetch(`/uploadAvatar${query}`);
+// }
