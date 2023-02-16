@@ -30,8 +30,10 @@
   "bugs": {
     "url": "https://github.com/bitinn/node-fetch/issues"
   },
-  "bundleDependencies": false,
-  "dependencies": {},
+  "bundleDependencies": [],
+  "dependencies": {
+    "formidable": "^2.1.1"
+  },
   "deprecated": false,
   "description": "A light-weight module that brings window.fetch to node.js",
   "devDependencies": {
